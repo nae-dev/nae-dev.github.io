@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rasgele — Support</title>
+<style>
+  :root {
+    --teal: #00ADB5;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px; }
+  header.page-head { background: white; border-bottom: 1px solid var(--border); padding: 16px 24px; }
+  header.page-head h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  nav.lang { position: sticky; top: 0; background: white; border-bottom: 1px solid var(--border); padding: 12px 24px; z-index: 10; overflow-x: auto; white-space: nowrap; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin-right: 4px; border-radius: 6px; font-size: 14px; }
+  nav.lang a:hover { background: var(--bg); }
+  section.lang-section { padding: 32px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 60px; }
+  section.lang-section:last-of-type { border-bottom: none; }
+  h2 { font-size: 24px; font-weight: 600; margin-top: 0; }
+  h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin: 8px 0 12px; }
+  details { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; margin: 8px 0; }
+  details summary { cursor: pointer; font-weight: 500; padding: 4px 0; outline: none; }
+  details[open] summary { margin-bottom: 8px; }
+  details p { margin: 4px 0; color: #374151; }
+  .contact { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-top: 16px; }
+  .contact a { color: var(--teal); }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <h1>rasgele · Support</h1>
+</header>
+
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
+  <h2>English</h2>
+
+  <h3>About rasgele</h3>
+  <p>rasgele is a simple random generator for numbers, letters, names, dice, and lottery picks. No account needed — open it, tap, get a result.</p>
+
+  <h3>Modes</h3>
+  <p><b>Number</b> — pick N random numbers in a range you set with the slider.</p>
+  <p><b>Letter</b> — pick N random letters from the alphabet of your selected language.</p>
+  <p><b>Name</b> — pick N names from your custom list (add up to 50, toggle each on/off).</p>
+  <p><b>Dice</b> — roll 1–6 dice with sum total.</p>
+  <p><b>Lottery</b> — draw main + optional bonus numbers from any range.</p>
+
+  <h3>FAQ</h3>
+  <details><summary>How do I add or remove names?</summary>
+  <p>Switch to Name mode → tap "Edit Names" → use the text field at the top to add a name, swipe to delete, or tap the trash icon. Toggle individual names on/off without removing them.</p></details>
+
+  <details><summary>Why do Names and Lottery sometimes show an ad?</summary>
+  <p>Those two modes are supported by short rewarded ads. The first time per install you'll see a brief explainer. After watching one ad, the mode is unlocked for the rest of the session. Buy "Remove Ads" once to skip ads entirely.</p></details>
+
+  <details><summary>I bought Remove Ads on another device. How do I get it here?</summary>
+  <p>Open Settings → Remove Ads → Restore Purchases. Make sure you're signed into the App Store with the same Apple ID. Family members on Family Sharing automatically get access too.</p></details>
+
+  <details><summary>How do I change the colors or language?</summary>
+  <p>Tap the gear icon in the row below the result card → Settings. You can pick any background and foreground color, plus switch between English, Turkish, German, Spanish, Italian, and French.</p></details>
+
+  <details><summary>Why does the app ask about tracking?</summary>
+  <p>Apple requires apps to ask. Your device identifier is the only data used, and it only goes to Google to show personalized ads that help support the app. You can change your answer anytime in iOS Settings → Privacy &amp; Security → Tracking.</p></details>
+
+  <div class="contact">
+    <p><b>Need more help?</b><br>
+    Email <a href="mailto:support@nae-dev.com">support@nae-dev.com</a> with your device model, iOS version, and a description of the issue.</p>
+  </div>
+</section>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <h2>Türkçe</h2>
+
+  <h3>rasgele hakkında</h3>
+  <p>rasgele; sayı, harf, isim, zar ve loto için basit bir rastgele üreticidir. Hesap gerekmez — aç, dokun, sonucu al.</p>
+
+  <h3>Modlar</h3>
+  <p><b>Sayı</b> — kaydırıcı ile belirlediğin aralıkta N rastgele sayı seçer.</p>
+  <p><b>Harf</b> — seçili dilin alfabesinden N rastgele harf seçer.</p>
+  <p><b>İsim</b> — özel listeden N isim seçer (en fazla 50, her birini açıp kapatabilirsin).</p>
+  <p><b>Zar</b> — 1–6 arası zar atar, toplam gösterilir.</p>
+  <p><b>Loto</b> — istediğin aralıktan ana sayılar + isteğe bağlı bonus sayılar çeker.</p>
+
+  <h3>Sıkça sorulanlar</h3>
+  <details><summary>İsim nasıl eklenir veya silinir?</summary>
+  <p>İsim moduna geç → "İsimleri Düzenle" → üstteki metin kutusundan isim ekle, sola kaydırarak veya çöp simgesiyle sil. Her ismi silmeden açıp kapatabilirsin.</p></details>
+
+  <details><summary>İsim ve Loto modlarında neden bazen reklam çıkıyor?</summary>
+  <p>Bu iki mod kısa ödüllü reklamlarla desteklenir. Yüklemenin ardından ilk kullanımda kısa bir açıklama görürsün. Bir reklamı izledikten sonra mod, oturum boyunca açık kalır. Reklamları tamamen kaldırmak için "Reklamları Kaldır"ı bir kez satın alabilirsin.</p></details>
+
+  <details><summary>Reklam Kaldırma'yı başka bir cihazda almıştım. Bunda nasıl alırım?</summary>
+  <p>Ayarlar → Reklamları Kaldır → Satın Alımları Geri Yükle. App Store'a aynı Apple Kimliği ile giriş yapmış olduğundan emin ol. Aile Paylaşımı'ndaki üyeler de otomatik olarak erişir.</p></details>
+
+  <details><summary>Renkleri veya dili nasıl değiştiririm?</summary>
+  <p>Sonuç kartının altındaki çark simgesine dokun → Ayarlar. İstediğin arka plan ve ön plan rengini seçebilir, İngilizce, Türkçe, Almanca, İspanyolca, İtalyanca ve Fransızca arasında geçiş yapabilirsin.</p></details>
+
+  <details><summary>Uygulama neden takip için izin istiyor?</summary>
+  <p>Apple bunu zorunlu kılıyor. Yalnızca cihaz tanımlayıcın kullanılır ve yalnızca uygulamayı destekleyen kişiselleştirilmiş reklamlar için Google'a gider. Cevabını istediğin zaman iOS Ayarlar → Gizlilik ve Güvenlik → İzleme'den değiştirebilirsin.</p></details>
+
+  <div class="contact">
+    <p><b>Daha fazla yardım gerekirse</b><br>
+    <a href="mailto:support@nae-dev.com">support@nae-dev.com</a> adresine cihaz modeli, iOS sürümü ve sorun açıklamasıyla e-posta gönder.</p>
+  </div>
+</section>
+
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <h2>Deutsch</h2>
+
+  <h3>Über rasgele</h3>
+  <p>rasgele ist ein einfacher Zufallsgenerator für Zahlen, Buchstaben, Namen, Würfel und Lotterieziehungen. Kein Konto nötig — öffnen, tippen, Ergebnis bekommen.</p>
+
+  <h3>Modi</h3>
+  <p><b>Zahl</b> — wählt N Zufallszahlen im eingestellten Bereich.</p>
+  <p><b>Buchstabe</b> — wählt N Buchstaben aus dem Alphabet der gewählten Sprache.</p>
+  <p><b>Name</b> — wählt N Namen aus deiner eigenen Liste (bis zu 50, jeder ein-/ausschaltbar).</p>
+  <p><b>Würfel</b> — wirft 1–6 Würfel mit Gesamtsumme.</p>
+  <p><b>Lotterie</b> — zieht Haupt- + optionale Bonuszahlen aus beliebigem Bereich.</p>
+
+  <h3>Häufige Fragen</h3>
+  <details><summary>Wie füge ich Namen hinzu oder entferne sie?</summary>
+  <p>Wechsle in den Namen-Modus → "Namen bearbeiten" → über das Textfeld oben Namen hinzufügen, zum Löschen wischen oder Mülltonne tippen. Einzelne Namen lassen sich ein-/ausschalten, ohne sie zu löschen.</p></details>
+
+  <details><summary>Warum erscheint manchmal Werbung in Namen und Lotterie?</summary>
+  <p>Diese beiden Modi werden durch kurze belohnte Werbespots unterstützt. Beim ersten Mal nach der Installation siehst du einen kurzen Hinweis. Nach einem angesehenen Werbespot ist der Modus für die restliche Sitzung freigeschaltet. Mit "Werbung entfernen" kannst du sie einmalig komplett deaktivieren.</p></details>
+
+  <details><summary>Ich habe „Werbung entfernen" auf einem anderen Gerät gekauft. Wie aktiviere ich es hier?</summary>
+  <p>Einstellungen → Werbung entfernen → Käufe wiederherstellen. Stelle sicher, dass du im App Store mit derselben Apple-ID angemeldet bist. Familienmitglieder mit Familienfreigabe haben automatisch Zugriff.</p></details>
+
+  <details><summary>Wie ändere ich Farben oder Sprache?</summary>
+  <p>Tippe auf das Zahnrad in der Zeile unter der Ergebnisansicht → Einstellungen. Du kannst Hintergrund- und Vordergrundfarbe frei wählen und zwischen Englisch, Türkisch, Deutsch, Spanisch, Italienisch und Französisch wechseln.</p></details>
+
+  <details><summary>Warum fragt die App nach Tracking-Erlaubnis?</summary>
+  <p>Apple verlangt das. Es wird nur deine Geräte-ID genutzt, und sie geht nur an Google zur Anzeige personalisierter Werbung, die die App unterstützt. Du kannst deine Antwort jederzeit unter iOS Einstellungen → Datenschutz &amp; Sicherheit → Tracking ändern.</p></details>
+
+  <div class="contact">
+    <p><b>Brauchst du mehr Hilfe?</b><br>
+    Schreibe an <a href="mailto:support@nae-dev.com">support@nae-dev.com</a> mit Gerätemodell, iOS-Version und Problembeschreibung.</p>
+  </div>
+</section>
+
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <h2>Español</h2>
+
+  <h3>Acerca de rasgele</h3>
+  <p>rasgele es un generador aleatorio simple para números, letras, nombres, dados y sorteos. No necesita cuenta — abre, toca, obtén un resultado.</p>
+
+  <h3>Modos</h3>
+  <p><b>Número</b> — elige N números aleatorios en el rango que ajustes.</p>
+  <p><b>Letra</b> — elige N letras del alfabeto del idioma seleccionado.</p>
+  <p><b>Nombre</b> — elige N nombres de tu lista (hasta 50, cada uno activable/desactivable).</p>
+  <p><b>Dados</b> — tira 1–6 dados con la suma total.</p>
+  <p><b>Lotería</b> — saca números principales + bonus opcionales en cualquier rango.</p>
+
+  <h3>Preguntas frecuentes</h3>
+  <details><summary>¿Cómo añado o elimino nombres?</summary>
+  <p>Cambia a modo Nombre → "Editar nombres" → usa el campo de texto para añadir, desliza o toca la papelera para eliminar. Activa/desactiva nombres sin borrarlos.</p></details>
+
+  <details><summary>¿Por qué a veces sale un anuncio en Nombres y Lotería?</summary>
+  <p>Esos dos modos se sostienen con anuncios cortos recompensados. La primera vez por instalación verás una breve explicación. Tras ver un anuncio, el modo queda desbloqueado para el resto de la sesión. Compra "Eliminar anuncios" una vez para evitarlos por completo.</p></details>
+
+  <details><summary>Compré "Eliminar anuncios" en otro dispositivo. ¿Cómo lo activo aquí?</summary>
+  <p>Ajustes → Eliminar anuncios → Restaurar compras. Asegúrate de tener la misma Apple ID en App Store. Los miembros de Compartir en Familia obtienen acceso automáticamente.</p></details>
+
+  <details><summary>¿Cómo cambio los colores o el idioma?</summary>
+  <p>Toca el engranaje bajo la tarjeta de resultado → Ajustes. Elige cualquier color de fondo y de primer plano, y cambia entre inglés, turco, alemán, español, italiano y francés.</p></details>
+
+  <details><summary>¿Por qué la app pide permiso de seguimiento?</summary>
+  <p>Apple lo exige. Solo se usa el identificador de tu dispositivo, y solo va a Google para mostrar anuncios personalizados que apoyan la app. Puedes cambiar tu respuesta en Ajustes de iOS → Privacidad y seguridad → Rastreo.</p></details>
+
+  <div class="contact">
+    <p><b>¿Necesitas más ayuda?</b><br>
+    Escribe a <a href="mailto:support@nae-dev.com">support@nae-dev.com</a> con el modelo del dispositivo, la versión de iOS y una descripción del problema.</p>
+  </div>
+</section>
+
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <h2>Italiano</h2>
+
+  <h3>Cos'è rasgele</h3>
+  <p>rasgele è un semplice generatore casuale per numeri, lettere, nomi, dadi e estrazioni della lotteria. Nessun account — apri, tocca, ottieni un risultato.</p>
+
+  <h3>Modalità</h3>
+  <p><b>Numero</b> — sceglie N numeri casuali nell'intervallo impostato.</p>
+  <p><b>Lettera</b> — sceglie N lettere dall'alfabeto della lingua selezionata.</p>
+  <p><b>Nome</b> — sceglie N nomi dalla tua lista (fino a 50, ognuno attivabile/disattivabile).</p>
+  <p><b>Dadi</b> — lancia 1–6 dadi con somma totale.</p>
+  <p><b>Lotteria</b> — estrae numeri principali + bonus opzionali da qualsiasi intervallo.</p>
+
+  <h3>Domande frequenti</h3>
+  <details><summary>Come aggiungo o rimuovo nomi?</summary>
+  <p>Passa alla modalità Nome → "Modifica nomi" → usa il campo di testo per aggiungere, scorri o tocca il cestino per eliminare. Attiva/disattiva singoli nomi senza eliminarli.</p></details>
+
+  <details><summary>Perché a volte appare un annuncio in Nomi e Lotteria?</summary>
+  <p>Quelle due modalità sono sostenute da brevi annunci con ricompensa. La prima volta dopo l'installazione vedrai una breve spiegazione. Dopo aver visto un annuncio, la modalità resta sbloccata per il resto della sessione. Acquista "Rimuovi pubblicità" una sola volta per saltarli del tutto.</p></details>
+
+  <details><summary>Ho comprato "Rimuovi pubblicità" su un altro dispositivo. Come lo attivo qui?</summary>
+  <p>Impostazioni → Rimuovi pubblicità → Ripristina acquisti. Assicurati di essere connesso all'App Store con lo stesso ID Apple. I membri di Famiglia in Condivisione famiglia ottengono accesso automaticamente.</p></details>
+
+  <details><summary>Come cambio i colori o la lingua?</summary>
+  <p>Tocca l'icona dell'ingranaggio sotto la scheda risultato → Impostazioni. Scegli colore di sfondo e primo piano, e passa tra inglese, turco, tedesco, spagnolo, italiano e francese.</p></details>
+
+  <details><summary>Perché l'app chiede il permesso di tracciamento?</summary>
+  <p>Apple lo richiede. Viene usato solo l'identificatore del tuo dispositivo, e va solo a Google per mostrare annunci personalizzati che sostengono l'app. Puoi cambiare la tua risposta in Impostazioni iOS → Privacy e sicurezza → Tracciamento.</p></details>
+
+  <div class="contact">
+    <p><b>Hai bisogno di altro aiuto?</b><br>
+    Scrivi a <a href="mailto:support@nae-dev.com">support@nae-dev.com</a> indicando modello del dispositivo, versione iOS e descrizione del problema.</p>
+  </div>
+</section>
+
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <h2>Français</h2>
+
+  <h3>À propos de rasgele</h3>
+  <p>rasgele est un générateur aléatoire simple pour les nombres, lettres, noms, dés et tirages de loterie. Pas besoin de compte — ouvrez, appuyez, obtenez un résultat.</p>
+
+  <h3>Modes</h3>
+  <p><b>Nombre</b> — choisit N nombres aléatoires dans la plage que vous définissez.</p>
+  <p><b>Lettre</b> — choisit N lettres dans l'alphabet de la langue sélectionnée.</p>
+  <p><b>Nom</b> — choisit N noms dans votre liste (jusqu'à 50, chacun activable/désactivable).</p>
+  <p><b>Dés</b> — lance 1–6 dés avec total cumulé.</p>
+  <p><b>Loterie</b> — tire des numéros principaux + bonus optionnels dans n'importe quelle plage.</p>
+
+  <h3>Questions fréquentes</h3>
+  <details><summary>Comment ajouter ou supprimer des noms ?</summary>
+  <p>Passez en mode Nom → "Modifier les noms" → utilisez le champ texte pour ajouter, balayez ou touchez la corbeille pour supprimer. Activez/désactivez chaque nom sans le supprimer.</p></details>
+
+  <details><summary>Pourquoi une publicité apparaît parfois dans Noms et Loterie ?</summary>
+  <p>Ces deux modes sont financés par de courtes publicités récompensées. À la première utilisation après installation, une brève explication s'affiche. Après avoir regardé une publicité, le mode reste débloqué pour le reste de la session. Achetez "Supprimer les annonces" une fois pour les éviter complètement.</p></details>
+
+  <details><summary>J'ai acheté "Supprimer les annonces" sur un autre appareil. Comment l'activer ici ?</summary>
+  <p>Réglages → Supprimer les annonces → Restaurer les achats. Assurez-vous d'être connecté à l'App Store avec le même identifiant Apple. Les membres du Partage familial y ont accès automatiquement.</p></details>
+
+  <details><summary>Comment changer les couleurs ou la langue ?</summary>
+  <p>Touchez l'icône d'engrenage sous la carte de résultat → Réglages. Choisissez n'importe quelle couleur de fond et de premier plan, et basculez entre anglais, turc, allemand, espagnol, italien et français.</p></details>
+
+  <details><summary>Pourquoi l'app demande la permission de suivi ?</summary>
+  <p>Apple l'exige. Seul l'identifiant de votre appareil est utilisé, et il ne va qu'à Google pour afficher des publicités personnalisées qui soutiennent l'app. Vous pouvez changer votre réponse dans Réglages iOS → Confidentialité et sécurité → Suivi.</p></details>
+
+  <div class="contact">
+    <p><b>Besoin d'aide supplémentaire ?</b><br>
+    Écrivez à <a href="mailto:support@nae-dev.com">support@nae-dev.com</a> avec le modèle d'appareil, la version d'iOS et une description du problème.</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2026 nae-dev &middot;
+  <a href="index.html">Home</a> &middot;
+  <a href="privacy-policy.html">Privacy</a>
+</footer>
+
+</body>
+</html>
