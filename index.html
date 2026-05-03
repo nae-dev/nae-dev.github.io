@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAE Dev — independent iOS apps</title>
+<meta name="description" content="Independent iOS apps by Nejat Erdal. Clean utilities built for the App Store.">
+<meta name="theme-color" content="#1a1a1a">
+<link rel="icon" type="image/png" href="rasgele/icon.png">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-2: #4b5563;
+    --muted: #9ca3af;
+    --bg: #fafbfc;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --accent: #0a84ff;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-hover: 0 2px 6px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.10);
+    --radius: 18px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO ============================================================= */
+  header.hero {
+    text-align: center;
+    padding: 96px 24px 64px;
+    background: radial-gradient(ellipse at top, rgba(10,132,255,0.06), transparent 60%);
+  }
+  header.hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  header.hero p.tagline {
+    font-size: 19px;
+    color: var(--ink-2);
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    header.hero { padding: 64px 24px 48px; }
+    header.hero h1 { font-size: 40px; letter-spacing: -1px; }
+    header.hero p.tagline { font-size: 17px; }
+  }
+
+  /* SECTION HEADERS ================================================== */
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  /* APPS GRID ======================================================== */
+  section.apps { padding: 32px 0 64px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .app-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .app-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .app-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  }
+
+  .app-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 6px;
+  }
+
+  .app-card .subtitle {
+    color: var(--ink-2);
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .app-card p.description {
+    color: var(--ink-2);
+    font-size: 15px;
+    flex-grow: 1;
+    margin-bottom: 24px;
+  }
+
+  .app-card .links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: white;
+  }
+  .btn-primary:hover { background: #000; }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: var(--bg); }
+
+  /* ABOUT ============================================================ */
+  section.about {
+    padding: 48px 0 96px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+  section.about h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  section.about p {
+    color: var(--ink-2);
+    font-size: 16px;
+    max-width: 600px;
+  }
+  section.about a { color: var(--accent); text-decoration: none; }
+  section.about a:hover { text-decoration: underline; }
+
+  /* FOOTER =========================================================== */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--ink-2); margin: 0 6px; text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>NAE Dev</h1>
+    <p class="tagline">Independent iOS apps from Nejat Erdal. Clean utilities built for the App Store.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="apps">
+    <div class="section-label">Apps</div>
+    <div class="grid">
+
+      <!-- ============ BELLEK ============ -->
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="bellek app icon">
+        <h2>bellek</h2>
+        <div class="subtitle">Memory utility</div>
+        <p class="description">
+          <!-- TODO: replace with your real bellek description -->
+          A clean, focused memory companion for iOS. Available on the App Store.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Open in App Store</a>
+          <a class="btn btn-secondary" href="bellek/">Learn more</a>
+        </div>
+      </article>
+
+      <!-- ============ RASGELE ============ -->
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="rasgele app icon">
+        <h2>rasgele</h2>
+        <div class="subtitle">Random Generator</div>
+        <p class="description">
+          A simple, fast random generator for numbers, letters, names, dice, and lottery.
+          Available in 6 languages. No accounts, no clutter.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Open in App Store</a>
+          <a class="btn btn-secondary" href="rasgele/">Learn more</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <h3>About</h3>
+    <p>
+      Solo iOS developer based in Turkey. Building small, well-crafted utility apps
+      designed to do one thing well. Reach out at
+      <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Nejat Erdal &middot;
+  <a href="bellek/">bellek</a> &middot;
+  <a href="rasgele/">rasgele</a> &middot;
+  <a href="mailto:nae_dev@icloud.com">Contact</a>
+</footer>
+
+</body>
+</html>
