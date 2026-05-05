@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YapBoz — A classic sliding puzzle, beautifully illustrated</title>
+<meta name="description" content="YapBoz is a modern take on the classic 15-tile sliding puzzle. Multiple frames, three difficulties, masterpieces from Vermeer, Klimt, Bruegel, Rousseau, Osman Hamdi, plus playful kid-friendly puzzles. Available in English, Turkish, German, Spanish, Italian, French.">
+<style>
+  :root {
+    --brand: #F0A040;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+  header { text-align: center; padding: 64px 24px 32px; }
+  .logo {
+    width: 96px; height: 96px; border-radius: 22px;
+    display: inline-block;
+    box-shadow: 0 6px 24px rgba(240, 160, 64, 0.30);
+  }
+  h1 { font-size: 28px; font-weight: 600; margin: 16px 0 4px; letter-spacing: 0.5px; }
+  .tagline { color: var(--muted); margin: 0 0 32px; font-size: 16px; }
+  .badge {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--ink);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    margin: 8px;
+  }
+  .badge.outline {
+    background: white;
+    color: var(--ink);
+    border: 1px solid #e5e7eb;
+  }
+  section { padding: 24px 0; border-top: 1px solid #e5e7eb; }
+  section h2 { font-size: 20px; font-weight: 600; margin-top: 0; }
+  ul { padding-left: 20px; }
+  ul li { margin: 6px 0; }
+  .langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+  .langs span {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
 
+<header>
+  <img class="logo" src="YapBoz-icon.png" alt="YapBoz app icon" width="96" height="96">
+  <h1>YapBoz</h1>
+  <p class="tagline">The classic sliding puzzle, beautifully illustrated.</p>
+  <a class="badge" href="#">Download on the App Store</a>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>What is YapBoz?</h2>
+    <p>YapBoz (Turkish for "puzzle") is a modern take on the classic sliding-tile puzzle. Slide pieces toward the empty slot — one at a time, or a whole row at once — to recreate the picture.</p>
+    <p>Choose from beautifully illustrated puzzles spanning museum masterpieces and playful kid-friendly artwork. Pair any picture with the frame style you like — vintage wood, beveled wood, blue gingham — in three difficulty levels.</p>
+    <p>No accounts, no tracking, no clutter. Just open it and play.</p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>Square (3×3, 4×4, 5×5) and portrait (3×4, 4×5, 5×6) puzzles</li>
+      <li>Multiple frame styles, including a vintage hand-photographed board</li>
+      <li>Single-tile and full-row sliding mechanics</li>
+      <li>Light, dark, and system appearance</li>
+      <li>Six languages — English, Turkish, German, Spanish, Italian, French</li>
+      <li>Universal app for iPhone and iPad</li>
+      <li>No personalized ads, no tracking</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="langs">
+      <span>English</span>
+      <span>Türkçe</span>
+      <span>Deutsch</span>
+      <span>Español</span>
+      <span>Italiano</span>
+      <span>Français</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>More</h2>
+    <p>
+      <a class="badge outline" href="support.html">Support</a>
+      <a class="badge outline" href="privacy-policy.html">Privacy Policy</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 nae-dev &middot;
+  <a href="support.html">Support</a> &middot;
+  <a href="privacy-policy.html">Privacy</a>
+</footer>
+
+</body>
+</html>
