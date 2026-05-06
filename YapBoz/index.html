@@ -3,121 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YapBoz — A classic sliding puzzle, beautifully illustrated</title>
-<meta name="description" content="YapBoz is a modern take on the classic 15-tile sliding puzzle. Multiple frames, three difficulties, masterpieces from Vermeer, Klimt, Bruegel, Rousseau, Osman Hamdi, plus playful kid-friendly puzzles. Available in English, Turkish, German, Spanish, Italian, French.">
+<title>NAE Dev — iOS & Mac apps</title>
+<meta name="description" content="Clean utilities and games built for the App Store.">
+<meta name="theme-color" content="#1a1a1a">
+<link rel="icon" type="image/png" href="nae.png?v=2">
+<link rel="apple-touch-icon" href="nae.png">
 <style>
   :root {
-    --brand: #F0A040;
     --ink: #1a1a1a;
-    --muted: #6b7280;
-    --bg: #f8f9fa;
+    --ink-2: #4b5563;
+    --muted: #9ca3af;
+    --bg: #fafbfc;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --accent: #0a84ff;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    --shadow-hover: 0 2px 6px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.10);
+    --radius: 18px;
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
     color: var(--ink);
     background: var(--bg);
     line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-  header { text-align: center; padding: 64px 24px 32px; }
-  .logo {
-    width: 96px; height: 96px; border-radius: 22px;
-    display: inline-block;
-    box-shadow: 0 6px 24px rgba(240, 160, 64, 0.30);
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO ============================================================= */
+  header.hero {
+    text-align: center;
+    padding: 96px 24px 64px;
+    background: radial-gradient(ellipse at top, rgba(10,132,255,0.06), transparent 60%);
   }
-  h1 { font-size: 28px; font-weight: 600; margin: 16px 0 4px; letter-spacing: 0.5px; }
-  .tagline { color: var(--muted); margin: 0 0 32px; font-size: 16px; }
-  .badge {
-    display: inline-block;
-    padding: 12px 24px;
+  header.hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  header.hero p.tagline {
+    font-size: 19px;
+    color: var(--ink-2);
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    header.hero { padding: 64px 24px 48px; }
+    header.hero h1 { font-size: 40px; letter-spacing: -1px; }
+    header.hero p.tagline { font-size: 17px; }
+  }
+
+  /* SECTION HEADERS ================================================== */
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  /* APPS GRID ======================================================== */
+  section.apps { padding: 32px 0 64px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .app-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .app-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .app-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  }
+
+  .app-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 6px;
+  }
+
+  .app-card .subtitle {
+    color: var(--ink-2);
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .app-card p.description {
+    color: var(--ink-2);
+    font-size: 15px;
+    flex-grow: 1;
+    margin-bottom: 24px;
+  }
+
+  .app-card .links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .btn-primary {
     background: var(--ink);
     color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: 500;
-    margin: 8px;
   }
-  .badge.outline {
-    background: white;
+  .btn-primary:hover { background: #000; }
+  .btn-secondary {
+    background: transparent;
     color: var(--ink);
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
   }
-  section { padding: 24px 0; border-top: 1px solid #e5e7eb; }
-  section h2 { font-size: 20px; font-weight: 600; margin-top: 0; }
-  ul { padding-left: 20px; }
-  ul li { margin: 6px 0; }
-  .langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
-  .langs span {
-    background: white;
-    border: 1px solid #e5e7eb;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 13px;
+  .btn-secondary:hover { background: var(--bg); }
+
+  /* ABOUT ============================================================ */
+  section.about {
+    padding: 48px 0 96px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+  section.about h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  section.about p {
+    color: var(--ink-2);
+    font-size: 16px;
+    max-width: 600px;
+  }
+  section.about a { color: var(--accent); text-decoration: none; }
+  section.about a:hover { text-decoration: underline; }
+
+  /* FOOTER =========================================================== */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
     color: var(--muted);
+    font-size: 13px;
   }
-  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
-  footer a { color: var(--muted); margin: 0 8px; }
+  footer a { color: var(--ink-2); margin: 0 6px; text-decoration: none; }
+  footer a:hover { color: var(--ink); }
 </style>
 </head>
 <body>
 
-<header>
-  <img class="logo" src="YapBoz-icon.png" alt="YapBoz app icon" width="96" height="96">
-  <h1>YapBoz</h1>
-  <p class="tagline">The classic sliding puzzle, beautifully illustrated.</p>
-  <a class="badge" href="#">Download on the App Store</a>
+<header class="hero">
+  <div class="wrap">
+    <h1>NAE Dev</h1>
+    <p class="tagline">mobile apps </p>
+  </div>
 </header>
 
 <div class="wrap">
 
-  <section>
-    <h2>What is YapBoz?</h2>
-    <p>YapBoz (Turkish for "puzzle") is a modern take on the classic sliding-tile puzzle. Slide pieces toward the empty slot — one at a time, or a whole row at once — to recreate the picture.</p>
-    <p>Choose from beautifully illustrated puzzles spanning museum masterpieces and playful kid-friendly artwork. Pair any picture with the frame style you like — vintage wood, beveled wood, blue gingham — in three difficulty levels.</p>
-    <p>No accounts, no tracking, no clutter. Just open it and play.</p>
-  </section>
+  <section class="apps">
+    <div class="section-label">Apps</div>
+    <div class="grid">
 
-  <section>
-    <h2>Features</h2>
-    <ul>
-      <li>Square (3×3, 4×4, 5×5) and portrait (3×4, 4×5, 5×6) puzzles</li>
-      <li>Multiple frame styles, including a vintage hand-photographed board</li>
-      <li>Single-tile and full-row sliding mechanics</li>
-      <li>Light, dark, and system appearance</li>
-      <li>Six languages — English, Turkish, German, Spanish, Italian, French</li>
-      <li>Universal app for iPhone and iPad</li>
-      <li>No personalized ads, no tracking</li>
-    </ul>
-  </section>
+      <!-- ============ BELLEK ============ -->
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="bellek app icon">
+        <h2>bellek</h2>
+        <div class="subtitle">Memory utility</div>
+        <p class="description">
+          <!-- TODO: replace with your real bellek description -->
+          Memory game with card pairs for iOS. Available on the App Store.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Open in App Store</a>
+          <a class="btn btn-secondary" href="bellek/support.html">Learn more</a>
+        </div>
+      </article>
 
-  <section>
-    <h2>Languages</h2>
-    <div class="langs">
-      <span>English</span>
-      <span>Türkçe</span>
-      <span>Deutsch</span>
-      <span>Español</span>
-      <span>Italiano</span>
-      <span>Français</span>
+      <!-- ============ RASGELE ============ -->
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="rasgele app icon">
+        <h2>rasgele</h2>
+        <div class="subtitle">Random Generator</div>
+        <p class="description">
+          A simple, fast random generator for numbers, letters, names, dice, and lottery.
+          Available in 6 languages. No accounts, no clutter.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Open in App Store</a>
+          <a class="btn btn-secondary" href="rasgele/">Learn more</a>
+        </div>
+      </article>
+
+      <!-- ============ YAPBOZ ============ -->
+      <article class="app-card">
+        <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="YapBoz app icon">
+        <h2>YapBoz</h2>
+        <div class="subtitle">Sliding puzzle</div>
+        <p class="description">
+          The classic sliding-tile puzzle, beautifully illustrated.
+          Museum masterpieces and kid-friendly art across multiple frames and three difficulty levels.
+          Available in 6 languages.
+        </p>
+        <div class="links">
+          <a class="btn btn-primary" href="#">Open in App Store</a>
+          <a class="btn btn-secondary" href="YapBoz/">Learn more</a>
+        </div>
+      </article>
+
     </div>
   </section>
 
-  <section>
-    <h2>More</h2>
+  <section class="about">
+    <h3>About</h3>
     <p>
-      <a class="badge outline" href="support.html">Support</a>
-      <a class="badge outline" href="privacy-policy.html">Privacy Policy</a>
+      A software house building small, well-crafted mobile apps. Reach out at
+      <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.
     </p>
   </section>
 
 </div>
 
 <footer>
-  &copy; 2026 nae-dev &middot;
-  <a href="support.html">Support</a> &middot;
-  <a href="privacy-policy.html">Privacy</a>
+  &copy; 2026 NAE Dev &middot;
+  <a href="bellek/">bellek</a> &middot;
+  <a href="rasgele/">rasgele</a> &middot;
+  <a href="YapBoz/">YapBoz</a> &middot;
+  <a href="mailto:nae_dev@icloud.com">Contact</a>
 </footer>
 
 </body>
