@@ -72,24 +72,29 @@
     <li>Your selected appearance (System / Light / Dark)</li>
     <li>Your selected frame and puzzle picture</li>
     <li>Your selected difficulty</li>
-    <li>The list of frames and puzzles you have unlocked via rewarded ads</li>
+    <li>Your in-progress tile arrangement, so you can resume mid-puzzle after closing the app</li>
+    <li>Your puzzles-solved counter, used internally to time an optional review prompt</li>
   </ul>
   <p>None of this is transmitted to us or to any third party.</p>
 
   <h3>Third-party services</h3>
-  <p><b>Google AdMob</b> — YapBoz displays a banner ad and short rewarded ads (used to unlock additional puzzles or frames) via Google's Mobile Ads SDK. We request <b>non-personalized ads only</b> — no IDFA, no cross-app tracking, no advertising profile. AdMob still receives basic non-identifying signals (approximate region from IP, ad-interaction events, basic device info such as model and OS version) used purely to deliver and measure the contextual ad. This data is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+  <p><b>Google AdMob</b> — YapBoz displays a banner ad and short rewarded ads (used to unlock additional puzzles or frames for the duration of the current selection) via Google's Mobile Ads SDK. We request <b>non-personalized ads only</b> — no IDFA, no cross-app tracking, no advertising profile. AdMob still receives basic non-identifying signals (approximate region from IP, ad-interaction events, basic device info such as model and OS version) used purely to deliver and measure the contextual ad. This data is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
   <p><b>Apple App Store / StoreKit</b> — when YapBoz adds in-app purchases (planned for a future version), Apple processes the transaction. We will receive only an entitlement flag indicating your device has access; Apple holds the purchase record. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
   <h3>No App Tracking Transparency prompt</h3>
   <p>YapBoz does not show iOS's "App Tracking Transparency" prompt, because we do not track you. The advertising SDK is configured to request non-personalized ads only, which removes the need to ask for tracking permission.</p>
+
+  <h3>Consent for ad serving (regulated regions)</h3>
+  <p>Even though all our ads are non-personalized, the EU/UK/Switzerland and several US privacy states (California, Colorado, Connecticut, Utah, Virginia) require an explicit consent surface before any ad serving. If you launch YapBoz from one of those regions, Google's User Messaging Platform (UMP) presents a one-time consent form on first launch. You can change or revoke your choice at any time from <b>Settings → Manage privacy choices</b>. Outside those regions, no consent form is shown and the Settings row is hidden.</p>
 
   <h3>Children's privacy</h3>
   <p>YapBoz is suitable for all ages and does not knowingly collect data from children. AdMob serves non-personalized ads only, which is the most privacy-respecting setting for any audience including children. The app is rated for general audiences on the App Store.</p>
 
   <h3>Your choices</h3>
   <ul>
-    <li>Delete the app — all locally-stored preferences and unlock state are removed.</li>
-    <li>Turn off Wi-Fi and cellular data — banner and rewarded ads will not load; the app remains fully playable for already-unlocked content.</li>
+    <li>Delete the app — all locally-stored preferences are removed.</li>
+    <li>Turn off Wi-Fi and cellular data — ads will not load; the app remains fully playable, and locked frames and pictures are still selectable since the rewarded gate falls open when no ad is available.</li>
+    <li>If you live in a regulated region, open <b>Settings → Manage privacy choices</b> to change or withdraw your ad consent at any time.</li>
   </ul>
 
   <h3>Changes to this policy</h3>
@@ -114,24 +119,29 @@
     <li>Seçili görünüm (Sistem / Açık / Koyu)</li>
     <li>Seçili çerçeve ve bulmaca resmi</li>
     <li>Seçili zorluk seviyesi</li>
-    <li>Ödüllü reklamlarla açtığın çerçevelerin ve bulmacaların listesi</li>
+    <li>Devam eden bulmaca düzenin (uygulamayı kapatıp tekrar açtığında kaldığın yerden devam edebilirsin)</li>
+    <li>Çözdüğün bulmaca sayısı (uygulama içinde opsiyonel bir değerlendirme isteğinin zamanlaması için kullanılır)</li>
   </ul>
   <p>Bunların hiçbiri bize veya üçüncü taraflara gönderilmez.</p>
 
   <h3>Üçüncü taraf hizmetler</h3>
-  <p><b>Google AdMob</b> — YapBoz, Google Mobile Ads SDK'sı üzerinden bir banner reklam ve kısa ödüllü reklamlar (ek bulmaca veya çerçeve açmak için) gösterir. Yalnızca <b>kişiselleştirilmemiş reklam</b> isteriz — IDFA yok, uygulamalar arası takip yok, reklam profili yok. AdMob, yalnızca bağlamsal reklamı sunmak ve ölçmek için temel kimliksiz sinyalleri (IP'den çıkarılan yaklaşık bölge, reklam etkileşim olayları, model ve iOS sürümü gibi cihaz bilgileri) almaya devam eder. Bu veriler <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> altındadır.</p>
+  <p><b>Google AdMob</b> — YapBoz, Google Mobile Ads SDK'sı üzerinden bir banner reklam ve kısa ödüllü reklamlar (geçerli seçim süresince ek bulmaca veya çerçeve açmak için) gösterir. Yalnızca <b>kişiselleştirilmemiş reklam</b> isteriz — IDFA yok, uygulamalar arası takip yok, reklam profili yok. AdMob, yalnızca bağlamsal reklamı sunmak ve ölçmek için temel kimliksiz sinyalleri (IP'den çıkarılan yaklaşık bölge, reklam etkileşim olayları, model ve iOS sürümü gibi cihaz bilgileri) almaya devam eder. Bu veriler <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> altındadır.</p>
   <p><b>Apple App Store / StoreKit</b> — YapBoz uygulama içi satın alma eklediğinde (gelecekteki bir sürüm için planlanmıştır), işlemi Apple yapar. Biz yalnızca cihazın erişim hakkı olduğunu gösteren bir bayrak alırız; satın alma kaydı Apple'da kalır. <a href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</a>.</p>
 
   <h3>Uygulama Takibi Şeffaflığı (ATT) istemi yok</h3>
   <p>YapBoz iOS'un "Uygulama Takibi Şeffaflığı" istemini göstermez, çünkü seni takip etmiyoruz. Reklam SDK'sı yalnızca kişiselleştirilmemiş reklam isteyecek şekilde yapılandırılmıştır; bu nedenle takip izni isteme gereği yoktur.</p>
+
+  <h3>Reklam sunumu için onay (düzenlemeli bölgeler)</h3>
+  <p>Tüm reklamlarımız kişiselleştirilmemiş olsa da AB / Birleşik Krallık / İsviçre ve bazı ABD gizlilik eyaletleri (California, Colorado, Connecticut, Utah, Virginia) herhangi bir reklam sunumundan önce açık bir onay yüzeyi gerektirir. Bu bölgelerden YapBoz'u başlatırsan, ilk açılışta Google'ın Kullanıcı Mesajlaşma Platformu (UMP) tek seferlik bir onay formu gösterir. Tercihini istediğin zaman <b>Ayarlar → Gizlilik tercihlerini yönet</b> üzerinden değiştirebilir veya geri alabilirsin. Bu bölgelerin dışında onay formu gösterilmez ve Ayarlar satırı gizlenir.</p>
 
   <h3>Çocukların gizliliği</h3>
   <p>YapBoz her yaş için uygundur ve bilerek çocuklardan veri toplamaz. AdMob yalnızca kişiselleştirilmemiş reklamlar sunar — bu, çocuklar dahil her kitle için en gizliliğe saygılı ayardır. Uygulama, App Store'da genel kitleye yöneliktir.</p>
 
   <h3>Tercihlerin</h3>
   <ul>
-    <li>Uygulamayı sil — yerel olarak saklanan tüm tercihler ve açma durumu kaldırılır.</li>
-    <li>Wi-Fi ve hücresel veriyi kapat — banner ve ödüllü reklamlar yüklenmez; zaten açılmış içerikler oynanmaya devam eder.</li>
+    <li>Uygulamayı sil — yerel olarak saklanan tüm tercihler kaldırılır.</li>
+    <li>Wi-Fi ve hücresel veriyi kapat — reklamlar yüklenmez; uygulama oynanabilir kalır ve hiçbir reklam yüklenemediğinde ödüllü kapı "açık başarısızlık" davranışıyla geçtiği için kilitli çerçeveler ile resimler de seçilebilir olur.</li>
+    <li>Düzenlemeli bir bölgede yaşıyorsan, reklam onayını istediğin zaman değiştirmek veya geri almak için <b>Ayarlar → Gizlilik tercihlerini yönet</b> bölümünü aç.</li>
   </ul>
 
   <h3>Politika güncellemeleri</h3>
@@ -156,24 +166,29 @@
     <li>Gewähltes Erscheinungsbild (System / Hell / Dunkel)</li>
     <li>Gewählter Rahmen und Puzzle-Bild</li>
     <li>Gewählte Schwierigkeit</li>
-    <li>Liste der Rahmen und Puzzles, die du per belohntem Werbespot freigeschaltet hast</li>
+    <li>Deine laufende Puzzle-Anordnung, damit du nach dem Schließen der App fortsetzen kannst</li>
+    <li>Deine Anzahl gelöster Puzzles, intern verwendet, um eine optionale Bewertungsanfrage zeitlich zu steuern</li>
   </ul>
   <p>Nichts davon wird an uns oder Dritte übertragen.</p>
 
   <h3>Drittanbieterdienste</h3>
-  <p><b>Google AdMob</b> — YapBoz zeigt einen Banner und kurze belohnte Werbespots (zum Freischalten zusätzlicher Puzzles oder Rahmen) über das Google Mobile Ads SDK. Wir fordern <b>ausschließlich nicht-personalisierte Werbung</b> an — keine IDFA, kein App-übergreifendes Tracking, kein Werbeprofil. AdMob erhält weiterhin grundlegende nicht-identifizierende Signale (aus der IP abgeleitete ungefähre Region, Werbe-Interaktionsereignisse, Geräteinformationen wie Modell und iOS-Version), die ausschließlich zur Auslieferung und Messung der kontextuellen Werbung dienen. Diese Daten unterliegen der <a href="https://policies.google.com/privacy">Google-Datenschutzerklärung</a>.</p>
+  <p><b>Google AdMob</b> — YapBoz zeigt einen Banner und kurze belohnte Werbespots (zum Freischalten zusätzlicher Puzzles oder Rahmen für die Dauer der aktuellen Auswahl) über das Google Mobile Ads SDK. Wir fordern <b>ausschließlich nicht-personalisierte Werbung</b> an — keine IDFA, kein App-übergreifendes Tracking, kein Werbeprofil. AdMob erhält weiterhin grundlegende nicht-identifizierende Signale (aus der IP abgeleitete ungefähre Region, Werbe-Interaktionsereignisse, Geräteinformationen wie Modell und iOS-Version), die ausschließlich zur Auslieferung und Messung der kontextuellen Werbung dienen. Diese Daten unterliegen der <a href="https://policies.google.com/privacy">Google-Datenschutzerklärung</a>.</p>
   <p><b>Apple App Store / StoreKit</b> — wenn YapBoz In-App-Käufe einführt (für eine spätere Version geplant), wickelt Apple die Transaktion ab. Wir erhalten nur ein Berechtigungsflag, dass dein Gerät Zugriff hat; den Kaufdatensatz behält Apple. Siehe <a href="https://www.apple.com/legal/privacy/">Apple-Datenschutzerklärung</a>.</p>
 
   <h3>Keine App-Tracking-Transparenz-Anfrage</h3>
   <p>YapBoz zeigt die iOS-„App-Tracking-Transparenz"-Anfrage nicht, weil wir dich nicht verfolgen. Das Werbe-SDK ist so konfiguriert, dass es ausschließlich nicht-personalisierte Werbung anfordert; eine Tracking-Erlaubnis muss daher nicht eingeholt werden.</p>
+
+  <h3>Einwilligung zur Werbeauslieferung (regulierte Regionen)</h3>
+  <p>Obwohl alle unsere Werbung nicht-personalisiert ist, verlangen die EU/UK/Schweiz und einige US-Datenschutzstaaten (Kalifornien, Colorado, Connecticut, Utah, Virginia) eine ausdrückliche Einwilligungsoberfläche vor jeder Werbeauslieferung. Wenn du YapBoz aus einer dieser Regionen startest, zeigt Googles User Messaging Platform (UMP) beim ersten Start eine einmalige Einwilligungsabfrage. Du kannst deine Wahl jederzeit unter <b>Einstellungen → Datenschutzeinstellungen verwalten</b> ändern oder widerrufen. Außerhalb dieser Regionen wird keine Einwilligungsabfrage gezeigt und die Einstellungs-Zeile ist ausgeblendet.</p>
 
   <h3>Datenschutz für Kinder</h3>
   <p>YapBoz ist für alle Altersgruppen geeignet und sammelt wissentlich keine Daten von Kindern. AdMob liefert ausschließlich nicht-personalisierte Werbung — die datenschutzfreundlichste Einstellung für jedes Publikum, einschließlich Kinder. Die App ist im App Store für ein allgemeines Publikum eingestuft.</p>
 
   <h3>Deine Optionen</h3>
   <ul>
-    <li>App löschen — alle lokal gespeicherten Einstellungen und der Freischaltstatus werden entfernt.</li>
-    <li>WLAN und Mobilfunk ausschalten — Banner und belohnte Werbung laden nicht; bereits freigeschaltete Inhalte bleiben spielbar.</li>
+    <li>App löschen — alle lokal gespeicherten Einstellungen werden entfernt.</li>
+    <li>WLAN und Mobilfunk ausschalten — Werbung wird nicht geladen; die App bleibt voll spielbar, und gesperrte Rahmen sowie Bilder bleiben auswählbar, da der belohnte Werbe-Gate „fail-open" passiert, wenn keine Werbung verfügbar ist.</li>
+    <li>Wenn du in einer regulierten Region lebst, öffne <b>Einstellungen → Datenschutzeinstellungen verwalten</b>, um deine Werbe-Einwilligung jederzeit zu ändern oder zu widerrufen.</li>
   </ul>
 
   <h3>Änderungen dieser Richtlinie</h3>
@@ -198,24 +213,29 @@
     <li>La apariencia seleccionada (Sistema / Claro / Oscuro)</li>
     <li>El marco y la imagen del puzle seleccionados</li>
     <li>La dificultad seleccionada</li>
-    <li>La lista de marcos y puzles que has desbloqueado mediante anuncios recompensados</li>
+    <li>Tu disposición de puzle en curso, para que puedas retomarla tras cerrar la app</li>
+    <li>Tu contador de puzles resueltos, uso interno para programar una solicitud opcional de valoración</li>
   </ul>
   <p>Nada de esto se transmite a nosotros ni a terceros.</p>
 
   <h3>Servicios de terceros</h3>
-  <p><b>Google AdMob</b> — YapBoz muestra un banner y anuncios recompensados cortos (para desbloquear puzles o marcos adicionales) a través del SDK de Google Mobile Ads. Solicitamos <b>únicamente anuncios no personalizados</b> — sin IDFA, sin seguimiento entre apps, sin perfil publicitario. AdMob aún recibe señales básicas no identificativas (región aproximada por IP, eventos de interacción con anuncios, datos básicos del dispositivo como modelo y versión de iOS) usadas solo para entregar y medir el anuncio contextual. Estos datos se rigen por la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.</p>
+  <p><b>Google AdMob</b> — YapBoz muestra un banner y anuncios recompensados cortos (para desbloquear puzles o marcos adicionales durante la selección actual) a través del SDK de Google Mobile Ads. Solicitamos <b>únicamente anuncios no personalizados</b> — sin IDFA, sin seguimiento entre apps, sin perfil publicitario. AdMob aún recibe señales básicas no identificativas (región aproximada por IP, eventos de interacción con anuncios, datos básicos del dispositivo como modelo y versión de iOS) usadas solo para entregar y medir el anuncio contextual. Estos datos se rigen por la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.</p>
   <p><b>Apple App Store / StoreKit</b> — cuando YapBoz incorpore compras dentro de la app (planificadas para una versión futura), Apple procesará la transacción. Solo recibiremos una bandera de acceso indicando que tu dispositivo tiene el derecho; el registro de compra lo conserva Apple. Ver <a href="https://www.apple.com/legal/privacy/">Política de Privacidad de Apple</a>.</p>
 
   <h3>Sin solicitud de App Tracking Transparency</h3>
   <p>YapBoz no muestra el aviso de "Transparencia en el Seguimiento de Apps" de iOS, porque no te rastreamos. El SDK publicitario está configurado para solicitar únicamente anuncios no personalizados; por lo tanto, no es necesario pedir permiso de rastreo.</p>
+
+  <h3>Consentimiento para la publicación de anuncios (regiones reguladas)</h3>
+  <p>Aunque todos nuestros anuncios son no personalizados, la UE/Reino Unido/Suiza y varios estados de EE. UU. con leyes de privacidad (California, Colorado, Connecticut, Utah, Virginia) exigen una superficie de consentimiento explícita antes de cualquier publicación de anuncios. Si abres YapBoz desde una de esas regiones, la User Messaging Platform (UMP) de Google muestra un formulario de consentimiento único en el primer inicio. Puedes cambiar o revocar tu elección en cualquier momento desde <b>Ajustes → Gestionar opciones de privacidad</b>. Fuera de esas regiones no se muestra ningún formulario y la fila de Ajustes está oculta.</p>
 
   <h3>Privacidad de los menores</h3>
   <p>YapBoz es apta para todas las edades y no recopila conscientemente datos de menores. AdMob sirve únicamente anuncios no personalizados — el ajuste más respetuoso con la privacidad para cualquier público, incluidos los menores. La app está clasificada para público general en la App Store.</p>
 
   <h3>Tus opciones</h3>
   <ul>
-    <li>Eliminar la app — se borran todas las preferencias guardadas localmente y el estado de desbloqueo.</li>
-    <li>Desactivar Wi-Fi y datos móviles — los banners y los anuncios recompensados no cargarán; el contenido ya desbloqueado sigue siendo jugable.</li>
+    <li>Eliminar la app — se borran todas las preferencias guardadas localmente.</li>
+    <li>Desactivar Wi-Fi y datos móviles — los anuncios no cargarán; la app sigue siendo totalmente jugable, y los marcos e imágenes bloqueados continúan siendo seleccionables porque la "compuerta" del anuncio recompensado se abre cuando no hay anuncio disponible.</li>
+    <li>Si vives en una región regulada, abre <b>Ajustes → Gestionar opciones de privacidad</b> para cambiar o retirar tu consentimiento publicitario en cualquier momento.</li>
   </ul>
 
   <h3>Cambios a esta política</h3>
@@ -240,24 +260,29 @@
     <li>L'aspetto selezionato (Sistema / Chiaro / Scuro)</li>
     <li>La cornice e l'immagine del puzzle selezionate</li>
     <li>La difficoltà selezionata</li>
-    <li>L'elenco delle cornici e dei puzzle che hai sbloccato con annunci con ricompensa</li>
+    <li>La tua configurazione di puzzle in corso, così puoi riprendere dopo aver chiuso l'app</li>
+    <li>Il tuo conteggio di puzzle risolti, uso interno per programmare una richiesta opzionale di valutazione</li>
   </ul>
   <p>Nulla di tutto ciò viene trasmesso a noi o a terzi.</p>
 
   <h3>Servizi di terzi</h3>
-  <p><b>Google AdMob</b> — YapBoz mostra un banner e brevi annunci con ricompensa (per sbloccare puzzle o cornici aggiuntive) tramite il Google Mobile Ads SDK. Richiediamo <b>solo annunci non personalizzati</b> — niente IDFA, niente tracciamento tra app, niente profilo pubblicitario. AdMob riceve comunque segnali di base non identificativi (regione approssimativa dall'IP, eventi di interazione con gli annunci, informazioni di base sul dispositivo come modello e versione di iOS) usati solo per consegnare e misurare l'annuncio contestuale. Questi dati sono regolati dall'<a href="https://policies.google.com/privacy">Informativa sulla privacy di Google</a>.</p>
+  <p><b>Google AdMob</b> — YapBoz mostra un banner e brevi annunci con ricompensa (per sbloccare puzzle o cornici aggiuntive per la durata della selezione corrente) tramite il Google Mobile Ads SDK. Richiediamo <b>solo annunci non personalizzati</b> — niente IDFA, niente tracciamento tra app, niente profilo pubblicitario. AdMob riceve comunque segnali di base non identificativi (regione approssimativa dall'IP, eventi di interazione con gli annunci, informazioni di base sul dispositivo come modello e versione di iOS) usati solo per consegnare e misurare l'annuncio contestuale. Questi dati sono regolati dall'<a href="https://policies.google.com/privacy">Informativa sulla privacy di Google</a>.</p>
   <p><b>Apple App Store / StoreKit</b> — quando YapBoz aggiungerà acquisti in-app (previsti per una versione futura), Apple gestirà la transazione. Riceveremo solo un'indicazione di autorizzazione che il tuo dispositivo ha l'accesso; Apple conserva il record di acquisto. Vedi <a href="https://www.apple.com/legal/privacy/">Informativa sulla privacy di Apple</a>.</p>
 
   <h3>Nessuna richiesta di App Tracking Transparency</h3>
   <p>YapBoz non mostra la richiesta "Trasparenza tracciamento app" di iOS, perché non ti tracciamo. L'SDK pubblicitario è configurato per richiedere solo annunci non personalizzati; quindi non serve chiedere il permesso di tracciamento.</p>
+
+  <h3>Consenso per la pubblicazione di annunci (regioni regolamentate)</h3>
+  <p>Anche se tutti i nostri annunci sono non personalizzati, UE / Regno Unito / Svizzera e alcuni stati USA con normative sulla privacy (California, Colorado, Connecticut, Utah, Virginia) richiedono una superficie di consenso esplicita prima di qualsiasi pubblicazione di annunci. Se avvii YapBoz da una di queste regioni, la User Messaging Platform (UMP) di Google presenta un modulo di consenso una tantum al primo avvio. Puoi modificare o revocare la tua scelta in qualunque momento da <b>Impostazioni → Gestisci scelte sulla privacy</b>. Al di fuori di queste regioni, nessun modulo viene mostrato e la riga in Impostazioni è nascosta.</p>
 
   <h3>Privacy dei minori</h3>
   <p>YapBoz è adatta a tutte le età e non raccoglie consapevolmente dati dai minori. AdMob serve solo annunci non personalizzati — l'impostazione più rispettosa della privacy per qualsiasi pubblico, inclusi i minori. L'app è classificata per pubblico generale sull'App Store.</p>
 
   <h3>Le tue scelte</h3>
   <ul>
-    <li>Eliminare l'app — vengono rimosse tutte le preferenze salvate localmente e lo stato di sblocco.</li>
-    <li>Disattivare Wi-Fi e dati cellulari — banner e annunci con ricompensa non si caricano; i contenuti già sbloccati rimangono giocabili.</li>
+    <li>Eliminare l'app — vengono rimosse tutte le preferenze salvate localmente.</li>
+    <li>Disattivare Wi-Fi e dati cellulari — gli annunci non si caricano; l'app rimane completamente giocabile e cornici e immagini bloccate rimangono selezionabili perché il gate dell'annuncio con ricompensa "fallisce in apertura" quando non c'è inventario disponibile.</li>
+    <li>Se vivi in una regione regolamentata, apri <b>Impostazioni → Gestisci scelte sulla privacy</b> per modificare o ritirare il tuo consenso pubblicitario in qualunque momento.</li>
   </ul>
 
   <h3>Modifiche alla policy</h3>
@@ -282,24 +307,29 @@
     <li>L'apparence sélectionnée (Système / Clair / Sombre)</li>
     <li>Le cadre et l'image de puzzle sélectionnés</li>
     <li>La difficulté sélectionnée</li>
-    <li>La liste des cadres et puzzles déverrouillés via des publicités récompensées</li>
+    <li>Votre disposition de puzzle en cours, pour reprendre après la fermeture de l'app</li>
+    <li>Votre compteur de puzzles résolus, usage interne pour programmer une demande optionnelle d'évaluation</li>
   </ul>
   <p>Rien de tout cela n'est transmis à nous ou à des tiers.</p>
 
   <h3>Services tiers</h3>
-  <p><b>Google AdMob</b> — YapBoz affiche une bannière et de courtes publicités récompensées (pour déverrouiller des puzzles ou des cadres supplémentaires) via le SDK Google Mobile Ads. Nous demandons <b>uniquement des publicités non personnalisées</b> — pas d'IDFA, pas de suivi inter-applications, pas de profil publicitaire. AdMob reçoit toujours des signaux de base non identifiants (région approximative dérivée de l'IP, événements d'interaction avec les annonces, informations basiques sur l'appareil comme modèle et version d'iOS) utilisés uniquement pour diffuser et mesurer la publicité contextuelle. Ces données sont régies par la <a href="https://policies.google.com/privacy">Politique de confidentialité de Google</a>.</p>
+  <p><b>Google AdMob</b> — YapBoz affiche une bannière et de courtes publicités récompensées (pour déverrouiller des puzzles ou des cadres supplémentaires pendant la sélection en cours) via le SDK Google Mobile Ads. Nous demandons <b>uniquement des publicités non personnalisées</b> — pas d'IDFA, pas de suivi inter-applications, pas de profil publicitaire. AdMob reçoit toujours des signaux de base non identifiants (région approximative dérivée de l'IP, événements d'interaction avec les annonces, informations basiques sur l'appareil comme modèle et version d'iOS) utilisés uniquement pour diffuser et mesurer la publicité contextuelle. Ces données sont régies par la <a href="https://policies.google.com/privacy">Politique de confidentialité de Google</a>.</p>
   <p><b>Apple App Store / StoreKit</b> — lorsque YapBoz ajoutera des achats intégrés (prévu pour une version future), Apple traitera la transaction. Nous ne recevrons qu'un indicateur d'autorisation indiquant que votre appareil a l'accès ; Apple conserve l'enregistrement d'achat. Voir <a href="https://www.apple.com/legal/privacy/">Politique de confidentialité d'Apple</a>.</p>
 
   <h3>Pas de demande App Tracking Transparency</h3>
   <p>YapBoz n'affiche pas la demande « Transparence du suivi des apps » d'iOS, parce que nous ne vous suivons pas. Le SDK publicitaire est configuré pour ne demander que des publicités non personnalisées ; il n'est donc pas nécessaire de solliciter une permission de suivi.</p>
+
+  <h3>Consentement pour la diffusion publicitaire (régions réglementées)</h3>
+  <p>Bien que toutes nos publicités soient non personnalisées, l'UE / le Royaume-Uni / la Suisse et plusieurs États américains avec des lois sur la vie privée (Californie, Colorado, Connecticut, Utah, Virginie) exigent une interface de consentement explicite avant toute diffusion publicitaire. Si vous lancez YapBoz depuis l'une de ces régions, la User Messaging Platform (UMP) de Google présente un formulaire de consentement unique au premier lancement. Vous pouvez modifier ou retirer votre choix à tout moment depuis <b>Réglages → Gérer les choix de confidentialité</b>. En dehors de ces régions, aucun formulaire n'est présenté et la ligne Réglages est masquée.</p>
 
   <h3>Vie privée des enfants</h3>
   <p>YapBoz convient à tous les âges et ne collecte sciemment aucune donnée auprès des enfants. AdMob ne diffuse que des publicités non personnalisées — le réglage le plus respectueux de la vie privée pour tout public, y compris les enfants. L'app est classée tout public sur l'App Store.</p>
 
   <h3>Vos choix</h3>
   <ul>
-    <li>Supprimer l'application — toutes les préférences stockées localement et l'état de déverrouillage sont supprimés.</li>
-    <li>Désactiver Wi-Fi et données cellulaires — les bannières et publicités récompensées ne se chargent pas ; les contenus déjà déverrouillés restent jouables.</li>
+    <li>Supprimer l'application — toutes les préférences stockées localement sont supprimées.</li>
+    <li>Désactiver Wi-Fi et données cellulaires — les publicités ne se chargent pas ; l'app reste pleinement jouable, et les cadres et images verrouillés restent sélectionnables car la « porte » de la publicité récompensée s'ouvre par défaut quand aucune publicité n'est disponible.</li>
+    <li>Si vous vivez dans une région réglementée, ouvrez <b>Réglages → Gérer les choix de confidentialité</b> pour modifier ou retirer votre consentement publicitaire à tout moment.</li>
   </ul>
 
   <h3>Modifications de cette politique</h3>
