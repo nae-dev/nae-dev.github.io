@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>paylash — User Guide</title>
+<style>
+  :root {
+    --brand: #0a84ff;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+    --border: #e5e7eb;
+    --accent-bg: #eef6ff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px; }
+  header.page-head { background: white; border-bottom: 1px solid var(--border); padding: 16px 24px; }
+  header.page-head h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  .updated { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  nav.lang { position: sticky; top: 0; background: white; border-bottom: 1px solid var(--border); padding: 12px 24px; z-index: 10; overflow-x: auto; white-space: nowrap; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin-right: 4px; border-radius: 6px; font-size: 14px; }
+  nav.lang a:hover { background: var(--bg); }
+  section.lang-section { padding: 32px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 60px; }
+  section.lang-section:last-of-type { border-bottom: none; }
+  h2 { font-size: 24px; font-weight: 600; margin-top: 0; }
+  h3 { font-size: 19px; font-weight: 600; margin: 32px 0 8px; padding-top: 8px; scroll-margin-top: 60px; }
+  h4 { font-size: 16px; font-weight: 600; margin: 20px 0 4px; }
+  p { margin: 8px 0 12px; }
+  ul, ol { padding-left: 22px; }
+  ul li, ol li { margin: 6px 0; }
+  a { color: var(--brand); }
+  .toc { background: var(--accent-bg); border: 1px solid #c7e0fa; border-radius: 10px; padding: 16px 20px; margin: 16px 0 32px; }
+  .toc h4 { margin: 0 0 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); }
+  .toc ul { list-style: none; padding-left: 0; columns: 2; column-gap: 24px; margin: 0; }
+  .toc li { margin: 4px 0; break-inside: avoid; }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  @media (max-width: 600px) { .toc ul { columns: 1; } }
+  .tip { background: white; border-left: 3px solid var(--brand); padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+  .tip b { color: var(--brand); }
+  .placeholder { background: #fff8e1; border: 1px dashed #f0c674; border-radius: 8px; padding: 12px; color: #7a6500; font-size: 14px; }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <h1>paylash · User Guide</h1>
+  <div class="updated">Last updated: 2 June 2026</div>
+</header>
+
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
+  <h2>English</h2>
+
+  <p>This guide walks through every feature of paylash, from the no-account bill splitter to managing a group across multiple devices. It's organized by what you'd do as a user, not by app structure — so feel free to jump straight to the section you need.</p>
+
+  <div class="toc">
+    <h4>Contents</h4>
+    <ul>
+      <li><a href="#bill-splitter">The bill splitter</a></li>
+      <li><a href="#itemized-split">Itemized split & OCR</a></li>
+      <li><a href="#restricted-participation">Restricted participation</a></li>
+      <li><a href="#going-premium">Going premium</a></li>
+      <li><a href="#creating-groups">Creating groups</a></li>
+      <li><a href="#inviting-members">Inviting members</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#adding-expenses">Adding expenses</a></li>
+      <li><a href="#event-locking">Locking & settlement</a></li>
+      <li><a href="#sharing">Sharing reports</a></li>
+      <li><a href="#cross-device">Multiple devices & web</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#settings">Settings & account</a></li>
+    </ul>
+  </div>
+
+  <h3 id="bill-splitter">The bill splitter (no account needed)</h3>
+  <p>The Expense tab is paylash's simplest tool. You won't need an account, internet, or anything else.</p>
+  <ol>
+    <li>Open the <b>Expense</b> tab.</li>
+    <li>Enter the bill amount.</li>
+    <li>Set the number of people splitting it.</li>
+    <li>Optionally pick a tip percentage (5%, 10%, 15%, 20%, 30%) or enter a custom tip.</li>
+    <li>The result card shows each person's share. Tap the share button to send it via Messages, email, or any other app.</li>
+  </ol>
+  <p>If only some people ordered an extra item, see <a href="#restricted-participation">Restricted participation</a>.</p>
+
+  <h3 id="itemized-split">Itemized split & receipt OCR</h3>
+  <p>The Itemized tab is for when an even split isn't fair — different people had different things. paylash calculates who pays what based on which items each person had.</p>
+  <ol>
+    <li>Open the <b>Itemized</b> tab.</li>
+    <li>Tap the <b>camera icon</b> at the top to scan a receipt, or enter line items manually.</li>
+    <li>For each line item, assign the people who had it. Tap a person's avatar to toggle them in or out.</li>
+    <li>Add a tip if needed (percentage of the bill, or a custom amount).</li>
+    <li>The per-person total appears at the bottom. Tap any person to see what they had.</li>
+    <li>Tap share to send the breakdown.</li>
+  </ol>
+  <div class="tip"><b>About OCR:</b> the receipt scan uses Apple's Vision framework — all processing happens on your device, no image is uploaded. It works best with printed receipts in good light. Hand-write the line items if OCR misses anything; corrections take seconds.</div>
+
+  <h3 id="restricted-participation">Restricted participation (the "exception" toggle)</h3>
+  <p>The most powerful (and least obvious) feature of the bill splitter. Use it when an item on the bill was only had by some of the people present.</p>
+  <p><b>Example</b>: Five friends have dinner. The total is <b>₺5,000</b>. Two of them also shared a <b>₺2,000</b> bottle of wine on top of the meal. You don't want to split the wine across all five.</p>
+  <ol>
+    <li>Enter the full amount: <b>₺5,000</b>.</li>
+    <li>Set people to <b>5</b>.</li>
+    <li>Turn on the <b>Restricted Participation</b> toggle.</li>
+    <li>Set the exception amount to <b>₺2,000</b> (the wine).</li>
+    <li>Set "how many had it" to <b>2</b>.</li>
+  </ol>
+  <p>paylash calculates two shares:</p>
+  <ul>
+    <li>The <b>2 people with extra</b> pay: their share of the ₺3,000 meal + the full ₺2,000 / 2 (their wine).</li>
+    <li>The <b>3 people without extra</b> pay: only their share of the ₺3,000 meal.</li>
+  </ul>
+  <p>The result card shows both amounts side-by-side. The tip (if any) is added proportionally.</p>
+
+  <h3 id="going-premium">Going premium</h3>
+  <p>The bill splitter is permanently free. The Groups tab — where you share expenses, manage events, and track settlement — requires a premium subscription.</p>
+  <p><b>What premium unlocks</b>:</p>
+  <ul>
+    <li>Creating and joining shared groups across iPhone, iPad, Mac, and the web</li>
+    <li>Organising events within a group</li>
+    <li>Adding shared expenses with multiple split styles</li>
+    <li>Lockable events with auto-calculated settlement plans</li>
+    <li>PDF and text report sharing</li>
+    <li>Push notifications when group activity changes</li>
+    <li>No ads anywhere in the app</li>
+  </ul>
+  <p><b>How to subscribe</b>: tap the Groups tab if you haven't, or Settings → "Upgrade to paylash premium". Both lead to the same paywall, showing a 7-day free trial on the monthly plan or a discounted annual plan.</p>
+  <p><b>How to manage your subscription</b>: Settings → "paylash premium active" → opens Apple's Manage Subscriptions sheet, where you can cancel, switch between monthly and annual, or reactivate after a lapse. Apple processes everything; we receive only an entitlement flag.</p>
+
+  <h3 id="creating-groups">Creating a group</h3>
+  <p>Once premium is active, the Groups tab opens with your list of groups (empty on first use).</p>
+  <ol>
+    <li>Tap the <b>+</b> button at the top.</li>
+    <li>Enter a group name (e.g., "Berlin trip", "Friday dinner crew", "Roommates").</li>
+    <li>Pick an emoji or initial-letter avatar for the group.</li>
+    <li>Optionally add a description (visible to all members).</li>
+    <li>Tap Save.</li>
+  </ol>
+  <p>You're now the group's first <b>admin</b>. Admins can edit the group, manage members, and unlock locked events. Regular members can add expenses but not change group settings.</p>
+
+  <h3 id="inviting-members">Inviting members</h3>
+  <p>Every group has <b>member slots</b>. When you create a group, only one slot exists (yours). Add more for each person you want to include.</p>
+  <ol>
+    <li>Open the group, tap the member roster.</li>
+    <li>Tap <b>+ Add member</b>.</li>
+    <li>Enter the person's nickname (how they'll appear in the group).</li>
+    <li>Save. The slot now exists but is <b>unclaimed</b> — no real user yet.</li>
+    <li>Tap the gear icon next to the unclaimed slot. paylash generates a short invite code valid for 30 days.</li>
+    <li>Share the code or the universal link via any chat app, email, or SMS.</li>
+  </ol>
+  <p>When the recipient opens the link on iOS (or pastes the code into Groups → "I have a code"), they claim that slot. Their nickname and expenses are now tied to your slot, not a duplicate.</p>
+  <p><b>If they don't have paylash yet</b>: the link routes them to the App Store first, then back into the redemption flow after install.</p>
+  <p><b>If they don't have premium</b>: the gate sheet shows them what's needed. The invite code stays valid the whole 30 days — they have time to subscribe.</p>
+
+  <h3 id="events">Events</h3>
+  <p>Events sit inside a group and bundle expenses by occasion. A group called "Berlin trip" might have events for "Restaurant night", "Museum entries", and "Taxi rides".</p>
+  <ol>
+    <li>Inside a group, tap <b>+ Add event</b>.</li>
+    <li>Name the event (e.g., "Restaurant night").</li>
+    <li>Pick an emoji avatar.</li>
+    <li>Optionally set start and end dates.</li>
+    <li>Pick which group members participate (default: all members).</li>
+    <li>Save.</li>
+  </ol>
+  <p>Only event participants appear in the per-person settlement at the end. If three of five friends went to the museum, only those three are part of that event's expenses and settlement.</p>
+
+  <h3 id="adding-expenses">Adding expenses to an event</h3>
+  <p>Inside an event, tap <b>+ Add expense</b>. You'll see three split modes:</p>
+  <ul>
+    <li><b>Equal split</b> — divide evenly among event participants. Set name, amount, and who paid.</li>
+    <li><b>Restricted participation</b> — same as the bill splitter's exception toggle. Some participants pay more for an extra item.</li>
+    <li><b>Itemized</b> — line items with per-person assignment, same as the Itemized tab. Use OCR if you have a receipt photo.</li>
+  </ul>
+  <p>Common fields on every expense:</p>
+  <ul>
+    <li><b>Name</b> — the expense's label (e.g., "Hotel night 1", "Lunch").</li>
+    <li><b>Amount</b> — total including tip and any line items.</li>
+    <li><b>Paid by</b> — which member fronted the cost.</li>
+    <li><b>Date</b> — when the expense happened.</li>
+    <li><b>Avatar</b> — emoji or initials to mark it on the list.</li>
+  </ul>
+  <p><b>Who can edit?</b> The expense creator, the payer, the event creator, and any group admin can edit or delete an expense. Other members see it but can't change it. Lock the event to freeze all expenses against further edits.</p>
+
+  <h3 id="event-locking">Locking an event & settlement</h3>
+  <p>When all expenses are entered and the event is "complete" (the trip is over, the night is settled, etc.), lock it.</p>
+  <ol>
+    <li>Open the event.</li>
+    <li>Scroll to the total card at the top.</li>
+    <li>Tap the <b>lock icon</b>.</li>
+    <li>Confirm.</li>
+  </ol>
+  <p>Locking does three things:</p>
+  <ul>
+    <li>Freezes all expenses — no one can add, edit, or delete them.</li>
+    <li>Reveals the <b>Settlement</b> view — a list of "X owes Y €Z" transactions.</li>
+    <li>Enables sharing as PDF or text.</li>
+  </ul>
+  <p>The settlement plan calculates the minimum set of payments needed to clear all debts. Example: if A owes B €10, B owes C €15, and C owes A €5, paylash collapses this to a single transaction (e.g., A → C: €5 and B → C: €10) instead of three round-trip payments.</p>
+  <p>As members pay each other, mark each settlement transaction <b>complete</b> in the Settlement view. When every transaction is done, the event is fully resolved.</p>
+  <p><b>Unlocking</b>: any admin can unlock an event to add a missed expense or fix an error. Unlocking discards the current settlement plan; locking again recalculates it from the updated expenses.</p>
+
+  <h3 id="sharing">Sharing reports</h3>
+  <p>From any locked event, tap the share icon in the header. paylash offers three formats:</p>
+  <ul>
+    <li><b>PDF</b> — multi-page report with per-member balances, the settlement transactions, and per-expense detail. Suitable for emailing, archiving, or printing.</li>
+    <li><b>Text</b> — plain-text summary of who-owes-whom. Best for chat apps. Includes the event name, the total, and each settlement transaction.</li>
+    <li><b>Text + PDF</b> — sends both as one share payload.</li>
+  </ul>
+  <p>Sharing works from any device signed into the group — iPhone, iPad, or Mac. The web app provides read-only access but doesn't currently generate PDF or text shares (use a phone/iPad/Mac for that).</p>
+
+  <h3 id="cross-device">Multiple devices & the web</h3>
+  <p>Sign in with the same email + password on any number of devices. Your groups, events, and expenses sync in real time — add an expense on your Mac and it appears on your iPad seconds later.</p>
+  <p><b>The web app</b> at <a href="https://paylash-fffac.web.app">paylash-fffac.web.app</a> provides a read-only view of all your groups. Useful when you don't have an Apple device handy. You can browse groups, see events and expenses, but you can't edit or add anything from the web — for that, use iOS or macOS.</p>
+
+  <h3 id="notifications">Notifications</h3>
+  <p>When premium is active, paylash sends push notifications for activity in your groups: new expenses, settlement marks, members added or removed, event locks. Each notification deep-links to the relevant screen — tap to jump straight to the new expense or the updated event.</p>
+  <p><b>Permission</b>: on first sign-in, iOS asks for notification permission. You can change this later under iOS Settings → paylash → Notifications.</p>
+  <p><b>Language</b>: notifications arrive in your selected app language (Settings → Language). This is per-user, so different members of the same group can receive notifications in different languages from the same event.</p>
+  <p><b>Quietness</b>: paylash never sends marketing notifications, never sends "you haven't opened the app in X days" prompts. Push is reserved for things that actually happened in your groups.</p>
+
+  <h3 id="settings">Settings & account</h3>
+  <p>The Settings tab gives you:</p>
+  <ul>
+    <li><b>Profile</b> (premium only) — your nickname, optional first/last name, optional avatar. Visible to group members.</li>
+    <li><b>Language</b> — pick from English, Turkish, German, Spanish, Italian, French. Applies instantly app-wide.</li>
+    <li><b>Appearance</b> — System, Light, or Dark.</li>
+    <li><b>Default currency</b> — the currency new expenses default to. You can change per-expense.</li>
+    <li><b>Premium row</b> — upgrade if you're not premium; manage subscription if you are.</li>
+    <li><b>About</b> — version info plus links to this guide, privacy policy, and support.</li>
+  </ul>
+  <p><b>Account deletion</b>: Profile → Delete Account removes your profile + the groups you own. Expenses you contributed to groups still owned by others may remain — they're part of those groups' financial history. Deletion is permanent; there's no undo.</p>
+
+  <p>That's the whole app. If something is unclear or you find a feature behaving unexpectedly, email <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> — we read every message.</p>
+</section>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <h2>Türkçe</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <h2>Deutsch</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <h2>Español</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <h2>Italiano</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <h2>Français</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2026 NAE Dev &middot;
+  <a href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy</a> &middot;
+  <a href="https://nae-dev.github.io/paylash/support.html">Support</a> &middot;
+  <a href="https://nae-dev.github.io">More apps</a> &middot;
+  <a href="mailto:nae_dev@icloud.com">Contact</a>
+</footer>
+
+</body>
+</html>

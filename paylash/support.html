@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>paylash — Support</title>
+<style>
+  :root {
+    --brand: #0a84ff;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px; }
+  header.page-head { background: white; border-bottom: 1px solid var(--border); padding: 16px 24px; }
+  header.page-head h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  .updated { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  nav.lang { position: sticky; top: 0; background: white; border-bottom: 1px solid var(--border); padding: 12px 24px; z-index: 10; overflow-x: auto; white-space: nowrap; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin-right: 4px; border-radius: 6px; font-size: 14px; }
+  nav.lang a:hover { background: var(--bg); }
+  section.lang-section { padding: 32px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 60px; }
+  section.lang-section:last-of-type { border-bottom: none; }
+  h2 { font-size: 24px; font-weight: 600; margin-top: 0; }
+  h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin: 8px 0 12px; }
+  ul { padding-left: 22px; }
+  ul li { margin: 4px 0; }
+  a { color: var(--brand); }
+  details { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin: 8px 0; }
+  details summary { cursor: pointer; font-weight: 500; outline: none; }
+  details[open] summary { margin-bottom: 8px; }
+  details p:last-child { margin-bottom: 0; }
+  .contact { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-top: 24px; }
+  .placeholder { background: #fff8e1; border: 1px dashed #f0c674; border-radius: 8px; padding: 12px; color: #7a6500; font-size: 14px; }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <h1>paylash · Support</h1>
+  <div class="updated">Last updated: 2 June 2026</div>
+</header>
+
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
+  <h2>English</h2>
+
+  <h3>About paylash</h3>
+  <p>paylash is an expense-splitting app for iPhone, iPad, Mac, and the web. Use the bill splitter on your own with no account, or subscribe to premium to manage shared groups, events, and expenses with friends.</p>
+  <p>For a full walkthrough of every feature, see the <a href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a>. For privacy questions, see the <a href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy Policy</a>.</p>
+
+  <h3>Quick start</h3>
+  <p><b>Free use, no account</b>: open the Expense or Itemized tab and start splitting a bill immediately. Nothing is saved to the cloud; the calculation lives only on your device.</p>
+  <p><b>Premium use, shared groups</b>: tap the Groups tab. Sign in with an email and password, verify the email, then either create your own group or redeem an invite code from a friend.</p>
+
+  <h3>Frequently asked questions</h3>
+
+  <details><summary>Do I need an account to split a bill?</summary>
+  <p>No. The Expense tab (single split) and the Itemized tab (per-line-item split with optional receipt OCR) work entirely without an account. Open the app and start using them. Nothing is sent or stored.</p></details>
+
+  <details><summary>What does the premium subscription unlock?</summary>
+  <p>The Groups tab. Specifically: creating and joining groups, organising events within a group, adding shared expenses, generating settlement plans, sharing PDF and text reports of locked events, push notifications when group activity changes, and ad removal across the app. The bill splitter (Expense + Itemized tabs) remains free regardless of subscription.</p></details>
+
+  <details><summary>How do I sign up?</summary>
+  <p>Tap the Groups tab if you haven't yet. The paywall appears. Tap Start free trial or Subscribe. After purchase, enter an email and password to create your account. paylash sends a verification email — tap the link in that email, then return to the app and tap "I've verified". Your account is ready.</p></details>
+
+  <details><summary>The verification email didn't arrive. What now?</summary>
+  <p>Check your spam folder first — verification mail from Firebase is sometimes filtered. If it's not there, return to the verification screen in paylash and tap "Resend verification email". The new mail will arrive within a minute. If repeated resends fail, your email provider may be rejecting Firebase delivery — try signing up with a different email address.</p></details>
+
+  <details><summary>How do I invite friends to a group?</summary>
+  <p>Inside the group, tap the member roster, then the gear icon next to an unclaimed slot. paylash generates a short invite code valid for 30 days. Share the code (or the universal link it generates) by message, email, or any chat app. Your friend opens the link on iOS (or pastes the code into paylash → Groups → "I have a code") and joins the slot you set aside for them.</p></details>
+
+  <details><summary>What is "restricted participation" on an expense?</summary>
+  <p>It's the toggle that splits an expense unevenly when only some members ordered the extra item. Example: a group of 5 has dinner for ₺3,000, but 2 of them also ordered ₺2,000 of wine on top. Turn on Restricted Participation, set the exception amount to ₺2,000 and "how many had it" to 2 — paylash automatically calculates that those 2 people pay more, while the other 3 pay only their share of the base ₺3,000. See the <a href="https://nae-dev.github.io/paylash/user-guide.html#restricted-participation">User Guide</a> for the math.</p></details>
+
+  <details><summary>How does the OCR receipt scanner work?</summary>
+  <p>In the Itemized tab, tap the camera icon at the top. Photograph the receipt. paylash extracts the line items and prices using Apple's Vision framework — all processing happens on your device, no upload. Review the extracted items, fix anything that came out wrong, and assign each item to specific people in the roster. No account or premium needed.</p></details>
+
+  <details><summary>What happens when I lock an event?</summary>
+  <p>Locking an event freezes all expenses inside it — no one can add, edit, or delete expenses anymore — and reveals the settlement plan. The settlement plan calculates who owes whom and tries to minimise the number of payments needed to close out all debts. Locking is reversible: any admin can unlock the event to add corrections.</p></details>
+
+  <details><summary>How do I share the settlement?</summary>
+  <p>Once an event is locked, tap the share icon in the event header. You can share as a PDF report (multi-page, includes per-member balances + the settlement transactions + per-expense detail) or as a plain-text summary (good for chat apps). Both formats include enough detail that members can verify everything without re-opening the app.</p></details>
+
+  <details><summary>How do I cancel my subscription?</summary>
+  <p>Settings → "paylash premium active" → opens Apple's Manage Subscriptions sheet. From there you can cancel, downgrade from annual to monthly, or upgrade. Cancellation keeps your access until the end of the current billing period — you don't lose features immediately.</p></details>
+
+  <details><summary>How do I delete my account?</summary>
+  <p>Settings → Profile → Delete Account. paylash asks for confirmation, then removes your profile and the groups you own. Expenses you contributed to groups owned by other people may be retained — the financial history belongs to the group, not just to you. Account deletion is permanent and cannot be undone.</p></details>
+
+  <details><summary>I'm not getting push notifications</summary>
+  <p>Three things to check. (1) iOS Settings → paylash → Notifications: confirm "Allow Notifications" is on. (2) Inside paylash → Settings → confirm you're signed in and your account is active. (3) Send a test from your iPad or Mac signed into the same account — if those receive notifications, the iPhone-side delivery is the issue and toggling "Allow Notifications" off-then-on usually clears it. macOS notifications can be delayed by several minutes when the app is fully backgrounded; this is a known macOS behaviour, not a paylash bug.</p></details>
+
+  <details><summary>Can I use paylash on multiple devices?</summary>
+  <p>Yes — that's the design. Sign in with the same email on iPhone, iPad, and Mac. Your groups, events, and expenses sync in real time. The web app at paylash-fffac.web.app provides read-only access from any browser using the same credentials — useful when you don't have an Apple device handy.</p></details>
+
+  <details><summary>Does paylash work offline?</summary>
+  <p>The free bill splitter (Expense + Itemized tabs) works fully offline. The Groups feature requires a connection — without one, you can still view cached data but can't add or sync new expenses until you reconnect.</p></details>
+
+  <details><summary>Is paylash available on Android?</summary>
+  <p>Not in v1. The web app (paylash-fffac.web.app) provides read-only access from any device including Android. An Android client is on the v2 roadmap but not committed.</p></details>
+
+  <details><summary>Is my data private?</summary>
+  <p>Yes. We never sell, rent, or share your data with advertisers. The free-tier banner ad shows non-personalized ads only — no advertising profile is built. Read the full <a href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy Policy</a> for the complete breakdown of what we collect and why.</p></details>
+
+  <div class="contact">
+    <p><b>Need more help?</b><br>
+    Email <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> with your device model, iOS version, account email (if relevant), and a clear description of what you saw vs what you expected. We reply within a couple of days, usually faster.</p>
+  </div>
+</section>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <h2>Türkçe</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <h2>Deutsch</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <h2>Español</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <h2>Italiano</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <h2>Français</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2026 NAE Dev &middot;
+  <a href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy</a> &middot;
+  <a href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a> &middot;
+  <a href="https://nae-dev.github.io">More apps</a> &middot;
+  <a href="mailto:nae_dev@icloud.com">Contact</a>
+</footer>
+
+</body>
+</html>

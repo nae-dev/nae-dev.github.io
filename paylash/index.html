@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>paylash — Split bills with friends, on every device</title>
+<meta name="description" content="paylash splits bills, tracks group expenses, and settles trips fairly across iPhone, iPad, Mac, and the web. OCR receipts, locked events, PDF reports. Available in 6 languages.">
+<style>
+  :root {
+    --brand: #0a84ff;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+  header { text-align: center; padding: 64px 24px 32px; }
+  .logo {
+    width: 96px; height: 96px; border-radius: 22px;
+    display: inline-block;
+    box-shadow: 0 6px 24px rgba(10, 132, 255, 0.25);
+  }
+  h1 { font-size: 28px; font-weight: 600; margin: 16px 0 4px; letter-spacing: 0.5px; }
+  .tagline { color: var(--muted); margin: 0 0 32px; font-size: 16px; }
+  .badge {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--ink);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    margin: 8px;
+  }
+  .badge.outline {
+    background: white;
+    color: var(--ink);
+    border: 1px solid #e5e7eb;
+  }
+  section { padding: 24px 0; border-top: 1px solid #e5e7eb; }
+  section h2 { font-size: 20px; font-weight: 600; margin-top: 0; }
+  ul { padding-left: 20px; }
+  ul li { margin: 6px 0; }
+  .langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+  .langs span {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="paylash-icon.png" alt="paylash app icon" width="96" height="96">
+  <h1>paylash</h1>
+  <p class="tagline">Split bills with friends, across iPhone, iPad, Mac, and the web.</p>
+  <a class="badge" href="https://apps.apple.com/app/id6767579860">Download on the App Store</a>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>What is paylash?</h2>
+    <p>paylash is a bill-splitting app for iPhone, iPad, Mac, and the web. Split a single bill on your own with no account, or share groups and expenses with friends through a premium subscription.</p>
+    <p>Scan receipts with the built-in OCR. Handle uneven splits where only some people had extra items. Lock events to freeze their state and generate clean settlement plans. Share results as PDF or plain text. View read-only from any browser.</p>
+    <p>No tracking, no personalised ads, no email spam.</p>
+  </section>
+
+  <section>
+    <h2>Free, no account needed</h2>
+    <ul>
+      <li>Quick bill splitter with tip presets (5–30%) and a custom tip option</li>
+      <li>Restricted-participation toggle for when only some people had an extra item</li>
+      <li>Itemized split — assign each receipt line to specific people</li>
+      <li>Receipt OCR — Apple Vision framework, all on-device, nothing uploaded</li>
+      <li>Local-only — works offline, no signup, no signin</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Premium features</h2>
+    <ul>
+      <li>Shared groups across iPhone, iPad, Mac, and the web — real-time sync</li>
+      <li>Events organise expenses by trip, night, or occasion</li>
+      <li>Multiple split styles per expense — equal, restricted, itemized</li>
+      <li>Lockable events with auto-calculated settlement plans (minimum payments)</li>
+      <li>PDF and text settlement reports</li>
+      <li>Push notifications when groups change</li>
+      <li>No ads anywhere in the app</li>
+      <li>7-day free trial on monthly subscription</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="langs">
+      <span>English</span>
+      <span>Türkçe</span>
+      <span>Deutsch</span>
+      <span>Español</span>
+      <span>Italiano</span>
+      <span>Français</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>More</h2>
+    <p>
+      <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a>
+      <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Support</a>
+      <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy Policy</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 NAE Dev &middot;
+  <a href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a> &middot;
+  <a href="https://nae-dev.github.io/paylash/support.html">Support</a> &middot;
+  <a href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy</a> &middot;
+  <a href="https://nae-dev.github.io">More apps</a>
+</footer>
+
+</body>
+</html>

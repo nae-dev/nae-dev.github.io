@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>paylash — Privacy Policy</title>
+<style>
+  :root {
+    --brand: #0a84ff;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px; }
+  header.page-head { background: white; border-bottom: 1px solid var(--border); padding: 16px 24px; }
+  header.page-head h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  .updated { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  nav.lang { position: sticky; top: 0; background: white; border-bottom: 1px solid var(--border); padding: 12px 24px; z-index: 10; overflow-x: auto; white-space: nowrap; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin-right: 4px; border-radius: 6px; font-size: 14px; }
+  nav.lang a:hover { background: var(--bg); }
+  section.lang-section { padding: 32px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 60px; }
+  section.lang-section:last-of-type { border-bottom: none; }
+  h2 { font-size: 24px; font-weight: 600; margin-top: 0; }
+  h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin: 8px 0 12px; }
+  ul { padding-left: 22px; }
+  ul li { margin: 4px 0; }
+  a { color: var(--brand); }
+  .contact { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-top: 16px; }
+  .placeholder { background: #fff8e1; border: 1px dashed #f0c674; border-radius: 8px; padding: 12px; color: #7a6500; font-size: 14px; }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <h1>paylash · Privacy Policy</h1>
+  <div class="updated">Last updated: 2 June 2026</div>
+</header>
+
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
+  <h2>English</h2>
+
+  <h3>Summary</h3>
+  <p>paylash lets you split bills on your own and — if you subscribe to premium — share groups and expenses with friends across iPhone, iPad, Mac, and the web. This page explains exactly what we collect, why, and what control you have.</p>
+  <p><b>The short version</b>: the bill splitter and itemized split work entirely on your device and require no account. Everything else (groups, events, shared expenses) needs an account, and the data you create there is stored in Google Firebase so your devices and your group members can see it. We never sell your data. We never run ads that profile you.</p>
+
+  <h3>Who is responsible</h3>
+  <p>paylash is built and operated by <b>NAE Dev</b>. For privacy questions, write to <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. We are the data controller for the personal data described below.</p>
+
+  <h3>If you only use the bill splitter</h3>
+  <p>The Expense tab and the Itemized tab (the bill splitter, OCR receipt scan, per-person split) work without signing in. All input — amounts, people counts, line items, the receipt photo if you attach one — stays on your device. We don't transmit or store any of it.</p>
+  <p>For free-tier users on the Expense and Itemized tabs, paylash also shows a non-personalized banner ad. See "Advertising" below.</p>
+
+  <h3>If you create an account and use Groups</h3>
+  <p>The Groups tab requires a paid premium subscription. When you subscribe and sign up, we process the following personal data:</p>
+  <ul>
+    <li><b>Email address</b> — used as your account identifier, for sign-in, for email verification, and for password reset. We send no marketing email.</li>
+    <li><b>Password</b> — handled by Firebase Authentication. We never see your password; it is hashed and stored by Google on our behalf.</li>
+    <li><b>Profile</b> — an optional nickname, first name, last name, and an avatar (emoji or initials). You choose what to provide. The nickname is visible to other members of any group you join; the names and avatar are visible inside the app on your devices.</li>
+    <li><b>Preferred language</b> — the language you pick in Settings, mirrored to your account so notifications arrive in your language.</li>
+    <li><b>Premium subscription state</b> — whether your subscription is active and when it expires. This is mirrored from Apple's StoreKit so other devices you sign in to can see your premium status without re-checking the App Store.</li>
+    <li><b>Push notification tokens</b> — issued by Apple for each device you've enabled notifications on. We use them to deliver notifications about your groups.</li>
+    <li><b>Groups, events, expenses, settlements you create</b> — your user-generated content. Stored in Firebase Firestore, visible to other members of the same group or event.</li>
+    <li><b>Activity metadata</b> — timestamps and the user ID of who last updated a group, event, or expense, so the app can show "you" vs "another member" attribution.</li>
+  </ul>
+
+  <h3>How we use your data</h3>
+  <p>Each category above has a single, specific purpose tied directly to the feature it powers — we don't reuse data for unrelated purposes. We do not build advertising profiles. We do not sell, rent, or share your personal data with third parties for their own marketing.</p>
+  <p>Our legal bases for processing (under EU/UK GDPR):</p>
+  <ul>
+    <li><b>Performance of a contract</b> (Art. 6(1)(b)) — account creation, sign-in, syncing your groups across your devices, delivering notifications you've opted into, processing the premium subscription.</li>
+    <li><b>Legitimate interests</b> (Art. 6(1)(f)) — keeping the service running and secure (e.g., rate-limiting abuse, cleaning up unverified accounts), debugging crashes, basic analytics through Firebase that don't profile individuals.</li>
+    <li><b>Consent</b> (Art. 6(1)(a)) — non-personalized advertising on free-tier surfaces, where consent is required by EU/UK/Swiss law or by certain US state laws. You can change or withdraw consent at any time.</li>
+  </ul>
+
+  <h3>What stays only on your device</h3>
+  <ul>
+    <li>Your appearance preference (System / Light / Dark)</li>
+    <li>Your default currency</li>
+    <li>Your in-progress bill in the Expense and Itemized tabs (so you can return mid-edit)</li>
+    <li>Any receipt photo you attach (uploaded to the group's expense only when you save; not before)</li>
+  </ul>
+
+  <h3>Who else processes your data</h3>
+  <p>We rely on a small set of trusted infrastructure providers. Each has its own privacy policy linked below.</p>
+  <ul>
+    <li><b>Google Firebase</b> (Google LLC) — Authentication, Firestore database, Cloud Functions, and Cloud Messaging for push delivery. Data is stored in Google's US data centers (us-central1) and processed under Google's standard contractual clauses for international transfers. <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a>.</li>
+    <li><b>Apple</b> — handles your in-app purchase as the merchant of record. Apple processes the subscription, holds the payment record, and sends us only an entitlement signal indicating whether your account is currently premium. Apple also delivers our push notifications (APNs). <a href="https://www.apple.com/legal/privacy/">Apple Privacy</a>.</li>
+    <li><b>Google AdMob</b> — serves a single banner ad on the free-tier Expense and Itemized tabs. We request <b>non-personalized ads only</b> — no advertising identifier (IDFA), no cross-app tracking, no advertising profile of you. AdMob receives basic non-identifying signals (approximate region from IP, ad-interaction events, device model and OS version) used purely to deliver and measure the contextual ad. <a href="https://policies.google.com/privacy">Google Privacy</a>.</li>
+    <li><b>Frankfurter</b> (frankfurter.app) — used only when you display amounts in a currency different from the expense's source currency. We send the currency codes (e.g., "EUR,TRY") and never any identifier, account data, or amount.</li>
+  </ul>
+
+  <h3>International data transfers</h3>
+  <p>Firebase stores your account and group data on Google Cloud servers in the United States. If you are in the EU/UK/Switzerland, your data is transferred to the United States. Google operates under the EU Standard Contractual Clauses (SCCs) for these transfers. By creating an account you acknowledge this transfer; if you'd prefer your data not leave the EU, you cannot currently use the Groups feature of paylash.</p>
+
+  <h3>Your rights</h3>
+  <p>If you are in the EU/UK/Switzerland, GDPR gives you the following rights. Equivalent rights exist for residents of California (CCPA/CPRA), Colorado, Connecticut, Utah, and Virginia. We honor all of them regardless of where you live.</p>
+  <ul>
+    <li><b>Access</b> — see what we have. Most of it is visible in the app itself; for a machine-readable export, email us.</li>
+    <li><b>Rectification</b> — fix it. Edit your profile and your expenses through the app. For account email changes, contact support.</li>
+    <li><b>Erasure</b> — delete it. Go to Settings → Profile → Delete Account. Your account and all owned groups, events, and expenses are removed. Expenses you contributed to a group still owned by other members may be retained without your identifying details, since other members rely on the financial history.</li>
+    <li><b>Portability</b> — get a copy. Email <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> and we'll provide a JSON export within 30 days.</li>
+    <li><b>Restriction & objection</b> — request that we pause specific processing or object to it. Email support.</li>
+    <li><b>Withdraw consent</b> — for AdMob ads in regulated regions, open Settings → Manage privacy choices. Withdrawal does not affect processing before the withdrawal.</li>
+    <li><b>Complaint</b> — you have the right to lodge a complaint with your local data protection authority.</li>
+  </ul>
+
+  <h3>Data retention</h3>
+  <p>We keep your data while your account is active. Unverified accounts created with no follow-up are automatically deleted after 7 days. When you delete your account, we remove your profile and the groups you own. Expenses you contributed to groups owned by other people may be retained — they're part of the group's financial history — but your identifying details are stripped where feasible. Backup snapshots of Firestore may persist briefly after deletion under Google's standard retention.</p>
+
+  <h3>Children's privacy</h3>
+  <p>paylash is not directed at children under 13. We do not knowingly collect data from anyone under 13. The App Store rating reflects the app's intended audience. If you believe we've inadvertently collected data from a child, email us and we'll remove it.</p>
+
+  <h3>App Tracking Transparency</h3>
+  <p>paylash does not show the iOS App Tracking Transparency prompt because we do not track you across apps or websites. Our advertising SDK is configured for non-personalized ads only, which removes the need to request tracking permission.</p>
+
+  <h3>Advertising</h3>
+  <p>Free-tier users see one banner ad at the top of the Expense and Itemized tabs. Premium subscribers see no ads anywhere. The banner is always non-personalized.</p>
+  <p>If you launch paylash from the EU, UK, Switzerland, or one of the regulated US privacy states (California, Colorado, Connecticut, Utah, Virginia), Google's User Messaging Platform (UMP) shows a one-time consent form on first launch. You can change or revoke your choice at any time from Settings → Manage privacy choices. Outside those regions, no consent form is shown and the Settings row is hidden.</p>
+
+  <h3>Security</h3>
+  <p>All traffic between paylash and our servers uses TLS encryption. Passwords are hashed by Firebase Authentication using industry-standard methods (we never see your password). Firestore enforces server-side rules so a user can only read and write their own data and the groups they belong to. We log security-relevant events for abuse detection; these logs are retained for a maximum of 30 days.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>If we change this policy we'll update the "Last updated" date at the top. Material changes will be communicated via the App Store listing or in-app notice on the next release.</p>
+
+  <div class="contact">
+    <p><b>Contact</b><br>
+    Privacy questions, data export requests, complaints — email <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. We respond within 30 days, usually within a week.</p>
+  </div>
+</section>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <h2>Türkçe</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <h2>Deutsch</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <h2>Español</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <h2>Italiano</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <h2>Français</h2>
+  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2026 NAE Dev &middot;
+  <a href="https://nae-dev.github.io/paylash/support.html">Support</a> &middot;
+  <a href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a> &middot;
+  <a href="https://nae-dev.github.io">More apps</a> &middot;
+  <a href="mailto:nae_dev@icloud.com">Contact</a>
+</footer>
+
+</body>
+</html>
