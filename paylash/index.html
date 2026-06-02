@@ -11,6 +11,7 @@
     --ink: #1a1a1a;
     --muted: #6b7280;
     --bg: #f8f9fa;
+    --border: #e5e7eb;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
@@ -20,113 +21,373 @@
     background: var(--bg);
     line-height: 1.55;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-  header { text-align: center; padding: 64px 24px 32px; }
-  .logo {
-    width: 96px; height: 96px; border-radius: 22px;
-    display: inline-block;
-    box-shadow: 0 6px 24px rgba(10, 132, 255, 0.25);
-  }
+  nav.lang { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 24px; z-index: 20; overflow-x: auto; white-space: nowrap; text-align: center; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin: 0 2px; border-radius: 6px; font-size: 14px; display: inline-block; }
+  nav.lang a:hover { background: var(--bg); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 16px 24px 48px; }
+  header.hero { text-align: center; padding: 56px 24px 24px; }
+  .logo { width: 96px; height: 96px; border-radius: 22px; display: inline-block; box-shadow: 0 6px 24px rgba(10, 132, 255, 0.25); }
   h1 { font-size: 28px; font-weight: 600; margin: 16px 0 4px; letter-spacing: 0.5px; }
   .tagline { color: var(--muted); margin: 0 0 32px; font-size: 16px; }
-  .badge {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--ink);
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: 500;
-    margin: 8px;
-  }
-  .badge.outline {
-    background: white;
-    color: var(--ink);
-    border: 1px solid #e5e7eb;
-  }
-  section { padding: 24px 0; border-top: 1px solid #e5e7eb; }
-  section h2 { font-size: 20px; font-weight: 600; margin-top: 0; }
+  .badge { display: inline-block; padding: 12px 24px; background: var(--ink); color: white; text-decoration: none; border-radius: 12px; font-weight: 500; margin: 8px; }
+  .badge.outline { background: white; color: var(--ink); border: 1px solid var(--border); }
+  section.lang-section { padding: 0; }
+  section.feature { padding: 24px 0; border-top: 1px solid var(--border); }
+  section.feature h2 { font-size: 20px; font-weight: 600; margin-top: 0; }
   ul { padding-left: 20px; }
   ul li { margin: 6px 0; }
   .langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
-  .langs span {
-    background: white;
-    border: 1px solid #e5e7eb;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    color: var(--muted);
-  }
-  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+  .langs span { background: white; border: 1px solid var(--border); padding: 4px 10px; border-radius: 6px; font-size: 13px; color: var(--muted); }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); }
   footer a { color: var(--muted); margin: 0 8px; }
 </style>
 </head>
 <body>
 
-<header>
-  <img class="logo" src="paylash-icon.png" alt="paylash app icon" width="96" height="96">
-  <h1>paylash</h1>
-  <p class="tagline">Split bills with friends, across iPhone, iPad, Mac, and the web.</p>
-  <a class="badge" href="https://apps.apple.com/app/id6767579860">Download on the App Store</a>
-</header>
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
 
-<div class="wrap">
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="paylash-icon.png" alt="paylash app icon" width="96" height="96">
+    <h1>paylash</h1>
+    <p class="tagline">Split bills with friends, across iPhone, iPad, Mac, and the web.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6767579860">Download on the App Store</a>
+  </header>
+  <div class="wrap">
+    <section class="feature">
+      <h2>What is paylash?</h2>
+      <p>paylash is a bill-splitting app for iPhone, iPad, Mac, and the web. Split a single bill on your own with no account, or share groups and expenses with friends through a premium subscription.</p>
+      <p>Scan receipts with the built-in OCR. Handle uneven splits where only some people had extra items. Lock events to freeze their state and generate clean settlement plans. Share results as PDF or plain text. View read-only from any browser.</p>
+      <p>No tracking, no personalised ads, no email spam.</p>
+    </section>
+    <section class="feature">
+      <h2>Free, no account needed</h2>
+      <ul>
+        <li>Quick bill splitter with tip presets (5–30%) and a custom tip option</li>
+        <li>Restricted-participation toggle for when only some people had an extra item</li>
+        <li>Itemized split — assign each receipt line to specific people</li>
+        <li>Receipt OCR — Apple Vision framework, all on-device, nothing uploaded</li>
+        <li>Local-only — works offline, no signup, no signin</li>
+        <li>Contextual <b>?</b> tips on the trickier features, with deep links into the <a href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a></li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Premium features</h2>
+      <ul>
+        <li>Shared groups across iPhone, iPad, Mac, and the web — real-time sync</li>
+        <li>Events organise expenses by trip, night, or occasion</li>
+        <li>Multiple split styles per expense — equal, restricted, itemized</li>
+        <li>Lockable events with auto-calculated settlement plans (minimum payments)</li>
+        <li>PDF and text settlement reports</li>
+        <li>Push notifications when groups change</li>
+        <li>No ads anywhere in the app</li>
+        <li>7-day free trial on monthly subscription</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Languages</h2>
+      <div class="langs">
+        <span>English</span><span>Türkçe</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Français</span>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>More</h2>
+      <p>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Support</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy Policy</a>
+      </p>
+    </section>
+  </div>
+</section>
 
-  <section>
-    <h2>What is paylash?</h2>
-    <p>paylash is a bill-splitting app for iPhone, iPad, Mac, and the web. Split a single bill on your own with no account, or share groups and expenses with friends through a premium subscription.</p>
-    <p>Scan receipts with the built-in OCR. Handle uneven splits where only some people had extra items. Lock events to freeze their state and generate clean settlement plans. Share results as PDF or plain text. View read-only from any browser.</p>
-    <p>No tracking, no personalised ads, no email spam.</p>
-  </section>
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="paylash-icon.png" alt="paylash uygulama simgesi" width="96" height="96">
+    <h1>paylash</h1>
+    <p class="tagline">Arkadaşlarınla hesap böl — iPhone, iPad, Mac ve web'de.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6767579860">App Store'dan indir</a>
+  </header>
+  <div class="wrap">
+    <section class="feature">
+      <h2>paylash nedir?</h2>
+      <p>paylash, iPhone, iPad, Mac ve web için bir hesap bölme uygulamasıdır. Hesap olmadan tek başına bir hesap böl ya da premium abonelikle arkadaşlarınla gruplar ve harcamalar paylaş.</p>
+      <p>Yerleşik OCR ile makbuzları tara. Sadece bazı kişilerin ekstra aldığı eşit olmayan bölüşmeleri yönet. Etkinlikleri kilitleyerek durumlarını dondur ve temiz hesaplaşma planları oluştur. Sonuçları PDF veya düz metin olarak paylaş. Herhangi bir tarayıcıdan salt okunur görüntüle.</p>
+      <p>Takip yok, kişiselleştirilmiş reklam yok, e-posta spam'i yok.</p>
+    </section>
+    <section class="feature">
+      <h2>Ücretsiz, hesap gerekmiyor</h2>
+      <ul>
+        <li>Bahşiş ayarları (5–30%) ve özel bahşiş seçeneğiyle hızlı hesap bölücü</li>
+        <li>Sadece bazı kişilerin ekstra bir şey aldığı durumlar için Kısıtlı Katılım anahtarı</li>
+        <li>Kalem kalem bölme — her makbuz satırını belirli kişilere ata</li>
+        <li>Makbuz OCR'ı — Apple Vision çerçevesi, her şey cihazda, hiçbir şey yüklenmez</li>
+        <li>Yalnızca yerel — çevrimdışı çalışır, kayıt yok, giriş yok</li>
+        <li>Daha karmaşık özelliklerde bağlamsal <b>?</b> ipuçları, <a href="https://nae-dev.github.io/paylash/user-guide.html">Kullanım Kılavuzu</a>'na doğrudan bağlantılarla</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Premium özellikler</h2>
+      <ul>
+        <li>iPhone, iPad, Mac ve web'de paylaşılan gruplar — gerçek zamanlı senkronizasyon</li>
+        <li>Etkinlikler harcamaları gezi, akşam veya olaya göre düzenler</li>
+        <li>Harcama başına birden çok bölme stili — eşit, kısıtlı, kalem kalem</li>
+        <li>Otomatik hesaplanan hesaplaşma planlarıyla kilitlenebilir etkinlikler (en az ödeme)</li>
+        <li>PDF ve metin hesaplaşma raporları</li>
+        <li>Gruplar değiştiğinde push bildirimleri</li>
+        <li>Uygulamanın hiçbir yerinde reklam yok</li>
+        <li>Aylık abonelikte 7 günlük ücretsiz deneme</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Diller</h2>
+      <div class="langs">
+        <span>English</span><span>Türkçe</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Français</span>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>Daha fazlası</h2>
+      <p>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">Kullanım Kılavuzu</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Destek</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Gizlilik Politikası</a>
+      </p>
+    </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Free, no account needed</h2>
-    <ul>
-      <li>Quick bill splitter with tip presets (5–30%) and a custom tip option</li>
-      <li>Restricted-participation toggle for when only some people had an extra item</li>
-      <li>Itemized split — assign each receipt line to specific people</li>
-      <li>Receipt OCR — Apple Vision framework, all on-device, nothing uploaded</li>
-      <li>Local-only — works offline, no signup, no signin</li>
-      <li>Contextual <b>?</b> tips on the trickier features, with deep links into the <a href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a></li>
-    </ul>
-  </section>
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="paylash-icon.png" alt="paylash App-Symbol" width="96" height="96">
+    <h1>paylash</h1>
+    <p class="tagline">Rechnungen mit Freunden teilen — auf iPhone, iPad, Mac und im Web.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6767579860">Laden im App Store</a>
+  </header>
+  <div class="wrap">
+    <section class="feature">
+      <h2>Was ist paylash?</h2>
+      <p>paylash ist eine Rechnungsteiler-App für iPhone, iPad, Mac und das Web. Teile eine Rechnung allein ohne Konto, oder teile Gruppen und Ausgaben mit Freunden über ein Premium-Abonnement.</p>
+      <p>Scanne Belege mit dem eingebauten OCR. Verwalte ungleichmäßige Aufteilungen, bei denen nur einige Personen Zusatzartikel hatten. Sperre Ereignisse, um ihren Zustand einzufrieren und saubere Abrechnungspläne zu erzeugen. Teile Ergebnisse als PDF oder Klartext. Schreibgeschützte Ansicht von jedem Browser.</p>
+      <p>Kein Tracking, keine personalisierte Werbung, kein E-Mail-Spam.</p>
+    </section>
+    <section class="feature">
+      <h2>Kostenlos, kein Konto nötig</h2>
+      <ul>
+        <li>Schneller Rechnungsteiler mit Trinkgeld-Vorgaben (5–30%) und eigener Trinkgeld-Option</li>
+        <li>Eingeschränkte-Teilnahme-Schalter, wenn nur einige Personen einen Zusatzartikel hatten</li>
+        <li>Postenweise Aufteilung — weise jeden Posten bestimmten Personen zu</li>
+        <li>Beleg-OCR — Apple Vision-Framework, alles auf dem Gerät, nichts wird hochgeladen</li>
+        <li>Nur lokal — funktioniert offline, kein Sign-up, kein Sign-in</li>
+        <li>Kontextuelle <b>?</b>-Hinweise bei den kniffligen Funktionen mit Deep-Links ins <a href="https://nae-dev.github.io/paylash/user-guide.html">Benutzerhandbuch</a></li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Premium-Funktionen</h2>
+      <ul>
+        <li>Geteilte Gruppen auf iPhone, iPad, Mac und im Web — Echtzeit-Synchronisation</li>
+        <li>Ereignisse organisieren Ausgaben nach Reise, Abend oder Anlass</li>
+        <li>Mehrere Aufteilungsarten pro Ausgabe — gleichmäßig, eingeschränkt, postenweise</li>
+        <li>Sperrbare Ereignisse mit automatisch berechneten Abrechnungsplänen (minimale Zahlungen)</li>
+        <li>PDF- und Text-Abrechnungsberichte</li>
+        <li>Push-Benachrichtigungen bei Gruppenänderungen</li>
+        <li>Keine Werbung irgendwo in der App</li>
+        <li>7-tägige kostenlose Testphase im Monatsabonnement</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Sprachen</h2>
+      <div class="langs">
+        <span>English</span><span>Türkçe</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Français</span>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>Mehr</h2>
+      <p>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">Benutzerhandbuch</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Support</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Datenschutzerklärung</a>
+      </p>
+    </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Premium features</h2>
-    <ul>
-      <li>Shared groups across iPhone, iPad, Mac, and the web — real-time sync</li>
-      <li>Events organise expenses by trip, night, or occasion</li>
-      <li>Multiple split styles per expense — equal, restricted, itemized</li>
-      <li>Lockable events with auto-calculated settlement plans (minimum payments)</li>
-      <li>PDF and text settlement reports</li>
-      <li>Push notifications when groups change</li>
-      <li>No ads anywhere in the app</li>
-      <li>7-day free trial on monthly subscription</li>
-    </ul>
-  </section>
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="paylash-icon.png" alt="icono de paylash" width="96" height="96">
+    <h1>paylash</h1>
+    <p class="tagline">Divide cuentas con amigos en iPhone, iPad, Mac y la web.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6767579860">Descargar en App Store</a>
+  </header>
+  <div class="wrap">
+    <section class="feature">
+      <h2>¿Qué es paylash?</h2>
+      <p>paylash es una app para dividir cuentas en iPhone, iPad, Mac y la web. Divide una cuenta por tu cuenta sin necesidad de cuenta, o comparte grupos y gastos con amigos con una suscripción premium.</p>
+      <p>Escanea recibos con el OCR integrado. Maneja divisiones desiguales cuando solo algunas personas tienen artículos extra. Bloquea eventos para congelar su estado y generar planes de liquidación limpios. Comparte resultados en PDF o texto sin formato. Vista de solo lectura desde cualquier navegador.</p>
+      <p>Sin seguimiento, sin anuncios personalizados, sin spam por correo.</p>
+    </section>
+    <section class="feature">
+      <h2>Gratis, sin cuenta necesaria</h2>
+      <ul>
+        <li>Divisor de cuentas rápido con propinas predefinidas (5–30%) y opción personalizada</li>
+        <li>Interruptor de participación restringida cuando solo algunas personas tuvieron un artículo extra</li>
+        <li>División por artículo — asigna cada línea del recibo a personas concretas</li>
+        <li>OCR de recibos — framework Vision de Apple, todo en el dispositivo, nada se sube</li>
+        <li>Solo local — funciona sin conexión, sin registro, sin sesión</li>
+        <li>Pistas contextuales <b>?</b> en las funciones más complejas, con enlaces directos a la <a href="https://nae-dev.github.io/paylash/user-guide.html">Guía de usuario</a></li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Funciones premium</h2>
+      <ul>
+        <li>Grupos compartidos en iPhone, iPad, Mac y la web — sincronización en tiempo real</li>
+        <li>Los eventos organizan los gastos por viaje, noche u ocasión</li>
+        <li>Varios estilos de división por gasto — equitativo, restringido, por artículo</li>
+        <li>Eventos bloqueables con planes de liquidación calculados automáticamente (pagos mínimos)</li>
+        <li>Informes de liquidación en PDF y texto</li>
+        <li>Notificaciones push cuando cambian los grupos</li>
+        <li>Sin anuncios en ningún sitio de la app</li>
+        <li>Prueba gratuita de 7 días en la suscripción mensual</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Idiomas</h2>
+      <div class="langs">
+        <span>English</span><span>Türkçe</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Français</span>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>Más</h2>
+      <p>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">Guía de usuario</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Soporte</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Política de privacidad</a>
+      </p>
+    </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Languages</h2>
-    <div class="langs">
-      <span>English</span>
-      <span>Türkçe</span>
-      <span>Deutsch</span>
-      <span>Español</span>
-      <span>Italiano</span>
-      <span>Français</span>
-    </div>
-  </section>
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="paylash-icon.png" alt="icona di paylash" width="96" height="96">
+    <h1>paylash</h1>
+    <p class="tagline">Dividi i conti con gli amici su iPhone, iPad, Mac e web.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6767579860">Scarica sull'App Store</a>
+  </header>
+  <div class="wrap">
+    <section class="feature">
+      <h2>Cos'è paylash?</h2>
+      <p>paylash è un'app per dividere i conti su iPhone, iPad, Mac e web. Dividi un singolo conto da solo senza account, oppure condividi gruppi e spese con gli amici tramite un abbonamento premium.</p>
+      <p>Scansiona gli scontrini con l'OCR integrato. Gestisci divisioni non uniformi quando solo alcune persone hanno avuto articoli extra. Blocca gli eventi per congelarne lo stato e generare piani di saldo puliti. Condividi i risultati in PDF o testo semplice. Visualizza in sola lettura da qualsiasi browser.</p>
+      <p>Niente tracciamento, niente pubblicità personalizzate, niente spam via email.</p>
+    </section>
+    <section class="feature">
+      <h2>Gratis, senza account</h2>
+      <ul>
+        <li>Divisore di conti veloce con preimpostazioni di mancia (5–30%) e opzione personalizzata</li>
+        <li>Interruttore di partecipazione limitata quando solo alcune persone hanno avuto un articolo extra</li>
+        <li>Divisione per voce — assegna ogni voce dello scontrino a persone specifiche</li>
+        <li>OCR scontrini — framework Vision di Apple, tutto sul dispositivo, nulla viene caricato</li>
+        <li>Solo locale — funziona offline, niente registrazione, niente accesso</li>
+        <li>Suggerimenti contestuali <b>?</b> sulle funzioni più complesse, con link diretti alla <a href="https://nae-dev.github.io/paylash/user-guide.html">Guida utente</a></li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Funzioni premium</h2>
+      <ul>
+        <li>Gruppi condivisi su iPhone, iPad, Mac e web — sincronizzazione in tempo reale</li>
+        <li>Gli eventi organizzano le spese per viaggio, serata o occasione</li>
+        <li>Diversi stili di divisione per spesa — equa, limitata, per voce</li>
+        <li>Eventi bloccabili con piani di saldo calcolati automaticamente (pagamenti minimi)</li>
+        <li>Report di saldo in PDF e testo</li>
+        <li>Notifiche push quando i gruppi cambiano</li>
+        <li>Niente pubblicità da nessuna parte nell'app</li>
+        <li>Prova gratuita di 7 giorni sull'abbonamento mensile</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Lingue</h2>
+      <div class="langs">
+        <span>English</span><span>Türkçe</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Français</span>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>Altro</h2>
+      <p>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">Guida utente</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Supporto</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Informativa sulla privacy</a>
+      </p>
+    </section>
+  </div>
+</section>
 
-  <section>
-    <h2>More</h2>
-    <p>
-      <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">User Guide</a>
-      <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Support</a>
-      <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy Policy</a>
-    </p>
-  </section>
-
-</div>
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="paylash-icon.png" alt="icône paylash" width="96" height="96">
+    <h1>paylash</h1>
+    <p class="tagline">Partage les notes avec des amis sur iPhone, iPad, Mac et le web.</p>
+    <a class="badge" href="https://apps.apple.com/app/id6767579860">Télécharger dans l'App Store</a>
+  </header>
+  <div class="wrap">
+    <section class="feature">
+      <h2>Qu'est-ce que paylash ?</h2>
+      <p>paylash est une app de partage de notes pour iPhone, iPad, Mac et le web. Partage une note seul sans compte, ou partage des groupes et des dépenses avec des amis via un abonnement premium.</p>
+      <p>Numérise les reçus avec l'OCR intégré. Gère les partages inégaux où seules certaines personnes ont eu des articles supplémentaires. Verrouille les événements pour figer leur état et générer des plans de règlement clairs. Partage les résultats en PDF ou texte brut. Vue en lecture seule depuis n'importe quel navigateur.</p>
+      <p>Pas de suivi, pas de pub personnalisée, pas de spam par e-mail.</p>
+    </section>
+    <section class="feature">
+      <h2>Gratuit, sans compte</h2>
+      <ul>
+        <li>Diviseur de notes rapide avec presets de pourboire (5–30%) et option personnalisée</li>
+        <li>Commutateur de participation restreinte quand seules certaines personnes ont eu un article supplémentaire</li>
+        <li>Partage article par article — assigne chaque ligne du reçu à des personnes spécifiques</li>
+        <li>OCR de reçus — framework Vision d'Apple, tout sur l'appareil, rien n'est téléversé</li>
+        <li>Local uniquement — fonctionne hors ligne, pas d'inscription, pas de connexion</li>
+        <li>Astuces contextuelles <b>?</b> sur les fonctionnalités les plus complexes, avec liens directs vers le <a href="https://nae-dev.github.io/paylash/user-guide.html">Guide utilisateur</a></li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Fonctionnalités premium</h2>
+      <ul>
+        <li>Groupes partagés sur iPhone, iPad, Mac et le web — sync en temps réel</li>
+        <li>Les événements organisent les dépenses par voyage, soirée ou occasion</li>
+        <li>Plusieurs styles de partage par dépense — équitable, restreint, article par article</li>
+        <li>Événements verrouillables avec plans de règlement calculés automatiquement (paiements minimum)</li>
+        <li>Rapports de règlement en PDF et texte</li>
+        <li>Notifications push quand les groupes changent</li>
+        <li>Aucune publicité nulle part dans l'app</li>
+        <li>Essai gratuit de 7 jours sur l'abonnement mensuel</li>
+      </ul>
+    </section>
+    <section class="feature">
+      <h2>Langues</h2>
+      <div class="langs">
+        <span>English</span><span>Türkçe</span><span>Deutsch</span><span>Español</span><span>Italiano</span><span>Français</span>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>Plus</h2>
+      <p>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/user-guide.html">Guide utilisateur</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/support.html">Support</a>
+        <a class="badge outline" href="https://nae-dev.github.io/paylash/privacy-policy.html">Politique de confidentialité</a>
+      </p>
+    </section>
+  </div>
+</section>
 
 <footer>
   &copy; 2026 NAE Dev &middot;
@@ -135,6 +396,78 @@
   <a href="https://nae-dev.github.io/paylash/privacy-policy.html">Privacy</a> &middot;
   <a href="https://nae-dev.github.io">More apps</a>
 </footer>
+
+<script>
+(function() {
+  const SUPPORTED = ['en', 'tr', 'de', 'es', 'it', 'fr'];
+  const STORAGE_KEY = 'nae-lang';
+
+  function detectLang() {
+    const hash = window.location.hash.slice(1);
+    if (SUPPORTED.includes(hash)) {
+      try { localStorage.setItem(STORAGE_KEY, hash); } catch(e) {}
+      return hash;
+    }
+    if (hash && hash.includes('-')) {
+      const prefix = hash.split('-')[0];
+      if (SUPPORTED.includes(prefix)) {
+        try { localStorage.setItem(STORAGE_KEY, prefix); } catch(e) {}
+        return prefix;
+      }
+    }
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.includes(stored)) return stored;
+    } catch(e) {}
+    return 'en';
+  }
+
+  function showOnly(lang) {
+    SUPPORTED.forEach(l => {
+      const section = document.getElementById(l);
+      if (section) section.style.display = (l === lang) ? '' : 'none';
+    });
+  }
+
+  function decorateLinks(lang) {
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
+      if (href.includes('apps.apple.com')) return;
+      if (href.includes('paylash-fffac.web.app')) return;
+      if (href.startsWith('http://') || (href.startsWith('https://') && !href.startsWith('https://nae-dev.github.io'))) return;
+      const hashIdx = href.indexOf('#');
+      if (hashIdx >= 0) {
+        const existing = href.slice(hashIdx + 1);
+        if (SUPPORTED.includes(existing)) {
+          a.setAttribute('href', href.slice(0, hashIdx) + '#' + lang);
+        }
+        return;
+      }
+      a.setAttribute('href', href + '#' + lang);
+    });
+  }
+
+  function init() {
+    const lang = detectLang();
+    showOnly(lang);
+    decorateLinks(lang);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  window.addEventListener('hashchange', function() {
+    const lang = detectLang();
+    showOnly(lang);
+    decorateLinks(lang);
+  });
+})();
+</script>
 
 </body>
 </html>

@@ -640,5 +640,89 @@
   <a href="mailto:nae_dev@icloud.com">Contact</a>
 </footer>
 
+<script>
+(function() {
+  const SUPPORTED = ['en', 'tr', 'de', 'es', 'it', 'fr'];
+  const STORAGE_KEY = 'nae-lang';
+
+  function detectLang() {
+    const hash = window.location.hash.slice(1);
+    if (SUPPORTED.includes(hash)) {
+      try { localStorage.setItem(STORAGE_KEY, hash); } catch(e) {}
+      return hash;
+    }
+    if (hash && hash.includes('-')) {
+      const prefix = hash.split('-')[0];
+      if (SUPPORTED.includes(prefix)) {
+        try { localStorage.setItem(STORAGE_KEY, prefix); } catch(e) {}
+        return prefix;
+      }
+    }
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.includes(stored)) return stored;
+    } catch(e) {}
+    return 'en';
+  }
+
+  function showOnly(lang) {
+    SUPPORTED.forEach(l => {
+      const section = document.getElementById(l);
+      if (section) section.style.display = (l === lang) ? '' : 'none';
+    });
+  }
+
+  function decorateLinks(lang) {
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
+      if (href.includes('apps.apple.com')) return;
+      if (href.includes('paylash-fffac.web.app')) return;
+      if (href.startsWith('http://') || (href.startsWith('https://') && !href.startsWith('https://nae-dev.github.io'))) return;
+      const hashIdx = href.indexOf('#');
+      if (hashIdx >= 0) {
+        const existing = href.slice(hashIdx + 1);
+        if (SUPPORTED.includes(existing)) {
+          a.setAttribute('href', href.slice(0, hashIdx) + '#' + lang);
+        }
+        return;
+      }
+      a.setAttribute('href', href + '#' + lang);
+    });
+  }
+
+  function scrollToFeature() {
+    const hash = window.location.hash.slice(1);
+    if (hash && hash.includes('-') && SUPPORTED.includes(hash.split('-')[0])) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView();
+      });
+    }
+  }
+
+  function init() {
+    const lang = detectLang();
+    showOnly(lang);
+    decorateLinks(lang);
+    scrollToFeature();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  window.addEventListener('hashchange', function() {
+    const lang = detectLang();
+    showOnly(lang);
+    decorateLinks(lang);
+    scrollToFeature();
+  });
+})();
+</script>
+
 </body>
 </html>
