@@ -21,11 +21,8 @@
     --shadow-hover: 0 2px 6px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.10);
     --radius: 18px;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
     color: var(--ink);
@@ -34,13 +31,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* LANG NAV =========================================================== */
+  nav.lang { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 24px; z-index: 20; overflow-x: auto; white-space: nowrap; text-align: center; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin: 0 2px; border-radius: 6px; font-size: 14px; display: inline-block; }
+  nav.lang a:hover { background: var(--bg); }
 
   /* HERO ============================================================= */
   header.hero {
     text-align: center;
-    padding: 96px 24px 64px;
+    padding: 80px 24px 56px;
     background: radial-gradient(ellipse at top, rgba(10,132,255,0.06), transparent 60%);
   }
   header.hero h1 {
@@ -56,14 +57,13 @@
     max-width: 540px;
     margin: 0 auto;
   }
-
   @media (max-width: 600px) {
-    header.hero { padding: 64px 24px 48px; }
+    header.hero { padding: 56px 24px 40px; }
     header.hero h1 { font-size: 40px; letter-spacing: -1px; }
     header.hero p.tagline { font-size: 17px; }
   }
 
-  /* SECTION HEADERS ================================================== */
+  /* SECTION LABELS =================================================== */
   .section-label {
     font-size: 13px;
     font-weight: 600;
@@ -75,118 +75,36 @@
 
   /* APPS GRID ======================================================== */
   section.apps { padding: 32px 0 64px; }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-  }
-
-  @media (max-width: 720px) {
-    .grid { grid-template-columns: 1fr; }
-  }
-
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
   .app-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 32px 28px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
+    background: var(--card); border-radius: var(--radius); padding: 32px 28px;
+    border: 1px solid var(--border); box-shadow: var(--shadow);
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
     transition: transform 0.18s ease, box-shadow 0.18s ease;
   }
-  .app-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-  }
-
-  .app-icon {
-    width: 88px;
-    height: 88px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    object-fit: cover;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
-  }
-
-  .app-card h2 {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    margin-bottom: 6px;
-  }
-
-  .app-card .subtitle {
-    color: var(--ink-2);
-    font-size: 15px;
-    margin-bottom: 16px;
-  }
-
-  .app-card p.description {
-    color: var(--ink-2);
-    font-size: 15px;
-    flex-grow: 1;
-    margin-bottom: 24px;
-  }
-
-  .app-card .links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  .btn-primary {
-    background: var(--ink);
-    color: white;
-  }
+  .app-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+  .app-icon { width: 88px; height: 88px; border-radius: 20px; margin-bottom: 20px; object-fit: cover; box-shadow: 0 4px 14px rgba(0,0,0,0.10); }
+  .app-card h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 6px; }
+  .app-card .subtitle { color: var(--ink-2); font-size: 15px; margin-bottom: 16px; }
+  .app-card p.description { color: var(--ink-2); font-size: 15px; flex-grow: 1; margin-bottom: 24px; }
+  .app-card .links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; transition: background 0.15s ease; }
+  .btn-primary { background: var(--ink); color: white; }
   .btn-primary:hover { background: #000; }
-  .btn-secondary {
-    background: transparent;
-    color: var(--ink);
-    border: 1px solid var(--border);
-  }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--border); }
   .btn-secondary:hover { background: var(--bg); }
 
   /* ABOUT ============================================================ */
-  section.about {
-    padding: 48px 0 96px;
-    border-top: 1px solid var(--border);
-    margin-top: 32px;
-  }
-  section.about h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-  section.about p {
-    color: var(--ink-2);
-    font-size: 16px;
-    max-width: 600px;
-  }
+  section.about { padding: 48px 0 96px; border-top: 1px solid var(--border); margin-top: 32px; }
+  section.about h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+  section.about p { color: var(--ink-2); font-size: 16px; max-width: 600px; }
   section.about a { color: var(--accent); text-decoration: none; }
   section.about a:hover { text-decoration: underline; }
 
   /* FOOTER =========================================================== */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 24px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-  }
+  footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--muted); font-size: 13px; }
   footer a { color: var(--ink-2); margin: 0 6px; text-decoration: none; }
   footer a:hover { color: var(--ink); }
 </style>
@@ -196,89 +114,338 @@
 <header class="hero">
   <div class="wrap">
     <h1>NAE Dev</h1>
-    <p class="tagline">mobile apps </p>
+    <p class="tagline">mobile apps</p>
   </div>
 </header>
 
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
+
 <div class="wrap">
 
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
   <section class="apps">
     <div class="section-label">Apps</div>
     <div class="grid">
-
-      <!-- ============ PAYLASH ============ -->
       <article class="app-card">
         <img class="app-icon" src="paylash/paylash-icon.png" alt="paylash app icon">
         <h2>paylash</h2>
         <div class="subtitle">Bill splitter</div>
-        <p class="description">
-          Split bills with friends across iPhone, iPad, Mac, and the web.
-          OCR receipts, restricted-participation splits, lockable events
-          with auto-calculated settlement plans, PDF and text reports.
-          Available in 6 languages.
-        </p>
+        <p class="description">Split bills with friends across iPhone, iPad, Mac, and the web. OCR receipts, restricted-participation splits, lockable events with auto-calculated settlement plans, PDF and text reports. Available in 6 languages.</p>
         <div class="links">
           <a class="btn btn-primary" href="https://apps.apple.com/app/id6767579860">Open in App Store</a>
           <a class="btn btn-secondary" href="paylash/">Learn more</a>
         </div>
       </article>
-
-      <!-- ============ RASGELE ============ -->
       <article class="app-card">
         <img class="app-icon" src="rasgele/icon.png" alt="rasgele app icon">
         <h2>rasgele</h2>
         <div class="subtitle">Random Generator</div>
-        <p class="description">
-          A simple, fast random generator for numbers, letters, names, dice, and lottery.
-          Available in 6 languages. No accounts, no clutter.
-        </p>
+        <p class="description">A simple, fast random generator for numbers, letters, names, dice, and lottery. Available in 6 languages. No accounts, no clutter.</p>
         <div class="links">
           <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Open in App Store</a>
           <a class="btn btn-secondary" href="rasgele/">Learn more</a>
         </div>
       </article>
-
-      <!-- ============ YAPBOZ ============ -->
       <article class="app-card">
         <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="YapBoz app icon">
         <h2>YapBoz</h2>
         <div class="subtitle">Sliding puzzle</div>
-        <p class="description">
-          The classic sliding-tile puzzle, beautifully illustrated.
-          Museum masterpieces and kid-friendly art across multiple frames and three difficulty levels.
-          Available in 6 languages.
-        </p>
+        <p class="description">The classic sliding-tile puzzle, beautifully illustrated. Museum masterpieces and kid-friendly art across multiple frames and three difficulty levels. Available in 6 languages.</p>
         <div class="links">
           <a class="btn btn-primary" href="#">Open in App Store</a>
           <a class="btn btn-secondary" href="YapBoz/">Learn more</a>
         </div>
       </article>
-
-      <!-- ============ BELLEK ============ -->
       <article class="app-card">
         <img class="app-icon" src="bellek/icon.png" alt="bellek app icon">
         <h2>bellek</h2>
         <div class="subtitle">Memory utility</div>
-        <p class="description">
-          <!-- TODO: replace with your real bellek description -->
-          Memory game with card pairs for iOS. Available on the App Store.
-        </p>
+        <p class="description">Memory game with card pairs for iOS. Available on the App Store.</p>
         <div class="links">
           <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Open in App Store</a>
           <a class="btn btn-secondary" href="bellek/support.html">Learn more</a>
         </div>
       </article>
-
     </div>
   </section>
-
   <section class="about">
     <h3>About</h3>
-    <p>
-      A software house building small, well-crafted mobile apps. Reach out at
-      <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.
-    </p>
+    <p>A software house building small, well-crafted mobile apps. Reach out at <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.</p>
   </section>
+</section>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <section class="apps">
+    <div class="section-label">Uygulamalar</div>
+    <div class="grid">
+      <article class="app-card">
+        <img class="app-icon" src="paylash/paylash-icon.png" alt="paylash uygulama simgesi">
+        <h2>paylash</h2>
+        <div class="subtitle">Hesap bölücü</div>
+        <p class="description">iPhone, iPad, Mac ve web'de arkadaşlarınla hesap böl. OCR makbuzlar, kısıtlı katılım bölüşümleri, otomatik hesaplanan hesaplaşma planlı kilitlenebilir etkinlikler, PDF ve metin raporları. 6 dilde.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6767579860">App Store'da aç</a>
+          <a class="btn btn-secondary" href="paylash/">Daha fazla bilgi</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="rasgele uygulama simgesi">
+        <h2>rasgele</h2>
+        <div class="subtitle">Rastgele Üreteç</div>
+        <p class="description">Sayılar, harfler, isimler, zar ve loto için basit, hızlı bir rastgele üreteç. 6 dilde. Hesap yok, karmaşa yok.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">App Store'da aç</a>
+          <a class="btn btn-secondary" href="rasgele/">Daha fazla bilgi</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="YapBoz uygulama simgesi">
+        <h2>YapBoz</h2>
+        <div class="subtitle">Kaydırma bulmaca</div>
+        <p class="description">Klasik kaydırma bulmacası, güzel illüstrasyonlarla. Müze başyapıtları ve çocuk dostu sanat, birden fazla çerçeve ve üç zorluk seviyesi. 6 dilde.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="#">App Store'da aç</a>
+          <a class="btn btn-secondary" href="YapBoz/">Daha fazla bilgi</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="bellek uygulama simgesi">
+        <h2>bellek</h2>
+        <div class="subtitle">Hafıza yardımcısı</div>
+        <p class="description">iOS için eşli kartlı hafıza oyunu. App Store'da.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">App Store'da aç</a>
+          <a class="btn btn-secondary" href="bellek/support.html">Daha fazla bilgi</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="about">
+    <h3>Hakkımızda</h3>
+    <p>Küçük ve özenle yapılmış mobil uygulamalar geliştiren bir yazılım stüdyosu. İletişim için <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.</p>
+  </section>
+</section>
+
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <section class="apps">
+    <div class="section-label">Apps</div>
+    <div class="grid">
+      <article class="app-card">
+        <img class="app-icon" src="paylash/paylash-icon.png" alt="paylash App-Symbol">
+        <h2>paylash</h2>
+        <div class="subtitle">Rechnungsteiler</div>
+        <p class="description">Rechnungen mit Freunden teilen auf iPhone, iPad, Mac und im Web. OCR-Belege, eingeschränkte Teilnahme bei Aufteilungen, sperrbare Ereignisse mit automatisch berechneten Abrechnungsplänen, PDF- und Text-Berichte. In 6 Sprachen verfügbar.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6767579860">Im App Store öffnen</a>
+          <a class="btn btn-secondary" href="paylash/">Mehr erfahren</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="rasgele App-Symbol">
+        <h2>rasgele</h2>
+        <div class="subtitle">Zufallsgenerator</div>
+        <p class="description">Ein einfacher, schneller Zufallsgenerator für Zahlen, Buchstaben, Namen, Würfel und Lotto. In 6 Sprachen. Keine Konten, keine Unordnung.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Im App Store öffnen</a>
+          <a class="btn btn-secondary" href="rasgele/">Mehr erfahren</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="YapBoz App-Symbol">
+        <h2>YapBoz</h2>
+        <div class="subtitle">Schiebepuzzle</div>
+        <p class="description">Das klassische Schiebepuzzle, wunderschön illustriert. Museums-Meisterwerke und kinderfreundliche Kunst über mehrere Rahmen und drei Schwierigkeitsstufen. In 6 Sprachen.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="#">Im App Store öffnen</a>
+          <a class="btn btn-secondary" href="YapBoz/">Mehr erfahren</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="bellek App-Symbol">
+        <h2>bellek</h2>
+        <div class="subtitle">Gedächtnis-Tool</div>
+        <p class="description">Memory-Spiel mit Kartenpaaren für iOS. Im App Store verfügbar.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Im App Store öffnen</a>
+          <a class="btn btn-secondary" href="bellek/support.html">Mehr erfahren</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="about">
+    <h3>Über uns</h3>
+    <p>Ein Software-Studio, das kleine, sorgfältig gefertigte Mobil-Apps entwickelt. Kontakt unter <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.</p>
+  </section>
+</section>
+
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <section class="apps">
+    <div class="section-label">Apps</div>
+    <div class="grid">
+      <article class="app-card">
+        <img class="app-icon" src="paylash/paylash-icon.png" alt="icono de paylash">
+        <h2>paylash</h2>
+        <div class="subtitle">Divisor de cuentas</div>
+        <p class="description">Divide cuentas con amigos en iPhone, iPad, Mac y la web. Recibos OCR, divisiones con participación restringida, eventos bloqueables con planes de liquidación calculados automáticamente, informes en PDF y texto. Disponible en 6 idiomas.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6767579860">Abrir en App Store</a>
+          <a class="btn btn-secondary" href="paylash/">Más información</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="icono de rasgele">
+        <h2>rasgele</h2>
+        <div class="subtitle">Generador aleatorio</div>
+        <p class="description">Un generador aleatorio simple y rápido para números, letras, nombres, dados y lotería. En 6 idiomas. Sin cuentas, sin ruido.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Abrir en App Store</a>
+          <a class="btn btn-secondary" href="rasgele/">Más información</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="icono de YapBoz">
+        <h2>YapBoz</h2>
+        <div class="subtitle">Puzle deslizante</div>
+        <p class="description">El clásico puzle deslizante, bellamente ilustrado. Obras maestras de museo y arte para niños en varios marcos y tres niveles de dificultad. En 6 idiomas.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="#">Abrir en App Store</a>
+          <a class="btn btn-secondary" href="YapBoz/">Más información</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="icono de bellek">
+        <h2>bellek</h2>
+        <div class="subtitle">Utilidad de memoria</div>
+        <p class="description">Juego de memoria con pares de cartas para iOS. Disponible en la App Store.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Abrir en App Store</a>
+          <a class="btn btn-secondary" href="bellek/support.html">Más información</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="about">
+    <h3>Acerca de</h3>
+    <p>Un estudio de software que crea apps móviles pequeñas y bien cuidadas. Contáctanos en <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.</p>
+  </section>
+</section>
+
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <section class="apps">
+    <div class="section-label">App</div>
+    <div class="grid">
+      <article class="app-card">
+        <img class="app-icon" src="paylash/paylash-icon.png" alt="icona di paylash">
+        <h2>paylash</h2>
+        <div class="subtitle">Divisore di conti</div>
+        <p class="description">Dividi le spese con gli amici su iPhone, iPad, Mac e web. Scontrini OCR, divisioni a partecipazione limitata, eventi bloccabili con piani di saldo calcolati automaticamente, report in PDF e testo. Disponibile in 6 lingue.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6767579860">Apri in App Store</a>
+          <a class="btn btn-secondary" href="paylash/">Scopri di più</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="icona di rasgele">
+        <h2>rasgele</h2>
+        <div class="subtitle">Generatore casuale</div>
+        <p class="description">Un generatore casuale semplice e veloce per numeri, lettere, nomi, dadi e lotteria. In 6 lingue. Niente account, niente confusione.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Apri in App Store</a>
+          <a class="btn btn-secondary" href="rasgele/">Scopri di più</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="icona di YapBoz">
+        <h2>YapBoz</h2>
+        <div class="subtitle">Puzzle scorrevole</div>
+        <p class="description">Il classico puzzle scorrevole, splendidamente illustrato. Capolavori museali e arte per bambini su diverse cornici e tre livelli di difficoltà. In 6 lingue.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="#">Apri in App Store</a>
+          <a class="btn btn-secondary" href="YapBoz/">Scopri di più</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="icona di bellek">
+        <h2>bellek</h2>
+        <div class="subtitle">Strumento di memoria</div>
+        <p class="description">Gioco di memoria con coppie di carte per iOS. Disponibile sull'App Store.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Apri in App Store</a>
+          <a class="btn btn-secondary" href="bellek/support.html">Scopri di più</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="about">
+    <h3>Chi siamo</h3>
+    <p>Uno studio software che crea piccole app mobili curate nei dettagli. Contattaci a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.</p>
+  </section>
+</section>
+
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <section class="apps">
+    <div class="section-label">Apps</div>
+    <div class="grid">
+      <article class="app-card">
+        <img class="app-icon" src="paylash/paylash-icon.png" alt="icône paylash">
+        <h2>paylash</h2>
+        <div class="subtitle">Diviseur de notes</div>
+        <p class="description">Partage les notes avec des amis sur iPhone, iPad, Mac et le web. Reçus OCR, partages à participation restreinte, événements verrouillables avec plans de règlement calculés automatiquement, rapports PDF et texte. Disponible en 6 langues.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6767579860">Ouvrir dans l'App Store</a>
+          <a class="btn btn-secondary" href="paylash/">En savoir plus</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="rasgele/icon.png" alt="icône rasgele">
+        <h2>rasgele</h2>
+        <div class="subtitle">Générateur aléatoire</div>
+        <p class="description">Un générateur aléatoire simple et rapide pour nombres, lettres, noms, dés et loterie. En 6 langues. Pas de compte, pas d'encombrement.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6765879682">Ouvrir dans l'App Store</a>
+          <a class="btn btn-secondary" href="rasgele/">En savoir plus</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="YapBoz/YapBoz-icon.png" alt="icône YapBoz">
+        <h2>YapBoz</h2>
+        <div class="subtitle">Puzzle coulissant</div>
+        <p class="description">Le classique puzzle coulissant, magnifiquement illustré. Chefs-d'œuvre de musée et art adapté aux enfants à travers plusieurs cadres et trois niveaux de difficulté. En 6 langues.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="#">Ouvrir dans l'App Store</a>
+          <a class="btn btn-secondary" href="YapBoz/">En savoir plus</a>
+        </div>
+      </article>
+      <article class="app-card">
+        <img class="app-icon" src="bellek/icon.png" alt="icône bellek">
+        <h2>bellek</h2>
+        <div class="subtitle">Utilitaire de mémoire</div>
+        <p class="description">Jeu de mémoire avec paires de cartes pour iOS. Disponible sur l'App Store.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761543413">Ouvrir dans l'App Store</a>
+          <a class="btn btn-secondary" href="bellek/support.html">En savoir plus</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="about">
+    <h3>À propos</h3>
+    <p>Un studio logiciel qui crée de petites apps mobiles bien soignées. Contacte-nous à <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>.</p>
+  </section>
+</section>
 
 </div>
 
@@ -290,6 +457,78 @@
   <a href="YapBoz/">YapBoz</a> &middot;
   <a href="mailto:nae_dev@icloud.com">Contact</a>
 </footer>
+
+<script>
+(function() {
+  const SUPPORTED = ['en', 'tr', 'de', 'es', 'it', 'fr'];
+  const STORAGE_KEY = 'nae-lang';
+
+  function detectLang() {
+    const hash = window.location.hash.slice(1);
+    if (SUPPORTED.includes(hash)) {
+      try { localStorage.setItem(STORAGE_KEY, hash); } catch(e) {}
+      return hash;
+    }
+    if (hash && hash.includes('-')) {
+      const prefix = hash.split('-')[0];
+      if (SUPPORTED.includes(prefix)) {
+        try { localStorage.setItem(STORAGE_KEY, prefix); } catch(e) {}
+        return prefix;
+      }
+    }
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.includes(stored)) return stored;
+    } catch(e) {}
+    return 'en';
+  }
+
+  function showOnly(lang) {
+    SUPPORTED.forEach(l => {
+      const section = document.getElementById(l);
+      if (section) section.style.display = (l === lang) ? '' : 'none';
+    });
+  }
+
+  function decorateLinks(lang) {
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
+      if (href.includes('apps.apple.com')) return;
+      if (href.includes('paylash-fffac.web.app')) return;
+      if (href.startsWith('http://') || (href.startsWith('https://') && !href.startsWith('https://nae-dev.github.io'))) return;
+      const hashIdx = href.indexOf('#');
+      if (hashIdx >= 0) {
+        const existing = href.slice(hashIdx + 1);
+        if (SUPPORTED.includes(existing)) {
+          a.setAttribute('href', href.slice(0, hashIdx) + '#' + lang);
+        }
+        return;
+      }
+      a.setAttribute('href', href + '#' + lang);
+    });
+  }
+
+  function init() {
+    const lang = detectLang();
+    showOnly(lang);
+    decorateLinks(lang);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  window.addEventListener('hashchange', function() {
+    const lang = detectLang();
+    showOnly(lang);
+    decorateLinks(lang);
+  });
+})();
+</script>
 
 </body>
 </html>
