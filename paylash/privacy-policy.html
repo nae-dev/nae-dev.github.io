@@ -158,31 +158,476 @@
 <!-- ============ TÜRKÇE ============ -->
 <section id="tr" class="lang-section">
   <h2>Türkçe</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <h3>Özet</h3>
+  <p>paylash, tek başına hesap bölmeni sağlar ve — premium aboneliğin varsa — iPhone, iPad, Mac ve web üzerinden arkadaşlarınla gruplar ve harcamalar paylaşmana izin verir. Bu sayfa, neleri topladığımızı, neden topladığımızı ve hangi kontrollere sahip olduğunu tam olarak açıklar.</p>
+  <p><b>Kısaca</b>: hesap bölücü ve kalem kalem bölme tamamen cihazında çalışır ve hesap gerektirmez. Diğer her şey (gruplar, etkinlikler, paylaşılan harcamalar) hesap gerektirir ve burada oluşturduğun veriler, cihazlarının ve grup üyelerinin görebilmesi için Google Firebase'de saklanır. Verini asla satmayız. Seni profilleyen reklam asla göstermeyiz.</p>
+
+  <h3>Sorumlu kim</h3>
+  <p>paylash, <b>NAE Dev</b> tarafından geliştirilmiş ve işletilmektedir. Gizlilik soruları için <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> adresine yaz. Aşağıda açıklanan kişisel veriler için veri sorumlusuyuz.</p>
+
+  <h3>Sadece hesap bölücüyü kullanırsan</h3>
+  <p>Harcama sekmesi ve Ayrıntılı sekmesi (hesap bölücü, makbuz OCR taraması, kişi başı bölüştürme) giriş yapmadan çalışır. Tüm girdiler — tutarlar, kişi sayısı, kalemler, eklediğin makbuz fotoğrafı — cihazında kalır. Bunların hiçbirini iletmeyiz veya saklamayız.</p>
+  <p>Harcama ve Ayrıntılı sekmelerindeki ücretsiz kullanıcılar için paylash, kişiselleştirilmemiş bir banner reklamı da gösterir. Aşağıdaki "Reklam" bölümüne bakın.</p>
+
+  <h3>Hesap oluşturup Grupları kullanırsan</h3>
+  <p>Gruplar sekmesi ücretli bir premium abonelik gerektirir. Abone olup kayıt olduğunda, aşağıdaki kişisel verileri işleriz:</p>
+  <ul>
+    <li><b>E-posta adresi</b> — hesap kimlik numaran, giriş, e-posta doğrulama ve parola sıfırlama için kullanılır. Pazarlama e-postası göndermeyiz.</li>
+    <li><b>Parola</b> — Firebase Authentication tarafından yönetilir. Parolanı asla görmeyiz; hash'lenir ve bizim adımıza Google tarafından saklanır.</li>
+    <li><b>Profil</b> — isteğe bağlı kullanıcı adı, ad, soyad ve bir avatar (emoji veya baş harfler). Neyi gireceğine sen karar verirsin. Kullanıcı adın, katıldığın grupların diğer üyelerine görünür; ad ve avatar uygulamanın içinde cihazlarında görünür.</li>
+    <li><b>Tercih edilen dil</b> — Ayarlar'dan seçtiğin dil, bildirimlerin kendi dilinde ulaşması için hesabına yansıtılır.</li>
+    <li><b>Premium abonelik durumu</b> — aboneliğinin aktif olup olmadığı ve ne zaman süresinin dolacağı. Bu, Apple'ın StoreKit'inden yansıtılır ki giriş yaptığın diğer cihazlar App Store'u yeniden kontrol etmeden premium durumunu görebilsin.</li>
+    <li><b>Push bildirim tokenları</b> — bildirimi etkinleştirdiğin her cihaz için Apple tarafından verilir. Gruplarınla ilgili bildirim göndermek için kullanırız.</li>
+    <li><b>Oluşturduğun gruplar, etkinlikler, harcamalar, hesaplaşmalar</b> — kullanıcı tarafından oluşturulan içeriklerin. Firebase Firestore'da saklanır, aynı grubun veya etkinliğin diğer üyelerine görünür.</li>
+    <li><b>Etkinlik üstverisi</b> — bir grubu, etkinliği veya harcamayı en son kimin güncellediğine dair zaman damgaları ve kullanıcı ID'si, böylece uygulama "sen" ile "başka bir üye" arasında ayrım gösterebilir.</li>
+  </ul>
+
+  <h3>Verini nasıl kullanırız</h3>
+  <p>Yukarıdaki her kategorinin, beslediği özelliğe doğrudan bağlı tek ve belirli bir amacı vardır — veriyi alakasız amaçlar için yeniden kullanmayız. Reklam profilleri oluşturmayız. Kişisel verini üçüncü taraflara kendi pazarlamaları için satmaz, kiralamaz veya paylaşmayız.</p>
+  <p>İşleme için hukuki dayanaklarımız (AB/Birleşik Krallık GDPR çerçevesinde):</p>
+  <ul>
+    <li><b>Sözleşmenin ifası</b> (Madde 6(1)(b)) — hesap oluşturma, giriş, gruplarını cihazların arasında senkronize etme, kabul ettiğin bildirimleri iletme, premium aboneliği işleme.</li>
+    <li><b>Meşru menfaatler</b> (Madde 6(1)(f)) — hizmetin çalışır ve güvenli kalmasını sağlama (ör. kötüye kullanımın hız sınırı, doğrulanmamış hesapların temizlenmesi), çökmelerin hatalarını ayıklama, bireyleri profillemeyen temel Firebase analitiği.</li>
+    <li><b>Onay</b> (Madde 6(1)(a)) — AB/Birleşik Krallık/İsviçre hukuku veya bazı ABD eyalet yasaları tarafından gerekli olduğunda ücretsiz katmandaki kişiselleştirilmemiş reklamcılık. Onayı istediğin zaman değiştirebilir veya geri çekebilirsin.</li>
+  </ul>
+
+  <h3>Sadece cihazında kalanlar</h3>
+  <ul>
+    <li>Görünüm tercihin (Sistem / Açık / Koyu)</li>
+    <li>Varsayılan para birimin</li>
+    <li>Harcama ve Ayrıntılı sekmelerindeki devam eden hesabın (düzenlemenin ortasında geri dönebilesin diye)</li>
+    <li>Eklediğin makbuz fotoğrafı (yalnızca kaydettiğinde gruptaki harcamaya yüklenir; daha önce değil)</li>
+  </ul>
+
+  <h3>Verini başka kimler işliyor</h3>
+  <p>Küçük bir güvenilir altyapı sağlayıcı setine güveniyoruz. Her birinin kendi gizlilik politikası aşağıda bağlantılıdır.</p>
+  <ul>
+    <li><b>Google Firebase</b> (Google LLC) — Kimlik doğrulama, Firestore veritabanı, Cloud Functions ve push iletimi için Cloud Messaging. Hesabın ve grup verilerin Google'ın <b>Belçika (europe-west1)</b> AB veri merkezinde saklanır ve sunucusuz fonksiyonlarımızın tamamı da europe-west1'de çalışır. Firebase Authentication ve Cloud Messaging, Google'ın global olarak dağıtılmış altyapısını kullanır. <a href="https://firebase.google.com/support/privacy">Firebase Gizliliği</a>.</li>
+    <li><b>Apple</b> — uygulama içi satın alımını kayıt sahibi olarak yürütür. Apple aboneliği işler, ödeme kaydını tutar ve bize yalnızca hesabının şu anda premium olup olmadığını gösteren bir yetki sinyali gönderir. Apple ayrıca push bildirimlerimizi de iletir (APNs). <a href="https://www.apple.com/legal/privacy/">Apple Gizliliği</a>.</li>
+    <li><b>Google AdMob</b> — ücretsiz katmanın Harcama ve Ayrıntılı sekmelerinde tek bir banner reklamı sunar. Yalnızca <b>kişiselleştirilmemiş reklamlar</b> isteriz — reklam tanımlayıcısı (IDFA) yok, uygulamalar arası takip yok, senin reklam profilin yok. AdMob, yalnızca bağlamsal reklamı sunmak ve ölçmek için temel kimliksiz sinyaller (IP'den çıkarılan yaklaşık bölge, reklam-etkileşim olayları, cihaz modeli ve OS sürümü) alır. <a href="https://policies.google.com/privacy">Google Gizliliği</a>.</a></li>
+    <li><b>Frankfurter</b> (frankfurter.app) — yalnızca tutarları harcamanın kaynak para biriminden farklı bir para biriminde görüntülediğinde kullanılır. Para birimi kodlarını (ör. "EUR,TRY") göndeririz, asla hiçbir tanımlayıcı, hesap verisi veya tutar göndermeyiz.</li>
+  </ul>
+
+  <h3>Uluslararası veri transferleri</h3>
+  <p>Hesabın ve grup verilerin Google Cloud sunucularında Belçika'da (europe-west1, Avrupa Birliği) saklanır ve paylash'ın tüm sunucusuz işleme süreçleri aynı bölgede gerçekleşir. <b>AB/Birleşik Krallık/İsviçre</b>'deysen, verin AB içinde kalır — uluslararası transfer gerçekleşmez.</p>
+  <p><b>AB dışındaysan</b> (Amerika Birleşik Devletleri, Türkiye, Latin Amerika veya başka herhangi bir AB dışı bölge), hesap oluşturmak verini saklama ve işleme için AB'ye transfer eder. Bu transferler için Google'ın standart sözleşme güvencelerine güveniyoruz.</p>
+
+  <h3>Haklarınız</h3>
+  <p>AB/Birleşik Krallık/İsviçre'deysen, GDPR sana aşağıdaki hakları verir. California (CCPA/CPRA), Colorado, Connecticut, Utah ve Virginia sakinleri için eşdeğer haklar mevcuttur. Nerede yaşıyor olursan ol, hepsine saygı duyarız.</p>
+  <ul>
+    <li><b>Erişim</b> — neye sahip olduğumuzu gör. Çoğu uygulamanın içinde görünür; makine okunabilir bir dışa aktarma için bize e-posta gönder.</li>
+    <li><b>Düzeltme</b> — düzelt. Profilini ve harcamalarını uygulama üzerinden düzenle. Hesap e-postası değişiklikleri için destekle iletişime geç.</li>
+    <li><b>Silme</b> — sil. Ayarlar → Profil → Hesabı Sil'e git. Hesabın ve sahip olduğun tüm gruplar, etkinlikler ve harcamalar kaldırılır. Diğer üyelerin sahip olduğu bir gruba katkıda bulunduğun harcamalar, diğer üyeler finansal geçmişe güvendiğinden, kimlik bilgilerin olmadan saklanabilir.</li>
+    <li><b>Taşınabilirlik</b> — bir kopya al. <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> adresine e-posta gönder, 30 gün içinde JSON dışa aktarımı sağlarız.</li>
+    <li><b>Kısıtlama ve itiraz</b> — belirli işlemeyi duraklatmamızı veya buna itiraz etmemizi iste. Destekle iletişime geç.</li>
+    <li><b>Onayı geri çek</b> — düzenlenmiş bölgelerdeki AdMob reklamları için Ayarlar → Gizlilik tercihlerini yönet'i aç. Geri çekme, geri çekmeden önceki işlemeyi etkilemez.</li>
+    <li><b>Şikayet</b> — yerel veri koruma otoritene şikayet etme hakkına sahipsin.</li>
+  </ul>
+
+  <h3>Veri saklama</h3>
+  <p>Hesabın aktifken verilerini saklarız. Takip edilmeyen doğrulanmamış hesaplar 7 gün sonra otomatik olarak silinir. Hesabını sildiğinde, profilini ve sahip olduğun grupları kaldırırız. Başkalarına ait gruplara katkıda bulunduğun harcamalar saklanabilir — bunlar grubun finansal geçmişinin bir parçasıdır — ancak mümkün olduğunda kimlik bilgilerin çıkarılır. Firestore'un yedek anlık görüntüleri, Google'ın standart saklama politikası altında silmeden sonra kısa süre boyunca devam edebilir.</p>
+
+  <h3>Çocukların gizliliği</h3>
+  <p>paylash 13 yaş altı çocuklara yönelik değildir. 13 yaşın altındaki kimseden bilerek veri toplamayız. App Store derecelendirmesi uygulamanın hedef kitlesini yansıtır. Bir çocuktan istenmeden veri topladığımıza inanıyorsan, bize e-posta gönder, kaldıracağız.</p>
+
+  <h3>Uygulama Takibi Şeffaflığı</h3>
+  <p>paylash, iOS Uygulama Takibi Şeffaflığı istemini göstermez çünkü seni uygulamalar veya web siteleri arasında takip etmiyoruz. Reklam SDK'mız yalnızca kişiselleştirilmemiş reklamlar için yapılandırılmıştır, bu da takip izni isteme gereğini ortadan kaldırır.</p>
+
+  <h3>Reklam</h3>
+  <p>Ücretsiz katman kullanıcıları, Harcama ve Ayrıntılı sekmelerinin üstünde bir banner reklam görür. Premium aboneler hiçbir yerde reklam görmez. Banner her zaman kişiselleştirilmemiştir.</p>
+  <p>paylash'ı AB, Birleşik Krallık, İsviçre veya düzenlenmiş ABD gizlilik eyaletlerinden birinden (California, Colorado, Connecticut, Utah, Virginia) başlatırsan, Google'ın Kullanıcı Mesajlaşma Platformu (UMP) ilk açılışta tek seferlik bir onay formu gösterir. Tercihini istediğin zaman Ayarlar → Gizlilik tercihlerini yönet üzerinden değiştirebilir veya geri alabilirsin. Bu bölgelerin dışında onay formu gösterilmez ve Ayarlar satırı gizlenir.</p>
+
+  <h3>Güvenlik</h3>
+  <p>paylash ile sunucularımız arasındaki tüm trafik TLS şifrelemesi kullanır. Parolalar, Firebase Authentication tarafından endüstri standardı yöntemlerle hash'lenir (parolanı asla görmeyiz). Firestore, bir kullanıcının yalnızca kendi verilerini ve üyesi olduğu grupları okuyup yazabilmesi için sunucu tarafında kurallar uygular. Kötüye kullanım tespiti için güvenlikle ilgili olayları kaydederiz; bu günlükler en fazla 30 gün saklanır.</p>
+
+  <h3>Bu politikadaki değişiklikler</h3>
+  <p>Bu politikayı değiştirirsek, sayfanın üstündeki "Son güncelleme" tarihini güncelleriz. Önemli değişiklikler, bir sonraki sürümde App Store listesi veya uygulama içi bildirim ile duyurulur.</p>
+
+  <div class="contact">
+    <p><b>İletişim</b><br>
+    Gizlilik soruları, veri dışa aktarma talepleri, şikayetler — <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> adresine e-posta gönder. 30 gün içinde, genellikle bir hafta içinde yanıt veriyoruz.</p>
+  </div>
 </section>
 
 <!-- ============ DEUTSCH ============ -->
 <section id="de" class="lang-section">
   <h2>Deutsch</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <h3>Zusammenfassung</h3>
+  <p>Mit paylash kannst du Rechnungen für dich allein teilen und — wenn du Premium abonnierst — Gruppen und Ausgaben mit Freunden auf iPhone, iPad, Mac und im Web teilen. Diese Seite erklärt genau, was wir sammeln, warum, und welche Kontrolle du hast.</p>
+  <p><b>Die Kurzfassung</b>: Der Rechnungsteiler und die postenweise Aufteilung funktionieren vollständig auf deinem Gerät und benötigen kein Konto. Alles andere (Gruppen, Ereignisse, geteilte Ausgaben) benötigt ein Konto, und die dort erstellten Daten werden in Google Firebase gespeichert, damit deine Geräte und deine Gruppenmitglieder sie sehen können. Wir verkaufen deine Daten niemals. Wir schalten niemals Werbung, die dich profiliert.</p>
+
+  <h3>Wer ist verantwortlich</h3>
+  <p>paylash wird von <b>NAE Dev</b> entwickelt und betrieben. Bei Datenschutzfragen schreib an <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Wir sind der Datenverantwortliche für die unten beschriebenen personenbezogenen Daten.</p>
+
+  <h3>Wenn du nur den Rechnungsteiler nutzt</h3>
+  <p>Der Ausgaben-Tab und der Postenweise-Tab (Rechnungsteiler, OCR-Belegscan, Pro-Person-Aufteilung) funktionieren ohne Anmeldung. Alle Eingaben — Beträge, Personenanzahl, Posten, das Beleg-Foto, falls du eins anhängst — bleiben auf deinem Gerät. Wir übertragen oder speichern davon nichts.</p>
+  <p>Für Nutzer ohne Premium zeigt paylash im Ausgaben- und Postenweise-Tab zusätzlich ein nicht-personalisiertes Banner an. Siehe „Werbung" unten.</p>
+
+  <h3>Wenn du ein Konto erstellst und Gruppen nutzt</h3>
+  <p>Der Gruppen-Tab erfordert ein kostenpflichtiges Premium-Abonnement. Wenn du abonnierst und dich registrierst, verarbeiten wir die folgenden personenbezogenen Daten:</p>
+  <ul>
+    <li><b>E-Mail-Adresse</b> — wird als Konto-Kennung, für die Anmeldung, zur E-Mail-Verifizierung und zum Passwort-Zurücksetzen verwendet. Wir senden keine Marketing-E-Mails.</li>
+    <li><b>Passwort</b> — wird von Firebase Authentication verwaltet. Wir sehen dein Passwort nie; es wird gehasht und in unserem Auftrag von Google gespeichert.</li>
+    <li><b>Profil</b> — ein optionaler Spitzname, Vorname, Nachname und ein Avatar (Emoji oder Initialen). Du entscheidest, was du angibst. Der Spitzname ist für andere Mitglieder der Gruppen, denen du beitrittst, sichtbar; die Namen und der Avatar sind in der App auf deinen Geräten sichtbar.</li>
+    <li><b>Bevorzugte Sprache</b> — die in den Einstellungen gewählte Sprache, die mit deinem Konto synchronisiert wird, damit Benachrichtigungen in deiner Sprache eintreffen.</li>
+    <li><b>Premium-Abonnementstatus</b> — ob dein Abonnement aktiv ist und wann es ausläuft. Dies wird aus Apples StoreKit gespiegelt, damit andere Geräte, auf denen du dich anmeldest, deinen Premium-Status sehen können, ohne den App Store erneut abzufragen.</li>
+    <li><b>Push-Benachrichtigungs-Tokens</b> — von Apple für jedes Gerät ausgegeben, auf dem du Benachrichtigungen aktiviert hast. Wir verwenden sie, um Benachrichtigungen über deine Gruppen zuzustellen.</li>
+    <li><b>Gruppen, Ereignisse, Ausgaben, Abrechnungen, die du erstellst</b> — deine nutzergenerierten Inhalte. In Firebase Firestore gespeichert, für andere Mitglieder derselben Gruppe oder desselben Ereignisses sichtbar.</li>
+    <li><b>Aktivitäts-Metadaten</b> — Zeitstempel und die Benutzer-ID, wer eine Gruppe, ein Ereignis oder eine Ausgabe zuletzt aktualisiert hat, damit die App „du" gegenüber „ein anderes Mitglied" anzeigen kann.</li>
+  </ul>
+
+  <h3>Wie wir deine Daten verwenden</h3>
+  <p>Jede Kategorie oben hat einen einzigen, spezifischen Zweck, der direkt an die Funktion gebunden ist, die sie ermöglicht — wir nutzen Daten nicht für nicht verwandte Zwecke wieder. Wir erstellen keine Werbeprofile. Wir verkaufen, vermieten oder teilen deine personenbezogenen Daten nicht mit Dritten für deren eigenes Marketing.</p>
+  <p>Unsere Rechtsgrundlagen für die Verarbeitung (gemäß EU/UK DSGVO):</p>
+  <ul>
+    <li><b>Vertragserfüllung</b> (Art. 6(1)(b)) — Kontoerstellung, Anmeldung, Synchronisation deiner Gruppen zwischen Geräten, Zustellung der von dir abonnierten Benachrichtigungen, Verarbeitung des Premium-Abonnements.</li>
+    <li><b>Berechtigte Interessen</b> (Art. 6(1)(f)) — den Dienst am Laufen und sicher halten (z. B. Rate-Limiting bei Missbrauch, Bereinigung nicht verifizierter Konten), Debugging von Abstürzen, grundlegende Firebase-Analytik, die keine Individuen profiliert.</li>
+    <li><b>Einwilligung</b> (Art. 6(1)(a)) — nicht-personalisierte Werbung auf den Free-Tier-Oberflächen, wo eine Einwilligung nach EU/UK/Schweizer Recht oder nach bestimmten US-Bundesstaatsgesetzen erforderlich ist. Du kannst die Einwilligung jederzeit ändern oder widerrufen.</li>
+  </ul>
+
+  <h3>Was nur auf deinem Gerät bleibt</h3>
+  <ul>
+    <li>Deine Erscheinungsbild-Einstellung (System / Hell / Dunkel)</li>
+    <li>Deine Standardwährung</li>
+    <li>Deine laufende Rechnung in den Tabs Ausgaben und Postenweise (damit du mitten in der Bearbeitung zurückkehren kannst)</li>
+    <li>Jedes von dir angehängte Beleg-Foto (wird nur beim Speichern in die Ausgabe der Gruppe hochgeladen; nicht vorher)</li>
+  </ul>
+
+  <h3>Wer sonst deine Daten verarbeitet</h3>
+  <p>Wir verlassen uns auf eine kleine Gruppe vertrauenswürdiger Infrastruktur-Anbieter. Jeder hat seine eigene unten verlinkte Datenschutzerklärung.</p>
+  <ul>
+    <li><b>Google Firebase</b> (Google LLC) — Authentifizierung, Firestore-Datenbank, Cloud Functions und Cloud Messaging für Push-Zustellung. Deine Konto- und Gruppendaten werden im EU-Rechenzentrum von Google in <b>Belgien (europe-west1)</b> gespeichert, und alle unsere serverlosen Funktionen laufen ebenfalls in europe-west1. Firebase Authentication und Cloud Messaging nutzen Googles global verteilte Infrastruktur. <a href="https://firebase.google.com/support/privacy">Firebase-Datenschutz</a>.</li>
+    <li><b>Apple</b> — wickelt deinen In-App-Kauf als Händler ab. Apple verarbeitet das Abonnement, hält den Zahlungsdatensatz und sendet uns nur ein Berechtigungssignal, das angibt, ob dein Konto derzeit Premium ist. Apple stellt auch unsere Push-Benachrichtigungen zu (APNs). <a href="https://www.apple.com/legal/privacy/">Apple-Datenschutz</a>.</li>
+    <li><b>Google AdMob</b> — schaltet ein einzelnes Banner auf den Free-Tier-Tabs Ausgaben und Postenweise. Wir fordern <b>ausschließlich nicht-personalisierte Werbung</b> an — keine Werbe-ID (IDFA), kein App-übergreifendes Tracking, kein Werbeprofil von dir. AdMob erhält grundlegende nicht-identifizierende Signale (aus der IP abgeleitete ungefähre Region, Werbe-Interaktionsereignisse, Gerätemodell und OS-Version), die ausschließlich zur Auslieferung und Messung der kontextuellen Werbung dienen. <a href="https://policies.google.com/privacy">Google-Datenschutz</a>.</li>
+    <li><b>Frankfurter</b> (frankfurter.app) — wird nur verwendet, wenn du Beträge in einer anderen Währung als der Ursprungswährung der Ausgabe anzeigst. Wir senden die Währungscodes (z. B. „EUR,TRY") und niemals eine Kennung, Kontodaten oder Beträge.</li>
+  </ul>
+
+  <h3>Internationale Datenübertragungen</h3>
+  <p>Deine Konto- und Gruppendaten werden auf Google-Cloud-Servern in Belgien (europe-west1, Europäische Union) gespeichert, und die gesamte serverlose Verarbeitung von paylash findet in derselben Region statt. Wenn du in der <b>EU/UK/Schweiz</b> bist, bleiben deine Daten in der EU — es findet keine internationale Übertragung statt.</p>
+  <p>Wenn du <b>außerhalb der EU</b> bist (USA, Türkei, Lateinamerika oder jede andere Nicht-EU-Region), überträgt die Kontoerstellung deine Daten zur Speicherung und Verarbeitung in die EU. Wir verlassen uns für diese Übertragungen auf Googles Standardvertragsklauseln.</p>
+
+  <h3>Deine Rechte</h3>
+  <p>Wenn du in der EU/UK/Schweiz bist, gewährt dir die DSGVO die folgenden Rechte. Gleichwertige Rechte bestehen für Einwohner Kaliforniens (CCPA/CPRA), Colorados, Connecticuts, Utahs und Virginias. Wir respektieren sie alle, unabhängig davon, wo du lebst.</p>
+  <ul>
+    <li><b>Auskunft</b> — sieh, was wir haben. Das meiste ist in der App selbst sichtbar; für einen maschinenlesbaren Export schreib uns eine E-Mail.</li>
+    <li><b>Berichtigung</b> — korrigiere es. Bearbeite dein Profil und deine Ausgaben über die App. Für Konto-E-Mail-Änderungen wende dich an den Support.</li>
+    <li><b>Löschung</b> — lösche es. Gehe zu Einstellungen → Profil → Konto löschen. Dein Konto und alle eigenen Gruppen, Ereignisse und Ausgaben werden entfernt. Ausgaben, zu denen du in einer Gruppe beigetragen hast, die noch anderen Mitgliedern gehört, können ohne deine Identifikationsdaten aufbewahrt werden, da andere Mitglieder sich auf die Finanzhistorie verlassen.</li>
+    <li><b>Übertragbarkeit</b> — hol dir eine Kopie. Schreib an <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>, und wir stellen einen JSON-Export innerhalb von 30 Tagen bereit.</li>
+    <li><b>Einschränkung & Widerspruch</b> — fordere, dass wir eine bestimmte Verarbeitung pausieren oder ihr widersprechen. Wende dich an den Support.</li>
+    <li><b>Einwilligung widerrufen</b> — für AdMob-Werbung in regulierten Regionen öffne Einstellungen → Datenschutzeinstellungen verwalten. Der Widerruf berührt nicht die Verarbeitung vor dem Widerruf.</li>
+    <li><b>Beschwerde</b> — du hast das Recht, eine Beschwerde bei deiner örtlichen Datenschutzbehörde einzureichen.</li>
+  </ul>
+
+  <h3>Datenaufbewahrung</h3>
+  <p>Wir bewahren deine Daten auf, solange dein Konto aktiv ist. Nicht verifizierte Konten ohne Folgeaktivität werden nach 7 Tagen automatisch gelöscht. Wenn du dein Konto löschst, entfernen wir dein Profil und die Gruppen, die du besitzt. Ausgaben, zu denen du in Gruppen anderer Personen beigetragen hast, können aufbewahrt werden — sie sind Teil der Finanzhistorie der Gruppe — aber deine Identifikationsdaten werden, wo möglich, entfernt. Backup-Snapshots von Firestore können nach der Löschung kurzzeitig gemäß Googles Standard-Aufbewahrung bestehen bleiben.</p>
+
+  <h3>Datenschutz für Kinder</h3>
+  <p>paylash richtet sich nicht an Kinder unter 13 Jahren. Wir sammeln wissentlich keine Daten von Personen unter 13 Jahren. Die App-Store-Altersfreigabe spiegelt die beabsichtigte Zielgruppe der App wider. Wenn du glaubst, dass wir versehentlich Daten von einem Kind gesammelt haben, schreib uns eine E-Mail, und wir werden sie entfernen.</p>
+
+  <h3>App-Tracking-Transparenz</h3>
+  <p>paylash zeigt die iOS-App-Tracking-Transparenz-Abfrage nicht, weil wir dich nicht über Apps oder Websites hinweg verfolgen. Unser Werbe-SDK ist nur für nicht-personalisierte Werbung konfiguriert, was die Notwendigkeit zur Anforderung einer Tracking-Erlaubnis beseitigt.</p>
+
+  <h3>Werbung</h3>
+  <p>Free-Tier-Nutzer sehen ein Banner oben in den Tabs Ausgaben und Postenweise. Premium-Abonnenten sehen nirgendwo Werbung. Das Banner ist immer nicht-personalisiert.</p>
+  <p>Wenn du paylash aus der EU, dem UK, der Schweiz oder einem der regulierten US-Datenschutzstaaten (Kalifornien, Colorado, Connecticut, Utah, Virginia) startest, zeigt Googles User Messaging Platform (UMP) beim ersten Start ein einmaliges Einwilligungsformular. Du kannst deine Wahl jederzeit unter Einstellungen → Datenschutzeinstellungen verwalten ändern oder widerrufen. Außerhalb dieser Regionen wird kein Einwilligungsformular gezeigt und die Einstellungs-Zeile ist ausgeblendet.</p>
+
+  <h3>Sicherheit</h3>
+  <p>Der gesamte Datenverkehr zwischen paylash und unseren Servern nutzt TLS-Verschlüsselung. Passwörter werden von Firebase Authentication mit branchenüblichen Methoden gehasht (wir sehen dein Passwort nie). Firestore erzwingt serverseitige Regeln, sodass ein Nutzer nur eigene Daten und die Gruppen, denen er angehört, lesen und schreiben kann. Wir protokollieren sicherheitsrelevante Ereignisse zur Missbrauchserkennung; diese Protokolle werden maximal 30 Tage aufbewahrt.</p>
+
+  <h3>Änderungen dieser Richtlinie</h3>
+  <p>Wenn wir diese Richtlinie ändern, aktualisieren wir das Datum „Zuletzt aktualisiert" oben. Wesentliche Änderungen werden über den App-Store-Eintrag oder eine In-App-Mitteilung beim nächsten Release bekannt gegeben.</p>
+
+  <div class="contact">
+    <p><b>Kontakt</b><br>
+    Datenschutzfragen, Datenexport-Anfragen, Beschwerden — schreib an <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Wir antworten innerhalb von 30 Tagen, meist innerhalb einer Woche.</p>
+  </div>
 </section>
 
 <!-- ============ ESPAÑOL ============ -->
 <section id="es" class="lang-section">
   <h2>Español</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <h3>Resumen</h3>
+  <p>paylash te permite dividir cuentas por tu cuenta y — si te suscribes a premium — compartir grupos y gastos con amigos en iPhone, iPad, Mac y la web. Esta página explica exactamente qué recogemos, por qué y qué control tienes.</p>
+  <p><b>La versión corta</b>: el divisor de cuentas y la división por artículo funcionan completamente en tu dispositivo y no requieren cuenta. Todo lo demás (grupos, eventos, gastos compartidos) necesita una cuenta, y los datos que creas allí se guardan en Google Firebase para que tus dispositivos y los miembros de tu grupo puedan verlos. Nunca vendemos tus datos. Nunca mostramos anuncios que te perfilen.</p>
+
+  <h3>Quién es responsable</h3>
+  <p>paylash es desarrollado y operado por <b>NAE Dev</b>. Para preguntas sobre privacidad, escribe a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Somos el responsable del tratamiento de los datos personales descritos a continuación.</p>
+
+  <h3>Si solo usas el divisor de cuentas</h3>
+  <p>La pestaña Gasto y la pestaña Por artículo (el divisor de cuentas, el escaneo OCR de recibos, la división por persona) funcionan sin iniciar sesión. Toda la entrada — importes, número de personas, artículos, la foto del recibo si la adjuntas — se queda en tu dispositivo. No transmitimos ni almacenamos nada de eso.</p>
+  <p>Para usuarios de nivel gratuito en las pestañas Gasto y Por artículo, paylash también muestra un anuncio de banner no personalizado. Consulta "Publicidad" más abajo.</p>
+
+  <h3>Si creas una cuenta y usas Grupos</h3>
+  <p>La pestaña Grupos requiere una suscripción premium de pago. Cuando te suscribes y te registras, tratamos los siguientes datos personales:</p>
+  <ul>
+    <li><b>Dirección de correo electrónico</b> — utilizada como identificador de cuenta, para iniciar sesión, para verificación de correo y para restablecer la contraseña. No enviamos correos de marketing.</li>
+    <li><b>Contraseña</b> — gestionada por Firebase Authentication. Nunca vemos tu contraseña; se cifra (hash) y se almacena en nuestro nombre por Google.</li>
+    <li><b>Perfil</b> — un apodo opcional, nombre, apellido y un avatar (emoji o iniciales). Tú eliges qué proporcionar. El apodo es visible para otros miembros de cualquier grupo al que te unas; el nombre y el avatar son visibles dentro de la app en tus dispositivos.</li>
+    <li><b>Idioma preferido</b> — el idioma que eliges en Ajustes, sincronizado con tu cuenta para que las notificaciones lleguen en tu idioma.</li>
+    <li><b>Estado de la suscripción premium</b> — si tu suscripción está activa y cuándo expira. Se sincroniza desde StoreKit de Apple para que otros dispositivos donde inicies sesión puedan ver tu estado premium sin volver a consultar la App Store.</li>
+    <li><b>Tokens de notificación push</b> — emitidos por Apple para cada dispositivo en el que hayas activado las notificaciones. Los usamos para entregar notificaciones sobre tus grupos.</li>
+    <li><b>Grupos, eventos, gastos, liquidaciones que creas</b> — tu contenido generado por el usuario. Almacenado en Firebase Firestore, visible para otros miembros del mismo grupo o evento.</li>
+    <li><b>Metadatos de actividad</b> — marcas de tiempo y el ID de quién actualizó por última vez un grupo, evento o gasto, para que la app pueda mostrar la atribución "tú" frente a "otro miembro".</li>
+  </ul>
+
+  <h3>Cómo usamos tus datos</h3>
+  <p>Cada categoría anterior tiene un único propósito específico vinculado directamente a la función que impulsa — no reutilizamos los datos para fines no relacionados. No construimos perfiles publicitarios. No vendemos, alquilamos ni compartimos tus datos personales con terceros para sus propios fines de marketing.</p>
+  <p>Nuestras bases legales para el tratamiento (bajo el RGPD de la UE/Reino Unido):</p>
+  <ul>
+    <li><b>Ejecución de un contrato</b> (Art. 6(1)(b)) — creación de cuenta, inicio de sesión, sincronización de tus grupos entre dispositivos, entrega de notificaciones a las que has dado tu consentimiento, procesamiento de la suscripción premium.</li>
+    <li><b>Intereses legítimos</b> (Art. 6(1)(f)) — mantener el servicio en funcionamiento y seguro (p. ej., limitar abusos, limpiar cuentas no verificadas), depurar bloqueos, análisis básico mediante Firebase que no perfila a individuos.</li>
+    <li><b>Consentimiento</b> (Art. 6(1)(a)) — publicidad no personalizada en las superficies del nivel gratuito, donde la ley de la UE/Reino Unido/Suiza o de ciertos estados de EE. UU. lo requiere. Puedes cambiar o retirar tu consentimiento en cualquier momento.</li>
+  </ul>
+
+  <h3>Lo que se queda solo en tu dispositivo</h3>
+  <ul>
+    <li>Tu preferencia de apariencia (Sistema / Claro / Oscuro)</li>
+    <li>Tu moneda predeterminada</li>
+    <li>Tu cuenta en curso en las pestañas Gasto y Por artículo (para que puedas volver a media edición)</li>
+    <li>Cualquier foto de recibo que adjuntes (solo se sube al gasto del grupo cuando guardas; no antes)</li>
+  </ul>
+
+  <h3>Quién más procesa tus datos</h3>
+  <p>Dependemos de un pequeño conjunto de proveedores de infraestructura de confianza. Cada uno tiene su propia política de privacidad enlazada abajo.</p>
+  <ul>
+    <li><b>Google Firebase</b> (Google LLC) — Authentication, base de datos Firestore, Cloud Functions y Cloud Messaging para entrega push. Los datos de tu cuenta y de los grupos se almacenan en el centro de datos europeo de Google en <b>Bélgica (europe-west1)</b>, y todas nuestras funciones sin servidor también se ejecutan en europe-west1. Firebase Authentication y Cloud Messaging usan la infraestructura distribuida globalmente de Google. <a href="https://firebase.google.com/support/privacy">Privacidad de Firebase</a>.</li>
+    <li><b>Apple</b> — gestiona tu compra dentro de la app como comerciante de registro. Apple procesa la suscripción, conserva el registro de pago y solo nos envía una señal de derechos que indica si tu cuenta es actualmente premium. Apple también entrega nuestras notificaciones push (APNs). <a href="https://www.apple.com/legal/privacy/">Privacidad de Apple</a>.</li>
+    <li><b>Google AdMob</b> — sirve un único anuncio de banner en las pestañas Gasto y Por artículo del nivel gratuito. Solicitamos <b>solo anuncios no personalizados</b> — sin identificador publicitario (IDFA), sin seguimiento entre apps, sin perfil publicitario tuyo. AdMob recibe señales básicas no identificativas (región aproximada derivada de la IP, eventos de interacción con anuncios, modelo de dispositivo y versión de iOS) usadas únicamente para entregar y medir el anuncio contextual. <a href="https://policies.google.com/privacy">Privacidad de Google</a>.</li>
+    <li><b>Frankfurter</b> (frankfurter.app) — usado solo cuando muestras importes en una moneda diferente a la moneda original del gasto. Enviamos los códigos de moneda (p. ej., "EUR,TRY") y nunca ningún identificador, dato de cuenta o importe.</li>
+  </ul>
+
+  <h3>Transferencias internacionales de datos</h3>
+  <p>Los datos de tu cuenta y de los grupos se almacenan en servidores de Google Cloud en Bélgica (europe-west1, Unión Europea), y todo el procesamiento sin servidor de paylash ocurre en la misma región. Si estás en la <b>UE/Reino Unido/Suiza</b>, tus datos permanecen en la UE — no se produce transferencia internacional.</p>
+  <p>Si estás <b>fuera de la UE</b> (Estados Unidos, Turquía, América Latina o cualquier otra región no perteneciente a la UE), crear una cuenta transfiere tus datos a la UE para su almacenamiento y procesamiento. Confiamos en las salvaguardas contractuales estándar de Google para esas transferencias.</p>
+
+  <h3>Tus derechos</h3>
+  <p>Si estás en la UE/Reino Unido/Suiza, el RGPD te otorga los siguientes derechos. Existen derechos equivalentes para los residentes de California (CCPA/CPRA), Colorado, Connecticut, Utah y Virginia. Los respetamos todos, independientemente de dónde vivas.</p>
+  <ul>
+    <li><b>Acceso</b> — mira lo que tenemos. La mayor parte es visible en la propia app; para una exportación legible por máquina, envíanos un correo.</li>
+    <li><b>Rectificación</b> — corrígelo. Edita tu perfil y tus gastos desde la app. Para cambios de correo de la cuenta, contacta con soporte.</li>
+    <li><b>Supresión</b> — bórralo. Ve a Ajustes → Perfil → Eliminar cuenta. Tu cuenta y todos los grupos, eventos y gastos propios se eliminan. Los gastos que aportaste a un grupo que aún pertenece a otros miembros pueden conservarse sin tus datos identificativos, ya que otros miembros dependen del historial financiero.</li>
+    <li><b>Portabilidad</b> — obtén una copia. Escribe a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> y proporcionaremos una exportación JSON dentro de 30 días.</li>
+    <li><b>Limitación y oposición</b> — solicita que pausemos un tratamiento específico u oponte a él. Contacta con soporte.</li>
+    <li><b>Retirar el consentimiento</b> — para anuncios de AdMob en regiones reguladas, abre Ajustes → Gestionar preferencias de privacidad. La retirada no afecta al tratamiento anterior a la retirada.</li>
+    <li><b>Reclamación</b> — tienes derecho a presentar una reclamación ante tu autoridad local de protección de datos.</li>
+  </ul>
+
+  <h3>Conservación de datos</h3>
+  <p>Conservamos tus datos mientras tu cuenta esté activa. Las cuentas no verificadas creadas sin seguimiento se eliminan automáticamente después de 7 días. Cuando eliminas tu cuenta, retiramos tu perfil y los grupos que posees. Los gastos que aportaste a grupos propiedad de otras personas pueden conservarse — son parte del historial financiero del grupo — pero tus datos identificativos se eliminan donde sea factible. Las copias de seguridad de Firestore pueden persistir brevemente tras la eliminación bajo la retención estándar de Google.</p>
+
+  <h3>Privacidad de los niños</h3>
+  <p>paylash no está dirigida a niños menores de 13 años. No recogemos a sabiendas datos de menores de 13 años. La clasificación de la App Store refleja la audiencia prevista de la app. Si crees que hemos recogido datos de un niño por error, envíanos un correo y los eliminaremos.</p>
+
+  <h3>Transparencia del seguimiento de apps</h3>
+  <p>paylash no muestra la solicitud de Transparencia del seguimiento de apps de iOS porque no te rastreamos en apps o sitios web. Nuestro SDK publicitario está configurado solo para anuncios no personalizados, lo que elimina la necesidad de pedir permiso de seguimiento.</p>
+
+  <h3>Publicidad</h3>
+  <p>Los usuarios del nivel gratuito ven un banner en la parte superior de las pestañas Gasto y Por artículo. Los suscriptores premium no ven anuncios en ningún lugar. El banner siempre es no personalizado.</p>
+  <p>Si lanzas paylash desde la UE, Reino Unido, Suiza o uno de los estados de privacidad regulados de EE. UU. (California, Colorado, Connecticut, Utah, Virginia), la User Messaging Platform (UMP) de Google muestra un formulario de consentimiento único en el primer inicio. Puedes cambiar o revocar tu elección en cualquier momento desde Ajustes → Gestionar preferencias de privacidad. Fuera de esas regiones, no se muestra ningún formulario de consentimiento y la fila de Ajustes se oculta.</p>
+
+  <h3>Seguridad</h3>
+  <p>Todo el tráfico entre paylash y nuestros servidores usa cifrado TLS. Las contraseñas son cifradas (hash) por Firebase Authentication usando métodos estándar de la industria (nunca vemos tu contraseña). Firestore aplica reglas del lado del servidor para que un usuario solo pueda leer y escribir sus propios datos y los grupos a los que pertenece. Registramos eventos relevantes para la seguridad con fines de detección de abusos; estos registros se conservan un máximo de 30 días.</p>
+
+  <h3>Cambios en esta política</h3>
+  <p>Si cambiamos esta política, actualizaremos la fecha "Última actualización" en la parte superior. Los cambios materiales se comunicarán a través de la ficha de la App Store o un aviso en la app en la próxima versión.</p>
+
+  <div class="contact">
+    <p><b>Contacto</b><br>
+    Preguntas sobre privacidad, solicitudes de exportación de datos, reclamaciones — escribe a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Respondemos en 30 días, normalmente en una semana.</p>
+  </div>
 </section>
 
 <!-- ============ ITALIANO ============ -->
 <section id="it" class="lang-section">
   <h2>Italiano</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <h3>Riepilogo</h3>
+  <p>paylash ti permette di dividere i conti da solo e — se sottoscrivi premium — di condividere gruppi e spese con gli amici su iPhone, iPad, Mac e web. Questa pagina spiega esattamente cosa raccogliamo, perché e quale controllo hai.</p>
+  <p><b>Versione breve</b>: il divisore di conti e la divisione per voce funzionano interamente sul tuo dispositivo e non richiedono un account. Tutto il resto (gruppi, eventi, spese condivise) richiede un account, e i dati che crei lì sono memorizzati in Google Firebase affinché i tuoi dispositivi e i membri del gruppo possano vederli. Non vendiamo mai i tuoi dati. Non pubblichiamo mai annunci che ti profilano.</p>
+
+  <h3>Chi è responsabile</h3>
+  <p>paylash è sviluppata e gestita da <b>NAE Dev</b>. Per domande sulla privacy, scrivi a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Siamo il titolare del trattamento per i dati personali descritti di seguito.</p>
+
+  <h3>Se usi solo il divisore di conti</h3>
+  <p>La scheda Spesa e la scheda Per voce (il divisore di conti, la scansione OCR degli scontrini, la divisione per persona) funzionano senza accedere. Tutto l'input — importi, numero di persone, voci, la foto dello scontrino se la alleghi — resta sul tuo dispositivo. Non trasmettiamo né memorizziamo nulla di tutto ciò.</p>
+  <p>Per gli utenti del livello gratuito nelle schede Spesa e Per voce, paylash mostra anche un banner pubblicitario non personalizzato. Vedi "Pubblicità" sotto.</p>
+
+  <h3>Se crei un account e usi i Gruppi</h3>
+  <p>La scheda Gruppi richiede un abbonamento premium a pagamento. Quando ti abboni e ti registri, trattiamo i seguenti dati personali:</p>
+  <ul>
+    <li><b>Indirizzo email</b> — usato come identificatore del tuo account, per l'accesso, per la verifica email e per il reset della password. Non inviamo email di marketing.</li>
+    <li><b>Password</b> — gestita da Firebase Authentication. Non vediamo mai la tua password; viene sottoposta a hash e memorizzata da Google per nostro conto.</li>
+    <li><b>Profilo</b> — un soprannome facoltativo, nome, cognome e un avatar (emoji o iniziali). Decidi tu cosa fornire. Il soprannome è visibile agli altri membri di qualsiasi gruppo a cui ti unisci; i nomi e l'avatar sono visibili all'interno dell'app sui tuoi dispositivi.</li>
+    <li><b>Lingua preferita</b> — la lingua che scegli nelle Impostazioni, sincronizzata con il tuo account così le notifiche arrivano nella tua lingua.</li>
+    <li><b>Stato dell'abbonamento premium</b> — se il tuo abbonamento è attivo e quando scade. Viene sincronizzato dallo StoreKit di Apple così gli altri dispositivi su cui accedi possono vedere il tuo stato premium senza ricontrollare l'App Store.</li>
+    <li><b>Token per notifiche push</b> — rilasciati da Apple per ogni dispositivo su cui hai abilitato le notifiche. Li usiamo per consegnare notifiche sui tuoi gruppi.</li>
+    <li><b>Gruppi, eventi, spese, saldi che crei</b> — i tuoi contenuti generati dall'utente. Memorizzati in Firebase Firestore, visibili ad altri membri dello stesso gruppo o evento.</li>
+    <li><b>Metadati di attività</b> — timestamp e l'ID dell'utente che ha aggiornato per ultimo un gruppo, evento o spesa, così l'app può mostrare l'attribuzione "tu" rispetto a "un altro membro".</li>
+  </ul>
+
+  <h3>Come usiamo i tuoi dati</h3>
+  <p>Ogni categoria sopra ha uno scopo unico e specifico legato direttamente alla funzione che alimenta — non riutilizziamo i dati per scopi non correlati. Non costruiamo profili pubblicitari. Non vendiamo, affittiamo o condividiamo i tuoi dati personali con terzi per il loro marketing.</p>
+  <p>Le nostre basi giuridiche per il trattamento (ai sensi del GDPR UE/UK):</p>
+  <ul>
+    <li><b>Esecuzione di un contratto</b> (Art. 6(1)(b)) — creazione dell'account, accesso, sincronizzazione dei tuoi gruppi tra dispositivi, consegna delle notifiche a cui hai aderito, elaborazione dell'abbonamento premium.</li>
+    <li><b>Interessi legittimi</b> (Art. 6(1)(f)) — mantenere il servizio funzionante e sicuro (es. rate-limiting degli abusi, pulizia degli account non verificati), debug dei crash, analisi di base tramite Firebase che non profilano gli individui.</li>
+    <li><b>Consenso</b> (Art. 6(1)(a)) — pubblicità non personalizzata sulle superfici del livello gratuito, dove il consenso è richiesto dalla legge UE/UK/Svizzera o da alcune leggi statali statunitensi. Puoi modificare o revocare il consenso in qualsiasi momento.</li>
+  </ul>
+
+  <h3>Cosa resta solo sul tuo dispositivo</h3>
+  <ul>
+    <li>La tua preferenza di aspetto (Sistema / Chiaro / Scuro)</li>
+    <li>La tua valuta predefinita</li>
+    <li>Il tuo conto in corso nelle schede Spesa e Per voce (così puoi tornare a metà modifica)</li>
+    <li>Qualsiasi foto di scontrino che alleghi (caricata sulla spesa del gruppo solo quando salvi; non prima)</li>
+  </ul>
+
+  <h3>Chi altro tratta i tuoi dati</h3>
+  <p>Ci affidiamo a un piccolo gruppo di fornitori di infrastruttura fidati. Ognuno ha la propria informativa sulla privacy collegata sotto.</p>
+  <ul>
+    <li><b>Google Firebase</b> (Google LLC) — Authentication, database Firestore, Cloud Functions e Cloud Messaging per la consegna push. I dati del tuo account e dei gruppi sono memorizzati nel data center europeo di Google in <b>Belgio (europe-west1)</b>, e anche tutte le nostre funzioni serverless vengono eseguite in europe-west1. Firebase Authentication e Cloud Messaging utilizzano l'infrastruttura distribuita globalmente di Google. <a href="https://firebase.google.com/support/privacy">Privacy di Firebase</a>.</li>
+    <li><b>Apple</b> — gestisce il tuo acquisto in-app come venditore di registrazione. Apple elabora l'abbonamento, conserva il record di pagamento e ci invia solo un segnale di abilitazione che indica se il tuo account è attualmente premium. Apple consegna anche le nostre notifiche push (APNs). <a href="https://www.apple.com/legal/privacy/">Privacy di Apple</a>.</li>
+    <li><b>Google AdMob</b> — pubblica un singolo banner sulle schede Spesa e Per voce del livello gratuito. Richiediamo <b>solo annunci non personalizzati</b> — nessun identificatore pubblicitario (IDFA), nessun tracciamento tra app, nessun profilo pubblicitario di te. AdMob riceve segnali di base non identificativi (regione approssimativa derivata dall'IP, eventi di interazione con gli annunci, modello del dispositivo e versione OS) usati esclusivamente per consegnare e misurare l'annuncio contestuale. <a href="https://policies.google.com/privacy">Privacy di Google</a>.</li>
+    <li><b>Frankfurter</b> (frankfurter.app) — usato solo quando visualizzi importi in una valuta diversa da quella di origine della spesa. Inviamo i codici valuta (es. "EUR,TRY") e mai alcun identificatore, dato dell'account o importo.</li>
+  </ul>
+
+  <h3>Trasferimenti internazionali di dati</h3>
+  <p>I dati del tuo account e dei gruppi sono memorizzati su server Google Cloud in Belgio (europe-west1, Unione Europea), e tutta l'elaborazione serverless di paylash avviene nella stessa regione. Se ti trovi nell'<b>UE/Regno Unito/Svizzera</b>, i tuoi dati restano nell'UE — non avviene alcun trasferimento internazionale.</p>
+  <p>Se ti trovi <b>fuori dall'UE</b> (Stati Uniti, Turchia, America Latina o qualsiasi altra regione non UE), creare un account trasferisce i tuoi dati nell'UE per la conservazione e l'elaborazione. Ci affidiamo alle clausole contrattuali standard di Google per tali trasferimenti.</p>
+
+  <h3>I tuoi diritti</h3>
+  <p>Se ti trovi nell'UE/Regno Unito/Svizzera, il GDPR ti garantisce i seguenti diritti. Diritti equivalenti esistono per i residenti della California (CCPA/CPRA), Colorado, Connecticut, Utah e Virginia. Li rispettiamo tutti, indipendentemente da dove vivi.</p>
+  <ul>
+    <li><b>Accesso</b> — vedi cosa abbiamo. La maggior parte è visibile nell'app stessa; per un'esportazione leggibile dalla macchina, scrivici un'email.</li>
+    <li><b>Rettifica</b> — correggi. Modifica il tuo profilo e le tue spese tramite l'app. Per modifiche all'email dell'account, contatta il supporto.</li>
+    <li><b>Cancellazione</b> — eliminalo. Vai su Impostazioni → Profilo → Elimina account. Il tuo account e tutti i gruppi, eventi e spese di tua proprietà vengono rimossi. Le spese che hai contribuito a un gruppo ancora di proprietà di altri membri possono essere conservate senza i tuoi dati identificativi, poiché altri membri si affidano alla cronologia finanziaria.</li>
+    <li><b>Portabilità</b> — ottieni una copia. Scrivi a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> e forniremo un'esportazione JSON entro 30 giorni.</li>
+    <li><b>Limitazione e opposizione</b> — richiedi di mettere in pausa un trattamento specifico o opponiti. Contatta il supporto.</li>
+    <li><b>Revoca del consenso</b> — per gli annunci AdMob nelle regioni regolamentate, apri Impostazioni → Gestisci preferenze sulla privacy. La revoca non influisce sul trattamento precedente alla revoca.</li>
+    <li><b>Reclamo</b> — hai il diritto di presentare un reclamo alla tua autorità locale per la protezione dei dati.</li>
+  </ul>
+
+  <h3>Conservazione dei dati</h3>
+  <p>Conserviamo i tuoi dati finché il tuo account è attivo. Gli account non verificati creati senza follow-up vengono eliminati automaticamente dopo 7 giorni. Quando elimini il tuo account, rimuoviamo il tuo profilo e i gruppi che possiedi. Le spese che hai contribuito a gruppi di proprietà di altre persone possono essere conservate — fanno parte della cronologia finanziaria del gruppo — ma i tuoi dati identificativi vengono rimossi ove possibile. Gli snapshot di backup di Firestore possono persistere brevemente dopo l'eliminazione secondo la retention standard di Google.</p>
+
+  <h3>Privacy dei minori</h3>
+  <p>paylash non è rivolta ai bambini sotto i 13 anni. Non raccogliamo consapevolmente dati da persone sotto i 13 anni. La classificazione dell'App Store riflette il pubblico previsto dell'app. Se ritieni che abbiamo raccolto inavvertitamente dati da un bambino, scrivici un'email e li rimuoveremo.</p>
+
+  <h3>Trasparenza del tracciamento delle app</h3>
+  <p>paylash non mostra il prompt di Trasparenza del tracciamento delle app di iOS perché non ti tracciamo tra app o siti web. Il nostro SDK pubblicitario è configurato solo per annunci non personalizzati, il che elimina la necessità di richiedere il permesso di tracciamento.</p>
+
+  <h3>Pubblicità</h3>
+  <p>Gli utenti del livello gratuito vedono un banner in cima alle schede Spesa e Per voce. Gli abbonati premium non vedono pubblicità da nessuna parte. Il banner è sempre non personalizzato.</p>
+  <p>Se avvii paylash dall'UE, Regno Unito, Svizzera o da uno degli stati statunitensi regolamentati sulla privacy (California, Colorado, Connecticut, Utah, Virginia), la User Messaging Platform (UMP) di Google mostra un modulo di consenso una tantum al primo avvio. Puoi modificare o revocare la tua scelta in qualsiasi momento da Impostazioni → Gestisci preferenze sulla privacy. Al di fuori di tali regioni, non viene mostrato alcun modulo di consenso e la riga delle Impostazioni è nascosta.</p>
+
+  <h3>Sicurezza</h3>
+  <p>Tutto il traffico tra paylash e i nostri server utilizza la crittografia TLS. Le password vengono sottoposte a hash da Firebase Authentication utilizzando metodi standard del settore (non vediamo mai la tua password). Firestore applica regole lato server affinché un utente possa solo leggere e scrivere i propri dati e i gruppi a cui appartiene. Registriamo eventi rilevanti per la sicurezza per il rilevamento di abusi; questi log vengono conservati per un massimo di 30 giorni.</p>
+
+  <h3>Modifiche a questa policy</h3>
+  <p>Se modifichiamo questa policy, aggiorneremo la data "Ultimo aggiornamento" in alto. Le modifiche sostanziali saranno comunicate tramite la scheda App Store o un avviso in-app alla prossima release.</p>
+
+  <div class="contact">
+    <p><b>Contatto</b><br>
+    Domande sulla privacy, richieste di esportazione dati, reclami — scrivi a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Rispondiamo entro 30 giorni, di solito entro una settimana.</p>
+  </div>
 </section>
 
 <!-- ============ FRANÇAIS ============ -->
 <section id="fr" class="lang-section">
   <h2>Français</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <h3>Résumé</h3>
+  <p>paylash te permet de partager des notes seul et — si tu souscris à premium — de partager des groupes et des dépenses avec des amis sur iPhone, iPad, Mac et le web. Cette page explique exactement ce que nous collectons, pourquoi, et quel contrôle tu as.</p>
+  <p><b>La version courte</b> : le diviseur de notes et le partage article par article fonctionnent entièrement sur ton appareil et ne nécessitent pas de compte. Tout le reste (groupes, événements, dépenses partagées) nécessite un compte, et les données que tu crées y sont stockées dans Google Firebase pour que tes appareils et les membres de ton groupe puissent les voir. Nous ne vendons jamais tes données. Nous ne diffusons jamais de publicités qui te profilent.</p>
+
+  <h3>Qui est responsable</h3>
+  <p>paylash est développée et exploitée par <b>NAE Dev</b>. Pour les questions de confidentialité, écris à <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Nous sommes le responsable du traitement pour les données personnelles décrites ci-dessous.</p>
+
+  <h3>Si tu utilises uniquement le diviseur de notes</h3>
+  <p>L'onglet Dépense et l'onglet Détaillé (le diviseur de notes, la numérisation OCR des reçus, le partage par personne) fonctionnent sans connexion. Toute l'entrée — montants, nombre de personnes, articles, la photo du reçu si tu en attaches une — reste sur ton appareil. Nous n'en transmettons ni n'en stockons rien.</p>
+  <p>Pour les utilisateurs gratuits sur les onglets Dépense et Détaillé, paylash affiche également une bannière publicitaire non personnalisée. Voir « Publicité » ci-dessous.</p>
+
+  <h3>Si tu crées un compte et utilises Groupes</h3>
+  <p>L'onglet Groupes nécessite un abonnement premium payant. Lorsque tu t'abonnes et t'inscris, nous traitons les données personnelles suivantes :</p>
+  <ul>
+    <li><b>Adresse e-mail</b> — utilisée comme identifiant de compte, pour la connexion, pour la vérification de l'e-mail et pour la réinitialisation du mot de passe. Nous n'envoyons aucun e-mail marketing.</li>
+    <li><b>Mot de passe</b> — géré par Firebase Authentication. Nous ne voyons jamais ton mot de passe ; il est haché et stocké par Google pour notre compte.</li>
+    <li><b>Profil</b> — un pseudo facultatif, prénom, nom et un avatar (emoji ou initiales). Tu choisis ce que tu fournis. Le pseudo est visible par les autres membres de tout groupe que tu rejoins ; les noms et l'avatar sont visibles dans l'app sur tes appareils.</li>
+    <li><b>Langue préférée</b> — la langue que tu choisis dans Réglages, synchronisée avec ton compte pour que les notifications arrivent dans ta langue.</li>
+    <li><b>État de l'abonnement premium</b> — si ton abonnement est actif et quand il expire. Synchronisé depuis le StoreKit d'Apple pour que les autres appareils où tu te connectes puissent voir ton statut premium sans ré-interroger l'App Store.</li>
+    <li><b>Tokens de notifications push</b> — émis par Apple pour chaque appareil sur lequel tu as activé les notifications. Nous les utilisons pour livrer des notifications concernant tes groupes.</li>
+    <li><b>Groupes, événements, dépenses, règlements que tu crées</b> — ton contenu généré par l'utilisateur. Stockés dans Firebase Firestore, visibles par les autres membres du même groupe ou événement.</li>
+    <li><b>Métadonnées d'activité</b> — horodatages et l'ID utilisateur de qui a mis à jour en dernier un groupe, un événement ou une dépense, pour que l'app puisse afficher l'attribution « toi » ou « un autre membre ».</li>
+  </ul>
+
+  <h3>Comment nous utilisons tes données</h3>
+  <p>Chaque catégorie ci-dessus a une finalité unique et spécifique liée directement à la fonctionnalité qu'elle alimente — nous ne réutilisons pas les données à des fins non liées. Nous ne construisons pas de profils publicitaires. Nous ne vendons, louons ni partageons tes données personnelles avec des tiers pour leur propre marketing.</p>
+  <p>Nos bases légales pour le traitement (au titre du RGPD UE/UK) :</p>
+  <ul>
+    <li><b>Exécution d'un contrat</b> (Art. 6(1)(b)) — création de compte, connexion, synchronisation de tes groupes entre tes appareils, livraison des notifications auxquelles tu as souscrit, traitement de l'abonnement premium.</li>
+    <li><b>Intérêts légitimes</b> (Art. 6(1)(f)) — maintenir le service en fonctionnement et sécurisé (par exemple, limiter les abus, nettoyer les comptes non vérifiés), déboguer les plantages, analyses de base via Firebase qui ne profilent pas les individus.</li>
+    <li><b>Consentement</b> (Art. 6(1)(a)) — publicité non personnalisée sur les surfaces gratuites, lorsque le consentement est requis par la loi UE/UK/Suisse ou par certaines lois étatiques américaines. Tu peux modifier ou retirer ton consentement à tout moment.</li>
+  </ul>
+
+  <h3>Ce qui reste uniquement sur ton appareil</h3>
+  <ul>
+    <li>Ta préférence d'apparence (Système / Clair / Sombre)</li>
+    <li>Ta devise par défaut</li>
+    <li>Ta note en cours dans les onglets Dépense et Détaillé (pour que tu puisses revenir au milieu d'une modification)</li>
+    <li>Toute photo de reçu que tu attaches (téléversée à la dépense du groupe uniquement lors de l'enregistrement ; pas avant)</li>
+  </ul>
+
+  <h3>Qui d'autre traite tes données</h3>
+  <p>Nous nous appuyons sur un petit ensemble de fournisseurs d'infrastructure de confiance. Chacun a sa propre politique de confidentialité liée ci-dessous.</p>
+  <ul>
+    <li><b>Google Firebase</b> (Google LLC) — Authentication, base de données Firestore, Cloud Functions et Cloud Messaging pour la livraison push. Les données de ton compte et de tes groupes sont stockées dans le centre de données européen de Google en <b>Belgique (europe-west1)</b>, et toutes nos fonctions sans serveur s'exécutent également dans europe-west1. Firebase Authentication et Cloud Messaging utilisent l'infrastructure distribuée mondialement de Google. <a href="https://firebase.google.com/support/privacy">Confidentialité Firebase</a>.</li>
+    <li><b>Apple</b> — gère ton achat in-app en tant que commerçant de référence. Apple traite l'abonnement, conserve l'enregistrement de paiement et nous envoie uniquement un signal d'autorisation indiquant si ton compte est actuellement premium. Apple livre également nos notifications push (APNs). <a href="https://www.apple.com/legal/privacy/">Confidentialité Apple</a>.</li>
+    <li><b>Google AdMob</b> — diffuse une seule bannière sur les onglets Dépense et Détaillé du niveau gratuit. Nous demandons <b>uniquement des publicités non personnalisées</b> — pas d'identifiant publicitaire (IDFA), pas de tracking entre apps, pas de profil publicitaire de toi. AdMob reçoit des signaux non identifiants de base (région approximative dérivée de l'IP, événements d'interaction avec les publicités, modèle d'appareil et version d'OS) utilisés uniquement pour livrer et mesurer la publicité contextuelle. <a href="https://policies.google.com/privacy">Confidentialité Google</a>.</li>
+    <li><b>Frankfurter</b> (frankfurter.app) — utilisé uniquement lorsque tu affiches des montants dans une devise différente de celle d'origine de la dépense. Nous envoyons les codes de devise (par exemple « EUR,TRY ») et jamais d'identifiant, de données de compte ou de montant.</li>
+  </ul>
+
+  <h3>Transferts internationaux de données</h3>
+  <p>Les données de ton compte et de tes groupes sont stockées sur des serveurs Google Cloud en Belgique (europe-west1, Union européenne), et tout le traitement sans serveur de paylash a lieu dans la même région. Si tu es dans l'<b>UE/UK/Suisse</b>, tes données restent dans l'UE — aucun transfert international ne se produit.</p>
+  <p>Si tu es <b>hors UE</b> (États-Unis, Turquie, Amérique latine, ou toute autre région non-UE), la création d'un compte transfère tes données vers l'UE pour le stockage et le traitement. Nous nous appuyons sur les garanties contractuelles standard de Google pour ces transferts.</p>
+
+  <h3>Tes droits</h3>
+  <p>Si tu es dans l'UE/UK/Suisse, le RGPD t'accorde les droits suivants. Des droits équivalents existent pour les résidents de Californie (CCPA/CPRA), du Colorado, du Connecticut, de l'Utah et de la Virginie. Nous les honorons tous, quel que soit ton lieu de résidence.</p>
+  <ul>
+    <li><b>Accès</b> — vois ce que nous avons. La plupart est visible dans l'app elle-même ; pour une exportation lisible par machine, envoie-nous un e-mail.</li>
+    <li><b>Rectification</b> — corrige. Modifie ton profil et tes dépenses via l'app. Pour les changements d'e-mail de compte, contacte le support.</li>
+    <li><b>Effacement</b> — supprime. Va dans Réglages → Profil → Supprimer le compte. Ton compte et tous les groupes, événements et dépenses que tu possèdes sont supprimés. Les dépenses que tu as contribuées à un groupe encore possédé par d'autres membres peuvent être conservées sans tes données identifiantes, car les autres membres dépendent de l'historique financier.</li>
+    <li><b>Portabilité</b> — obtiens une copie. Écris à <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> et nous fournirons une exportation JSON sous 30 jours.</li>
+    <li><b>Limitation et opposition</b> — demande que nous suspendions un traitement spécifique ou oppose-toi à celui-ci. Contacte le support.</li>
+    <li><b>Retirer le consentement</b> — pour les publicités AdMob dans les régions réglementées, ouvre Réglages → Gérer les préférences de confidentialité. Le retrait n'affecte pas le traitement antérieur au retrait.</li>
+    <li><b>Réclamation</b> — tu as le droit de déposer une réclamation auprès de ton autorité locale de protection des données.</li>
+  </ul>
+
+  <h3>Conservation des données</h3>
+  <p>Nous conservons tes données tant que ton compte est actif. Les comptes non vérifiés créés sans suivi sont automatiquement supprimés après 7 jours. Lorsque tu supprimes ton compte, nous retirons ton profil et les groupes que tu possèdes. Les dépenses que tu as contribuées à des groupes appartenant à d'autres personnes peuvent être conservées — elles font partie de l'historique financier du groupe — mais tes données identifiantes sont retirées lorsque c'est faisable. Les sauvegardes Firestore peuvent persister brièvement après la suppression selon la rétention standard de Google.</p>
+
+  <h3>Confidentialité des enfants</h3>
+  <p>paylash n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données auprès de personnes de moins de 13 ans. La classification App Store reflète le public visé de l'app. Si tu penses que nous avons collecté par inadvertance des données d'un enfant, envoie-nous un e-mail et nous les supprimerons.</p>
+
+  <h3>Transparence du suivi des apps</h3>
+  <p>paylash ne montre pas la demande de Transparence du suivi des apps d'iOS car nous ne te suivons pas sur d'autres apps ou sites web. Notre SDK publicitaire est configuré uniquement pour des publicités non personnalisées, ce qui supprime le besoin de demander la permission de suivi.</p>
+
+  <h3>Publicité</h3>
+  <p>Les utilisateurs gratuits voient une bannière en haut des onglets Dépense et Détaillé. Les abonnés premium ne voient aucune publicité nulle part. La bannière est toujours non personnalisée.</p>
+  <p>Si tu lances paylash depuis l'UE, le Royaume-Uni, la Suisse ou l'un des États américains réglementés en matière de confidentialité (Californie, Colorado, Connecticut, Utah, Virginie), la User Messaging Platform (UMP) de Google affiche un formulaire de consentement unique au premier lancement. Tu peux modifier ou révoquer ton choix à tout moment depuis Réglages → Gérer les préférences de confidentialité. En dehors de ces régions, aucun formulaire de consentement n'est affiché et la ligne Réglages est masquée.</p>
+
+  <h3>Sécurité</h3>
+  <p>Tout le trafic entre paylash et nos serveurs utilise le chiffrement TLS. Les mots de passe sont hachés par Firebase Authentication selon des méthodes standard de l'industrie (nous ne voyons jamais ton mot de passe). Firestore applique des règles côté serveur pour qu'un utilisateur ne puisse lire et écrire que ses propres données et les groupes auxquels il appartient. Nous enregistrons les événements pertinents pour la sécurité à des fins de détection d'abus ; ces journaux sont conservés au maximum 30 jours.</p>
+
+  <h3>Modifications de cette politique</h3>
+  <p>Si nous modifions cette politique, nous mettrons à jour la date « Dernière mise à jour » en haut. Les changements importants seront communiqués via la fiche App Store ou un avis in-app à la prochaine version.</p>
+
+  <div class="contact">
+    <p><b>Contact</b><br>
+    Questions de confidentialité, demandes d'exportation de données, réclamations — écris à <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a>. Nous répondons sous 30 jours, généralement sous une semaine.</p>
+  </div>
 </section>
 
 </div>

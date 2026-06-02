@@ -261,31 +261,941 @@
 <!-- ============ TÜRKÇE ============ -->
 <section id="tr" class="lang-section">
   <h2>Türkçe</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <p>Bu kılavuz, paylash'ın her özelliğini — hesap gerektirmeyen hesap bölücüden birden fazla cihazda grup yönetimine kadar — adım adım anlatır. Uygulama yapısına göre değil, bir kullanıcı olarak yapacağın işlere göre düzenlenmiştir, bu yüzden ihtiyacın olan bölüme doğrudan atlayabilirsin.</p>
+
+  <div class="tip"><b>Uygulama içi yardım:</b> iOS / iPadOS / macOS uygulamasının önemli ekranlarında küçük bir <b>?</b> düğmesi ara — Kısıtlı Katılım anahtarı, kalem kalem bölmedeki Kalemler bölümü, Gruplar listesi, bir grubun içindeki etkinlikler listesi, grup etkinliğinin kilit göstergesi, hesaplaşma planı ve davet kodu paylaşma sayfası. <b>?</b>'ya dokunmak kısa bir açıklama ve bu kılavuzun ilgili bölümüne dönen "Daha fazla bilgi" bağlantısı açar.</div>
+
+  <div class="toc">
+    <h4>İçindekiler</h4>
+    <ul>
+      <li><a href="#bill-splitter">Hesap bölücü</a></li>
+      <li><a href="#itemized-split">Kalem kalem bölme ve OCR</a></li>
+      <li><a href="#restricted-participation">Kısıtlı katılım</a></li>
+      <li><a href="#going-premium">Premium'a geçmek</a></li>
+      <li><a href="#creating-groups">Grup oluşturmak</a></li>
+      <li><a href="#inviting-members">Üye davet etmek</a></li>
+      <li><a href="#events">Etkinlikler</a></li>
+      <li><a href="#adding-expenses">Harcama eklemek</a></li>
+      <li><a href="#event-locking">Kilitleme ve hesaplaşma</a></li>
+      <li><a href="#sharing">Rapor paylaşmak</a></li>
+      <li><a href="#cross-device">Birden fazla cihaz ve web</a></li>
+      <li><a href="#notifications">Bildirimler</a></li>
+      <li><a href="#settings">Ayarlar ve hesap</a></li>
+    </ul>
+  </div>
+
+  <h3 id="bill-splitter">Hesap bölücü (hesap gerekmiyor)</h3>
+  <p>Harcama sekmesi paylash'ın en basit aracıdır. Hesaba, internete veya başka bir şeye ihtiyacın yok.</p>
+  <ol>
+    <li><b>Harcama</b> sekmesini aç.</li>
+    <li>Hesabın tutarını gir.</li>
+    <li>Bölüşecek kişi sayısını ayarla.</li>
+    <li>İsteğe bağlı olarak bir bahşiş yüzdesi seç (5%, 10%, 15%, 20%, 30%) veya özel bir bahşiş gir.</li>
+    <li>Sonuç kartı her kişinin payını gösterir. Mesajlar, e-posta veya başka bir uygulama üzerinden göndermek için paylaş düğmesine dokun.</li>
+  </ol>
+  <p>Yalnızca bazı kişiler ekstra bir şey aldıysa, <a href="#restricted-participation">Kısıtlı katılım</a> bölümüne bak.</p>
+
+  <h3 id="itemized-split">Kalem kalem bölme ve makbuz OCR'ı</h3>
+  <p>Ayrıntılı sekmesi, eşit bölüşmenin adil olmadığı durumlar içindir — farklı kişiler farklı şeyler aldı. paylash, her kişinin aldığı kalemlere göre kimin ne kadar ödeyeceğini hesaplar.</p>
+  <ol>
+    <li><b>Ayrıntılı</b> sekmesini aç.</li>
+    <li>Bir makbuz taramak için üstteki <b>kamera simgesine</b> dokun veya kalemleri elle gir.</li>
+    <li>Her kalem için, alan kişileri ata. Birinin avatarına dokunarak onu ekleyip çıkarabilirsin.</li>
+    <li>Gerekirse bahşiş ekle (hesabın yüzdesi veya özel bir tutar).</li>
+    <li>Kişi başı toplam altta görünür. Birinin neyi aldığını görmek için ona dokun.</li>
+    <li>Dağılımı göndermek için paylaş'a dokun.</li>
+  </ol>
+  <div class="tip"><b>OCR hakkında:</b> Makbuz taraması Apple'ın Vision çerçevesini kullanır — tüm işlem cihazında olur, hiçbir görüntü yüklenmez. İyi aydınlatmada basılı makbuzlarla en iyi sonucu verir. OCR bir şeyi kaçırırsa kalemleri elle gir; düzeltmeler saniyeler sürer.</div>
+
+  <h3 id="restricted-participation">Kısıtlı katılım ("istisna" anahtarı)</h3>
+  <p>Hesap bölücünün en güçlü (ve en az belirgin) özelliği. Hesaptaki bir kalemi yalnızca bazı kişiler aldığında kullan.</p>
+  <p><b>Örnek</b>: Beş arkadaş akşam yemeği yiyor. Toplam <b>₺5.000</b>. Bunlardan ikisi yemeğin üstüne <b>₺2.000</b>'lik bir şarap da paylaştı. Şarabı beş kişiye bölmek istemezsin.</p>
+  <ol>
+    <li>Tam tutarı gir: <b>₺5.000</b>.</li>
+    <li>Kişi sayısını <b>5</b> olarak ayarla.</li>
+    <li><b>Kısıtlı Katılım</b> anahtarını aç.</li>
+    <li>İstisna tutarını <b>₺2.000</b> olarak ayarla (şarap).</li>
+    <li>"Kaç kişi aldı"yı <b>2</b> olarak ayarla.</li>
+  </ol>
+  <p>paylash iki pay hesaplar:</p>
+  <ul>
+    <li><b>2 kişi (ekstra alan)</b> şunu öder: ₺3.000'lik yemekteki payı + ₺2.000 / 2'nin tamamı (şarapları).</li>
+    <li><b>3 kişi (ekstra almayan)</b> şunu öder: yalnızca ₺3.000'lik yemekteki payı.</li>
+  </ul>
+  <p>Sonuç kartı her iki tutarı yan yana gösterir. Varsa bahşiş orantılı eklenir.</p>
+
+  <h3 id="going-premium">Premium'a geçmek</h3>
+  <p>Hesap bölücü kalıcı olarak ücretsizdir. Gruplar sekmesi — harcamaları paylaştığın, etkinlikleri yönettiğin ve hesaplaşmayı takip ettiğin yer — premium abonelik gerektirir.</p>
+  <p><b>Premium neleri açar</b>:</p>
+  <ul>
+    <li>iPhone, iPad, Mac ve web'de paylaşılan gruplar oluşturma ve katılma</li>
+    <li>Bir grup içinde etkinlikler düzenleme</li>
+    <li>Birden çok bölme stili ile paylaşılan harcamalar ekleme</li>
+    <li>Otomatik hesaplanan hesaplaşma planlı kilitlenebilir etkinlikler</li>
+    <li>PDF ve metin raporu paylaşımı</li>
+    <li>Grup etkinliği değiştiğinde push bildirimleri</li>
+    <li>Uygulamanın hiçbir yerinde reklam yok</li>
+  </ul>
+  <p><b>Nasıl abone olunur</b>: Gruplar sekmesine veya Ayarlar → "paylash premium'a geç" üzerine dokun. İkisi de aynı ödeme sayfasına götürür, aylık planda 7 günlük ücretsiz deneme veya indirimli yıllık plan gösterir.</p>
+  <p><b>Aboneliğini nasıl yönetirsin</b>: Ayarlar → "paylash premium aktif" → Apple'ın Abonelikleri Yönet sayfasını açar. Buradan iptal edebilir, aylık ve yıllık arasında geçiş yapabilir veya bir kesintiden sonra yeniden etkinleştirebilirsin. Her şeyi Apple işler; biz yalnızca bir yetki bayrağı alırız.</p>
+
+  <h3 id="creating-groups">Grup oluşturmak</h3>
+  <p>Premium aktif olduğunda, Gruplar sekmesi gruplarının listesiyle açılır (ilk kullanımda boş).</p>
+  <ol>
+    <li>Üstteki <b>+</b> düğmesine dokun.</li>
+    <li>Grup adı gir (ör. "Berlin gezisi", "Cuma akşam yemeği ekibi", "Ev arkadaşları").</li>
+    <li>Grup için bir emoji veya baş harf avatarı seç.</li>
+    <li>İsteğe bağlı bir açıklama ekle (tüm üyelere görünür).</li>
+    <li>Kaydet'e dokun.</li>
+  </ol>
+  <p>Artık grubun ilk <b>yöneticisisin</b>. Yöneticiler grubu düzenleyebilir, üyeleri yönetebilir ve kilitli etkinliklerin kilidini açabilir. Normal üyeler harcama ekleyebilir ama grup ayarlarını değiştiremez.</p>
+
+  <h3 id="inviting-members">Üye davet etmek</h3>
+  <p>Her grubun <b>üye slotları</b> vardır. Bir grup oluşturduğunda yalnızca bir slot vardır (seninki). Dahil etmek istediğin her kişi için daha fazla ekle.</p>
+  <ol>
+    <li>Grubu aç, üye listesine dokun.</li>
+    <li><b>+ Üye ekle</b>'ye dokun.</li>
+    <li>Kişinin kullanıcı adını gir (grupta nasıl görüneceği).</li>
+    <li>Kaydet. Slot artık var ama <b>sahipsiz</b> — henüz gerçek bir kullanıcı yok.</li>
+    <li>Sahipsiz slotun yanındaki dişli simgesine dokun. paylash 30 gün geçerli kısa bir davet kodu oluşturur.</li>
+    <li>Kodu veya evrensel bağlantıyı herhangi bir sohbet uygulaması, e-posta veya SMS ile paylaş.</li>
+  </ol>
+  <p>Alıcı bağlantıyı iOS'ta açtığında (veya kodu Gruplar → "Kodum var" alanına yapıştırdığında), o slotu alır. Kullanıcı adı ve harcamaları artık bir kopya değil senin slotuna bağlıdır.</p>
+  <p><b>paylash henüz yoksa</b>: Bağlantı önce App Store'a, sonra yüklemeden sonra geri kullanma akışına yönlendirir.</p>
+  <p><b>Premium'u yoksa</b>: Geçit sayfası neyin gerektiğini gösterir. Davet kodu 30 gün boyunca geçerli kalır — abone olmak için zamanı vardır.</p>
+
+  <h3 id="events">Etkinlikler</h3>
+  <p>Etkinlikler bir grubun içinde yer alır ve harcamaları olaya göre gruplandırır. "Berlin gezisi" adlı bir grupta "Restoran gecesi", "Müze girişleri" ve "Taksi yolculukları" gibi etkinlikler olabilir.</p>
+  <ol>
+    <li>Bir grup içinde <b>+ Etkinlik ekle</b>'ye dokun.</li>
+    <li>Etkinliği adlandır (ör. "Restoran gecesi").</li>
+    <li>Bir emoji avatar seç.</li>
+    <li>İsteğe bağlı olarak başlangıç ve bitiş tarihleri ayarla.</li>
+    <li>Hangi grup üyelerinin katılacağını seç (varsayılan: tüm üyeler).</li>
+    <li>Kaydet.</li>
+  </ol>
+  <p>Sonunda, kişi başı hesaplaşmada yalnızca etkinlik katılımcıları görünür. Beş arkadaştan üçü müzeye gittiyse, yalnızca bu üçü o etkinliğin harcamalarının ve hesaplaşmasının bir parçasıdır.</p>
+
+  <h3 id="adding-expenses">Etkinliğe harcama eklemek</h3>
+  <p>Bir etkinlik içinde <b>+ Harcama ekle</b>'ye dokun. Üç bölme modu göreceksin:</p>
+  <ul>
+    <li><b>Eşit bölme</b> — etkinlik katılımcıları arasında eşit böl. Ad, tutar ve kimin ödediğini ayarla.</li>
+    <li><b>Kısıtlı katılım</b> — hesap bölücünün istisna anahtarıyla aynı. Bazı katılımcılar ekstra bir kalem için daha fazla öder.</li>
+    <li><b>Kalem kalem</b> — Ayrıntılı sekmesindeki gibi kişi başına atamalı kalemler. Makbuz fotoğrafın varsa OCR kullan.</li>
+  </ul>
+  <p>Her harcamada ortak alanlar:</p>
+  <ul>
+    <li><b>Ad</b> — harcamanın etiketi (ör. "Otel 1. gece", "Öğle yemeği").</li>
+    <li><b>Tutar</b> — bahşiş ve kalemler dahil toplam.</li>
+    <li><b>Ödeyen</b> — masrafı hangi üyenin önden karşıladığı.</li>
+    <li><b>Tarih</b> — harcamanın ne zaman gerçekleştiği.</li>
+    <li><b>Avatar</b> — listede işaretlemek için emoji veya baş harfler.</li>
+  </ul>
+  <p><b>Kim düzenleyebilir?</b> Harcamayı oluşturan, ödeyen, etkinliği oluşturan ve grubun herhangi bir yöneticisi bir harcamayı düzenleyebilir veya silebilir. Diğer üyeler görür ama değiştiremez. Tüm harcamaları daha fazla düzenlemeye karşı dondurmak için etkinliği kilitle.</p>
+
+  <h3 id="event-locking">Etkinliği kilitlemek ve hesaplaşma</h3>
+  <p>Tüm harcamalar girildiğinde ve etkinlik "tamamlandığında" (gezi bitti, gece kapandı vb.), onu kilitle.</p>
+  <ol>
+    <li>Etkinliği aç.</li>
+    <li>Üstteki toplam kartına kaydır.</li>
+    <li><b>Kilit simgesine</b> dokun.</li>
+    <li>Onayla.</li>
+  </ol>
+  <p>Kilitleme üç şey yapar:</p>
+  <ul>
+    <li>Tüm harcamaları dondurur — kimse ekleyemez, düzenleyemez veya silemez.</li>
+    <li><b>Hesaplaşma</b> görünümünü açığa çıkarır — "X, Y'ye €Z borçlu" işlemlerinin bir listesi.</li>
+    <li>PDF veya metin olarak paylaşımı etkinleştirir.</li>
+  </ul>
+  <p>Hesaplaşma planı, tüm borçları kapatmak için gerekli en az ödeme setini hesaplar. Örnek: A, B'ye €10 borçlu, B, C'ye €15 borçlu ve C, A'ya €5 borçluysa, paylash bunu üç oda turu ödeme yerine tek bir işleme (ör. A → C: €5 ve B → C: €10) indirger.</p>
+  <p>Üyeler birbirine ödedikçe, Hesaplaşma görünümünde her hesaplaşma işlemini <b>tamamlandı</b> olarak işaretle. Her işlem yapıldığında etkinlik tamamen çözülür.</p>
+  <p><b>Kilidi açma</b>: Herhangi bir yönetici unutulan bir harcamayı eklemek veya bir hatayı düzeltmek için bir etkinliğin kilidini açabilir. Kilidi açmak mevcut hesaplaşma planını atar; tekrar kilitleme onu güncellenmiş harcamalardan yeniden hesaplar.</p>
+
+  <h3 id="sharing">Rapor paylaşmak</h3>
+  <p>Herhangi bir kilitli etkinlikten, başlıktaki paylaş simgesine dokun. paylash üç biçim sunar:</p>
+  <ul>
+    <li><b>PDF</b> — üye başı bakiyeleri, hesaplaşma işlemleri ve harcama başı ayrıntıları içeren çok sayfalı rapor. E-posta, arşivleme veya yazdırma için uygundur.</li>
+    <li><b>Metin</b> — kimin kime borçlu olduğunun düz metin özeti. Sohbet uygulamaları için en iyisi. Etkinlik adını, toplamı ve her hesaplaşma işlemini içerir.</li>
+    <li><b>Metin + PDF</b> — ikisini tek bir paylaşım yüküyle gönderir.</li>
+  </ul>
+  <p>Paylaşım grup oturumu açık herhangi bir cihazdan çalışır — iPhone, iPad veya Mac. Web uygulaması salt okunur erişim sağlar ama şu anda PDF veya metin paylaşımı oluşturmaz (bunun için bir telefon/iPad/Mac kullan).</p>
+
+  <h3 id="cross-device">Birden fazla cihaz ve web</h3>
+  <p>İstediğin sayıda cihazda aynı e-posta + şifre ile giriş yap. Gruplarınız, etkinlikleriniz ve harcamalarınız gerçek zamanlı olarak senkronize edilir — Mac'inde bir harcama ekle ve birkaç saniye sonra iPad'inde görünsün.</p>
+  <p><b>Web uygulaması</b> <a href="https://paylash-fffac.web.app">paylash-fffac.web.app</a> adresinde tüm gruplarının salt okunur görünümünü sağlar. Elinde bir Apple cihazı olmadığında yararlıdır. Grupları gözden geçirebilir, etkinlikleri ve harcamaları görebilirsin, ancak web'den hiçbir şey düzenleyemez veya ekleyemezsin — bunun için iOS veya macOS kullan.</p>
+
+  <h3 id="notifications">Bildirimler</h3>
+  <p>Premium aktifken, paylash gruplarındaki etkinlikler için push bildirimleri gönderir: yeni harcamalar, hesaplaşma işaretleri, eklenen veya kaldırılan üyeler, etkinlik kilitleri. Her bildirim ilgili ekrana deep-link sağlar — yeni harcamaya veya güncellenmiş etkinliğe doğrudan atlamak için dokun.</p>
+  <p><b>İzin</b>: İlk girişte iOS bildirim izni ister. Bunu daha sonra iOS Ayarları → paylash → Bildirimler üzerinden değiştirebilirsin.</p>
+  <p><b>Dil</b>: Bildirimler seçtiğin uygulama dilinde gelir (Ayarlar → Dil). Bu kullanıcı başınadır, dolayısıyla aynı grubun farklı üyeleri aynı etkinlikten farklı dillerde bildirim alabilir.</p>
+  <p><b>Sessizlik</b>: paylash asla pazarlama bildirimleri göndermez, asla "uygulamayı X gündür açmadın" istemleri göndermez. Push, gruplarında gerçekten olan şeyler için ayrılmıştır.</p>
+
+  <h3 id="settings">Ayarlar ve hesap</h3>
+  <p>Ayarlar sekmesi sana şunları sunar:</p>
+  <ul>
+    <li><b>Profil</b> (yalnızca premium) — kullanıcı adın, isteğe bağlı ad/soyad, isteğe bağlı avatar. Grup üyelerine görünür.</li>
+    <li><b>Dil</b> — İngilizce, Türkçe, Almanca, İspanyolca, İtalyanca, Fransızca arasından seç. Uygulamanın tamamına anında uygulanır.</li>
+    <li><b>Görünüm</b> — Sistem, Açık veya Koyu.</li>
+    <li><b>Varsayılan para birimi</b> — yeni harcamaların varsayılan olduğu para birimi. Harcama başına değiştirebilirsin.</li>
+    <li><b>Premium satırı</b> — premium değilsen yükselt; öyleysen aboneliğini yönet.</li>
+    <li><b>Hakkında</b> — sürüm bilgisi ve bu kılavuza, gizlilik politikasına ve desteğe bağlantılar.</li>
+  </ul>
+  <p><b>Hesap silme</b>: Profil → Hesabı Sil, profilini + sahip olduğun grupları kaldırır. Başkalarına ait gruplara katkıda bulunduğun harcamalar kalabilir — bunlar o grupların finansal geçmişinin bir parçasıdır. Silme kalıcıdır, geri alma yoktur.</p>
+
+  <p>İşte uygulamanın tamamı. Bir şey net değilse veya bir özelliğin beklenmedik şekilde davrandığını fark edersen, <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> adresine e-posta gönder — her mesajı okuyoruz.</p>
 </section>
 
 <!-- ============ DEUTSCH ============ -->
 <section id="de" class="lang-section">
   <h2>Deutsch</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <p>Diese Anleitung führt dich durch jede Funktion von paylash — vom Rechnungsteiler ohne Konto bis zur Verwaltung einer Gruppe über mehrere Geräte. Sie ist nach dem, was du als Nutzer tun würdest, gegliedert, nicht nach App-Struktur — du kannst also direkt zum Abschnitt springen, den du brauchst.</p>
+
+  <div class="tip"><b>Hilfe in der App:</b> Achte auf die kleine <b>?</b>-Taste auf wichtigen Bildschirmen der iOS/iPadOS/macOS-App — den Eingeschränkte-Teilnahme-Schalter, den Posten-Bereich der postenweisen Aufteilung, die Gruppenliste, die Ereignisliste innerhalb einer Gruppe, das Sperren-Element eines Gruppenereignisses, den Abrechnungsplan und das Einladungscode-Sheet. Ein Tippen auf <b>?</b> öffnet eine kurze Erklärung mit einem „Mehr erfahren"-Link, der dich zum passenden Abschnitt dieser Anleitung bringt.</div>
+
+  <div class="toc">
+    <h4>Inhalt</h4>
+    <ul>
+      <li><a href="#bill-splitter">Der Rechnungsteiler</a></li>
+      <li><a href="#itemized-split">Postenweise Aufteilung & OCR</a></li>
+      <li><a href="#restricted-participation">Eingeschränkte Teilnahme</a></li>
+      <li><a href="#going-premium">Auf Premium wechseln</a></li>
+      <li><a href="#creating-groups">Gruppen erstellen</a></li>
+      <li><a href="#inviting-members">Mitglieder einladen</a></li>
+      <li><a href="#events">Ereignisse</a></li>
+      <li><a href="#adding-expenses">Ausgaben hinzufügen</a></li>
+      <li><a href="#event-locking">Sperren & Abrechnung</a></li>
+      <li><a href="#sharing">Berichte teilen</a></li>
+      <li><a href="#cross-device">Mehrere Geräte & Web</a></li>
+      <li><a href="#notifications">Benachrichtigungen</a></li>
+      <li><a href="#settings">Einstellungen & Konto</a></li>
+    </ul>
+  </div>
+
+  <h3 id="bill-splitter">Der Rechnungsteiler (kein Konto nötig)</h3>
+  <p>Der Ausgaben-Tab ist paylashs einfachstes Werkzeug. Du brauchst kein Konto, kein Internet, nichts.</p>
+  <ol>
+    <li>Öffne den <b>Ausgaben</b>-Tab.</li>
+    <li>Gib den Rechnungsbetrag ein.</li>
+    <li>Stelle die Anzahl der Personen ein, die teilen.</li>
+    <li>Optional: wähle einen Trinkgeld-Prozentsatz (5%, 10%, 15%, 20%, 30%) oder gib ein eigenes Trinkgeld ein.</li>
+    <li>Die Ergebniskarte zeigt den Anteil jeder Person. Tippe auf Teilen, um es per Nachrichten, E-Mail oder einer anderen App zu senden.</li>
+  </ol>
+  <p>Wenn nur einige Personen einen Zusatzartikel bestellt haben, siehe <a href="#restricted-participation">Eingeschränkte Teilnahme</a>.</p>
+
+  <h3 id="itemized-split">Postenweise Aufteilung & Beleg-OCR</h3>
+  <p>Der Postenweise-Tab ist für die Fälle, in denen eine gleichmäßige Aufteilung nicht fair ist — verschiedene Personen hatten verschiedene Dinge. paylash berechnet, wer was zahlt, basierend darauf, welche Posten jede Person hatte.</p>
+  <ol>
+    <li>Öffne den <b>Postenweise</b>-Tab.</li>
+    <li>Tippe oben auf das <b>Kamera-Symbol</b>, um einen Beleg zu scannen, oder gib die Posten manuell ein.</li>
+    <li>Weise für jeden Posten die Personen zu, die ihn hatten. Tippe auf den Avatar einer Person, um sie ein- oder auszuschließen.</li>
+    <li>Füge bei Bedarf Trinkgeld hinzu (Prozentsatz der Rechnung oder ein eigener Betrag).</li>
+    <li>Der Pro-Person-Gesamtbetrag erscheint unten. Tippe auf eine Person, um zu sehen, was sie hatte.</li>
+    <li>Tippe auf Teilen, um die Aufstellung zu senden.</li>
+  </ol>
+  <div class="tip"><b>Über OCR:</b> Der Beleg-Scan nutzt Apples Vision-Framework — die gesamte Verarbeitung erfolgt auf deinem Gerät, kein Bild wird hochgeladen. Funktioniert am besten mit gedruckten Belegen bei gutem Licht. Schreibe die Posten von Hand, falls OCR etwas übersieht; Korrekturen dauern nur Sekunden.</div>
+
+  <h3 id="restricted-participation">Eingeschränkte Teilnahme (der „Ausnahme"-Schalter)</h3>
+  <p>Die mächtigste (und am wenigsten offensichtliche) Funktion des Rechnungsteilers. Verwende sie, wenn ein Posten auf der Rechnung nur von einigen Anwesenden bestellt wurde.</p>
+  <p><b>Beispiel</b>: Fünf Freunde essen zu Abend. Die Gesamtsumme ist <b>5.000 €</b>. Zwei davon teilen sich zusätzlich eine <b>2.000 €</b>-Flasche Wein. Du willst den Wein nicht auf alle fünf aufteilen.</p>
+  <ol>
+    <li>Gib den vollen Betrag ein: <b>5.000 €</b>.</li>
+    <li>Stelle die Personenzahl auf <b>5</b>.</li>
+    <li>Schalte den Schalter <b>Eingeschränkte Teilnahme</b> ein.</li>
+    <li>Setze den Ausnahmebetrag auf <b>2.000 €</b> (den Wein).</li>
+    <li>Setze „wie viele hatten es" auf <b>2</b>.</li>
+  </ol>
+  <p>paylash berechnet zwei Anteile:</p>
+  <ul>
+    <li>Die <b>2 Personen mit Extra</b> zahlen: ihren Anteil am 3.000 €-Essen + die vollen 2.000 € / 2 (ihren Wein).</li>
+    <li>Die <b>3 Personen ohne Extra</b> zahlen: nur ihren Anteil am 3.000 €-Essen.</li>
+  </ul>
+  <p>Die Ergebniskarte zeigt beide Beträge nebeneinander. Das Trinkgeld (falls vorhanden) wird proportional hinzugefügt.</p>
+
+  <h3 id="going-premium">Auf Premium wechseln</h3>
+  <p>Der Rechnungsteiler ist dauerhaft kostenlos. Der Gruppen-Tab — wo du Ausgaben teilst, Ereignisse verwaltest und die Abrechnung verfolgst — benötigt ein Premium-Abonnement.</p>
+  <p><b>Was Premium freischaltet</b>:</p>
+  <ul>
+    <li>Geteilte Gruppen erstellen und beitreten auf iPhone, iPad, Mac und im Web</li>
+    <li>Ereignisse innerhalb einer Gruppe organisieren</li>
+    <li>Geteilte Ausgaben mit mehreren Aufteilungsarten hinzufügen</li>
+    <li>Sperrbare Ereignisse mit automatisch berechnetem Abrechnungsplan</li>
+    <li>PDF- und Text-Berichte teilen</li>
+    <li>Push-Benachrichtigungen bei Änderungen in der Gruppe</li>
+    <li>Keine Werbung irgendwo in der App</li>
+  </ul>
+  <p><b>Abonnieren</b>: Tippe auf den Gruppen-Tab oder Einstellungen → „Auf paylash premium upgraden". Beides führt zum gleichen Paywall, der eine 7-tägige kostenlose Testphase im Monatsplan oder einen vergünstigten Jahresplan zeigt.</p>
+  <p><b>Abonnement verwalten</b>: Einstellungen → „paylash premium aktiv" → öffnet Apples Sheet „Abonnements verwalten", wo du kündigen, zwischen monatlich und jährlich wechseln oder nach einer Pause reaktivieren kannst. Apple verarbeitet alles; wir erhalten nur ein Berechtigungs-Flag.</p>
+
+  <h3 id="creating-groups">Eine Gruppe erstellen</h3>
+  <p>Sobald Premium aktiv ist, öffnet sich der Gruppen-Tab mit deiner Gruppenliste (beim ersten Mal leer).</p>
+  <ol>
+    <li>Tippe oben auf die <b>+</b>-Taste.</li>
+    <li>Gib einen Gruppennamen ein (z. B. „Berlin-Reise", „Freitags-Dinner-Crew", „WG").</li>
+    <li>Wähle einen Emoji- oder Initialen-Avatar für die Gruppe.</li>
+    <li>Optional: Beschreibung hinzufügen (für alle Mitglieder sichtbar).</li>
+    <li>Tippe auf Speichern.</li>
+  </ol>
+  <p>Du bist jetzt der erste <b>Admin</b> der Gruppe. Admins können die Gruppe bearbeiten, Mitglieder verwalten und gesperrte Ereignisse entsperren. Normale Mitglieder können Ausgaben hinzufügen, aber keine Gruppeneinstellungen ändern.</p>
+
+  <h3 id="inviting-members">Mitglieder einladen</h3>
+  <p>Jede Gruppe hat <b>Mitgliedsplätze</b>. Wenn du eine Gruppe erstellst, existiert nur ein Platz (deiner). Füge für jede Person, die du aufnehmen willst, weitere hinzu.</p>
+  <ol>
+    <li>Öffne die Gruppe, tippe auf die Mitgliederliste.</li>
+    <li>Tippe auf <b>+ Mitglied hinzufügen</b>.</li>
+    <li>Gib den Spitznamen der Person ein (wie sie in der Gruppe erscheinen wird).</li>
+    <li>Speichere. Der Platz existiert nun, ist aber <b>unbeansprucht</b> — noch kein echter Nutzer.</li>
+    <li>Tippe auf das Zahnrad-Symbol neben dem unbeanspruchten Platz. paylash erzeugt einen kurzen Einladungscode, der 30 Tage gültig ist.</li>
+    <li>Teile den Code oder den universellen Link per Chat-App, E-Mail oder SMS.</li>
+  </ol>
+  <p>Wenn der Empfänger den Link auf iOS öffnet (oder den Code in Gruppen → „Ich habe einen Code" einfügt), beansprucht er diesen Platz. Sein Spitzname und seine Ausgaben sind nun an deinen Platz gebunden, nicht an ein Duplikat.</p>
+  <p><b>Wenn er paylash noch nicht hat</b>: Der Link leitet ihn zuerst zum App Store, dann nach der Installation zurück in den Einlösungs-Flow.</p>
+  <p><b>Wenn er kein Premium hat</b>: Das Gate-Sheet zeigt, was benötigt wird. Der Einladungscode bleibt die vollen 30 Tage gültig — er hat Zeit, ein Abo abzuschließen.</p>
+
+  <h3 id="events">Ereignisse</h3>
+  <p>Ereignisse sitzen innerhalb einer Gruppe und bündeln Ausgaben nach Anlass. Eine Gruppe namens „Berlin-Reise" könnte Ereignisse für „Restaurantabend", „Museumseintritte" und „Taxifahrten" haben.</p>
+  <ol>
+    <li>Tippe in einer Gruppe auf <b>+ Ereignis hinzufügen</b>.</li>
+    <li>Benenne das Ereignis (z. B. „Restaurantabend").</li>
+    <li>Wähle einen Emoji-Avatar.</li>
+    <li>Optional: Start- und Enddatum festlegen.</li>
+    <li>Wähle, welche Gruppenmitglieder teilnehmen (Standard: alle Mitglieder).</li>
+    <li>Speichere.</li>
+  </ol>
+  <p>Am Ende erscheinen nur Ereignis-Teilnehmer in der Pro-Person-Abrechnung. Wenn drei von fünf Freunden ins Museum gegangen sind, sind nur diese drei Teil der Ausgaben und der Abrechnung dieses Ereignisses.</p>
+
+  <h3 id="adding-expenses">Ausgaben zu einem Ereignis hinzufügen</h3>
+  <p>Tippe in einem Ereignis auf <b>+ Ausgabe hinzufügen</b>. Du siehst drei Aufteilungsmodi:</p>
+  <ul>
+    <li><b>Gleichmäßige Aufteilung</b> — gleichmäßig unter den Ereignis-Teilnehmern aufteilen. Setze Name, Betrag und wer bezahlt hat.</li>
+    <li><b>Eingeschränkte Teilnahme</b> — wie der Ausnahme-Schalter des Rechnungsteilers. Einige Teilnehmer zahlen mehr für einen Zusatzartikel.</li>
+    <li><b>Postenweise</b> — Posten mit Pro-Person-Zuweisung, genau wie der Postenweise-Tab. Nutze OCR, wenn du ein Beleg-Foto hast.</li>
+  </ul>
+  <p>Gemeinsame Felder bei jeder Ausgabe:</p>
+  <ul>
+    <li><b>Name</b> — die Bezeichnung der Ausgabe (z. B. „Hotel Nacht 1", „Mittagessen").</li>
+    <li><b>Betrag</b> — Gesamt inklusive Trinkgeld und etwaiger Posten.</li>
+    <li><b>Bezahlt von</b> — welches Mitglied die Kosten vorgestreckt hat.</li>
+    <li><b>Datum</b> — wann die Ausgabe stattfand.</li>
+    <li><b>Avatar</b> — Emoji oder Initialen zur Kennzeichnung in der Liste.</li>
+  </ul>
+  <p><b>Wer kann bearbeiten?</b> Der Ersteller der Ausgabe, der Zahler, der Ersteller des Ereignisses und jeder Gruppen-Admin können eine Ausgabe bearbeiten oder löschen. Andere Mitglieder sehen sie, können sie aber nicht ändern. Sperre das Ereignis, um alle Ausgaben gegen weitere Bearbeitungen einzufrieren.</p>
+
+  <h3 id="event-locking">Ein Ereignis sperren & Abrechnung</h3>
+  <p>Wenn alle Ausgaben eingegeben sind und das Ereignis „abgeschlossen" ist (die Reise ist vorbei, der Abend ist geklärt usw.), sperre es.</p>
+  <ol>
+    <li>Öffne das Ereignis.</li>
+    <li>Scrolle zur Gesamtkarte oben.</li>
+    <li>Tippe auf das <b>Schloss-Symbol</b>.</li>
+    <li>Bestätige.</li>
+  </ol>
+  <p>Das Sperren bewirkt dreierlei:</p>
+  <ul>
+    <li>Friert alle Ausgaben ein — niemand kann sie hinzufügen, bearbeiten oder löschen.</li>
+    <li>Zeigt die <b>Abrechnung</b> — eine Liste von „X schuldet Y €Z"-Transaktionen.</li>
+    <li>Aktiviert das Teilen als PDF oder Text.</li>
+  </ul>
+  <p>Der Abrechnungsplan berechnet die minimale Anzahl an Zahlungen, um alle Schulden zu begleichen. Beispiel: Wenn A B 10 € schuldet, B C 15 € schuldet und C A 5 € schuldet, fasst paylash das zu einer einzigen Transaktion zusammen (z. B. A → C: 5 € und B → C: 10 €) statt drei Hin-und-Her-Zahlungen.</p>
+  <p>Während Mitglieder einander bezahlen, markiere jede Abrechnungstransaktion in der Abrechnungsansicht als <b>erledigt</b>. Wenn jede Transaktion erledigt ist, ist das Ereignis vollständig aufgelöst.</p>
+  <p><b>Entsperren</b>: Jeder Admin kann ein Ereignis entsperren, um eine fehlende Ausgabe hinzuzufügen oder einen Fehler zu beheben. Das Entsperren verwirft den aktuellen Abrechnungsplan; erneutes Sperren berechnet ihn aus den aktualisierten Ausgaben neu.</p>
+
+  <h3 id="sharing">Berichte teilen</h3>
+  <p>Tippe in einem beliebigen gesperrten Ereignis auf das Teilen-Symbol im Kopfbereich. paylash bietet drei Formate:</p>
+  <ul>
+    <li><b>PDF</b> — mehrseitiger Bericht mit Mitgliedersalden, den Abrechnungstransaktionen und Detail je Ausgabe. Geeignet zum E-Mail-Versand, Archivieren oder Drucken.</li>
+    <li><b>Text</b> — Klartext-Zusammenfassung wer-wem-was. Am besten für Chat-Apps. Enthält den Ereignisnamen, die Gesamtsumme und jede Abrechnungstransaktion.</li>
+    <li><b>Text + PDF</b> — sendet beides in einem Teilen-Paket.</li>
+  </ul>
+  <p>Das Teilen funktioniert von jedem Gerät, das in der Gruppe angemeldet ist — iPhone, iPad oder Mac. Die Web-App bietet schreibgeschützten Zugriff, erzeugt aber derzeit keine PDF- oder Text-Freigaben (verwende dafür ein Telefon/iPad/Mac).</p>
+
+  <h3 id="cross-device">Mehrere Geräte & das Web</h3>
+  <p>Melde dich mit derselben E-Mail + Passwort auf beliebig vielen Geräten an. Deine Gruppen, Ereignisse und Ausgaben werden in Echtzeit synchronisiert — füge auf deinem Mac eine Ausgabe hinzu und sie erscheint Sekunden später auf deinem iPad.</p>
+  <p><b>Die Web-App</b> unter <a href="https://paylash-fffac.web.app">paylash-fffac.web.app</a> bietet eine schreibgeschützte Ansicht aller deiner Gruppen. Nützlich, wenn du gerade kein Apple-Gerät zur Hand hast. Du kannst Gruppen durchsehen, Ereignisse und Ausgaben sehen, aber nicht aus dem Web heraus bearbeiten oder hinzufügen — verwende dafür iOS oder macOS.</p>
+
+  <h3 id="notifications">Benachrichtigungen</h3>
+  <p>Wenn Premium aktiv ist, sendet paylash Push-Benachrichtigungen für Aktivitäten in deinen Gruppen: neue Ausgaben, Abrechnungsmarkierungen, hinzugefügte oder entfernte Mitglieder, Ereignis-Sperren. Jede Benachrichtigung verweist per Deep-Link auf den passenden Bildschirm — tippe, um direkt zur neuen Ausgabe oder zum aktualisierten Ereignis zu springen.</p>
+  <p><b>Erlaubnis</b>: Beim ersten Anmelden fragt iOS nach der Benachrichtigungserlaubnis. Du kannst das später unter iOS-Einstellungen → paylash → Mitteilungen ändern.</p>
+  <p><b>Sprache</b>: Benachrichtigungen kommen in deiner gewählten App-Sprache (Einstellungen → Sprache). Das ist pro Nutzer, sodass verschiedene Mitglieder derselben Gruppe Benachrichtigungen vom selben Ereignis in verschiedenen Sprachen erhalten können.</p>
+  <p><b>Ruhe</b>: paylash sendet niemals Marketing-Benachrichtigungen und nie „Du hast die App seit X Tagen nicht geöffnet"-Aufforderungen. Push ist Dingen vorbehalten, die in deinen Gruppen tatsächlich passiert sind.</p>
+
+  <h3 id="settings">Einstellungen & Konto</h3>
+  <p>Der Einstellungen-Tab bietet dir:</p>
+  <ul>
+    <li><b>Profil</b> (nur Premium) — dein Spitzname, optionaler Vor-/Nachname, optionaler Avatar. Für Gruppenmitglieder sichtbar.</li>
+    <li><b>Sprache</b> — wähle zwischen Englisch, Türkisch, Deutsch, Spanisch, Italienisch, Französisch. Wird sofort app-weit angewendet.</li>
+    <li><b>Erscheinungsbild</b> — System, Hell oder Dunkel.</li>
+    <li><b>Standardwährung</b> — die Währung, auf die neue Ausgaben standardmäßig gesetzt sind. Pro Ausgabe änderbar.</li>
+    <li><b>Premium-Zeile</b> — upgraden, falls nicht Premium; Abonnement verwalten, falls schon.</li>
+    <li><b>Über</b> — Versionsinformationen plus Links zu dieser Anleitung, zur Datenschutzerklärung und zum Support.</li>
+  </ul>
+  <p><b>Konto löschen</b>: Profil → Konto löschen entfernt dein Profil + die Gruppen, die du besitzt. Ausgaben, zu denen du in Gruppen anderer beigetragen hast, können bestehen bleiben — sie sind Teil der Finanzhistorie dieser Gruppen. Die Löschung ist endgültig; kein Rückgängig.</p>
+
+  <p>Das war die ganze App. Wenn etwas unklar ist oder du eine Funktion entdeckst, die sich unerwartet verhält, schreib an <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> — wir lesen jede Nachricht.</p>
 </section>
 
 <!-- ============ ESPAÑOL ============ -->
 <section id="es" class="lang-section">
   <h2>Español</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <p>Esta guía recorre cada función de paylash, desde el divisor de cuentas sin necesidad de cuenta hasta gestionar un grupo en varios dispositivos. Está organizada por lo que harías como usuario, no por la estructura de la app — así que siéntete libre de saltar directamente a la sección que necesites.</p>
+
+  <div class="tip"><b>Ayuda dentro de la app:</b> busca el pequeño botón <b>?</b> en pantallas clave dentro de la app de iOS / iPadOS / macOS — el interruptor de Participación Restringida, la sección Artículos de la división por artículo, la lista de Grupos, la lista de eventos dentro de un grupo, el botón de bloqueo en un evento de grupo, el plan de liquidación y la hoja del código de invitación. Tocar <b>?</b> abre una explicación corta con un enlace "Más información" que te lleva a la sección correspondiente de esta guía.</div>
+
+  <div class="toc">
+    <h4>Contenidos</h4>
+    <ul>
+      <li><a href="#bill-splitter">El divisor de cuentas</a></li>
+      <li><a href="#itemized-split">División por artículo y OCR</a></li>
+      <li><a href="#restricted-participation">Participación restringida</a></li>
+      <li><a href="#going-premium">Pasar a premium</a></li>
+      <li><a href="#creating-groups">Crear grupos</a></li>
+      <li><a href="#inviting-members">Invitar miembros</a></li>
+      <li><a href="#events">Eventos</a></li>
+      <li><a href="#adding-expenses">Añadir gastos</a></li>
+      <li><a href="#event-locking">Bloqueo y liquidación</a></li>
+      <li><a href="#sharing">Compartir informes</a></li>
+      <li><a href="#cross-device">Varios dispositivos y web</a></li>
+      <li><a href="#notifications">Notificaciones</a></li>
+      <li><a href="#settings">Ajustes y cuenta</a></li>
+    </ul>
+  </div>
+
+  <h3 id="bill-splitter">El divisor de cuentas (sin cuenta)</h3>
+  <p>La pestaña Gasto es la herramienta más simple de paylash. No necesitas cuenta, internet, ni nada más.</p>
+  <ol>
+    <li>Abre la pestaña <b>Gasto</b>.</li>
+    <li>Introduce el importe de la cuenta.</li>
+    <li>Indica el número de personas que comparten.</li>
+    <li>Opcionalmente elige un porcentaje de propina (5%, 10%, 15%, 20%, 30%) o introduce una propina personalizada.</li>
+    <li>La tarjeta de resultado muestra la parte de cada persona. Toca el botón de compartir para enviarla por Mensajes, correo o cualquier otra app.</li>
+  </ol>
+  <p>Si solo algunos pidieron un artículo extra, consulta <a href="#restricted-participation">Participación restringida</a>.</p>
+
+  <h3 id="itemized-split">División por artículo y OCR de recibos</h3>
+  <p>La pestaña Por artículo es para cuando una división equitativa no es justa — personas distintas tuvieron cosas distintas. paylash calcula quién paga qué según los artículos que tuvo cada persona.</p>
+  <ol>
+    <li>Abre la pestaña <b>Por artículo</b>.</li>
+    <li>Toca el <b>icono de cámara</b> arriba para escanear un recibo, o introduce los artículos manualmente.</li>
+    <li>Para cada artículo, asigna las personas que lo tuvieron. Toca el avatar de una persona para incluirla o quitarla.</li>
+    <li>Añade propina si la necesitas (porcentaje de la cuenta o un importe personalizado).</li>
+    <li>El total por persona aparece abajo. Toca a cualquier persona para ver lo que tuvo.</li>
+    <li>Toca compartir para enviar el desglose.</li>
+  </ol>
+  <div class="tip"><b>Sobre el OCR:</b> el escaneo de recibos usa el framework Vision de Apple — todo el procesamiento se hace en tu dispositivo, no se sube ninguna imagen. Funciona mejor con recibos impresos con buena luz. Si el OCR omite algo, introdúcelo a mano; las correcciones tardan segundos.</div>
+
+  <h3 id="restricted-participation">Participación restringida (el interruptor de "excepción")</h3>
+  <p>La función más potente (y menos obvia) del divisor de cuentas. Úsala cuando un artículo de la cuenta solo lo pidieron algunos de los presentes.</p>
+  <p><b>Ejemplo</b>: Cinco amigos cenan. El total es <b>5.000 €</b>. Dos de ellos comparten además una botella de vino de <b>2.000 €</b>. No quieres dividir el vino entre los cinco.</p>
+  <ol>
+    <li>Introduce el importe total: <b>5.000 €</b>.</li>
+    <li>Pon personas en <b>5</b>.</li>
+    <li>Activa el interruptor <b>Participación Restringida</b>.</li>
+    <li>Pon el importe extra en <b>2.000 €</b> (el vino).</li>
+    <li>Pon "cuántos lo tuvieron" en <b>2</b>.</li>
+  </ol>
+  <p>paylash calcula dos partes:</p>
+  <ul>
+    <li>Las <b>2 personas con extra</b> pagan: su parte de la comida de 3.000 € + los 2.000 € / 2 completos (su vino).</li>
+    <li>Las <b>3 personas sin extra</b> pagan: solo su parte de la comida de 3.000 €.</li>
+  </ul>
+  <p>La tarjeta de resultado muestra ambos importes en paralelo. La propina (si la hay) se añade proporcionalmente.</p>
+
+  <h3 id="going-premium">Pasar a premium</h3>
+  <p>El divisor de cuentas es siempre gratuito. La pestaña Grupos — donde compartes gastos, gestionas eventos y haces seguimiento de la liquidación — requiere una suscripción premium.</p>
+  <p><b>Qué desbloquea premium</b>:</p>
+  <ul>
+    <li>Crear y unirse a grupos compartidos en iPhone, iPad, Mac y la web</li>
+    <li>Organizar eventos dentro de un grupo</li>
+    <li>Añadir gastos compartidos con varios estilos de división</li>
+    <li>Eventos bloqueables con planes de liquidación auto-calculados</li>
+    <li>Compartir informes en PDF y texto</li>
+    <li>Notificaciones push cuando cambia la actividad del grupo</li>
+    <li>Sin anuncios en ningún sitio de la app</li>
+  </ul>
+  <p><b>Cómo suscribirse</b>: toca la pestaña Grupos o Ajustes → "Pasar a paylash premium". Ambos llevan al mismo paywall, que muestra una prueba gratuita de 7 días en el plan mensual o un plan anual con descuento.</p>
+  <p><b>Cómo gestionar tu suscripción</b>: Ajustes → "paylash premium activo" → abre la hoja de Gestionar Suscripciones de Apple, donde puedes cancelar, cambiar entre mensual y anual o reactivar tras una pausa. Apple lo procesa todo; nosotros solo recibimos un indicador de habilitación.</p>
+
+  <h3 id="creating-groups">Crear un grupo</h3>
+  <p>Una vez activado premium, la pestaña Grupos se abre con tu lista de grupos (vacía la primera vez).</p>
+  <ol>
+    <li>Toca el botón <b>+</b> de arriba.</li>
+    <li>Introduce un nombre de grupo (p. ej., "Viaje a Berlín", "Cena de los viernes", "Compañeros de piso").</li>
+    <li>Elige un emoji o avatar con inicial para el grupo.</li>
+    <li>Opcionalmente añade una descripción (visible para todos los miembros).</li>
+    <li>Toca Guardar.</li>
+  </ol>
+  <p>Ahora eres el primer <b>administrador</b> del grupo. Los administradores pueden editar el grupo, gestionar miembros y desbloquear eventos bloqueados. Los miembros normales pueden añadir gastos pero no cambiar los ajustes del grupo.</p>
+
+  <h3 id="inviting-members">Invitar miembros</h3>
+  <p>Cada grupo tiene <b>espacios de miembros</b>. Cuando creas un grupo solo existe un espacio (el tuyo). Añade más por cada persona que quieras incluir.</p>
+  <ol>
+    <li>Abre el grupo, toca la lista de miembros.</li>
+    <li>Toca <b>+ Añadir miembro</b>.</li>
+    <li>Introduce el apodo de la persona (cómo aparecerá en el grupo).</li>
+    <li>Guarda. El espacio ya existe pero está <b>libre</b> — aún no hay un usuario real.</li>
+    <li>Toca el icono de engranaje junto al espacio libre. paylash genera un código de invitación corto válido por 30 días.</li>
+    <li>Comparte el código o el enlace universal por chat, correo o SMS.</li>
+  </ol>
+  <p>Cuando el destinatario abre el enlace en iOS (o pega el código en Grupos → "Tengo un código"), reclama ese espacio. Su apodo y gastos quedan vinculados a tu espacio, no a un duplicado.</p>
+  <p><b>Si aún no tiene paylash</b>: el enlace lo lleva primero a la App Store y, tras instalar, de vuelta al flujo de canje.</p>
+  <p><b>Si no tiene premium</b>: la hoja de acceso le muestra lo que necesita. El código de invitación sigue siendo válido los 30 días — tiene tiempo de suscribirse.</p>
+
+  <h3 id="events">Eventos</h3>
+  <p>Los eventos viven dentro de un grupo y agrupan gastos por ocasión. Un grupo llamado "Viaje a Berlín" podría tener eventos para "Noche de restaurante", "Entradas a museos" y "Trayectos en taxi".</p>
+  <ol>
+    <li>Dentro de un grupo, toca <b>+ Añadir evento</b>.</li>
+    <li>Pon nombre al evento (p. ej., "Noche de restaurante").</li>
+    <li>Elige un avatar emoji.</li>
+    <li>Opcionalmente fija fecha de inicio y fin.</li>
+    <li>Elige qué miembros del grupo participan (por defecto: todos).</li>
+    <li>Guarda.</li>
+  </ol>
+  <p>Al final, solo los participantes del evento aparecen en la liquidación por persona. Si tres de cinco amigos fueron al museo, solo esos tres forman parte de los gastos y la liquidación de ese evento.</p>
+
+  <h3 id="adding-expenses">Añadir gastos a un evento</h3>
+  <p>Dentro de un evento, toca <b>+ Añadir gasto</b>. Verás tres modos de división:</p>
+  <ul>
+    <li><b>División equitativa</b> — repartir por igual entre los participantes del evento. Ajusta nombre, importe y quién pagó.</li>
+    <li><b>Participación restringida</b> — igual que el interruptor de excepción del divisor de cuentas. Algunos participantes pagan más por un artículo extra.</li>
+    <li><b>Por artículo</b> — artículos con asignación por persona, igual que la pestaña Por artículo. Usa OCR si tienes una foto del recibo.</li>
+  </ul>
+  <p>Campos comunes en cada gasto:</p>
+  <ul>
+    <li><b>Nombre</b> — etiqueta del gasto (p. ej., "Hotel noche 1", "Comida").</li>
+    <li><b>Importe</b> — total incluyendo propina y cualquier artículo.</li>
+    <li><b>Pagado por</b> — qué miembro adelantó el coste.</li>
+    <li><b>Fecha</b> — cuándo se produjo el gasto.</li>
+    <li><b>Avatar</b> — emoji o iniciales para marcarlo en la lista.</li>
+  </ul>
+  <p><b>¿Quién puede editar?</b> El creador del gasto, el pagador, el creador del evento y cualquier administrador del grupo pueden editar o eliminar un gasto. Los demás miembros lo ven pero no pueden cambiarlo. Bloquea el evento para congelar todos los gastos frente a más ediciones.</p>
+
+  <h3 id="event-locking">Bloquear un evento y liquidación</h3>
+  <p>Cuando todos los gastos están introducidos y el evento está "completo" (el viaje terminó, la noche se cerró, etc.), bloquéalo.</p>
+  <ol>
+    <li>Abre el evento.</li>
+    <li>Desplázate hasta la tarjeta del total arriba.</li>
+    <li>Toca el <b>icono de candado</b>.</li>
+    <li>Confirma.</li>
+  </ol>
+  <p>El bloqueo hace tres cosas:</p>
+  <ul>
+    <li>Congela todos los gastos — nadie puede añadirlos, editarlos ni eliminarlos.</li>
+    <li>Muestra la vista <b>Liquidación</b> — una lista de transacciones "X debe Y €Z".</li>
+    <li>Activa el compartir como PDF o texto.</li>
+  </ul>
+  <p>El plan de liquidación calcula el conjunto mínimo de pagos necesarios para saldar todas las deudas. Ejemplo: si A le debe 10 € a B, B le debe 15 € a C, y C le debe 5 € a A, paylash lo reduce a una sola transacción (p. ej., A → C: 5 € y B → C: 10 €) en lugar de tres pagos de ida y vuelta.</p>
+  <p>A medida que los miembros se pagan entre sí, marca cada transacción de liquidación como <b>completada</b> en la vista Liquidación. Cuando todas las transacciones estén hechas, el evento queda totalmente resuelto.</p>
+  <p><b>Desbloquear</b>: cualquier administrador puede desbloquear un evento para añadir un gasto que faltaba o corregir un error. Desbloquear descarta el plan de liquidación actual; bloquear de nuevo lo recalcula a partir de los gastos actualizados.</p>
+
+  <h3 id="sharing">Compartir informes</h3>
+  <p>Desde cualquier evento bloqueado, toca el icono de compartir en el encabezado. paylash ofrece tres formatos:</p>
+  <ul>
+    <li><b>PDF</b> — informe multipágina con saldos por miembro, las transacciones de liquidación y detalle por gasto. Apto para correo, archivo o impresión.</li>
+    <li><b>Texto</b> — resumen en texto plano de quién debe a quién. Mejor para apps de chat. Incluye el nombre del evento, el total y cada transacción de liquidación.</li>
+    <li><b>Texto + PDF</b> — envía ambos como un único paquete para compartir.</li>
+  </ul>
+  <p>Compartir funciona desde cualquier dispositivo con sesión iniciada en el grupo — iPhone, iPad o Mac. La web app ofrece acceso de solo lectura pero por ahora no genera compartir en PDF o texto (usa móvil/iPad/Mac para eso).</p>
+
+  <h3 id="cross-device">Varios dispositivos y la web</h3>
+  <p>Inicia sesión con el mismo correo + contraseña en tantos dispositivos como quieras. Tus grupos, eventos y gastos se sincronizan en tiempo real — añade un gasto en tu Mac y aparece en tu iPad segundos después.</p>
+  <p><b>La web app</b> en <a href="https://paylash-fffac.web.app">paylash-fffac.web.app</a> ofrece una vista de solo lectura de todos tus grupos. Útil cuando no tienes un dispositivo Apple a mano. Puedes navegar por los grupos, ver eventos y gastos, pero no puedes editar ni añadir nada desde la web — para eso usa iOS o macOS.</p>
+
+  <h3 id="notifications">Notificaciones</h3>
+  <p>Con premium activo, paylash envía notificaciones push para la actividad en tus grupos: nuevos gastos, marcas de liquidación, miembros añadidos o eliminados, bloqueos de evento. Cada notificación enlaza directamente a la pantalla relevante — tócala para ir directo al nuevo gasto o al evento actualizado.</p>
+  <p><b>Permiso</b>: al iniciar sesión por primera vez, iOS pide permiso de notificaciones. Puedes cambiarlo después en Ajustes de iOS → paylash → Notificaciones.</p>
+  <p><b>Idioma</b>: las notificaciones llegan en el idioma de la app que hayas elegido (Ajustes → Idioma). Es por usuario, así que distintos miembros del mismo grupo pueden recibir notificaciones en distintos idiomas del mismo evento.</p>
+  <p><b>Tranquilidad</b>: paylash nunca envía notificaciones de marketing, ni avisos de "no has abierto la app en X días". Las push están reservadas para cosas que pasaron de verdad en tus grupos.</p>
+
+  <h3 id="settings">Ajustes y cuenta</h3>
+  <p>La pestaña Ajustes te ofrece:</p>
+  <ul>
+    <li><b>Perfil</b> (solo premium) — tu apodo, nombre/apellido opcionales, avatar opcional. Visible para los miembros del grupo.</li>
+    <li><b>Idioma</b> — elige entre inglés, turco, alemán, español, italiano y francés. Se aplica al instante en toda la app.</li>
+    <li><b>Apariencia</b> — Sistema, Claro u Oscuro.</li>
+    <li><b>Moneda predeterminada</b> — la moneda por defecto para los nuevos gastos. Puedes cambiarla por gasto.</li>
+    <li><b>Fila premium</b> — actualiza si no eres premium; gestiona la suscripción si lo eres.</li>
+    <li><b>Acerca de</b> — información de versión más enlaces a esta guía, la política de privacidad y soporte.</li>
+  </ul>
+  <p><b>Eliminar cuenta</b>: Perfil → Eliminar cuenta retira tu perfil y los grupos que posees. Los gastos que aportaste a grupos que aún son de otras personas pueden permanecer — forman parte del historial financiero de esos grupos. La eliminación es permanente; no se puede deshacer.</p>
+
+  <p>Esa es toda la app. Si algo no queda claro o ves alguna función comportándose de forma rara, escribe a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> — leemos cada mensaje.</p>
 </section>
 
 <!-- ============ ITALIANO ============ -->
 <section id="it" class="lang-section">
   <h2>Italiano</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <p>Questa guida ti accompagna attraverso ogni funzione di paylash, dal divisore di conti senza account alla gestione di un gruppo su più dispositivi. È organizzata in base a ciò che faresti come utente, non secondo la struttura dell'app — quindi sentiti libero di saltare direttamente alla sezione che ti serve.</p>
+
+  <div class="tip"><b>Aiuto nell'app:</b> cerca il piccolo pulsante <b>?</b> sulle schermate chiave nell'app iOS / iPadOS / macOS — l'interruttore Partecipazione Limitata, la sezione Voci della divisione per voce, l'elenco Gruppi, l'elenco eventi all'interno di un gruppo, il pulsante di blocco di un evento di gruppo, il piano di saldo e il foglio del codice invito. Toccando <b>?</b> si apre una breve spiegazione con un link "Scopri di più" che ti riporta alla sezione corrispondente di questa guida.</div>
+
+  <div class="toc">
+    <h4>Contenuti</h4>
+    <ul>
+      <li><a href="#bill-splitter">Il divisore di conti</a></li>
+      <li><a href="#itemized-split">Divisione per voce e OCR</a></li>
+      <li><a href="#restricted-participation">Partecipazione limitata</a></li>
+      <li><a href="#going-premium">Passare a premium</a></li>
+      <li><a href="#creating-groups">Creare gruppi</a></li>
+      <li><a href="#inviting-members">Invitare membri</a></li>
+      <li><a href="#events">Eventi</a></li>
+      <li><a href="#adding-expenses">Aggiungere spese</a></li>
+      <li><a href="#event-locking">Blocco e saldo</a></li>
+      <li><a href="#sharing">Condividere report</a></li>
+      <li><a href="#cross-device">Più dispositivi e web</a></li>
+      <li><a href="#notifications">Notifiche</a></li>
+      <li><a href="#settings">Impostazioni e account</a></li>
+    </ul>
+  </div>
+
+  <h3 id="bill-splitter">Il divisore di conti (senza account)</h3>
+  <p>La scheda Spesa è lo strumento più semplice di paylash. Non ti servono account, internet o altro.</p>
+  <ol>
+    <li>Apri la scheda <b>Spesa</b>.</li>
+    <li>Inserisci l'importo del conto.</li>
+    <li>Imposta il numero di persone che dividono.</li>
+    <li>Facoltativamente scegli una percentuale di mancia (5%, 10%, 15%, 20%, 30%) o inserisci una mancia personalizzata.</li>
+    <li>La card del risultato mostra la quota di ciascuno. Tocca il pulsante di condivisione per inviarla tramite Messaggi, email o qualsiasi altra app.</li>
+  </ol>
+  <p>Se solo alcune persone hanno ordinato un articolo extra, vedi <a href="#restricted-participation">Partecipazione limitata</a>.</p>
+
+  <h3 id="itemized-split">Divisione per voce e OCR scontrini</h3>
+  <p>La scheda Per voce serve quando una divisione equa non è giusta — persone diverse hanno avuto cose diverse. paylash calcola chi paga cosa in base alle voci che ciascuno ha avuto.</p>
+  <ol>
+    <li>Apri la scheda <b>Per voce</b>.</li>
+    <li>Tocca l'<b>icona della fotocamera</b> in alto per scansionare uno scontrino, o inserisci le voci manualmente.</li>
+    <li>Per ogni voce, assegna le persone che l'hanno avuta. Tocca l'avatar di una persona per includerla o escluderla.</li>
+    <li>Aggiungi una mancia se serve (percentuale del conto o un importo personalizzato).</li>
+    <li>Il totale per persona compare in basso. Tocca una persona per vedere cosa ha avuto.</li>
+    <li>Tocca condividi per inviare il riepilogo.</li>
+  </ol>
+  <div class="tip"><b>Sull'OCR:</b> la scansione dello scontrino usa il framework Vision di Apple — tutta l'elaborazione avviene sul tuo dispositivo, nessuna immagine viene caricata. Funziona meglio con scontrini stampati e buona luce. Scrivi le voci a mano se l'OCR salta qualcosa; le correzioni richiedono secondi.</div>
+
+  <h3 id="restricted-participation">Partecipazione limitata (l'interruttore "eccezione")</h3>
+  <p>La funzione più potente (e meno ovvia) del divisore di conti. Usala quando una voce del conto è stata presa solo da alcuni dei presenti.</p>
+  <p><b>Esempio</b>: Cinque amici cenano. Il totale è <b>5.000 €</b>. Due di loro condividono inoltre una bottiglia di vino da <b>2.000 €</b> oltre alla cena. Non vuoi dividere il vino tra tutti e cinque.</p>
+  <ol>
+    <li>Inserisci l'importo totale: <b>5.000 €</b>.</li>
+    <li>Imposta le persone a <b>5</b>.</li>
+    <li>Attiva l'interruttore <b>Partecipazione Limitata</b>.</li>
+    <li>Imposta l'importo eccezionale a <b>2.000 €</b> (il vino).</li>
+    <li>Imposta "quante persone l'hanno avuto" a <b>2</b>.</li>
+  </ol>
+  <p>paylash calcola due quote:</p>
+  <ul>
+    <li>Le <b>2 persone con l'extra</b> pagano: la loro quota della cena da 3.000 € + i 2.000 € / 2 interi (il loro vino).</li>
+    <li>Le <b>3 persone senza l'extra</b> pagano: solo la loro quota della cena da 3.000 €.</li>
+  </ul>
+  <p>La card del risultato mostra entrambi gli importi affiancati. La mancia (se presente) viene aggiunta proporzionalmente.</p>
+
+  <h3 id="going-premium">Passare a premium</h3>
+  <p>Il divisore di conti è gratuito per sempre. La scheda Gruppi — dove condividi le spese, gestisci gli eventi e segui i saldi — richiede un abbonamento premium.</p>
+  <p><b>Cosa sblocca premium</b>:</p>
+  <ul>
+    <li>Creare e unirsi a gruppi condivisi su iPhone, iPad, Mac e web</li>
+    <li>Organizzare eventi all'interno di un gruppo</li>
+    <li>Aggiungere spese condivise con diversi stili di divisione</li>
+    <li>Eventi bloccabili con piani di saldo calcolati automaticamente</li>
+    <li>Condivisione di report PDF e di testo</li>
+    <li>Notifiche push quando cambia l'attività del gruppo</li>
+    <li>Nessuna pubblicità in tutta l'app</li>
+  </ul>
+  <p><b>Come abbonarsi</b>: tocca la scheda Gruppi oppure Impostazioni → "Passa a paylash premium". Entrambe portano allo stesso paywall, che mostra una prova gratuita di 7 giorni sul piano mensile o un piano annuale scontato.</p>
+  <p><b>Come gestire l'abbonamento</b>: Impostazioni → "paylash premium attivo" → apre il foglio Gestisci Abbonamenti di Apple, dove puoi annullare, passare da mensile ad annuale o riattivare dopo un'interruzione. Apple gestisce tutto; noi riceviamo solo un flag di abilitazione.</p>
+
+  <h3 id="creating-groups">Creare un gruppo</h3>
+  <p>Una volta attivato il premium, la scheda Gruppi si apre con l'elenco dei tuoi gruppi (vuoto al primo utilizzo).</p>
+  <ol>
+    <li>Tocca il pulsante <b>+</b> in alto.</li>
+    <li>Inserisci un nome del gruppo (es. "Viaggio a Berlino", "Cena del venerdì", "Coinquilini").</li>
+    <li>Scegli un emoji o un avatar con iniziale per il gruppo.</li>
+    <li>Facoltativamente aggiungi una descrizione (visibile a tutti i membri).</li>
+    <li>Tocca Salva.</li>
+  </ol>
+  <p>Ora sei il primo <b>admin</b> del gruppo. Gli admin possono modificare il gruppo, gestire i membri e sbloccare gli eventi bloccati. I membri normali possono aggiungere spese ma non modificare le impostazioni del gruppo.</p>
+
+  <h3 id="inviting-members">Invitare membri</h3>
+  <p>Ogni gruppo ha <b>posti membro</b>. Quando crei un gruppo esiste un solo posto (il tuo). Aggiungine altri per ogni persona che vuoi includere.</p>
+  <ol>
+    <li>Apri il gruppo, tocca l'elenco dei membri.</li>
+    <li>Tocca <b>+ Aggiungi membro</b>.</li>
+    <li>Inserisci il soprannome della persona (come apparirà nel gruppo).</li>
+    <li>Salva. Il posto ora esiste ma è <b>libero</b> — nessun utente reale ancora.</li>
+    <li>Tocca l'icona dell'ingranaggio accanto al posto libero. paylash genera un breve codice invito valido per 30 giorni.</li>
+    <li>Condividi il codice o il link universale tramite qualsiasi app di chat, email o SMS.</li>
+  </ol>
+  <p>Quando il destinatario apre il link su iOS (o incolla il codice in Gruppi → "Ho un codice"), occupa quel posto. Il suo soprannome e le sue spese sono ora legati al tuo posto, non a un duplicato.</p>
+  <p><b>Se non ha ancora paylash</b>: il link lo porta prima all'App Store, poi al flusso di riscatto dopo l'installazione.</p>
+  <p><b>Se non ha premium</b>: il foglio di gate gli mostra cosa serve. Il codice invito resta valido per tutti i 30 giorni — ha tempo per abbonarsi.</p>
+
+  <h3 id="events">Eventi</h3>
+  <p>Gli eventi vivono all'interno di un gruppo e raggruppano le spese per occasione. Un gruppo chiamato "Viaggio a Berlino" potrebbe avere eventi per "Serata al ristorante", "Ingressi ai musei" e "Corse in taxi".</p>
+  <ol>
+    <li>All'interno di un gruppo, tocca <b>+ Aggiungi evento</b>.</li>
+    <li>Dai un nome all'evento (es. "Serata al ristorante").</li>
+    <li>Scegli un avatar emoji.</li>
+    <li>Facoltativamente imposta date di inizio e fine.</li>
+    <li>Scegli quali membri del gruppo partecipano (predefinito: tutti i membri).</li>
+    <li>Salva.</li>
+  </ol>
+  <p>Alla fine, solo i partecipanti dell'evento compaiono nel saldo per persona. Se tre dei cinque amici sono andati al museo, solo quei tre fanno parte delle spese e del saldo di quell'evento.</p>
+
+  <h3 id="adding-expenses">Aggiungere spese a un evento</h3>
+  <p>All'interno di un evento, tocca <b>+ Aggiungi spesa</b>. Vedrai tre modalità di divisione:</p>
+  <ul>
+    <li><b>Divisione equa</b> — dividere equamente tra i partecipanti dell'evento. Imposta nome, importo e chi ha pagato.</li>
+    <li><b>Partecipazione limitata</b> — come l'interruttore eccezione del divisore di conti. Alcuni partecipanti pagano di più per un articolo extra.</li>
+    <li><b>Per voce</b> — voci con assegnazione per persona, come la scheda Per voce. Usa l'OCR se hai una foto dello scontrino.</li>
+  </ul>
+  <p>Campi comuni in ogni spesa:</p>
+  <ul>
+    <li><b>Nome</b> — l'etichetta della spesa (es. "Hotel notte 1", "Pranzo").</li>
+    <li><b>Importo</b> — totale incluso mancia e voci.</li>
+    <li><b>Pagato da</b> — quale membro ha anticipato il costo.</li>
+    <li><b>Data</b> — quando è avvenuta la spesa.</li>
+    <li><b>Avatar</b> — emoji o iniziali per contrassegnarla nell'elenco.</li>
+  </ul>
+  <p><b>Chi può modificare?</b> Il creatore della spesa, chi ha pagato, il creatore dell'evento e qualsiasi admin del gruppo possono modificare o eliminare una spesa. Gli altri membri la vedono ma non possono cambiarla. Blocca l'evento per congelare tutte le spese contro ulteriori modifiche.</p>
+
+  <h3 id="event-locking">Bloccare un evento e saldo</h3>
+  <p>Quando tutte le spese sono inserite e l'evento è "completo" (il viaggio è finito, la serata è chiusa, ecc.), bloccalo.</p>
+  <ol>
+    <li>Apri l'evento.</li>
+    <li>Scorri fino alla card del totale in alto.</li>
+    <li>Tocca l'<b>icona del lucchetto</b>.</li>
+    <li>Conferma.</li>
+  </ol>
+  <p>Il blocco fa tre cose:</p>
+  <ul>
+    <li>Congela tutte le spese — nessuno può aggiungerle, modificarle o eliminarle.</li>
+    <li>Rivela la vista <b>Saldo</b> — un elenco di transazioni "X deve Y €Z".</li>
+    <li>Abilita la condivisione come PDF o testo.</li>
+  </ul>
+  <p>Il piano di saldo calcola l'insieme minimo di pagamenti necessari per chiudere tutti i debiti. Esempio: se A deve 10 € a B, B deve 15 € a C, e C deve 5 € a A, paylash lo riduce a una sola transazione (es. A → C: 5 € e B → C: 10 €) invece di tre pagamenti andata-ritorno.</p>
+  <p>Man mano che i membri si pagano a vicenda, segna ogni transazione di saldo come <b>completata</b> nella vista Saldo. Quando ogni transazione è fatta, l'evento è completamente risolto.</p>
+  <p><b>Sbloccare</b>: qualsiasi admin può sbloccare un evento per aggiungere una spesa dimenticata o correggere un errore. Sbloccare scarta il piano di saldo corrente; bloccare di nuovo lo ricalcola dalle spese aggiornate.</p>
+
+  <h3 id="sharing">Condividere report</h3>
+  <p>Da qualsiasi evento bloccato, tocca l'icona di condivisione nell'intestazione. paylash offre tre formati:</p>
+  <ul>
+    <li><b>PDF</b> — report multipagina con saldi per membro, transazioni di saldo e dettaglio per spesa. Adatto a email, archiviazione o stampa.</li>
+    <li><b>Testo</b> — riepilogo in testo semplice di chi deve a chi. Ottimo per le app di chat. Include il nome dell'evento, il totale e ogni transazione di saldo.</li>
+    <li><b>Testo + PDF</b> — invia entrambi in un unico pacchetto di condivisione.</li>
+  </ul>
+  <p>La condivisione funziona da qualsiasi dispositivo connesso al gruppo — iPhone, iPad o Mac. L'app web offre accesso in sola lettura ma al momento non genera condivisioni PDF o di testo (per quello usa un telefono/iPad/Mac).</p>
+
+  <h3 id="cross-device">Più dispositivi e il web</h3>
+  <p>Accedi con la stessa email + password su quanti dispositivi vuoi. I tuoi gruppi, eventi e spese si sincronizzano in tempo reale — aggiungi una spesa sul Mac e compare sul tuo iPad dopo pochi secondi.</p>
+  <p><b>L'app web</b> su <a href="https://paylash-fffac.web.app">paylash-fffac.web.app</a> offre una vista in sola lettura di tutti i tuoi gruppi. Utile quando non hai un dispositivo Apple a portata di mano. Puoi sfogliare i gruppi, vedere eventi e spese, ma non puoi modificare o aggiungere niente dal web — per quello usa iOS o macOS.</p>
+
+  <h3 id="notifications">Notifiche</h3>
+  <p>Con premium attivo, paylash invia notifiche push per l'attività nei tuoi gruppi: nuove spese, contrassegni di saldo, membri aggiunti o rimossi, blocchi di evento. Ogni notifica porta direttamente alla schermata pertinente — tocca per saltare subito alla nuova spesa o all'evento aggiornato.</p>
+  <p><b>Permesso</b>: al primo accesso, iOS chiede il permesso per le notifiche. Puoi modificarlo in seguito in Impostazioni iOS → paylash → Notifiche.</p>
+  <p><b>Lingua</b>: le notifiche arrivano nella lingua dell'app che hai scelto (Impostazioni → Lingua). È per utente, quindi diversi membri dello stesso gruppo possono ricevere le notifiche in lingue diverse dallo stesso evento.</p>
+  <p><b>Tranquillità</b>: paylash non invia mai notifiche di marketing, mai avvisi di "non apri l'app da X giorni". Le push sono riservate a cose che sono davvero successe nei tuoi gruppi.</p>
+
+  <h3 id="settings">Impostazioni e account</h3>
+  <p>La scheda Impostazioni ti offre:</p>
+  <ul>
+    <li><b>Profilo</b> (solo premium) — il tuo soprannome, nome/cognome opzionali, avatar opzionale. Visibile ai membri del gruppo.</li>
+    <li><b>Lingua</b> — scegli tra inglese, turco, tedesco, spagnolo, italiano e francese. Si applica immediatamente in tutta l'app.</li>
+    <li><b>Aspetto</b> — Sistema, Chiaro o Scuro.</li>
+    <li><b>Valuta predefinita</b> — la valuta predefinita per le nuove spese. Puoi cambiarla per spesa.</li>
+    <li><b>Riga premium</b> — fai l'upgrade se non sei premium; gestisci l'abbonamento se lo sei.</li>
+    <li><b>Informazioni</b> — info sulla versione più link a questa guida, all'informativa sulla privacy e al supporto.</li>
+  </ul>
+  <p><b>Eliminazione dell'account</b>: Profilo → Elimina account rimuove il tuo profilo + i gruppi che possiedi. Le spese che hai contribuito a gruppi ancora di proprietà di altri possono rimanere — fanno parte della cronologia finanziaria di quei gruppi. L'eliminazione è permanente; non c'è ritorno.</p>
+
+  <p>Ecco l'intera app. Se qualcosa non è chiaro o trovi una funzione che si comporta in modo inatteso, scrivi a <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> — leggiamo ogni messaggio.</p>
 </section>
 
 <!-- ============ FRANÇAIS ============ -->
 <section id="fr" class="lang-section">
   <h2>Français</h2>
-  <p class="placeholder">Translation in progress. The English version above is the source of truth until this section is finalised.</p>
+
+  <p>Ce guide te fait découvrir chaque fonctionnalité de paylash, du diviseur de notes sans compte à la gestion d'un groupe sur plusieurs appareils. Il est organisé selon ce que tu ferais en tant qu'utilisateur, pas selon la structure de l'app — n'hésite donc pas à sauter directement à la section dont tu as besoin.</p>
+
+  <div class="tip"><b>Aide dans l'app :</b> cherche le petit bouton <b>?</b> sur les écrans clés de l'app iOS / iPadOS / macOS — le commutateur Participation Restreinte, la section Articles du partage article par article, la liste Groupes, la liste des événements dans un groupe, le bouton de verrouillage d'un événement de groupe, le plan de règlement et la feuille du code d'invitation. Toucher <b>?</b> ouvre une courte explication avec un lien « En savoir plus » qui te ramène à la section correspondante de ce guide.</div>
+
+  <div class="toc">
+    <h4>Sommaire</h4>
+    <ul>
+      <li><a href="#bill-splitter">Le diviseur de notes</a></li>
+      <li><a href="#itemized-split">Partage article par article et OCR</a></li>
+      <li><a href="#restricted-participation">Participation restreinte</a></li>
+      <li><a href="#going-premium">Passer à premium</a></li>
+      <li><a href="#creating-groups">Créer des groupes</a></li>
+      <li><a href="#inviting-members">Inviter des membres</a></li>
+      <li><a href="#events">Événements</a></li>
+      <li><a href="#adding-expenses">Ajouter des dépenses</a></li>
+      <li><a href="#event-locking">Verrouillage et règlement</a></li>
+      <li><a href="#sharing">Partager les rapports</a></li>
+      <li><a href="#cross-device">Plusieurs appareils et web</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#settings">Réglages et compte</a></li>
+    </ul>
+  </div>
+
+  <h3 id="bill-splitter">Le diviseur de notes (sans compte)</h3>
+  <p>L'onglet Dépense est l'outil le plus simple de paylash. Tu n'as besoin ni de compte, ni d'internet, ni de quoi que ce soit.</p>
+  <ol>
+    <li>Ouvre l'onglet <b>Dépense</b>.</li>
+    <li>Saisis le montant de la note.</li>
+    <li>Indique le nombre de personnes qui partagent.</li>
+    <li>Facultatif : choisis un pourcentage de pourboire (5%, 10%, 15%, 20%, 30%) ou saisis un pourboire personnalisé.</li>
+    <li>La carte de résultat affiche la part de chaque personne. Touche le bouton de partage pour l'envoyer via Messages, e-mail ou n'importe quelle autre app.</li>
+  </ol>
+  <p>Si seules certaines personnes ont commandé un article supplémentaire, voir <a href="#restricted-participation">Participation restreinte</a>.</p>
+
+  <h3 id="itemized-split">Partage article par article et OCR de reçus</h3>
+  <p>L'onglet Détaillé sert quand un partage équitable n'est pas juste — des personnes différentes ont eu des choses différentes. paylash calcule qui paie quoi selon les articles que chacun a eus.</p>
+  <ol>
+    <li>Ouvre l'onglet <b>Détaillé</b>.</li>
+    <li>Touche l'<b>icône d'appareil photo</b> en haut pour scanner un reçu, ou saisis les articles manuellement.</li>
+    <li>Pour chaque article, assigne les personnes qui l'ont eu. Touche l'avatar d'une personne pour l'inclure ou l'exclure.</li>
+    <li>Ajoute un pourboire si nécessaire (pourcentage de la note ou montant personnalisé).</li>
+    <li>Le total par personne apparaît en bas. Touche une personne pour voir ce qu'elle a eu.</li>
+    <li>Touche partager pour envoyer la répartition.</li>
+  </ol>
+  <div class="tip"><b>À propos de l'OCR :</b> la numérisation du reçu utilise le framework Vision d'Apple — tout le traitement se fait sur ton appareil, aucune image n'est téléversée. Fonctionne mieux avec des reçus imprimés et un bon éclairage. Saisis les articles à la main si l'OCR en manque ; les corrections prennent quelques secondes.</div>
+
+  <h3 id="restricted-participation">Participation restreinte (le commutateur « exception »)</h3>
+  <p>La fonctionnalité la plus puissante (et la moins évidente) du diviseur de notes. À utiliser quand un article de la note n'a été pris que par certaines des personnes présentes.</p>
+  <p><b>Exemple</b>: Cinq amis dînent. Le total est de <b>5 000 €</b>. Deux d'entre eux partagent en plus une bouteille de vin à <b>2 000 €</b>. Tu ne veux pas diviser le vin entre les cinq.</p>
+  <ol>
+    <li>Saisis le montant total : <b>5 000 €</b>.</li>
+    <li>Mets le nombre de personnes à <b>5</b>.</li>
+    <li>Active le commutateur <b>Participation Restreinte</b>.</li>
+    <li>Mets le montant exceptionnel à <b>2 000 €</b> (le vin).</li>
+    <li>Mets « combien l'ont eu » à <b>2</b>.</li>
+  </ol>
+  <p>paylash calcule deux parts :</p>
+  <ul>
+    <li>Les <b>2 personnes avec extra</b> paient : leur part du repas de 3 000 € + les 2 000 € / 2 complets (leur vin).</li>
+    <li>Les <b>3 personnes sans extra</b> paient : seulement leur part du repas de 3 000 €.</li>
+  </ul>
+  <p>La carte de résultat affiche les deux montants côte à côte. Le pourboire (s'il y en a) est ajouté proportionnellement.</p>
+
+  <h3 id="going-premium">Passer à premium</h3>
+  <p>Le diviseur de notes est gratuit à vie. L'onglet Groupes — où tu partages des dépenses, gères des événements et suis le règlement — nécessite un abonnement premium.</p>
+  <p><b>Ce que premium débloque</b> :</p>
+  <ul>
+    <li>Créer et rejoindre des groupes partagés sur iPhone, iPad, Mac et le web</li>
+    <li>Organiser des événements dans un groupe</li>
+    <li>Ajouter des dépenses partagées avec plusieurs styles de partage</li>
+    <li>Événements verrouillables avec plans de règlement calculés automatiquement</li>
+    <li>Partage de rapports PDF et texte</li>
+    <li>Notifications push lorsque l'activité du groupe change</li>
+    <li>Aucune publicité nulle part dans l'app</li>
+  </ul>
+  <p><b>Comment s'abonner</b> : touche l'onglet Groupes ou Réglages → « Passer à paylash premium ». Les deux mènent au même paywall, qui propose un essai gratuit de 7 jours sur l'offre mensuelle ou une offre annuelle à prix réduit.</p>
+  <p><b>Comment gérer ton abonnement</b> : Réglages → « paylash premium actif » → ouvre la feuille Gérer les abonnements d'Apple, où tu peux annuler, basculer entre mensuel et annuel, ou réactiver après une interruption. Apple gère tout ; nous recevons seulement un drapeau d'autorisation.</p>
+
+  <h3 id="creating-groups">Créer un groupe</h3>
+  <p>Une fois premium activé, l'onglet Groupes s'ouvre avec ta liste de groupes (vide à la première utilisation).</p>
+  <ol>
+    <li>Touche le bouton <b>+</b> en haut.</li>
+    <li>Saisis un nom de groupe (par ex. « Voyage à Berlin », « Dîner du vendredi », « Colocataires »).</li>
+    <li>Choisis un emoji ou un avatar à initiale pour le groupe.</li>
+    <li>Facultatif : ajoute une description (visible par tous les membres).</li>
+    <li>Touche Enregistrer.</li>
+  </ol>
+  <p>Tu es maintenant le premier <b>administrateur</b> du groupe. Les administrateurs peuvent modifier le groupe, gérer les membres et déverrouiller les événements verrouillés. Les membres ordinaires peuvent ajouter des dépenses mais pas modifier les réglages du groupe.</p>
+
+  <h3 id="inviting-members">Inviter des membres</h3>
+  <p>Chaque groupe a des <b>emplacements de membres</b>. Quand tu crées un groupe, il n'existe qu'un seul emplacement (le tien). Ajoutes-en d'autres pour chaque personne à inclure.</p>
+  <ol>
+    <li>Ouvre le groupe, touche la liste des membres.</li>
+    <li>Touche <b>+ Ajouter un membre</b>.</li>
+    <li>Saisis le pseudo de la personne (comment elle apparaîtra dans le groupe).</li>
+    <li>Enregistre. L'emplacement existe maintenant mais est <b>libre</b> — pas encore d'utilisateur réel.</li>
+    <li>Touche l'icône d'engrenage à côté de l'emplacement libre. paylash génère un court code d'invitation valable 30 jours.</li>
+    <li>Partage le code ou le lien universel via n'importe quelle app de chat, e-mail ou SMS.</li>
+  </ol>
+  <p>Quand le destinataire ouvre le lien sur iOS (ou colle le code dans Groupes → « J'ai un code »), il prend cet emplacement. Son pseudo et ses dépenses sont désormais liés à ton emplacement, pas à un doublon.</p>
+  <p><b>S'il n'a pas encore paylash</b> : le lien le redirige d'abord vers l'App Store, puis vers le flux de canje après installation.</p>
+  <p><b>S'il n'a pas premium</b> : la feuille d'accès lui montre ce qu'il faut. Le code d'invitation reste valable les 30 jours — il a le temps de s'abonner.</p>
+
+  <h3 id="events">Événements</h3>
+  <p>Les événements vivent dans un groupe et regroupent les dépenses par occasion. Un groupe nommé « Voyage à Berlin » peut avoir des événements pour « Soirée restaurant », « Entrées musée » et « Trajets en taxi ».</p>
+  <ol>
+    <li>Dans un groupe, touche <b>+ Ajouter un événement</b>.</li>
+    <li>Nomme l'événement (par ex. « Soirée restaurant »).</li>
+    <li>Choisis un avatar emoji.</li>
+    <li>Facultatif : fixe une date de début et de fin.</li>
+    <li>Choisis quels membres du groupe participent (par défaut : tous les membres).</li>
+    <li>Enregistre.</li>
+  </ol>
+  <p>À la fin, seuls les participants de l'événement apparaissent dans le règlement par personne. Si trois des cinq amis sont allés au musée, seuls ces trois-là font partie des dépenses et du règlement de cet événement.</p>
+
+  <h3 id="adding-expenses">Ajouter des dépenses à un événement</h3>
+  <p>Dans un événement, touche <b>+ Ajouter une dépense</b>. Tu verras trois modes de partage :</p>
+  <ul>
+    <li><b>Partage équitable</b> — répartir équitablement entre les participants à l'événement. Définis le nom, le montant et qui a payé.</li>
+    <li><b>Participation restreinte</b> — comme le commutateur d'exception du diviseur de notes. Certains participants paient plus pour un article supplémentaire.</li>
+    <li><b>Article par article</b> — articles avec attribution par personne, comme l'onglet Détaillé. Utilise l'OCR si tu as une photo du reçu.</li>
+  </ul>
+  <p>Champs communs à chaque dépense :</p>
+  <ul>
+    <li><b>Nom</b> — libellé de la dépense (par ex. « Hôtel nuit 1 », « Déjeuner »).</li>
+    <li><b>Montant</b> — total incluant pourboire et articles.</li>
+    <li><b>Payé par</b> — quel membre a avancé le coût.</li>
+    <li><b>Date</b> — quand la dépense a eu lieu.</li>
+    <li><b>Avatar</b> — emoji ou initiales pour la repérer dans la liste.</li>
+  </ul>
+  <p><b>Qui peut modifier ?</b> Le créateur de la dépense, le payeur, le créateur de l'événement et n'importe quel administrateur du groupe peuvent modifier ou supprimer une dépense. Les autres membres la voient mais ne peuvent pas la changer. Verrouille l'événement pour figer toutes les dépenses contre d'autres modifications.</p>
+
+  <h3 id="event-locking">Verrouiller un événement et règlement</h3>
+  <p>Quand toutes les dépenses sont saisies et que l'événement est « complet » (le voyage est terminé, la soirée est réglée, etc.), verrouille-le.</p>
+  <ol>
+    <li>Ouvre l'événement.</li>
+    <li>Fais défiler jusqu'à la carte du total en haut.</li>
+    <li>Touche l'<b>icône de cadenas</b>.</li>
+    <li>Confirme.</li>
+  </ol>
+  <p>Le verrouillage fait trois choses :</p>
+  <ul>
+    <li>Fige toutes les dépenses — personne ne peut les ajouter, les modifier ou les supprimer.</li>
+    <li>Révèle la vue <b>Règlement</b> — une liste de transactions « X doit Y €Z ».</li>
+    <li>Active le partage en PDF ou en texte.</li>
+  </ul>
+  <p>Le plan de règlement calcule l'ensemble minimum de paiements nécessaires pour solder toutes les dettes. Exemple : si A doit 10 € à B, B doit 15 € à C et C doit 5 € à A, paylash le réduit à une seule transaction (par ex. A → C : 5 € et B → C : 10 €) au lieu de trois paiements aller-retour.</p>
+  <p>Au fur et à mesure que les membres se paient entre eux, marque chaque transaction de règlement comme <b>terminée</b> dans la vue Règlement. Quand toutes les transactions sont faites, l'événement est entièrement réglé.</p>
+  <p><b>Déverrouiller</b> : n'importe quel administrateur peut déverrouiller un événement pour ajouter une dépense oubliée ou corriger une erreur. Le déverrouillage rejette le plan de règlement actuel ; le verrouiller à nouveau le recalcule à partir des dépenses mises à jour.</p>
+
+  <h3 id="sharing">Partager les rapports</h3>
+  <p>Depuis n'importe quel événement verrouillé, touche l'icône de partage dans l'en-tête. paylash propose trois formats :</p>
+  <ul>
+    <li><b>PDF</b> — rapport multi-pages avec soldes par membre, transactions de règlement et détail par dépense. Adapté à l'e-mail, à l'archivage ou à l'impression.</li>
+    <li><b>Texte</b> — résumé en texte brut de qui doit à qui. Idéal pour les apps de chat. Inclut le nom de l'événement, le total et chaque transaction de règlement.</li>
+    <li><b>Texte + PDF</b> — envoie les deux en un seul paquet de partage.</li>
+  </ul>
+  <p>Le partage fonctionne depuis n'importe quel appareil connecté au groupe — iPhone, iPad ou Mac. L'app web offre un accès en lecture seule mais ne génère pas actuellement de partage PDF ou texte (utilise un téléphone/iPad/Mac pour cela).</p>
+
+  <h3 id="cross-device">Plusieurs appareils et le web</h3>
+  <p>Connecte-toi avec le même e-mail + mot de passe sur autant d'appareils que tu veux. Tes groupes, événements et dépenses se synchronisent en temps réel — ajoute une dépense sur ton Mac et elle apparaît sur ton iPad quelques secondes plus tard.</p>
+  <p><b>L'app web</b> sur <a href="https://paylash-fffac.web.app">paylash-fffac.web.app</a> offre une vue en lecture seule de tous tes groupes. Utile quand tu n'as pas d'appareil Apple sous la main. Tu peux parcourir les groupes, voir les événements et dépenses, mais tu ne peux ni modifier ni ajouter quoi que ce soit depuis le web — pour cela, utilise iOS ou macOS.</p>
+
+  <h3 id="notifications">Notifications</h3>
+  <p>Lorsque premium est actif, paylash envoie des notifications push pour l'activité dans tes groupes : nouvelles dépenses, marques de règlement, membres ajoutés ou retirés, verrouillages d'événements. Chaque notification renvoie directement vers l'écran concerné — touche pour aller directement à la nouvelle dépense ou à l'événement mis à jour.</p>
+  <p><b>Autorisation</b> : à la première connexion, iOS demande l'autorisation des notifications. Tu peux la modifier plus tard dans Réglages iOS → paylash → Notifications.</p>
+  <p><b>Langue</b> : les notifications arrivent dans la langue de l'app que tu as choisie (Réglages → Langue). C'est par utilisateur, donc différents membres du même groupe peuvent recevoir les notifications dans des langues différentes pour le même événement.</p>
+  <p><b>Tranquillité</b> : paylash n'envoie jamais de notifications marketing, jamais de messages « tu n'as pas ouvert l'app depuis X jours ». Les push sont réservées à des choses qui se sont vraiment passées dans tes groupes.</p>
+
+  <h3 id="settings">Réglages et compte</h3>
+  <p>L'onglet Réglages t'offre :</p>
+  <ul>
+    <li><b>Profil</b> (premium uniquement) — ton pseudo, prénom/nom optionnels, avatar optionnel. Visible par les membres du groupe.</li>
+    <li><b>Langue</b> — choisis parmi anglais, turc, allemand, espagnol, italien et français. S'applique instantanément dans toute l'app.</li>
+    <li><b>Apparence</b> — Système, Clair ou Sombre.</li>
+    <li><b>Devise par défaut</b> — la devise par défaut des nouvelles dépenses. Modifiable par dépense.</li>
+    <li><b>Ligne premium</b> — passer à premium si tu ne l'es pas ; gérer l'abonnement si tu l'es.</li>
+    <li><b>À propos</b> — infos de version plus liens vers ce guide, la politique de confidentialité et le support.</li>
+  </ul>
+  <p><b>Suppression du compte</b> : Profil → Supprimer le compte retire ton profil + les groupes que tu possèdes. Les dépenses que tu as contribuées à des groupes appartenant à d'autres peuvent rester — elles font partie de l'historique financier de ces groupes. La suppression est permanente ; pas de retour en arrière.</p>
+
+  <p>Voilà toute l'app. Si quelque chose n'est pas clair ou si tu trouves une fonctionnalité qui se comporte de façon inattendue, écris à <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> — nous lisons chaque message.</p>
 </section>
 
 </div>
