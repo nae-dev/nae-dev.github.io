@@ -40,6 +40,14 @@
   .langs span { background: white; border: 1px solid var(--border); padding: 4px 10px; border-radius: 6px; font-size: 13px; color: var(--muted); }
   footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); }
   footer a { color: var(--muted); margin: 0 8px; }
+  .videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+  @media (max-width: 560px) { .videos { grid-template-columns: 1fr; } }
+  .video-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .video-card video { width: 100%; display: block; background: #000; aspect-ratio: 16 / 9; }
+  .video-card .vc-thumb { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--muted); font-size: 13px; letter-spacing: 0.3px; }
+  .video-card .vc-body { padding: 12px 14px; }
+  .video-card .vc-body h3 { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+  .video-card .vc-body p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.45; }
 </style>
 </head>
 <body>
@@ -69,6 +77,32 @@
       <p>No tracking, no personalised ads, no email spam.</p>
     </section>
     <section class="feature">
+      <h2>See it in action</h2>
+      <div class="videos">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+          <div class="vc-body">
+            <h3>How to sign up for the first time</h3>
+            <p>You've subscribed and become a premium user. Now create your account and set up your profile — this video walks you through it step by step. (App language and subtitles in English.)</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Coming soon</div>
+          <div class="vc-body">
+            <h3>Create your first group</h3>
+            <p>With your profile ready, it's time to create your first group. This video shows you how to create and set up a group, then add members and invite friends and family to join.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Coming soon</div>
+          <div class="vc-body">
+            <h3>Create your first event and start adding expenses</h3>
+            <p>Groups organize spending into events — a trip, a dinner, a night out. This video shows you how to create an event, set its currency, add who's involved, and start logging expenses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
       <h2>Free, no account needed</h2>
       <ul>
         <li>Quick bill splitter with tip presets (5–30%) and a custom tip option</li>
@@ -84,6 +118,8 @@
       <ul>
         <li>Shared groups across iPhone, iPad, Mac, and the web — real-time sync</li>
         <li>Events organise expenses by trip, night, or occasion</li>
+        <li>Per-event currency — each event shows in its own currency</li>
+        <li>Group photos that sync across all your devices and the web</li>
         <li>Multiple split styles per expense — equal, restricted, itemized</li>
         <li>Lockable events with auto-calculated settlement plans (minimum payments)</li>
         <li>PDF and text settlement reports</li>
@@ -125,6 +161,32 @@
       <p>Takip yok, kişiselleştirilmiş reklam yok, e-posta spam'i yok.</p>
     </section>
     <section class="feature">
+      <h2>İş başında izle</h2>
+      <div class="videos">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+          <div class="vc-body">
+            <h3>İlk kez nasıl kayıt olunur</h3>
+            <p>Abone oldun ve premium kullanıcı oldun. Şimdi hesabını oluştur ve profilini ayarla — bu video adım adım gösteriyor. (Uygulama dili ve altyazılar İngilizce.)</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Yakında</div>
+          <div class="vc-body">
+            <h3>İlk grubunu oluştur</h3>
+            <p>Profilin hazır olduğuna göre ilk grubunu oluşturma zamanı. Bu video bir grubu nasıl oluşturup ayarlayacağını, ardından üye ekleyip arkadaşlarını ve aileni nasıl davet edeceğini gösteriyor.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Yakında</div>
+          <div class="vc-body">
+            <h3>İlk etkinliğini oluştur ve harcama eklemeye başla</h3>
+            <p>Gruplar harcamaları etkinliklere göre düzenler — bir gezi, bir akşam yemeği, bir gece. Bu video bir etkinliği nasıl oluşturacağını, para birimini ayarlayacağını, kimlerin katıldığını ekleyeceğini ve harcama girmeye nasıl başlayacağını gösteriyor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
       <h2>Ücretsiz, hesap gerekmiyor</h2>
       <ul>
         <li>Bahşiş ayarları (5–30%) ve özel bahşiş seçeneğiyle hızlı hesap bölücü</li>
@@ -140,6 +202,8 @@
       <ul>
         <li>iPhone, iPad, Mac ve web'de paylaşılan gruplar — gerçek zamanlı senkronizasyon</li>
         <li>Etkinlikler harcamaları gezi, akşam veya olaya göre düzenler</li>
+        <li>Etkinlik başına para birimi — her etkinlik kendi para biriminde görünür</li>
+        <li>Tüm cihazlarında ve web'de senkronize olan grup fotoğrafları</li>
         <li>Harcama başına birden çok bölme stili — eşit, kısıtlı, kalem kalem</li>
         <li>Otomatik hesaplanan hesaplaşma planlarıyla kilitlenebilir etkinlikler (en az ödeme)</li>
         <li>PDF ve metin hesaplaşma raporları</li>
@@ -181,6 +245,32 @@
       <p>Kein Tracking, keine personalisierte Werbung, kein E-Mail-Spam.</p>
     </section>
     <section class="feature">
+      <h2>So funktioniert's</h2>
+      <div class="videos">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+          <div class="vc-body">
+            <h3>So meldest du dich zum ersten Mal an</h3>
+            <p>Du hast ein Abo abgeschlossen und bist jetzt Premium-Nutzer. Erstelle nun dein Konto und richte dein Profil ein — dieses Video zeigt dir Schritt für Schritt, wie. (App-Sprache und Untertitel auf Englisch.)</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Demnächst</div>
+          <div class="vc-body">
+            <h3>Erstelle deine erste Gruppe</h3>
+            <p>Dein Profil ist fertig — Zeit für deine erste Gruppe. Dieses Video zeigt dir, wie du eine Gruppe erstellst und einrichtest und dann Mitglieder hinzufügst und Freunde und Familie einlädst.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Demnächst</div>
+          <div class="vc-body">
+            <h3>Erstelle dein erstes Ereignis und füge Ausgaben hinzu</h3>
+            <p>Gruppen organisieren Ausgaben in Ereignissen — eine Reise, ein Abendessen, ein Abend. Dieses Video zeigt dir, wie du ein Ereignis erstellst, seine Währung festlegst, die Beteiligten hinzufügst und Ausgaben zu erfassen beginnst.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
       <h2>Kostenlos, kein Konto nötig</h2>
       <ul>
         <li>Schneller Rechnungsteiler mit Trinkgeld-Vorgaben (5–30%) und eigener Trinkgeld-Option</li>
@@ -196,6 +286,8 @@
       <ul>
         <li>Geteilte Gruppen auf iPhone, iPad, Mac und im Web — Echtzeit-Synchronisation</li>
         <li>Ereignisse organisieren Ausgaben nach Reise, Abend oder Anlass</li>
+        <li>Währung pro Ereignis — jedes Ereignis erscheint in seiner eigenen Währung</li>
+        <li>Gruppenfotos, die auf allen deinen Geräten und im Web synchronisiert werden</li>
         <li>Mehrere Aufteilungsarten pro Ausgabe — gleichmäßig, eingeschränkt, postenweise</li>
         <li>Sperrbare Ereignisse mit automatisch berechneten Abrechnungsplänen (minimale Zahlungen)</li>
         <li>PDF- und Text-Abrechnungsberichte</li>
@@ -237,6 +329,32 @@
       <p>Sin seguimiento, sin anuncios personalizados, sin spam por correo.</p>
     </section>
     <section class="feature">
+      <h2>Míralo en acción</h2>
+      <div class="videos">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+          <div class="vc-body">
+            <h3>Cómo registrarte por primera vez</h3>
+            <p>Te has suscrito y ya eres usuario premium. Ahora crea tu cuenta y configura tu perfil: este vídeo te lo muestra paso a paso. (Idioma de la app y subtítulos en inglés.)</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Próximamente</div>
+          <div class="vc-body">
+            <h3>Crea tu primer grupo</h3>
+            <p>Con tu perfil listo, es hora de crear tu primer grupo. Este vídeo te muestra cómo crear y configurar un grupo, y luego añadir miembros e invitar a amigos y familia.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Próximamente</div>
+          <div class="vc-body">
+            <h3>Crea tu primer evento y empieza a añadir gastos</h3>
+            <p>Los grupos organizan los gastos en eventos: un viaje, una cena, una noche. Este vídeo te muestra cómo crear un evento, definir su moneda, añadir a los participantes y empezar a registrar gastos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
       <h2>Gratis, sin cuenta necesaria</h2>
       <ul>
         <li>Divisor de cuentas rápido con propinas predefinidas (5–30%) y opción personalizada</li>
@@ -252,6 +370,8 @@
       <ul>
         <li>Grupos compartidos en iPhone, iPad, Mac y la web — sincronización en tiempo real</li>
         <li>Los eventos organizan los gastos por viaje, noche u ocasión</li>
+        <li>Moneda por evento — cada evento se muestra en su propia moneda</li>
+        <li>Fotos de grupo que se sincronizan en todos tus dispositivos y en la web</li>
         <li>Varios estilos de división por gasto — equitativo, restringido, por artículo</li>
         <li>Eventos bloqueables con planes de liquidación calculados automáticamente (pagos mínimos)</li>
         <li>Informes de liquidación en PDF y texto</li>
@@ -293,6 +413,32 @@
       <p>Niente tracciamento, niente pubblicità personalizzate, niente spam via email.</p>
     </section>
     <section class="feature">
+      <h2>Guardalo in azione</h2>
+      <div class="videos">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+          <div class="vc-body">
+            <h3>Come registrarti per la prima volta</h3>
+            <p>Hai sottoscritto l'abbonamento e ora sei un utente premium. Adesso crea il tuo account e imposta il profilo: questo video te lo mostra passo dopo passo. (Lingua dell'app e sottotitoli in inglese.)</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">In arrivo</div>
+          <div class="vc-body">
+            <h3>Crea il tuo primo gruppo</h3>
+            <p>Ora che il profilo è pronto, è il momento di creare il tuo primo gruppo. Questo video ti mostra come creare e configurare un gruppo e poi aggiungere membri e invitare amici e familiari.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">In arrivo</div>
+          <div class="vc-body">
+            <h3>Crea il tuo primo evento e inizia ad aggiungere spese</h3>
+            <p>I gruppi organizzano le spese in eventi: un viaggio, una cena, una serata. Questo video ti mostra come creare un evento, impostarne la valuta, aggiungere i partecipanti e iniziare a registrare le spese.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
       <h2>Gratis, senza account</h2>
       <ul>
         <li>Divisore di conti veloce con preimpostazioni di mancia (5–30%) e opzione personalizzata</li>
@@ -308,6 +454,8 @@
       <ul>
         <li>Gruppi condivisi su iPhone, iPad, Mac e web — sincronizzazione in tempo reale</li>
         <li>Gli eventi organizzano le spese per viaggio, serata o occasione</li>
+        <li>Valuta per evento — ogni evento è mostrato nella propria valuta</li>
+        <li>Foto del gruppo sincronizzate su tutti i tuoi dispositivi e sul web</li>
         <li>Diversi stili di divisione per spesa — equa, limitata, per voce</li>
         <li>Eventi bloccabili con piani di saldo calcolati automaticamente (pagamenti minimi)</li>
         <li>Report di saldo in PDF e testo</li>
@@ -349,6 +497,32 @@
       <p>Pas de suivi, pas de pub personnalisée, pas de spam par e-mail.</p>
     </section>
     <section class="feature">
+      <h2>Vois-le en action</h2>
+      <div class="videos">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+          <div class="vc-body">
+            <h3>Comment s'inscrire pour la première fois</h3>
+            <p>Tu t'es abonné et tu es maintenant utilisateur premium. Crée ton compte et configure ton profil — cette vidéo te montre comment, étape par étape. (Langue de l'app et sous-titres en anglais.)</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Bientôt</div>
+          <div class="vc-body">
+            <h3>Crée ton premier groupe</h3>
+            <p>Ton profil est prêt : il est temps de créer ton premier groupe. Cette vidéo te montre comment créer et configurer un groupe, puis ajouter des membres et inviter tes amis et ta famille.</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="vc-thumb">Bientôt</div>
+          <div class="vc-body">
+            <h3>Crée ton premier événement et commence à ajouter des dépenses</h3>
+            <p>Les groupes organisent les dépenses en événements — un voyage, un dîner, une soirée. Cette vidéo te montre comment créer un événement, définir sa devise, ajouter les participants et commencer à saisir des dépenses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
       <h2>Gratuit, sans compte</h2>
       <ul>
         <li>Diviseur de notes rapide avec presets de pourboire (5–30%) et option personnalisée</li>
@@ -364,6 +538,8 @@
       <ul>
         <li>Groupes partagés sur iPhone, iPad, Mac et le web — sync en temps réel</li>
         <li>Les événements organisent les dépenses par voyage, soirée ou occasion</li>
+        <li>Devise par événement — chaque événement s'affiche dans sa propre devise</li>
+        <li>Photos de groupe synchronisées sur tous tes appareils et le web</li>
         <li>Plusieurs styles de partage par dépense — équitable, restreint, article par article</li>
         <li>Événements verrouillables avec plans de règlement calculés automatiquement (paiements minimum)</li>
         <li>Rapports de règlement en PDF et texte</li>
