@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>paylash — Video tutorials</title>
+<meta name="description" content="Short video walkthroughs of paylash's main features — signing up, creating groups, adding expenses, settling up, and the web view.">
+<link rel="icon" href="../paylash-icon.png">
+<style>
+  :root {
+    --brand: #0a84ff;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f8f9fa;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  nav.lang { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 24px; z-index: 20; overflow-x: auto; white-space: nowrap; text-align: center; }
+  nav.lang a { color: var(--ink); text-decoration: none; padding: 6px 10px; margin: 0 2px; border-radius: 6px; font-size: 14px; display: inline-block; }
+  nav.lang a:hover { background: var(--bg); }
+  header.hero { text-align: center; padding: 48px 24px 8px; }
+  .logo { width: 76px; height: 76px; border-radius: 18px; display: inline-block; box-shadow: 0 6px 24px rgba(10, 132, 255, 0.25); }
+  h1 { font-size: 26px; font-weight: 600; margin: 14px 0 4px; letter-spacing: 0.5px; }
+  .tagline { color: var(--ink); margin: 0; font-size: 17px; font-weight: 600; }
+  .intro { color: var(--muted); margin: 6px auto 0; font-size: 14px; max-width: 560px; }
+  .tut { max-width: 720px; margin: 0 auto; padding: 8px 24px 56px; }
+  .tut-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin: 20px 0; scroll-margin-top: 72px; }
+  .tut-card video { width: 100%; display: block; background: #000; aspect-ratio: 16 / 9; }
+  .tut-card .vc-thumb { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--muted); font-size: 14px; letter-spacing: 0.3px; }
+  .tut-card .vc-body { padding: 14px 18px; }
+  .tut-card .vc-body h3 { margin: 0 0 6px; font-size: 17px; font-weight: 600; }
+  .tut-card .vc-body p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); }
+  footer a { color: var(--muted); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<nav class="lang">
+  <a href="#en">English</a>
+  <a href="#tr">Türkçe</a>
+  <a href="#de">Deutsch</a>
+  <a href="#es">Español</a>
+  <a href="#it">Italiano</a>
+  <a href="#fr">Français</a>
+</nav>
+
+<!-- ============ ENGLISH ============ -->
+<section id="en" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="../paylash-icon.png" alt="paylash app icon" width="76" height="76">
+    <h1>paylash</h1>
+    <p class="tagline">Video tutorials</p>
+    <p class="intro">Short walkthroughs of paylash's main features. The app and subtitles in the videos are in English.</p>
+  </header>
+  <div class="tut">
+    <div class="tut-card" id="en-signup_app">
+      <video controls preload="metadata" playsinline src="signup_app.mp4"></video>
+      <div class="vc-body">
+        <h3>How to sign up for the first time</h3>
+        <p>You've subscribed and become a premium user. Now create your account and set up your profile — this video walks you through it step by step.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="en-create_group">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h3>Create your first group</h3>
+        <p>With your profile ready, it's time to create your first group. This video shows you how to create and set up a group, then add members and invite friends and family to join.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="en-create_event_expenses">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h3>Create your first event and start adding expenses</h3>
+        <p>Groups organize spending into events — a trip, a dinner, a night out. This video shows you how to create an event, set its currency, add who's involved, and start logging expenses.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="en-lock_settle">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h3>Lock an event and settle up</h3>
+        <p>Once everyone's expenses are in, lock the event to freeze it. paylash works out who owes whom with the fewest payments, lets you tick each one off as it's paid, and exports a clean PDF or text summary to share.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="en-web_view">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h3>View your groups on the web</h3>
+        <p>No Apple device handy? Sign in on any browser to see all your groups, events, and balances — read-only, in your language. A quick tour of the web companion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TÜRKÇE ============ -->
+<section id="tr" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="../paylash-icon.png" alt="paylash uygulama simgesi" width="76" height="76">
+    <h1>paylash</h1>
+    <p class="tagline">Video eğitimleri</p>
+    <p class="intro">paylash'ın ana özelliklerinin kısa anlatımları. Videolardaki uygulama ve altyazılar İngilizcedir.</p>
+  </header>
+  <div class="tut">
+    <div class="tut-card" id="tr-signup_app">
+      <video controls preload="metadata" playsinline src="signup_app.mp4"></video>
+      <div class="vc-body">
+        <h3>İlk kez nasıl kayıt olunur</h3>
+        <p>Abone oldun ve premium kullanıcı oldun. Şimdi hesabını oluştur ve profilini ayarla — bu video adım adım gösteriyor.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="tr-create_group">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h3>İlk grubunu oluştur</h3>
+        <p>Profilin hazır olduğuna göre ilk grubunu oluşturma zamanı. Bu video bir grubu nasıl oluşturup ayarlayacağını, ardından üye ekleyip arkadaşlarını ve aileni nasıl davet edeceğini gösteriyor.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="tr-create_event_expenses">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h3>İlk etkinliğini oluştur ve harcama eklemeye başla</h3>
+        <p>Gruplar harcamaları etkinliklere göre düzenler — bir gezi, bir akşam yemeği, bir gece. Bu video bir etkinliği nasıl oluşturacağını, para birimini ayarlayacağını, kimlerin katıldığını ekleyeceğini ve harcama girmeye nasıl başlayacağını gösteriyor.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="tr-lock_settle">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h3>Bir etkinliği kilitle ve hesaplaş</h3>
+        <p>Herkesin harcamaları girildikten sonra etkinliği kilitleyerek dondur. paylash kimin kime en az ödemeyle borçlu olduğunu hesaplar, her ödemeyi yapıldıkça işaretlemeni sağlar ve paylaşmak için temiz bir PDF veya metin özeti dışa aktarır.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="tr-web_view">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h3>Gruplarını web'de görüntüle</h3>
+        <p>Elinde Apple cihazı yok mu? Herhangi bir tarayıcıdan giriş yaparak tüm gruplarını, etkinliklerini ve bakiyelerini gör — salt okunur, kendi dilinde. Web uygulamasının kısa bir turu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEUTSCH ============ -->
+<section id="de" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="../paylash-icon.png" alt="paylash App-Symbol" width="76" height="76">
+    <h1>paylash</h1>
+    <p class="tagline">Video-Tutorials</p>
+    <p class="intro">Kurze Durchläufe der wichtigsten paylash-Funktionen. App und Untertitel in den Videos sind auf Englisch.</p>
+  </header>
+  <div class="tut">
+    <div class="tut-card" id="de-signup_app">
+      <video controls preload="metadata" playsinline src="signup_app.mp4"></video>
+      <div class="vc-body">
+        <h3>So meldest du dich zum ersten Mal an</h3>
+        <p>Du hast ein Abo abgeschlossen und bist jetzt Premium-Nutzer. Erstelle nun dein Konto und richte dein Profil ein — dieses Video zeigt dir Schritt für Schritt, wie.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="de-create_group">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h3>Erstelle deine erste Gruppe</h3>
+        <p>Dein Profil ist fertig — Zeit für deine erste Gruppe. Dieses Video zeigt dir, wie du eine Gruppe erstellst und einrichtest und dann Mitglieder hinzufügst und Freunde und Familie einlädst.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="de-create_event_expenses">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h3>Erstelle dein erstes Ereignis und füge Ausgaben hinzu</h3>
+        <p>Gruppen organisieren Ausgaben in Ereignissen — eine Reise, ein Abendessen, ein Abend. Dieses Video zeigt dir, wie du ein Ereignis erstellst, seine Währung festlegst, die Beteiligten hinzufügst und Ausgaben zu erfassen beginnst.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="de-lock_settle">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h3>Ein Ereignis sperren und abrechnen</h3>
+        <p>Sobald alle Ausgaben erfasst sind, sperre das Ereignis, um es einzufrieren. paylash ermittelt mit den wenigsten Zahlungen, wer wem schuldet, lässt dich jede Zahlung als erledigt markieren und exportiert eine saubere PDF- oder Textübersicht zum Teilen.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="de-web_view">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h3>Deine Gruppen im Web ansehen</h3>
+        <p>Kein Apple-Gerät zur Hand? Melde dich in einem beliebigen Browser an, um all deine Gruppen, Ereignisse und Salden zu sehen — schreibgeschützt, in deiner Sprache. Ein kurzer Rundgang durch die Web-App.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESPAÑOL ============ -->
+<section id="es" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="../paylash-icon.png" alt="icono de paylash" width="76" height="76">
+    <h1>paylash</h1>
+    <p class="tagline">Tutoriales en vídeo</p>
+    <p class="intro">Recorridos breves por las funciones principales de paylash. La app y los subtítulos de los vídeos están en inglés.</p>
+  </header>
+  <div class="tut">
+    <div class="tut-card" id="es-signup_app">
+      <video controls preload="metadata" playsinline src="signup_app.mp4"></video>
+      <div class="vc-body">
+        <h3>Cómo registrarte por primera vez</h3>
+        <p>Te has suscrito y ya eres usuario premium. Ahora crea tu cuenta y configura tu perfil: este vídeo te lo muestra paso a paso.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="es-create_group">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h3>Crea tu primer grupo</h3>
+        <p>Con tu perfil listo, es hora de crear tu primer grupo. Este vídeo te muestra cómo crear y configurar un grupo, y luego añadir miembros e invitar a amigos y familia.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="es-create_event_expenses">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h3>Crea tu primer evento y empieza a añadir gastos</h3>
+        <p>Los grupos organizan los gastos en eventos: un viaje, una cena, una noche. Este vídeo te muestra cómo crear un evento, definir su moneda, añadir a los participantes y empezar a registrar gastos.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="es-lock_settle">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h3>Bloquea un evento y liquida</h3>
+        <p>Cuando estén todos los gastos, bloquea el evento para congelarlo. paylash calcula quién debe a quién con los menos pagos posibles, te deja marcar cada pago a medida que se hace y exporta un resumen limpio en PDF o texto para compartir.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="es-web_view">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h3>Mira tus grupos en la web</h3>
+        <p>¿No tienes un dispositivo Apple a mano? Inicia sesión en cualquier navegador para ver todos tus grupos, eventos y saldos — solo lectura, en tu idioma. Un recorrido rápido por la versión web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ITALIANO ============ -->
+<section id="it" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="../paylash-icon.png" alt="icona di paylash" width="76" height="76">
+    <h1>paylash</h1>
+    <p class="tagline">Video tutorial</p>
+    <p class="intro">Brevi guide alle funzioni principali di paylash. L'app e i sottotitoli nei video sono in inglese.</p>
+  </header>
+  <div class="tut">
+    <div class="tut-card" id="it-signup_app">
+      <video controls preload="metadata" playsinline src="signup_app.mp4"></video>
+      <div class="vc-body">
+        <h3>Come registrarti per la prima volta</h3>
+        <p>Hai sottoscritto l'abbonamento e ora sei un utente premium. Adesso crea il tuo account e imposta il profilo: questo video te lo mostra passo dopo passo.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="it-create_group">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h3>Crea il tuo primo gruppo</h3>
+        <p>Ora che il profilo è pronto, è il momento di creare il tuo primo gruppo. Questo video ti mostra come creare e configurare un gruppo e poi aggiungere membri e invitare amici e familiari.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="it-create_event_expenses">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h3>Crea il tuo primo evento e inizia ad aggiungere spese</h3>
+        <p>I gruppi organizzano le spese in eventi: un viaggio, una cena, una serata. Questo video ti mostra come creare un evento, impostarne la valuta, aggiungere i partecipanti e iniziare a registrare le spese.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="it-lock_settle">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h3>Blocca un evento e salda i conti</h3>
+        <p>Quando tutte le spese sono inserite, blocca l'evento per congelarlo. paylash calcola chi deve a chi con il minor numero di pagamenti, ti fa spuntare ogni pagamento man mano che avviene ed esporta un riepilogo pulito in PDF o testo da condividere.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="it-web_view">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h3>Guarda i tuoi gruppi sul web</h3>
+        <p>Nessun dispositivo Apple a portata di mano? Accedi da qualsiasi browser per vedere tutti i tuoi gruppi, eventi e saldi — in sola lettura, nella tua lingua. Un breve tour della versione web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRANÇAIS ============ -->
+<section id="fr" class="lang-section">
+  <header class="hero">
+    <img class="logo" src="../paylash-icon.png" alt="icône paylash" width="76" height="76">
+    <h1>paylash</h1>
+    <p class="tagline">Tutoriels vidéo</p>
+    <p class="intro">Aperçus rapides des principales fonctionnalités de paylash. L'app et les sous-titres des vidéos sont en anglais.</p>
+  </header>
+  <div class="tut">
+    <div class="tut-card" id="fr-signup_app">
+      <video controls preload="metadata" playsinline src="signup_app.mp4"></video>
+      <div class="vc-body">
+        <h3>Comment s'inscrire pour la première fois</h3>
+        <p>Tu t'es abonné et tu es maintenant utilisateur premium. Crée ton compte et configure ton profil — cette vidéo te montre comment, étape par étape.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="fr-create_group">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h3>Crée ton premier groupe</h3>
+        <p>Ton profil est prêt : il est temps de créer ton premier groupe. Cette vidéo te montre comment créer et configurer un groupe, puis ajouter des membres et inviter tes amis et ta famille.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="fr-create_event_expenses">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h3>Crée ton premier événement et commence à ajouter des dépenses</h3>
+        <p>Les groupes organisent les dépenses en événements — un voyage, un dîner, une soirée. Cette vidéo te montre comment créer un événement, définir sa devise, ajouter les participants et commencer à saisir des dépenses.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="fr-lock_settle">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h3>Verrouille un événement et règle les comptes</h3>
+        <p>Une fois toutes les dépenses saisies, verrouille l'événement pour le figer. paylash calcule qui doit quoi à qui avec le moins de paiements possible, te laisse cocher chaque paiement effectué et exporte un récapitulatif net en PDF ou texte à partager.</p>
+      </div>
+    </div>
+    <div class="tut-card" id="fr-web_view">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h3>Consulte tes groupes sur le web</h3>
+        <p>Pas d'appareil Apple sous la main ? Connecte-toi depuis n'importe quel navigateur pour voir tous tes groupes, événements et soldes — en lecture seule, dans ta langue. Un tour rapide de la version web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 NAE Dev &middot;
+  <a href="https://nae-dev.com/paylash/user-guide.html">User Guide</a> &middot;
+  <a href="https://nae-dev.com/paylash/support.html">Support</a> &middot;
+  <a href="https://nae-dev.com/paylash/">paylash</a>
+</footer>
+
+<script>
+(function() {
+  const SUPPORTED = ['en', 'tr', 'de', 'es', 'it', 'fr'];
+  const STORAGE_KEY = 'nae-lang';
+
+  function detectLang() {
+    const hash = window.location.hash.slice(1);
+    // Hash may be a bare lang ("tr") or a deep link ("tr-create_group").
+    const prefix = hash.split('-')[0];
+    if (SUPPORTED.includes(prefix)) {
+      try { localStorage.setItem(STORAGE_KEY, prefix); } catch(e) {}
+      return prefix;
+    }
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED.includes(stored)) return stored;
+    } catch(e) {}
+    return 'en';
+  }
+
+  function showOnly(lang) {
+    SUPPORTED.forEach(l => {
+      const section = document.getElementById(l);
+      if (section) section.style.display = (l === lang) ? '' : 'none';
+    });
+  }
+
+  // Deep link: "#<lang>-<video>" scrolls to that card once its section is shown.
+  function scrollToCard() {
+    const hash = window.location.hash.slice(1);
+    if (hash.includes('-')) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView();
+      });
+    }
+  }
+
+  function init() {
+    const lang = detectLang();
+    showOnly(lang);
+    scrollToCard();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  window.addEventListener('hashchange', function() {
+    showOnly(detectLang());
+    scrollToCard();
+  });
+})();
+</script>
+
+</body>
+</html>
