@@ -48,6 +48,14 @@
   .tip { background: white; border-left: 3px solid var(--brand); padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
   .tip b { color: var(--brand); }
   .placeholder { background: #fff8e1; border: 1px dashed #f0c674; border-radius: 8px; padding: 12px; color: #7a6500; font-size: 14px; }
+  .videos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 12px; }
+  @media (max-width: 600px) { .videos { grid-template-columns: 1fr; } }
+  .video-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .video-card video { width: 100%; display: block; background: #000; aspect-ratio: 16 / 9; }
+  .video-card .vc-thumb { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--muted); font-size: 13px; letter-spacing: 0.3px; }
+  .video-card .vc-body { padding: 12px 14px; }
+  .video-card .vc-body h4 { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+  .video-card .vc-body p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.45; }
   footer { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
   footer a { color: var(--muted); margin: 0 8px; }
 </style>
@@ -56,7 +64,7 @@
 
 <header class="page-head">
   <h1>paylash · User Guide</h1>
-  <div class="updated">Last updated: 14 June 2026</div>
+  <div class="updated">Last updated: 18 June 2026</div>
 </header>
 
 <nav class="lang">
@@ -81,6 +89,7 @@
   <div class="toc">
     <h4>Contents</h4>
     <ul>
+      <li><a href="#en-videos">Video tutorials</a></li>
       <li><a href="#en-bill-splitter">The bill splitter</a></li>
       <li><a href="#en-itemized-split">Itemized split & OCR</a></li>
       <li><a href="#en-restricted-participation">Restricted participation</a></li>
@@ -95,6 +104,53 @@
       <li><a href="#en-notifications">Notifications</a></li>
       <li><a href="#en-settings">Settings & account</a></li>
     </ul>
+  </div>
+
+  <h3 id="en-videos">Video tutorials</h3>
+  <p>Short walkthroughs of paylash's main features. The app and subtitles in the videos are in English. You can also browse them all on the <a href="https://nae-dev.github.io/paylash/videos/">video tutorials page</a>.</p>
+  <div class="videos">
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+      <div class="vc-body">
+        <h4>How to sign up for the first time</h4>
+        <p>You've subscribed and become a premium user. Now create your account and set up your profile — this video walks you through it step by step.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h4>Signing up on the web app</h4>
+        <p>Prefer the browser? You can create your paylash account on the web app too. This video walks you through signing up and setting up your profile from any browser.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/create_group.mp4"></video>
+      <div class="vc-body">
+        <h4>Create your first group</h4>
+        <p>With your profile ready, it's time to create your first group. This video shows you how to create and set up a group, then add members and invite friends and family to join.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h4>Joining a group</h4>
+        <p>Got an invite? This video shows you how to join an existing group with an invite code, and gives you a tour of the Groups view — where your groups, members, and shared events all live.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h4>Creating your first event</h4>
+        <p>Groups organize spending into events — a trip, a dinner, a night out. This video shows you how to create an event, add the people involved, and customize it to fit the occasion.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Coming soon</div>
+      <div class="vc-body">
+        <h4>Manage your expenses within an event</h4>
+        <p>This is where paylash does the heavy lifting. Learn how to add and customize expenses within an event, view live balances, and track settlements so everyone knows who owes whom.</p>
+      </div>
+    </div>
   </div>
 
   <h3 id="en-bill-splitter">The bill splitter (no account needed)</h3>
@@ -271,6 +327,7 @@
   <div class="toc">
     <h4>İçindekiler</h4>
     <ul>
+      <li><a href="#tr-videos">Video eğitimleri</a></li>
       <li><a href="#tr-bill-splitter">Hesap bölücü</a></li>
       <li><a href="#tr-itemized-split">Kalem kalem bölme ve OCR</a></li>
       <li><a href="#tr-restricted-participation">Kısıtlı katılım</a></li>
@@ -285,6 +342,53 @@
       <li><a href="#tr-notifications">Bildirimler</a></li>
       <li><a href="#tr-settings">Ayarlar ve hesap</a></li>
     </ul>
+  </div>
+
+  <h3 id="tr-videos">Video eğitimleri</h3>
+  <p>paylash'ın ana özelliklerinin kısa anlatımları. Videolardaki uygulama ve altyazılar İngilizcedir. Hepsini <a href="https://nae-dev.github.io/paylash/videos/">video eğitimleri sayfasında</a> da görebilirsin.</p>
+  <div class="videos">
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+      <div class="vc-body">
+        <h4>İlk kez nasıl kayıt olunur</h4>
+        <p>Abone oldun ve premium kullanıcı oldun. Şimdi hesabını oluştur ve profilini ayarla — bu video adım adım gösteriyor.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h4>Web uygulamasında kayıt olma</h4>
+        <p>Tarayıcıyı mı tercih edersin? paylash hesabını web uygulamasından da oluşturabilirsin. Bu video, herhangi bir tarayıcıdan nasıl kayıt olacağını ve profilini nasıl ayarlayacağını gösteriyor.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/create_group.mp4"></video>
+      <div class="vc-body">
+        <h4>İlk grubunu oluştur</h4>
+        <p>Profilin hazır olduğuna göre ilk grubunu oluşturma zamanı. Bu video bir grubu nasıl oluşturup ayarlayacağını, ardından üye ekleyip arkadaşlarını ve aileni nasıl davet edeceğini gösteriyor.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h4>Bir gruba katılma</h4>
+        <p>Davet aldın mı? Bu video, bir davet koduyla mevcut bir gruba nasıl katılacağını gösteriyor ve gruplarının, üyelerinin ve paylaşılan etkinliklerinin bulunduğu Gruplar görünümünde kısa bir tur sunuyor.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h4>İlk etkinliğini oluştur</h4>
+        <p>Gruplar harcamaları etkinliklere göre düzenler — bir gezi, bir akşam yemeği, bir gece. Bu video bir etkinliği nasıl oluşturacağını, katılan kişileri nasıl ekleyeceğini ve etkinliği duruma göre nasıl özelleştireceğini gösteriyor.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Yakında</div>
+      <div class="vc-body">
+        <h4>Bir etkinlikteki harcamalarını yönet</h4>
+        <p>İşte paylash'ın asıl işini yaptığı yer. Bir etkinlik içinde harcamaları nasıl ekleyip özelleştireceğini, anlık bakiyeleri nasıl görüntüleyeceğini ve kimin kime borçlu olduğunu herkesin bilmesi için hesaplaşmaları nasıl takip edeceğini öğren.</p>
+      </div>
+    </div>
   </div>
 
   <h3 id="tr-bill-splitter">Hesap bölücü (hesap gerekmiyor)</h3>
@@ -461,6 +565,7 @@
   <div class="toc">
     <h4>Inhalt</h4>
     <ul>
+      <li><a href="#de-videos">Video-Tutorials</a></li>
       <li><a href="#de-bill-splitter">Der Rechnungsteiler</a></li>
       <li><a href="#de-itemized-split">Postenweise Aufteilung & OCR</a></li>
       <li><a href="#de-restricted-participation">Eingeschränkte Teilnahme</a></li>
@@ -475,6 +580,53 @@
       <li><a href="#de-notifications">Benachrichtigungen</a></li>
       <li><a href="#de-settings">Einstellungen & Konto</a></li>
     </ul>
+  </div>
+
+  <h3 id="de-videos">Video-Tutorials</h3>
+  <p>Kurze Durchläufe der wichtigsten paylash-Funktionen. App und Untertitel in den Videos sind auf Englisch. Du findest sie alle auch auf der <a href="https://nae-dev.github.io/paylash/videos/">Video-Tutorials-Seite</a>.</p>
+  <div class="videos">
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+      <div class="vc-body">
+        <h4>So meldest du dich zum ersten Mal an</h4>
+        <p>Du hast ein Abo abgeschlossen und bist jetzt Premium-Nutzer. Erstelle nun dein Konto und richte dein Profil ein — dieses Video zeigt dir Schritt für Schritt, wie.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h4>Anmeldung in der Web-App</h4>
+        <p>Lieber im Browser? Du kannst dein paylash-Konto auch in der Web-App erstellen. Dieses Video zeigt dir, wie du dich von jedem Browser aus anmeldest und dein Profil einrichtest.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/create_group.mp4"></video>
+      <div class="vc-body">
+        <h4>Erstelle deine erste Gruppe</h4>
+        <p>Dein Profil ist fertig — Zeit für deine erste Gruppe. Dieses Video zeigt dir, wie du eine Gruppe erstellst und einrichtest und dann Mitglieder hinzufügst und Freunde und Familie einlädst.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h4>Einer Gruppe beitreten</h4>
+        <p>Eine Einladung erhalten? Dieses Video zeigt dir, wie du mit einem Einladungscode einer bestehenden Gruppe beitrittst, und führt dich durch die Gruppen-Ansicht — wo all deine Gruppen, Mitglieder und gemeinsamen Ereignisse zu finden sind.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h4>Erstelle dein erstes Ereignis</h4>
+        <p>Gruppen organisieren Ausgaben in Ereignissen — eine Reise, ein Abendessen, ein Abend. Dieses Video zeigt dir, wie du ein Ereignis erstellst, die Beteiligten hinzufügst und es passend zum Anlass anpasst.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Demnächst</div>
+      <div class="vc-body">
+        <h4>Verwalte deine Ausgaben in einem Ereignis</h4>
+        <p>Hier leistet paylash die eigentliche Arbeit. Lerne, wie du Ausgaben in einem Ereignis hinzufügst und anpasst, aktuelle Salden ansiehst und Abrechnungen verfolgst, damit jeder weiß, wer wem was schuldet.</p>
+      </div>
+    </div>
   </div>
 
   <h3 id="de-bill-splitter">Der Rechnungsteiler (kein Konto nötig)</h3>
@@ -651,6 +803,7 @@
   <div class="toc">
     <h4>Contenidos</h4>
     <ul>
+      <li><a href="#es-videos">Tutoriales en vídeo</a></li>
       <li><a href="#es-bill-splitter">El divisor de cuentas</a></li>
       <li><a href="#es-itemized-split">División por artículo y OCR</a></li>
       <li><a href="#es-restricted-participation">Participación restringida</a></li>
@@ -665,6 +818,53 @@
       <li><a href="#es-notifications">Notificaciones</a></li>
       <li><a href="#es-settings">Ajustes y cuenta</a></li>
     </ul>
+  </div>
+
+  <h3 id="es-videos">Tutoriales en vídeo</h3>
+  <p>Recorridos breves por las funciones principales de paylash. La app y los subtítulos de los vídeos están en inglés. También puedes verlos todos en la <a href="https://nae-dev.github.io/paylash/videos/">página de tutoriales en vídeo</a>.</p>
+  <div class="videos">
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+      <div class="vc-body">
+        <h4>Cómo registrarte por primera vez</h4>
+        <p>Te has suscrito y ya eres usuario premium. Ahora crea tu cuenta y configura tu perfil: este vídeo te lo muestra paso a paso.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h4>Registrarte en la versión web</h4>
+        <p>¿Prefieres el navegador? También puedes crear tu cuenta de paylash en la versión web. Este vídeo te muestra cómo registrarte y configurar tu perfil desde cualquier navegador.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/create_group.mp4"></video>
+      <div class="vc-body">
+        <h4>Crea tu primer grupo</h4>
+        <p>Con tu perfil listo, es hora de crear tu primer grupo. Este vídeo te muestra cómo crear y configurar un grupo, y luego añadir miembros e invitar a amigos y familia.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h4>Unirte a un grupo</h4>
+        <p>¿Te han invitado? Este vídeo te muestra cómo unirte a un grupo existente con un código de invitación y te da un recorrido por la vista de Grupos, donde están todos tus grupos, miembros y eventos compartidos.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h4>Crea tu primer evento</h4>
+        <p>Los grupos organizan los gastos en eventos: un viaje, una cena, una noche. Este vídeo te muestra cómo crear un evento, añadir a los participantes y personalizarlo según la ocasión.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Próximamente</div>
+      <div class="vc-body">
+        <h4>Gestiona tus gastos dentro de un evento</h4>
+        <p>Aquí es donde paylash hace el trabajo pesado. Aprende a añadir y personalizar gastos dentro de un evento, ver saldos en tiempo real y hacer seguimiento de las liquidaciones para que todos sepan quién debe a quién.</p>
+      </div>
+    </div>
   </div>
 
   <h3 id="es-bill-splitter">El divisor de cuentas (sin cuenta)</h3>
@@ -841,6 +1041,7 @@
   <div class="toc">
     <h4>Contenuti</h4>
     <ul>
+      <li><a href="#it-videos">Video tutorial</a></li>
       <li><a href="#it-bill-splitter">Il divisore di conti</a></li>
       <li><a href="#it-itemized-split">Divisione per voce e OCR</a></li>
       <li><a href="#it-restricted-participation">Partecipazione limitata</a></li>
@@ -855,6 +1056,53 @@
       <li><a href="#it-notifications">Notifiche</a></li>
       <li><a href="#it-settings">Impostazioni e account</a></li>
     </ul>
+  </div>
+
+  <h3 id="it-videos">Video tutorial</h3>
+  <p>Brevi guide alle funzioni principali di paylash. L'app e i sottotitoli nei video sono in inglese. Puoi vederli tutti anche nella <a href="https://nae-dev.github.io/paylash/videos/">pagina dei video tutorial</a>.</p>
+  <div class="videos">
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+      <div class="vc-body">
+        <h4>Come registrarti per la prima volta</h4>
+        <p>Hai sottoscritto l'abbonamento e ora sei un utente premium. Adesso crea il tuo account e imposta il profilo: questo video te lo mostra passo dopo passo.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h4>Registrarsi sulla versione web</h4>
+        <p>Preferisci il browser? Puoi creare il tuo account paylash anche sulla versione web. Questo video ti mostra come registrarti e impostare il profilo da qualsiasi browser.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/create_group.mp4"></video>
+      <div class="vc-body">
+        <h4>Crea il tuo primo gruppo</h4>
+        <p>Ora che il profilo è pronto, è il momento di creare il tuo primo gruppo. Questo video ti mostra come creare e configurare un gruppo e poi aggiungere membri e invitare amici e familiari.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h4>Unirsi a un gruppo</h4>
+        <p>Hai ricevuto un invito? Questo video ti mostra come unirti a un gruppo esistente con un codice di invito e ti accompagna nella vista Gruppi, dove trovi tutti i tuoi gruppi, membri ed eventi condivisi.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h4>Crea il tuo primo evento</h4>
+        <p>I gruppi organizzano le spese in eventi: un viaggio, una cena, una serata. Questo video ti mostra come creare un evento, aggiungere i partecipanti e personalizzarlo in base all'occasione.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">In arrivo</div>
+      <div class="vc-body">
+        <h4>Gestisci le tue spese all'interno di un evento</h4>
+        <p>Qui è dove paylash fa il lavoro pesante. Scopri come aggiungere e personalizzare le spese all'interno di un evento, vedere i saldi in tempo reale e tenere traccia dei pagamenti così che tutti sappiano chi deve cosa a chi.</p>
+      </div>
+    </div>
   </div>
 
   <h3 id="it-bill-splitter">Il divisore di conti (senza account)</h3>
@@ -1031,6 +1279,7 @@
   <div class="toc">
     <h4>Sommaire</h4>
     <ul>
+      <li><a href="#fr-videos">Tutoriels vidéo</a></li>
       <li><a href="#fr-bill-splitter">Le diviseur de notes</a></li>
       <li><a href="#fr-itemized-split">Partage article par article et OCR</a></li>
       <li><a href="#fr-restricted-participation">Participation restreinte</a></li>
@@ -1045,6 +1294,53 @@
       <li><a href="#fr-notifications">Notifications</a></li>
       <li><a href="#fr-settings">Réglages et compte</a></li>
     </ul>
+  </div>
+
+  <h3 id="fr-videos">Tutoriels vidéo</h3>
+  <p>Aperçus rapides des principales fonctionnalités de paylash. L'app et les sous-titres des vidéos sont en anglais. Tu peux aussi tous les retrouver sur la <a href="https://nae-dev.github.io/paylash/videos/">page des tutoriels vidéo</a>.</p>
+  <div class="videos">
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/signup_app.mp4"></video>
+      <div class="vc-body">
+        <h4>Comment s'inscrire pour la première fois</h4>
+        <p>Tu t'es abonné et tu es maintenant utilisateur premium. Crée ton compte et configure ton profil — cette vidéo te montre comment, étape par étape.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h4>S'inscrire sur la version web</h4>
+        <p>Tu préfères le navigateur ? Tu peux aussi créer ton compte paylash sur la version web. Cette vidéo te montre comment t'inscrire et configurer ton profil depuis n'importe quel navigateur.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" playsinline src="videos/create_group.mp4"></video>
+      <div class="vc-body">
+        <h4>Crée ton premier groupe</h4>
+        <p>Ton profil est prêt : il est temps de créer ton premier groupe. Cette vidéo te montre comment créer et configurer un groupe, puis ajouter des membres et inviter tes amis et ta famille.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h4>Rejoindre un groupe</h4>
+        <p>Tu as reçu une invitation ? Cette vidéo te montre comment rejoindre un groupe existant avec un code d'invitation et te fait visiter la vue Groupes — où se trouvent tous tes groupes, membres et événements partagés.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h4>Crée ton premier événement</h4>
+        <p>Les groupes organisent les dépenses en événements — un voyage, un dîner, une soirée. Cette vidéo te montre comment créer un événement, ajouter les participants et le personnaliser selon l'occasion.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="vc-thumb">Bientôt</div>
+      <div class="vc-body">
+        <h4>Gère tes dépenses au sein d'un événement</h4>
+        <p>C'est là que paylash fait le gros du travail. Apprends à ajouter et personnaliser des dépenses dans un événement, à consulter les soldes en temps réel et à suivre les remboursements pour que chacun sache qui doit quoi à qui.</p>
+      </div>
+    </div>
   </div>
 
   <h3 id="fr-bill-splitter">Le diviseur de notes (sans compte)</h3>
