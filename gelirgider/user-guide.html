@@ -11,17 +11,20 @@
   .wrap{max-width:760px;margin:0 auto;padding:24px}
   header.page-head{background:#fff;border-bottom:1px solid var(--border);padding:16px 24px}
   header.page-head h1{margin:0;font-size:20px;font-weight:600}
-  .updated{color:var(--muted);font-size:13px;margin-top:4px}
   nav.lang{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:12px 24px;z-index:10;overflow-x:auto;white-space:nowrap}
   nav.lang a{color:var(--ink);text-decoration:none;padding:6px 10px;margin-right:4px;border-radius:6px;font-size:14px}
   nav.lang a:hover{background:var(--bg)}
   section.lang-section{padding:24px 0;border-bottom:1px solid var(--border)}
   h2{font-size:24px;font-weight:600;margin-top:0}
   .lead{color:var(--muted);margin:4px 0 8px}
-  h3.group{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:28px 0 4px;border-top:1px solid var(--border);padding-top:20px}
-  h4{font-size:18px;font-weight:600;margin:22px 0 4px;scroll-margin-top:64px}
-  p{margin:4px 0 12px}a{color:var(--brand)}
-  .toc{background:var(--accent-bg);border:1px solid #c7e0fa;border-radius:10px;padding:16px 20px;margin:12px 0 24px}
+  h3.group{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:30px 0 4px;border-top:1px solid var(--border);padding-top:22px}
+  h4{font-size:19px;font-weight:600;margin:24px 0 4px;scroll-margin-top:64px}
+  p{margin:6px 0 10px}a{color:var(--brand)}
+  .how{font-weight:600;margin:10px 0 4px;font-size:14px}
+  ol{margin:0 0 10px;padding-left:22px}ol li{margin:5px 0}
+  .tip{background:var(--accent-bg);border:1px solid #c7e0fa;border-radius:8px;padding:8px 12px;font-size:14px;margin:8px 0 4px}
+  .tip b{color:var(--brand)}
+  .toc{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:12px 0 24px}
   .toc ul{list-style:none;padding-left:0;columns:2;column-gap:24px;margin:0}
   .toc li{margin:4px 0;break-inside:avoid}.toc a{text-decoration:none}
   @media(max-width:600px){.toc ul{columns:1}}
@@ -35,314 +38,692 @@
 
 <section id="en" class="lang-section">
 <h2>GelirGider · User Guide</h2>
-<p class="lead">Everything GelirGider can do, feature by feature. Tap the ⓘ next to a feature in the app to jump straight to its section here.</p>
-<div class="toc"><ul><li><a href="#en-cash-ledger">Cash ledger</a></li><li><a href="#en-credit-card">Credit Card ledger</a></li><li><a href="#en-new-entry">Adding an entry</a></li><li><a href="#en-add-to-cash">Add to Cash</a></li><li><a href="#en-recurring">Recurring Entry</a></li><li><a href="#en-varying-amounts">Varying Amounts</a></li><li><a href="#en-installments">Installment Purchase</a></li><li><a href="#en-deferred-payment">Deferred payment</a></li><li><a href="#en-foreign-currency">Currency Conversion</a></li><li><a href="#en-summary">Summary</a></li><li><a href="#en-budget">Budget</a></li><li><a href="#en-net-worth">Savings</a></li><li><a href="#en-holding-vadesiz">Demand account</a></li><li><a href="#en-vadeli">Term deposit</a></li><li><a href="#en-holding-metal">Precious metals</a></li><li><a href="#en-holding-crypto">Crypto</a></li><li><a href="#en-holding-stock">Stocks</a></li><li><a href="#en-holding-manual">Manual holding</a></li><li><a href="#en-birikim-transfer">Money to/from savings</a></li><li><a href="#en-daily-summary">Daily Summary</a></li><li><a href="#en-data-transfer">Data Transfer / Cleanup</a></li></ul></div>
-<h3 class="group">Akış (Cash Flow)</h3>
+<p class="lead">How to use every part of GelirGider, step by step. In the app, tap the ⓘ next to a feature to jump straight to its section here.</p>
+<div class="toc"><ul><li><a href="#en-cash-ledger">Cash ledger</a></li><li><a href="#en-credit-card">Credit Card ledger</a></li><li><a href="#en-new-entry">Adding an entry</a></li><li><a href="#en-add-to-cash">Add to Cash</a></li><li><a href="#en-recurring">Recurring series</a></li><li><a href="#en-varying-amounts">Varying amounts</a></li><li><a href="#en-installments">Installments</a></li><li><a href="#en-deferred-payment">Deferred payments</a></li><li><a href="#en-foreign-currency">Foreign currency (Premium)</a></li><li><a href="#en-summary">Summary</a></li><li><a href="#en-budget">Budget (Premium)</a></li><li><a href="#en-net-worth">Savings &amp; net worth (Premium)</a></li><li><a href="#en-holding-vadesiz">Demand Account</a></li><li><a href="#en-vadeli">Term Deposit</a></li><li><a href="#en-holding-metal">Precious Metals</a></li><li><a href="#en-holding-crypto">Crypto</a></li><li><a href="#en-holding-stock">Stocks</a></li><li><a href="#en-holding-manual">Manual holdings</a></li><li><a href="#en-birikim-transfer">Money to and from savings</a></li><li><a href="#en-daily-summary">Daily Summary</a></li><li><a href="#en-data-transfer">Data Transfer / Cleanup</a></li></ul></div>
+<h3 class="group">Cash Flow</h3>
 <h4 id="en-cash-ledger">Cash ledger</h4>
-<p>Your main cash account. The strip pills filter the time window; Summary collapses everything to one card per entry. Add more ledgers with + — 1 free, unlimited with Premium.</p>
+<p>Cash is your main cash account — the running total of the money you actually have. It's one of the two ledgers GelirGider starts you with (the other is Credit Card).</p>
+<p class="how">How to</p>
+<ol><li>Open the Cash Flow tab and tap Cash at the top of the ledger list.</li><li>The large number is your current balance. The pills below it (This Month, 30 Days, 3 Months) change how far ahead the list projects; Summary collapses everything to one card per entry.</li><li>Tap + (top right) to add income or an expense.</li><li>To create another ledger, tap + above the ledger list. Free includes one extra ledger; Premium is unlimited.</li></ol>
+<p class="tip"><b>Tip:</b> Only entries you've checked off count toward the balance — unchecked future entries show as upcoming, not spent yet.</p>
 <h4 id="en-credit-card">Credit Card ledger</h4>
-<p>Log card purchases here. When a statement cycle closes, its total appears as one “Card Payment” in your Cash ledger, due on the payment date — check it off when you pay.</p>
+<p>Credit Card tracks your card spending, then rolls each statement into a single payment in your Cash ledger — the way a real card works.</p>
+<p class="how">How to</p>
+<ol><li>Open the Credit Card ledger from the Cash Flow tab.</li><li>Tap + to log a purchase (name, amount, date). You can split a big one into installments under Advanced.</li><li>When a statement period closes, GelirGider creates one “Credit Card Payment” in your Cash ledger, dated to the payment day.</li><li>Check that payment off in Cash when you actually pay the card.</li></ol>
+<p class="tip"><b>Tip:</b> Set your statement and payment days when you create the ledger so the cycles line up with your real card.</p>
 <h4 id="en-new-entry">Adding an entry</h4>
-<p>Enter a name, amount, and date; the checkbox marks it paid or received. Under Advanced you can add a category, make it recurring, defer the settlement date, use a foreign currency, or set a reminder.</p>
+<p>Every income and expense is an entry inside a ledger.</p>
+<p class="how">How to</p>
+<ol><li>Open a ledger and tap + (top right).</li><li>Choose Income or Expense.</li><li>Type a name and amount, then set the date.</li><li>Leave the checkbox unticked if it hasn't happened yet; tick it once it's paid or received.</li><li>Open Advanced to add a category, make it recurring, defer the cash date, use a foreign currency, or set a reminder.</li><li>Tap Save.</li></ol>
+<p class="tip"><b>Tip:</b> The checkbox is the heart of the app — it's what turns a plan into an actual balance change.</p>
 <h4 id="en-add-to-cash">Add to Cash</h4>
-<p>When on, this ledger's entries also count toward your Cash balance and budget — handy for accounts you want reflected in your overall cash. Off keeps the ledger separate.</p>
-<h4 id="en-recurring">Recurring Entry</h4>
-<p>Creates one entry per month on the chosen day, from start to end. Each has its own checkbox. An occurrence leaves the series once you check it or its date passes — then it's a normal standalone entry you can edit or delete on its own. Editing the series only changes upcoming, unchecked occurrences.</p>
-<h4 id="en-varying-amounts">Varying Amounts</h4>
-<p>Enter a separate amount for each month — handy for inflation, seasonal bills (e.g. natural gas), or raises/renewals. Move the end date later to add months (copying the last amount), or earlier to remove them. At least 2 months are required.</p>
-<h4 id="en-installments">Installment Purchase</h4>
-<p>Splits the total into equal monthly card charges (the last absorbs any rounding). Each appears as “n/m” and lands in its month's statement. Once an installment is billed it's fixed; editing changes only the amount of upcoming installments. To change the count or schedule, delete and recreate.</p>
-<h4 id="en-deferred-payment">Deferred payment</h4>
-<p>The entry appears on the date above as a reminder, but the cash moves — and the balance changes — on the settlement date you pick.</p>
-<h4 id="en-foreign-currency">Currency Conversion</h4>
-<p>Unchecked foreign-currency amounts are converted to your app currency at the latest daily rate, so they update over time. Editing the top amount by hand fixes it and removes the foreign-currency link — it becomes a plain amount in your app currency. Checking the entry locks its value.</p>
+<p>A switch on a custom ledger that folds its entries into your overall Cash balance and budget — useful for an account you want reflected in your total cash.</p>
+<p class="how">How to</p>
+<ol><li>Create or edit a custom ledger (+ above the ledger list, or edit an existing one).</li><li>Turn on “Add to Cash”.</li><li>Now this ledger's income and expenses also appear in Cash and in your monthly Budget.</li><li>Turn it off to keep the ledger separate, with its own balance only.</li></ol>
+<p class="tip"><b>Tip:</b> Leave it off for things you track but don't want mixed into your spendable cash (e.g. a shared-flat kitty).</p>
+<h4 id="en-recurring">Recurring series</h4>
+<p>Turn one entry into a monthly series — rent, salary, subscriptions — so you enter it once and it repeats.</p>
+<p class="how">How to</p>
+<ol><li>Add an entry, then open Advanced and turn on Repeat.</li><li>Pick the repeat day and the Start and End dates.</li><li>Save — GelirGider creates one entry per month, each with its own checkbox.</li><li>Editing later asks whether to change This entry only, This and future entries, or the Entire series.</li></ol>
+<p class="tip"><b>Tip:</b> An entry leaves the series the moment you check it or its date passes — after that it's an independent entry you can edit alone.</p>
+<h4 id="en-varying-amounts">Varying amounts</h4>
+<p>A recurring series where each month can have a different amount — a utility bill that changes, for example.</p>
+<p class="how">How to</p>
+<ol><li>Add a recurring entry (Advanced → Repeat).</li><li>Turn on Varying Amounts.</li><li>A per-month table appears — type each month's amount.</li><li>Save; each month keeps its own value.</li></ol>
+<p class="tip"><b>Tip:</b> Leave a month blank to reuse the previous amount, or fill them all in for full control.</p>
+<h4 id="en-installments">Installments</h4>
+<p>Split a credit-card purchase into equal monthly installments, shown as n/m.</p>
+<p class="how">How to</p>
+<ol><li>In the Credit Card ledger, add a purchase and enter the TOTAL as the amount.</li><li>Open Advanced and turn on Installments.</li><li>Set the number of installments and the start month.</li><li>Save — each installment lands on its own month's statement, labelled 1/3, 2/3, …</li></ol>
+<p class="tip"><b>Tip:</b> A billed installment is locked; editing only changes the amount of installments not yet billed.</p>
+<h4 id="en-deferred-payment">Deferred payments</h4>
+<p>For when the due date and the day cash actually leaves differ — a tax you're notified of now but pay later, or an auto-debit.</p>
+<p class="how">How to</p>
+<ol><li>Add the entry and open Advanced.</li><li>Turn on Deferred payment.</li><li>Set the settlement date (when the cash really moves) — the due date stays the entry's own date.</li><li>Save — the entry counts against your balance on the settlement date, while a grey reminder of the due date shows in Today and the budget.</li></ol>
+<p class="tip"><b>Tip:</b> Use it whenever “I owe it now but pay it next month” — it keeps your cash-flow projection honest.</p>
+<h4 id="en-foreign-currency">Foreign currency (Premium)</h4>
+<p>Enter an amount in another currency and let GelirGider convert it to your default currency at the daily rate.</p>
+<p class="how">How to</p>
+<ol><li>Add an entry and open Advanced.</li><li>Tap Currency and choose the foreign currency.</li><li>Type the amount in that currency — the converted value fills the amount automatically.</li><li>Save. While the entry is unchecked, its value keeps updating with the daily rate; checking it fixes the amount.</li></ol>
+<p class="tip"><b>Tip:</b> Only currencies with a live rate are selectable. Editing the amount by hand fixes it and drops the conversion.</p>
 <h4 id="en-summary">Summary</h4>
-<p>One card per distinct entry instead of every dated occurrence — a whole recurring series shows as a single row. Toggle Ongoing/Past for active vs. finished.</p>
-<h3 class="group">Bütçe (Budget)</h3>
-<h4 id="en-budget">Budget</h4>
-<p>A monthly forward cash-flow view — income, expenses and the projected end balance, with a red-date warning if cash goes negative. Sort with ⇅, open the day chart with ▥, jump to the current month, and + adds a Cash entry to the shown month.</p>
-<h3 class="group">Birikim (Savings)</h3>
-<h4 id="en-net-worth">Savings</h4>
-<p>Your total net worth — cash, foreign currency, gold, crypto, stocks and term deposits, all in your default currency. FX, metals, crypto and stocks are priced live; the rest you set yourself. Add holdings with “Add Holding”.</p>
-<h4 id="en-holding-vadesiz">Demand account</h4>
-<p>A balance you set yourself — a current/checking-style account or any cash-like holding. It's also where term deposits pay out.</p>
-<h4 id="en-vadeli">Term deposit</h4>
-<p>A fixed-term deposit. Enter the amount, rate (gross or net), term and withholding, and the maturity value is computed. It can auto-renew, pay interest out each cycle, or be closed early.</p>
-<h4 id="en-holding-metal">Precious metals</h4>
-<p>Gold, silver, platinum or palladium by weight, priced live per troy ounce (gold-api.com) in your default currency.</p>
+<p>A consolidated view of a ledger — one card per distinct entry instead of every dated repeat.</p>
+<p class="how">How to</p>
+<ol><li>Open a ledger and tap the Summary pill in the header.</li><li>A recurring series shows as a single row, not one row per month.</li><li>Use the Ongoing / Past toggle to switch between active and finished entries.</li><li>Tap any card to open and edit it.</li></ol>
+<p class="tip"><b>Tip:</b> Summary is the fastest way to review “what do I actually have running” without scrolling through every occurrence.</p>
+<h3 class="group">Budget</h3>
+<h4 id="en-budget">Budget (Premium)</h4>
+<p>A forward-looking monthly cash-flow view: income, expenses, and where your cash lands at the end of each month.</p>
+<p class="how">How to</p>
+<ol><li>Open the Budget tab. The month list is on the left (or the ‹ › arrows on iPhone).</li><li>Each month shows Carried over + income − expenses = projected end balance.</li><li>If your cash is projected to go negative, a red-date warning appears (also on Today).</li><li>Use the header icons to sort (⇅), open the day chart (▥), jump to today, or add a Cash entry (+).</li></ol>
+<p class="tip"><b>Tip:</b> The red date tells you the exact day you'd run short — move an expense or add income before then to clear it.</p>
+<h3 class="group">Savings</h3>
+<h4 id="en-net-worth">Savings &amp; net worth (Premium)</h4>
+<p>Savings tracks everything you own — cash, foreign currency, gold, crypto, stocks, and term deposits — as one net-worth figure.</p>
+<p class="how">How to</p>
+<ol><li>Open the Savings tab. The number at the top is your total net worth in your default currency.</li><li>Tap “Add Holding” to add a holding, then pick its type.</li><li>Auto-priced types (foreign currency, gold, crypto, stocks) update from live prices; the rest you set yourself.</li><li>Pull to refresh, or tap the refresh button, to re-price everything.</li></ol>
+<p class="tip"><b>Tip:</b> Tap the ⓘ next to each type in the Add Holding list to see exactly how that type is valued.</p>
+<h4 id="en-holding-vadesiz">Demand Account</h4>
+<p>A balance you set yourself — a current/checking-style account, or any cash-like holding. It's also where term deposits pay out.</p>
+<p class="how">How to</p>
+<ol><li>In Savings, tap Add Holding and choose Demand Account.</li><li>Give it a name and its currency.</li><li>Enter the current balance.</li><li>Save — update the balance yourself whenever it changes.</li></ol>
+<p class="tip"><b>Tip:</b> Use a foreign currency here to hold, say, a USD account — it's revalued to your default currency at the daily rate.</p>
+<h4 id="en-vadeli">Term Deposit</h4>
+<p>A fixed-term deposit — GelirGider computes the maturity value from your rate and term, including withholding tax.</p>
+<p class="how">How to</p>
+<ol><li>In Savings, tap Add Holding and choose Term Deposit.</li><li>Enter the principal, the interest rate (gross or net), the term in days, and the withholding.</li><li>GelirGider previews the interest and maturity value as you type.</li><li>Choose whether it auto-renews, pays interest out each cycle, or you'll close it — then Save.</li></ol>
+<p class="tip"><b>Tip:</b> At maturity you can transfer the proceeds to a Demand Account, or let it renew for another term.</p>
+<h4 id="en-holding-metal">Precious Metals</h4>
+<p>Gold, silver, platinum, or palladium held by weight, priced live per troy ounce.</p>
+<p class="how">How to</p>
+<ol><li>In Savings, tap Add Holding and choose Precious Metals.</li><li>Pick the metal and the unit (grams or troy ounce).</li><li>Enter how much you hold.</li><li>Save — its value updates from live prices (gold-api.com) in your default currency.</li></ol>
+<p class="tip"><b>Tip:</b> Grouped as a portfolio by default — tap the Precious Metals row to see each position.</p>
 <h4 id="en-holding-crypto">Crypto</h4>
-<p>A cryptocurrency holding, priced live (CoinGecko) and converted to your default currency.</p>
+<p>A cryptocurrency holding, priced live and converted to your default currency.</p>
+<p class="how">How to</p>
+<ol><li>In Savings, tap Add Holding and choose Crypto.</li><li>Search for and pick the coin.</li><li>Enter the quantity (up to 8 decimals).</li><li>Save — value = quantity × live price (CoinGecko).</li></ol>
+<p class="tip"><b>Tip:</b> Prices refresh on a manual pull-to-refresh to stay within the free data limits — the last price is cached for offline.</p>
 <h4 id="en-holding-stock">Stocks</h4>
-<p>A stock position, priced from delayed quotes (Yahoo Finance) in the listing currency and converted to your default currency.</p>
-<h4 id="en-holding-manual">Manual holding</h4>
-<p>You enter this value yourself and update it when it changes — there's no live pricing for this type.</p>
-<h4 id="en-birikim-transfer">Money to/from savings</h4>
-<p>Moves cash between your Cash ledger and a holding through a matching Cash entry — it only applies once you confirm (check) it, and unchecking reverses it.</p>
+<p>A stock position, priced from delayed quotes in its native currency and converted to your default currency.</p>
+<p class="how">How to</p>
+<ol><li>In Savings, tap Add Holding and choose Stocks.</li><li>Search the ticker (global exchanges are supported) and pick it.</li><li>Enter the number of shares.</li><li>Save — value comes from Yahoo Finance (≈15-min delayed), crossed to your default currency.</li></ol>
+<p class="tip"><b>Tip:</b> If a quote is ever unavailable, your manually-set unit price is used, so the position never shows zero.</p>
+<h4 id="en-holding-manual">Manual holdings</h4>
+<p>Types with no live price — funds, bonds, real estate, receivables, valuables, or anything else — where you set the value yourself.</p>
+<p class="how">How to</p>
+<ol><li>In Savings, tap Add Holding and choose the type (e.g. Fund, Real Estate).</li><li>Name it and enter its current value.</li><li>Save.</li><li>Update the value yourself whenever it changes.</li></ol>
+<p class="tip"><b>Tip:</b> Great for a car, a property, or money someone owes you — anything you want counted in net worth.</p>
+<h4 id="en-birikim-transfer">Money to and from savings</h4>
+<p>Move cash between your Cash ledger and a Savings holding, with a matching Cash entry so your cash flow stays correct.</p>
+<p class="how">How to</p>
+<ol><li>Open a holding in Savings and choose to add to it (deposit) or withdraw from it.</li><li>Enter the amount and the date.</li><li>A matching entry is created in your Cash ledger.</li><li>It only takes effect once you confirm (check) it — unchecking reverses the whole transfer.</li></ol>
+<p class="tip"><b>Tip:</b> On the Cash side you can override the converted amount for foreign holdings, to match exactly what your bank moved.</p>
 <h3 class="group">Notifications &amp; Settings</h3>
 <h4 id="en-daily-summary">Daily Summary</h4>
-<p>One notification a day, at the time you pick, summarizing what needs attention: overdue, due today, and items whose reminder window is open. Empty days are skipped, and it's in the app's language.</p>
+<p>One notification a day, at a time you choose, summarising what needs attention.</p>
+<p class="how">How to</p>
+<ol><li>Open Settings → Notifications → Daily Summary.</li><li>Turn it on and pick the time of day.</li><li>Each day it lists what's overdue, due today, and any items whose reminder window is open.</li><li>Days with nothing to report are skipped.</li></ol>
+<p class="tip"><b>Tip:</b> It's written in the app's language and never notifies on an empty day, so it stays useful.</p>
 <h4 id="en-data-transfer">Data Transfer / Cleanup</h4>
-<p>Export a full backup or import one (Replace or Merge). On a device signed into iCloud, changes sync to your other devices; a simulator or signed-out device stays local. Clear wipes everything.</p>
+<p>Export a full backup of everything, import it on another device, or wipe the app clean.</p>
+<p class="how">How to</p>
+<ol><li>Open Settings → Data Transfer.</li><li>Tap Export (full backup) to save a complete JSON backup (Premium) anywhere — device, a folder, or iCloud Drive.</li><li>On another device, tap Import and choose Replace existing or Merge with existing.</li><li>Clear all data wipes everything and returns the app to its initial state.</li></ol>
+<p class="tip"><b>Tip:</b> On a device signed into iCloud, changes also sync to your other devices; a signed-out device stays local.</p>
 </section>
 
 <section id="tr" class="lang-section">
 <h2>GelirGider · Kullanım Kılavuzu</h2>
-<p class="lead">GelirGider'ın yapabildiği her şey, özellik özellik. Uygulamada bir özelliğin yanındaki ⓘ simgesine dokunarak doğrudan buradaki bölümüne gel.</p>
-<div class="toc"><ul><li><a href="#tr-cash-ledger">Nakit defteri</a></li><li><a href="#tr-credit-card">Kredi Kartı defteri</a></li><li><a href="#tr-new-entry">Kayıt ekleme</a></li><li><a href="#tr-add-to-cash">Nakit'e Ekle</a></li><li><a href="#tr-recurring">Tekrarlanan Kayıt</a></li><li><a href="#tr-varying-amounts">Değişken Tutarlar</a></li><li><a href="#tr-installments">Taksitli Harcama</a></li><li><a href="#tr-deferred-payment">Ertelenmiş ödeme</a></li><li><a href="#tr-foreign-currency">Döviz Çevrimi</a></li><li><a href="#tr-summary">Özet</a></li><li><a href="#tr-budget">Bütçe</a></li><li><a href="#tr-net-worth">Birikim</a></li><li><a href="#tr-holding-vadesiz">Vadesiz</a></li><li><a href="#tr-vadeli">Vadeli</a></li><li><a href="#tr-holding-metal">Kıymetli maden</a></li><li><a href="#tr-holding-crypto">Kripto</a></li><li><a href="#tr-holding-stock">Hisse senedi</a></li><li><a href="#tr-holding-manual">Elle girilen varlık</a></li><li><a href="#tr-birikim-transfer">Birikime para aktarma</a></li><li><a href="#tr-daily-summary">Günlük Özet</a></li><li><a href="#tr-data-transfer">Veri Aktarımı / Temizleme</a></li></ul></div>
+<p class="lead">GelirGider'ın her bölümünü adım adım nasıl kullanacağın. Uygulamada bir özelliğin yanındaki ⓘ'ye dokunarak doğrudan buradaki bölümüne gel.</p>
+<div class="toc"><ul><li><a href="#tr-cash-ledger">Nakit defteri</a></li><li><a href="#tr-credit-card">Kredi Kartı defteri</a></li><li><a href="#tr-new-entry">Kayıt ekleme</a></li><li><a href="#tr-add-to-cash">Nakit'e Ekle</a></li><li><a href="#tr-recurring">Tekrarlayan seri</a></li><li><a href="#tr-varying-amounts">Değişken tutarlar</a></li><li><a href="#tr-installments">Taksitler</a></li><li><a href="#tr-deferred-payment">Ertelenmiş ödemeler</a></li><li><a href="#tr-foreign-currency">Yabancı para (Premium)</a></li><li><a href="#tr-summary">Özet</a></li><li><a href="#tr-budget">Bütçe (Premium)</a></li><li><a href="#tr-net-worth">Birikim ve net değer (Premium)</a></li><li><a href="#tr-holding-vadesiz">Vadesiz</a></li><li><a href="#tr-vadeli">Vadeli mevduat</a></li><li><a href="#tr-holding-metal">Kıymetli maden</a></li><li><a href="#tr-holding-crypto">Kripto</a></li><li><a href="#tr-holding-stock">Hisse senedi</a></li><li><a href="#tr-holding-manual">Elle girilen varlıklar</a></li><li><a href="#tr-birikim-transfer">Birikime para aktarma</a></li><li><a href="#tr-daily-summary">Günlük Özet</a></li><li><a href="#tr-data-transfer">Veri Aktarımı / Temizleme</a></li></ul></div>
 <h3 class="group">Akış</h3>
 <h4 id="tr-cash-ledger">Nakit defteri</h4>
-<p>Ana nakit hesabın. Üstteki şerit zaman aralığını değiştirir; Özet her kaydı tek karta indirir. + ile yeni defter ekle — biri ücretsiz, Premium ile sınırsız.</p>
+<p>Nakit, ana nakit hesabındır — elinde gerçekten olan paranın güncel toplamı. GelirGider'ın seni başlattığı iki defterden biridir (diğeri Kredi Kartı).</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Akış sekmesini aç ve defter listesinin en üstündeki Nakit'e dokun.</li><li>Büyük sayı güncel kalanındır. Altındaki seçenekler (Bu Ay, 30 Gün, 3 Ay) listenin ne kadar ileriyi gösterdiğini değiştirir; Özet her kaydı tek karta indirir.</li><li>Gelir ya da gider eklemek için sağ üstteki +'ya dokun.</li><li>Başka defter oluşturmak için defter listesinin üstündeki +'ya dokun. Ücretsizde bir ek defter var; Premium'da sınırsız.</li></ol>
+<p class="tip"><b>İpucu:</b> Kalana yalnızca işaretlediğin kayıtlar dahildir — işaretlenmemiş ileri tarihli kayıtlar “yaklaşan” olarak görünür, henüz harcanmış sayılmaz.</p>
 <h4 id="tr-credit-card">Kredi Kartı defteri</h4>
-<p>Kart harcamalarını buraya gir. Ekstre dönemi kapanınca toplamı, Nakit defterinde son ödeme tarihli tek bir “Kredi Kartı Ödemesi” olarak görünür — ödediğinde işaretle.</p>
+<p>Kredi Kartı, kart harcamalarını takip eder ve her ekstreyi Nakit defterinde tek bir ödemeye dönüştürür — gerçek bir kart gibi.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Akış sekmesinden Kredi Kartı defterini aç.</li><li>Harcama girmek için +'ya dokun (isim, tutar, tarih). Büyük bir harcamayı Gelişmiş altında taksitlere bölebilirsin.</li><li>Ekstre dönemi kapanınca GelirGider, Nakit defterinde son ödeme tarihli tek bir “Kredi Kartı Ödemesi” oluşturur.</li><li>Kartı gerçekten ödediğinde bu ödemeyi Nakit'te işaretle.</li></ol>
+<p class="tip"><b>İpucu:</b> Defteri oluştururken kesim ve son ödeme günlerini ayarla ki dönemler gerçek kartınla örtüşsün.</p>
 <h4 id="tr-new-entry">Kayıt ekleme</h4>
-<p>İsim, tutar ve tarih gir; kutucuk ödendi/alındı olarak işaretler. Gelişmiş altında kategori ekleyebilir, tekrarlayabilir, nakit çıkış tarihini erteleyebilir, yabancı para kullanabilir ya da hatırlatma koyabilirsin.</p>
+<p>Her gelir ve gider, bir defterin içindeki bir kayıttır.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Bir defter aç ve sağ üstteki +'ya dokun.</li><li>Gelir ya da Gider'i seç.</li><li>İsim ve tutar yaz, sonra tarihi ayarla.</li><li>Henüz gerçekleşmediyse kutucuğu boş bırak; ödendiğinde/alındığında işaretle.</li><li>Kategori eklemek, tekrarlamak, nakit çıkış tarihini ertelemek, yabancı para kullanmak ya da hatırlatma koymak için Gelişmiş'i aç.</li><li>Kaydet'e dokun.</li></ol>
+<p class="tip"><b>İpucu:</b> Kutucuk uygulamanın kalbidir — bir planı gerçek bir bakiye değişimine o çevirir.</p>
 <h4 id="tr-add-to-cash">Nakit'e Ekle</h4>
-<p>Açıkken bu defterin kayıtları Nakit bakiyene ve bütçene de dahil olur — genel nakdine yansımasını istediğin hesaplar için kullanışlı. Kapalıyken defter ayrı kalır.</p>
-<h4 id="tr-recurring">Tekrarlanan Kayıt</h4>
-<p>Seçtiğin günde, başlangıçtan bitişe kadar her ay bir kayıt oluşturur. Her birinin kendi onay kutusu vardır. Bir kayıt, işaretlediğinde veya tarihi geçtiğinde seriden ayrılır; artık tek başına düzenleyip silebileceğin bağımsız bir kayıttır. Seriyi düzenlemek yalnızca gelecekteki, işaretlenmemiş kayıtları değiştirir.</p>
-<h4 id="tr-varying-amounts">Değişken Tutarlar</h4>
-<p>Her ay için ayrı tutar gir — enflasyon, mevsimsel değişim (ör. doğalgaz) ya da zam/yenileme durumlarında ileriki ayların beklenen tutarlarını tek tek düzenleyebilirsin. Bitiş tarihini ileri alırsan yeni aylar son tutarla eklenir; geri alırsan fazla aylar silinir. En az 2 ay gerekir.</p>
-<h4 id="tr-installments">Taksitli Harcama</h4>
-<p>Toplamı eşit aylık kart harcamalarına böler (son taksit yuvarlama farkını üstlenir). Her biri “n/m” olarak görünür ve ait olduğu ayın ekstresine girer. Bir taksit ekstreye yansıdıktan sonra sabitlenir; düzenleme yalnızca gelecek taksitlerin tutarını değiştirir. Taksit sayısını veya tarihleri değiştirmek için silip yeniden oluşturun.</p>
-<h4 id="tr-deferred-payment">Ertelenmiş ödeme</h4>
-<p>İşlem yukarıdaki tarihte hatırlatma olarak görünür, ama nakit seçtiğin ödeme tarihinde çıkar ve bakiyeyi o gün etkiler.</p>
-<h4 id="tr-foreign-currency">Döviz Çevrimi</h4>
-<p>İşaretlenmemiş döviz tutarları, uygulama para biriminize her gün güncel kura göre çevrilir, yani zamanla değişir. Üstteki tutarı elle değiştirirseniz sabitlenir ve döviz bağlantısı kaldırılır; artık döviz cinsi bir kayıt olmaz, uygulama para biriminde düz bir tutara dönüşür. Kaydı işaretlediğinizde değeri kilitlenir.</p>
+<p>Bir özel defterdeki kayıtları genel Nakit kalanına ve bütçene katan bir anahtar — toplam nakdine yansımasını istediğin bir hesap için kullanışlı.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Bir özel defter oluştur ya da düzenle (defter listesinin üstündeki +, ya da mevcut birini düzenle).</li><li>“Nakit'e Ekle”yi aç.</li><li>Artık bu defterin gelir ve giderleri Nakit'te ve aylık Bütçe'nde de görünür.</li><li>Defteri yalnızca kendi kalanıyla ayrı tutmak için kapat.</li></ol>
+<p class="tip"><b>İpucu:</b> Takip ettiğin ama harcanabilir nakdine karışmasını istemediğin şeyler için kapalı bırak (örn. ev ortak kasası).</p>
+<h4 id="tr-recurring">Tekrarlayan seri</h4>
+<p>Bir kaydı aylık seriye dönüştür — kira, maaş, abonelikler — bir kez gir, tekrarlansın.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Bir kayıt ekle, Gelişmiş'i aç ve Tekrarla'yı aç.</li><li>Ayın gününü, başlangıç ve bitiş tarihlerini seç.</li><li>Kaydet — GelirGider her ay için, her biri kendi kutucuğuyla bir kayıt oluşturur.</li><li>Sonradan düzenlemede yalnızca bunu, bunu ve sonrakileri ya da tüm seriyi değiştirmeyi seçersin.</li></ol>
+<p class="tip"><b>İpucu:</b> Bir kayıt, işaretlediğin ya da tarihi geçtiği anda seriden ayrılır — sonrasında tek başına düzenleyebileceğin bağımsız bir kayıttır.</p>
+<h4 id="tr-varying-amounts">Değişken tutarlar</h4>
+<p>Her ayın farklı tutar taşıyabildiği tekrarlayan seri — örneğin değişen bir fatura.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Tekrarlayan bir kayıt ekle (Gelişmiş → Tekrarla).</li><li>Değişken Tutarlar'ı aç.</li><li>Aylık bir tablo çıkar — her ayın tutarını yaz.</li><li>Kaydet; her ay kendi değerini korur.</li></ol>
+<p class="tip"><b>İpucu:</b> Bir ayı boş bırakırsan önceki tutar kullanılır; tam kontrol için hepsini doldur.</p>
+<h4 id="tr-installments">Taksitler</h4>
+<p>Bir kredi kartı harcamasını n/m olarak gösterilen eşit aylık taksitlere böl.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Kredi Kartı defterinde bir harcama ekle ve tutar olarak TOPLAMI gir.</li><li>Gelişmiş'i aç ve Taksit'i aç.</li><li>Taksit sayısını ve başlangıç ayını ayarla.</li><li>Kaydet — her taksit kendi ayının ekstresine 1/3, 2/3 … olarak düşer.</li></ol>
+<p class="tip"><b>İpucu:</b> Ekstreye giren taksit kilitlidir; düzenleme yalnızca henüz kesilmemiş taksitlerin tutarını değiştirir.</p>
+<h4 id="tr-deferred-payment">Ertelenmiş ödemeler</h4>
+<p>Vade tarihi ile nakdin gerçekten çıktığı gün farklı olduğunda — şimdi bildirilen ama sonra ödediğin bir vergi ya da otomatik ödeme.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Kaydı ekle ve Gelişmiş'i aç.</li><li>Ertelenmiş ödeme'yi aç.</li><li>Nakit çıkış tarihini ayarla (paranın gerçekten hareket ettiği gün) — vade tarihi kaydın kendi tarihi olarak kalır.</li><li>Kaydet — kayıt, nakit çıkış tarihinde kalanını etkiler; Bugün ve bütçede vade tarihinin gri bir hatırlatması görünür.</li></ol>
+<p class="tip"><b>İpucu:</b> “Şimdi borçluyum ama gelecek ay öderim” durumlarında kullan — nakit akışı tahminini doğru tutar.</p>
+<h4 id="tr-foreign-currency">Yabancı para (Premium)</h4>
+<p>Tutarı başka bir para biriminde gir; GelirGider onu günlük kurla varsayılan para birimine çevirsin.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Bir kayıt ekle ve Gelişmiş'i aç.</li><li>Para Birimi'ne dokun ve yabancı parayı seç.</li><li>Tutarı o para biriminde yaz — çevrilen değer Tutar'a otomatik gelir.</li><li>Kaydet. Kayıt işaretsizken değeri günlük kurla güncellenir; işaretlemek tutarı sabitler.</li></ol>
+<p class="tip"><b>İpucu:</b> Yalnızca canlı kuru olan para birimleri seçilebilir. Tutar'ı elle değiştirmek tutarı sabitler ve çevrimi bırakır.</p>
 <h4 id="tr-summary">Özet</h4>
-<p>Her tarihli tekrar yerine her ayrı kayıt için tek kart — tüm bir tekrarlayan seri tek satır olarak görünür. Etkin ve biten için Sürüyor/Geçmiş arasında geçiş yap.</p>
+<p>Bir defterin birleşik görünümü — her tarihli tekrar yerine her ayrı kayıt için tek kart.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Bir defter aç ve başlıktaki Özet seçeneğine dokun.</li><li>Tekrarlayan bir seri, aylık tek tek değil, tek satır olarak görünür.</li><li>Etkin ve biten kayıtlar arasında geçmek için Sürüyor / Geçmiş düğmesini kullan.</li><li>Düzenlemek için herhangi bir karta dokun.</li></ol>
+<p class="tip"><b>İpucu:</b> Özet, her tekrarı kaydırmadan “neyim sürüyor” diye bakmanın en hızlı yoludur.</p>
 <h3 class="group">Bütçe</h3>
-<h4 id="tr-budget">Bütçe</h4>
-<p>Aylık ileriye dönük nakit akışı — gelir, gider ve tahmini ay sonu bakiyesi; nakit eksiye düşerse kırmızı gün uyarısı. ⇅ ile sırala, ▥ ile gün grafiğini aç, bu aya atla; + görüntülenen aya Nakit kaydı ekler.</p>
+<h4 id="tr-budget">Bütçe (Premium)</h4>
+<p>İleriye dönük aylık nakit akışı görünümü: gelir, gider ve nakdinin her ay sonunda nerede olacağı.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Bütçe sekmesini aç. Ay listesi solda (iPhone'da ‹ › okları).</li><li>Her ay Devreden + gelir − gider = tahmini ay sonu kalanını gösterir.</li><li>Nakdin eksiye düşecekse kırmızı gün uyarısı çıkar (Bugün'de de).</li><li>Başlık simgeleriyle sırala (⇅), gün grafiğini aç (▥), bugüne atla ya da Nakit kaydı ekle (+).</li></ol>
+<p class="tip"><b>İpucu:</b> Kırmızı gün, tam olarak hangi gün açığa düşeceğini söyler — ondan önce bir gideri taşı ya da gelir ekle.</p>
 <h3 class="group">Birikim</h3>
-<h4 id="tr-net-worth">Birikim</h4>
-<p>Toplam net değerin — nakit, döviz, altın, kripto, hisse ve vadeli mevduat, hepsi varsayılan para biriminde. Döviz, maden, kripto ve hisse anlık fiyatlanır; gerisini sen belirlersin. “Varlık Ekle” ile ekle.</p>
+<h4 id="tr-net-worth">Birikim ve net değer (Premium)</h4>
+<p>Birikim, sahip olduğun her şeyi — nakit, yabancı para, altın, kripto, hisse ve vadeli mevduat — tek bir net değer olarak izler.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim sekmesini aç. Üstteki sayı, varsayılan para biriminde toplam net değerindir.</li><li>Varlık eklemek için “Varlık Ekle”ye dokun, sonra türünü seç.</li><li>Otomatik fiyatlanan türler (döviz, altın, kripto, hisse) canlı fiyatlarla güncellenir; gerisini sen belirlersin.</li><li>Her şeyi yeniden fiyatlamak için aşağı çek ya da yenile düğmesine dokun.</li></ol>
+<p class="tip"><b>İpucu:</b> Varlık Ekle listesinde her türün yanındaki ⓘ'ye dokunarak o türün tam olarak nasıl değerlendiğini gör.</p>
 <h4 id="tr-holding-vadesiz">Vadesiz</h4>
 <p>Kendi belirlediğin bir bakiye — vadesiz/cari hesap ya da nakit benzeri bir varlık. Vadeli mevduatların da buraya ödenir.</p>
-<h4 id="tr-vadeli">Vadeli</h4>
-<p>Vadeli mevduat. Tutar, oran (brüt ya da net), vade ve stopajı gir; vade sonu değeri hesaplanır. Otomatik yenilenebilir, her dönem faizi ödeyebilir ya da erken kapatılabilir.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de Varlık Ekle'ye dokun ve Vadesiz'i seç.</li><li>Bir isim ve para birimini ver.</li><li>Güncel bakiyeyi gir.</li><li>Kaydet — değiştiğinde bakiyeyi kendin güncelle.</li></ol>
+<p class="tip"><b>İpucu:</b> Burada yabancı para kullanarak örneğin bir USD hesabı tutabilirsin — günlük kurla varsayılan para birimine göre değerlenir.</p>
+<h4 id="tr-vadeli">Vadeli mevduat</h4>
+<p>Vadeli bir mevduat — GelirGider, oranından ve vadesinden, stopaj dahil, vade sonu değerini hesaplar.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de Varlık Ekle'ye dokun ve Vadeli'yi seç.</li><li>Anaparayı, faiz oranını (brüt ya da net), gün cinsinden vadeyi ve stopajı gir.</li><li>GelirGider sen yazdıkça faizi ve vade sonu değerini önizler.</li><li>Otomatik yenilensin mi, her dönem faizi ödesin mi, yoksa sen mi kapatacaksın seç — sonra Kaydet.</li></ol>
+<p class="tip"><b>İpucu:</b> Vade sonunda tutarı bir Vadesiz hesaba aktarabilir ya da bir dönem daha yenilenmesine izin verebilirsin.</p>
 <h4 id="tr-holding-metal">Kıymetli maden</h4>
-<p>Ağırlığa göre altın, gümüş, platin veya paladyum; ons başına anlık fiyatlanır (gold-api.com) ve varsayılan para biriminde gösterilir.</p>
+<p>Ağırlığa göre tutulan altın, gümüş, platin veya paladyum; ons başına canlı fiyatlanır.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de Varlık Ekle'ye dokun ve Kıymetli Maden'i seç.</li><li>Madeni ve birimi (gram ya da ons) seç.</li><li>Ne kadar tuttuğunu gir.</li><li>Kaydet — değeri canlı fiyatlarla (gold-api.com) varsayılan para biriminde güncellenir.</li></ol>
+<p class="tip"><b>İpucu:</b> Varsayılan olarak portföy halinde gruplanır — her pozisyonu görmek için Kıymetli Maden satırına dokun.</p>
 <h4 id="tr-holding-crypto">Kripto</h4>
-<p>Kripto para varlığı; anlık fiyatlanır (CoinGecko) ve varsayılan para birimine çevrilir.</p>
+<p>Kripto para varlığı; canlı fiyatlanır ve varsayılan para birimine çevrilir.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de Varlık Ekle'ye dokun ve Kripto'yu seç.</li><li>Coini ara ve seç.</li><li>Miktarı gir (8 ondalığa kadar).</li><li>Kaydet — değer = miktar × canlı fiyat (CoinGecko).</li></ol>
+<p class="tip"><b>İpucu:</b> Ücretsiz veri sınırları içinde kalmak için fiyatlar elle aşağı çekişte yenilenir — son fiyat çevrimdışı için önbelleğe alınır.</p>
 <h4 id="tr-holding-stock">Hisse senedi</h4>
-<p>Hisse pozisyonu; gecikmeli kotasyonlarla (Yahoo Finance) işlem para biriminde fiyatlanır ve varsayılan para birimine çevrilir.</p>
-<h4 id="tr-holding-manual">Elle girilen varlık</h4>
-<p>Bu değeri kendin girer ve değiştikçe güncellersin — bu tür için anlık fiyatlama yoktur.</p>
+<p>Hisse pozisyonu; kendi para biriminde gecikmeli kotasyonlarla fiyatlanır ve varsayılan para birimine çevrilir.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de Varlık Ekle'ye dokun ve Hisse Senedi'ni seç.</li><li>Sembolü ara (küresel borsalar desteklenir) ve seç.</li><li>Hisse adedini gir.</li><li>Kaydet — değer Yahoo Finance'ten (≈15 dk gecikmeli) gelir, varsayılan para birimine çevrilir.</li></ol>
+<p class="tip"><b>İpucu:</b> Bir kotasyon bulunamazsa elle girdiğin birim fiyat kullanılır, böylece pozisyon asla sıfır görünmez.</p>
+<h4 id="tr-holding-manual">Elle girilen varlıklar</h4>
+<p>Canlı fiyatı olmayan türler — fon, tahvil, gayrimenkul, alacak, değerli eşya ya da başka her şey — değeri kendin belirlersin.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de Varlık Ekle'ye dokun ve türü seç (örn. Fon, Gayrimenkul).</li><li>İsim ver ve güncel değerini gir.</li><li>Kaydet.</li><li>Değiştiğinde değeri kendin güncelle.</li></ol>
+<p class="tip"><b>İpucu:</b> Bir araba, bir mülk ya da birinin sana borcu için harika — net değere katmak istediğin her şey.</p>
 <h4 id="tr-birikim-transfer">Birikime para aktarma</h4>
-<p>Nakit defterin ile bir varlık arasında, eşleşen bir Nakit kaydı üzerinden para aktarır — yalnızca onayladığında (işaretlediğinde) geçerli olur; işareti kaldırmak geri alır.</p>
+<p>Nakit defterin ile bir Birikim varlığı arasında, nakit akışın doğru kalsın diye eşleşen bir Nakit kaydıyla para aktar.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Birikim'de bir varlığı aç ve ekleme (yatırma) ya da çekme seç.</li><li>Tutarı ve tarihi gir.</li><li>Nakit defterinde eşleşen bir kayıt oluşturulur.</li><li>Yalnızca onayladığında (işaretlediğinde) geçerli olur — işareti kaldırmak tüm aktarımı geri alır.</li></ol>
+<p class="tip"><b>İpucu:</b> Nakit tarafında, yabancı varlıklar için çevrilen tutarı bankanın hareket ettirdiğiyle birebir eşleştirmek üzere elle değiştirebilirsin.</p>
 <h3 class="group">Bildirimler ve Ayarlar</h3>
 <h4 id="tr-daily-summary">Günlük Özet</h4>
-<p>Günde bir bildirim, seçtiğin saatte, dikkat gerektirenleri özetler: geciken, bugün ödenecek ve hatırlatma penceresi açık olanlar. Boş günler atlanır ve uygulama dilindedir.</p>
+<p>Günde bir, seçtiğin saatte, dikkat gerektirenleri özetleyen tek bir bildirim.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Ayarlar → Bildirimler → Günlük Özet'i aç.</li><li>Aç ve günün saatini seç.</li><li>Her gün geciken, bugün ödenecek ve hatırlatma penceresi açık olanları listeler.</li><li>Bildirecek bir şey olmayan günler atlanır.</li></ol>
+<p class="tip"><b>İpucu:</b> Uygulama dilinde yazılır ve boş günde asla bildirmez, böylece işe yarar kalır.</p>
 <h4 id="tr-data-transfer">Veri Aktarımı / Temizleme</h4>
-<p>Tam yedek dışa aktar ya da içe aktar (Yerine koy veya Birleştir). iCloud'a giriş yapılmış cihazda değişiklikler diğer cihazlarına eşitlenir; simülatör ya da çıkış yapılmış cihaz yerel kalır. Temizle her şeyi siler.</p>
+<p>Her şeyin tam yedeğini dışa aktar, başka cihazda içe aktar ya da uygulamayı sıfırla.</p>
+<p class="how">Nasıl yapılır</p>
+<ol><li>Ayarlar → Veri Aktarımı'nı aç.</li><li>Tam JSON yedeğini istediğin yere kaydetmek için Dışa Aktar'a dokun (Premium) — cihaz, klasör ya da iCloud Drive.</li><li>Başka cihazda İçe Aktar'a dokun ve Yerine Koy ya da Birleştir'i seç.</li><li>Temizle tüm veriyi siler ve uygulamayı ilk haline döndürür.</li></ol>
+<p class="tip"><b>İpucu:</b> iCloud'a giriş yapılmış cihazda değişiklikler diğer cihazlarına da eşitlenir; çıkış yapılmış cihaz yerel kalır.</p>
 </section>
 
 <section id="de" class="lang-section">
 <h2>GelirGider · Benutzerhandbuch</h2>
-<p class="lead">Alles, was GelirGider kann — Funktion für Funktion. Tippe in der App auf das ⓘ neben einer Funktion, um direkt zu ihrem Abschnitt hier zu springen.</p>
-<div class="toc"><ul><li><a href="#de-cash-ledger">Bargeld-Buch</a></li><li><a href="#de-credit-card">Kreditkarten-Buch</a></li><li><a href="#de-new-entry">Einen Eintrag hinzufügen</a></li><li><a href="#de-add-to-cash">Zu Bargeld hinzufügen</a></li><li><a href="#de-recurring">Wiederkehrender Eintrag</a></li><li><a href="#de-varying-amounts">Variable Beträge</a></li><li><a href="#de-installments">Ratenkauf</a></li><li><a href="#de-deferred-payment">Aufgeschobene Zahlung</a></li><li><a href="#de-foreign-currency">Währungsumrechnung</a></li><li><a href="#de-summary">Übersicht</a></li><li><a href="#de-budget">Budget</a></li><li><a href="#de-net-worth">Ersparnisse</a></li><li><a href="#de-holding-vadesiz">Sichtkonto</a></li><li><a href="#de-vadeli">Festgeld</a></li><li><a href="#de-holding-metal">Edelmetalle</a></li><li><a href="#de-holding-crypto">Krypto</a></li><li><a href="#de-holding-stock">Aktien</a></li><li><a href="#de-holding-manual">Manueller Posten</a></li><li><a href="#de-birikim-transfer">Geld zu/von den Ersparnissen</a></li><li><a href="#de-daily-summary">Tägliche Übersicht</a></li><li><a href="#de-data-transfer">Datenübertragung / Bereinigen</a></li></ul></div>
-<h3 class="group">Akış (Cashflow)</h3>
+<p class="lead">So nutzt du jeden Teil von GelirGider, Schritt für Schritt. Tippe in der App auf das ⓘ neben einer Funktion, um direkt zu ihrem Abschnitt zu springen.</p>
+<div class="toc"><ul><li><a href="#de-cash-ledger">Bargeld-Buch</a></li><li><a href="#de-credit-card">Kreditkarten-Buch</a></li><li><a href="#de-new-entry">Einen Eintrag hinzufügen</a></li><li><a href="#de-add-to-cash">Zu Bargeld hinzufügen</a></li><li><a href="#de-recurring">Wiederkehrende Serie</a></li><li><a href="#de-varying-amounts">Variable Beträge</a></li><li><a href="#de-installments">Raten</a></li><li><a href="#de-deferred-payment">Aufgeschobene Zahlungen</a></li><li><a href="#de-foreign-currency">Fremdwährung (Premium)</a></li><li><a href="#de-summary">Übersicht</a></li><li><a href="#de-budget">Budget (Premium)</a></li><li><a href="#de-net-worth">Ersparnisse &amp; Vermögen (Premium)</a></li><li><a href="#de-holding-vadesiz">Sichtkonto</a></li><li><a href="#de-vadeli">Festgeld</a></li><li><a href="#de-holding-metal">Edelmetalle</a></li><li><a href="#de-holding-crypto">Krypto</a></li><li><a href="#de-holding-stock">Aktien</a></li><li><a href="#de-holding-manual">Manuelle Posten</a></li><li><a href="#de-birikim-transfer">Geld zu und aus den Ersparnissen</a></li><li><a href="#de-daily-summary">Tägliche Übersicht</a></li><li><a href="#de-data-transfer">Datenübertragung / Bereinigung</a></li></ul></div>
+<h3 class="group">Cashflow</h3>
 <h4 id="de-cash-ledger">Bargeld-Buch</h4>
-<p>Dein Haupt-Bargeldkonto. Die Filter-Pillen der Leiste grenzen den Zeitraum ein; die Übersicht fasst alles zu einer Karte pro Eintrag zusammen. Füge mit + weitere Bücher hinzu — 1 kostenlos, unbegrenzt mit Premium.</p>
+<p>Bargeld ist dein Hauptkonto — der laufende Gesamtbetrag des Geldes, das du wirklich hast. Es ist eines der beiden Bücher, mit denen GelirGider startet (das andere ist Kreditkarte).</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne den Tab Cashflow und tippe oben in der Bücherliste auf Bargeld.</li><li>Die große Zahl ist dein aktueller Kontostand. Die Auswahlfelder darunter (Dieser Monat, 30 Tage, 3 Monate) ändern, wie weit die Liste in die Zukunft projiziert; Übersicht fasst alles zu einer Karte pro Eintrag zusammen.</li><li>Tippe oben rechts auf +, um eine Einnahme oder Ausgabe hinzuzufügen.</li><li>Um ein weiteres Buch anzulegen, tippe auf das + über der Bücherliste. Gratis enthält ein zusätzliches Buch; Premium ist unbegrenzt.</li></ol>
+<p class="tip"><b>Tipp:</b> Nur Einträge, die du abgehakt hast, zählen zum Kontostand — nicht abgehakte künftige Einträge erscheinen als anstehend, sind aber noch nicht ausgegeben.</p>
 <h4 id="de-credit-card">Kreditkarten-Buch</h4>
-<p>Erfasse hier Kartenkäufe. Wenn ein Abrechnungszeitraum endet, erscheint sein Gesamtbetrag als eine einzelne „Kreditkartenzahlung“ in deinem Bargeld-Buch, fällig am Zahlungsdatum — hake sie ab, wenn du zahlst.</p>
+<p>Kreditkarte verfolgt deine Kartenausgaben und fasst dann jede Abrechnung zu einer einzigen Zahlung in deinem Bargeld-Buch zusammen — genau wie eine echte Karte funktioniert.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne das Buch Kreditkarte aus dem Tab Cashflow.</li><li>Tippe auf +, um einen Einkauf zu erfassen (Name, Betrag, Datum). Einen großen Betrag kannst du unter Erweitert in Raten aufteilen.</li><li>Wenn ein Abrechnungszeitraum endet, erstellt GelirGider eine einzige „Kreditkartenzahlung“ in deinem Bargeld-Buch, datiert auf den Zahltag.</li><li>Hake diese Zahlung im Bargeld-Buch ab, sobald du die Karte tatsächlich bezahlst.</li></ol>
+<p class="tip"><b>Tipp:</b> Lege beim Anlegen des Buchs deinen Abrechnungs- und Zahltag fest, damit die Zyklen mit deiner echten Karte übereinstimmen.</p>
 <h4 id="de-new-entry">Einen Eintrag hinzufügen</h4>
-<p>Gib einen Namen, Betrag und ein Datum ein; das Kästchen markiert ihn als bezahlt oder erhalten. Unter Erweitert kannst du eine Kategorie hinzufügen, ihn wiederkehrend machen, das Abrechnungsdatum verschieben, eine Fremdwährung nutzen oder eine Erinnerung setzen.</p>
+<p>Jede Einnahme und Ausgabe ist ein Eintrag innerhalb eines Buchs.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne ein Buch und tippe oben rechts auf +.</li><li>Wähle Einnahme oder Ausgabe.</li><li>Gib einen Namen und einen Betrag ein und lege dann das Datum fest.</li><li>Lass das Kästchen leer, wenn es noch nicht passiert ist; hake es ab, sobald bezahlt oder erhalten wurde.</li><li>Öffne Erweitert, um eine Kategorie hinzuzufügen, den Eintrag zu wiederholen, das Zahlungsdatum aufzuschieben, eine Fremdwährung zu verwenden oder eine Erinnerung zu setzen.</li><li>Tippe auf Sichern.</li></ol>
+<p class="tip"><b>Tipp:</b> Das Kästchen ist das Herzstück der App — es verwandelt einen Plan in eine tatsächliche Änderung des Kontostands.</p>
 <h4 id="de-add-to-cash">Zu Bargeld hinzufügen</h4>
-<p>Wenn aktiviert, zählen die Einträge dieses Buchs auch zu deinem Bargeld-Saldo und Budget — praktisch für Konten, die du in deinem gesamten Bargeld abgebildet sehen willst. Aus hält das Buch getrennt.</p>
-<h4 id="de-recurring">Wiederkehrender Eintrag</h4>
-<p>Erstellt pro Monat einen Eintrag am gewählten Tag, von Beginn bis Ende. Jeder hat sein eigenes Häkchen. Ein Eintrag verlässt die Serie, sobald du ihn abhakst oder sein Datum vorbei ist — dann ist er ein normaler, eigenständiger Eintrag. Die Serie zu bearbeiten ändert nur kommende, nicht abgehakte Einträge.</p>
+<p>Ein Schalter bei einem eigenen Buch, der dessen Einträge in deinen gesamten Bargeld-Stand und dein Budget einbezieht — nützlich für ein Konto, das sich in deinem gesamten Bargeld widerspiegeln soll.</p>
+<p class="how">So geht's</p>
+<ol><li>Erstelle oder bearbeite ein eigenes Buch (+ über der Bücherliste oder ein bestehendes bearbeiten).</li><li>Aktiviere „Zu Bargeld hinzufügen“.</li><li>Jetzt erscheinen Einnahmen und Ausgaben dieses Buchs auch im Bargeld-Buch und in deinem monatlichen Budget.</li><li>Schalte es aus, um das Buch getrennt zu halten, nur mit seinem eigenen Kontostand.</li></ol>
+<p class="tip"><b>Tipp:</b> Lass es aus für Dinge, die du verfolgst, aber nicht mit deinem verfügbaren Bargeld vermischen willst (z. B. eine WG-Haushaltskasse).</p>
+<h4 id="de-recurring">Wiederkehrende Serie</h4>
+<p>Verwandle einen Eintrag in eine monatliche Serie — Miete, Gehalt, Abos — damit du ihn einmal erfasst und er sich wiederholt.</p>
+<p class="how">So geht's</p>
+<ol><li>Füge einen Eintrag hinzu, öffne dann Erweitert und aktiviere Wiederholen.</li><li>Wähle den Wiederholungstag sowie das Beginn- und Ende-Datum.</li><li>Sichern — GelirGider erstellt einen Eintrag pro Monat, jeweils mit eigenem Kästchen.</li><li>Beim späteren Bearbeiten wirst du gefragt, ob du Nur dieser Eintrag, Dieser und künftige Einträge oder die Gesamte Serie ändern möchtest.</li></ol>
+<p class="tip"><b>Tipp:</b> Ein Eintrag verlässt die Serie in dem Moment, in dem du ihn abhakst oder sein Datum verstreicht — danach ist er ein eigenständiger Eintrag, den du allein bearbeiten kannst.</p>
 <h4 id="de-varying-amounts">Variable Beträge</h4>
-<p>Gib für jeden Monat einen eigenen Betrag ein – praktisch bei Inflation, saisonalen Rechnungen (z. B. Gas) oder Erhöhungen. Ein späteres Enddatum fügt Monate hinzu (kopiert den letzten Betrag), ein früheres entfernt sie. Mindestens 2 Monate.</p>
-<h4 id="de-installments">Ratenkauf</h4>
-<p>Teilt den Gesamtbetrag in gleiche monatliche Kartenbuchungen (die letzte trägt die Rundung). Jede erscheint als „n/m“ und landet in der Abrechnung ihres Monats. Eine abgerechnete Rate ist fix; Bearbeiten ändert nur den Betrag kommender Raten. Für Anzahl/Termine löschen und neu anlegen.</p>
-<h4 id="de-deferred-payment">Aufgeschobene Zahlung</h4>
-<p>Der Eintrag erscheint am Datum oben als Erinnerung, aber das Geld fließt — und der Saldo ändert sich — am gewählten Abrechnungsdatum.</p>
-<h4 id="de-foreign-currency">Währungsumrechnung</h4>
-<p>Nicht abgehakte Fremdwährungsbeträge werden täglich zum aktuellen Kurs in deine App-Währung umgerechnet und ändern sich daher mit der Zeit. Bearbeitest du den oberen Betrag von Hand, wird er fixiert und die Fremdwährungs-Verknüpfung entfernt — es wird ein einfacher Betrag in deiner App-Währung. Abhaken sperrt den Wert.</p>
+<p>Eine wiederkehrende Serie, bei der jeder Monat einen anderen Betrag haben kann — zum Beispiel eine schwankende Nebenkostenrechnung.</p>
+<p class="how">So geht's</p>
+<ol><li>Füge einen wiederkehrenden Eintrag hinzu (Erweitert → Wiederholen).</li><li>Aktiviere Variable Beträge.</li><li>Eine Tabelle pro Monat erscheint — gib den Betrag für jeden Monat ein.</li><li>Sichern; jeder Monat behält seinen eigenen Wert.</li></ol>
+<p class="tip"><b>Tipp:</b> Lass einen Monat leer, um den vorherigen Betrag zu übernehmen, oder fülle alle aus für volle Kontrolle.</p>
+<h4 id="de-installments">Raten</h4>
+<p>Teile einen Kreditkarteneinkauf in gleiche monatliche Raten auf, angezeigt als n/m.</p>
+<p class="how">So geht's</p>
+<ol><li>Füge im Kreditkarten-Buch einen Einkauf hinzu und gib den GESAMTBETRAG als Betrag ein.</li><li>Öffne Erweitert und aktiviere Raten.</li><li>Lege die Anzahl der Raten und den Startmonat fest.</li><li>Sichern — jede Rate landet auf der Abrechnung ihres eigenen Monats, beschriftet mit 1/3, 2/3, …</li></ol>
+<p class="tip"><b>Tipp:</b> Eine bereits abgerechnete Rate ist gesperrt; das Bearbeiten ändert nur den Betrag der noch nicht abgerechneten Raten.</p>
+<h4 id="de-deferred-payment">Aufgeschobene Zahlungen</h4>
+<p>Für den Fall, dass das Fälligkeitsdatum und der Tag, an dem das Geld tatsächlich abfließt, auseinanderfallen — eine Steuer, über die du jetzt informiert wirst, aber später zahlst, oder eine Lastschrift.</p>
+<p class="how">So geht's</p>
+<ol><li>Füge den Eintrag hinzu und öffne Erweitert.</li><li>Aktiviere Aufgeschobene Zahlung.</li><li>Lege das Ausgleichsdatum fest (wann das Geld wirklich abfließt) — das Fälligkeitsdatum bleibt das eigene Datum des Eintrags.</li><li>Sichern — der Eintrag wirkt sich am Ausgleichsdatum auf deinen Kontostand aus, während eine graue Erinnerung an das Fälligkeitsdatum in Heute und im Budget erscheint.</li></ol>
+<p class="tip"><b>Tipp:</b> Nutze das immer dann, wenn „Ich schulde es jetzt, zahle aber nächsten Monat“ — so bleibt deine Cashflow-Prognose ehrlich.</p>
+<h4 id="de-foreign-currency">Fremdwährung (Premium)</h4>
+<p>Gib einen Betrag in einer anderen Währung ein und lass GelirGider ihn zum Tageskurs in deine Standardwährung umrechnen.</p>
+<p class="how">So geht's</p>
+<ol><li>Füge einen Eintrag hinzu und öffne Erweitert.</li><li>Tippe auf Währung und wähle die Fremdwährung.</li><li>Gib den Betrag in dieser Währung ein — der umgerechnete Wert wird automatisch in den Betrag eingetragen.</li><li>Sichern. Solange der Eintrag nicht abgehakt ist, aktualisiert sich sein Wert weiter mit dem Tageskurs; das Abhaken fixiert den Betrag.</li></ol>
+<p class="tip"><b>Tipp:</b> Nur Währungen mit einem aktuellen Kurs sind auswählbar. Den Betrag von Hand zu ändern fixiert ihn und hebt die Umrechnung auf.</p>
 <h4 id="de-summary">Übersicht</h4>
-<p>Eine Karte pro eindeutigem Eintrag statt jedes datierten Vorkommens — eine ganze wiederkehrende Serie erscheint als einzelne Zeile. Wechsle zwischen Laufend/Früher für aktive und abgeschlossene.</p>
-<h3 class="group">Bütçe (Budget)</h3>
-<h4 id="de-budget">Budget</h4>
-<p>Eine monatliche vorausschauende Cashflow-Ansicht — Einnahmen, Ausgaben und der prognostizierte Endsaldo, mit einer Warnung als rotes Datum, falls das Bargeld negativ wird. Sortiere mit ⇅, öffne das Tagesdiagramm mit ▥, springe zum aktuellen Monat, und + fügt dem angezeigten Monat einen Bargeld-Eintrag hinzu.</p>
-<h3 class="group">Birikim (Ersparnisse)</h3>
-<h4 id="de-net-worth">Ersparnisse</h4>
-<p>Dein gesamtes Nettovermögen — Bargeld, Fremdwährung, Gold, Krypto, Aktien und Festgeld, alles in deiner Standardwährung. Devisen, Metalle, Krypto und Aktien werden live bepreist; den Rest legst du selbst fest. Füge Posten mit „Posten hinzufügen“ hinzu.</p>
+<p>Eine zusammengefasste Ansicht eines Buchs — eine Karte pro eigenständigem Eintrag statt jeder datierten Wiederholung.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne ein Buch und tippe im Kopfbereich auf das Feld Übersicht.</li><li>Eine wiederkehrende Serie erscheint als eine einzige Zeile, nicht als eine Zeile pro Monat.</li><li>Nutze den Umschalter Laufend / Früher, um zwischen aktiven und abgeschlossenen Einträgen zu wechseln.</li><li>Tippe auf eine beliebige Karte, um sie zu öffnen und zu bearbeiten.</li></ol>
+<p class="tip"><b>Tipp:</b> Übersicht ist der schnellste Weg, um zu prüfen „was habe ich eigentlich laufen“, ohne durch jede einzelne Wiederholung zu scrollen.</p>
+<h3 class="group">Budget</h3>
+<h4 id="de-budget">Budget (Premium)</h4>
+<p>Eine vorausschauende monatliche Cashflow-Ansicht: Einnahmen, Ausgaben und wo dein Geld am Ende jedes Monats steht.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne den Tab Budget. Die Monatsliste ist links (oder die Pfeile ‹ › auf dem iPhone).</li><li>Jeder Monat zeigt Übertrag + Einnahmen − Ausgaben = voraussichtlicher Endkontostand.</li><li>Wenn dein Geld voraussichtlich negativ wird, erscheint eine Warnung mit rotem Datum (auch in Heute).</li><li>Nutze die Symbole im Kopfbereich, um zu sortieren (⇅), das Tagesdiagramm zu öffnen (▥), zu heute zu springen oder einen Bargeld-Eintrag hinzuzufügen (+).</li></ol>
+<p class="tip"><b>Tipp:</b> Das rote Datum nennt dir den genauen Tag, an dem dir das Geld ausgehen würde — verschiebe eine Ausgabe oder füge davor eine Einnahme hinzu, um es zu bereinigen.</p>
+<h3 class="group">Ersparnisse</h3>
+<h4 id="de-net-worth">Ersparnisse &amp; Vermögen (Premium)</h4>
+<p>Ersparnisse verfolgt alles, was du besitzt — Bargeld, Fremdwährung, Gold, Krypto, Aktien und Festgeld — als eine einzige Vermögenszahl.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne den Tab Ersparnisse. Die Zahl oben ist dein Gesamtvermögen in deiner Standardwährung.</li><li>Tippe auf „Posten hinzufügen“, um einen Posten hinzuzufügen, und wähle dann seinen Typ.</li><li>Automatisch bepreiste Typen (Fremdwährung, Gold, Krypto, Aktien) werden mit Live-Kursen aktualisiert; den Rest legst du selbst fest.</li><li>Ziehe zum Aktualisieren nach unten oder tippe auf die Aktualisieren-Schaltfläche, um alles neu zu bepreisen.</li></ol>
+<p class="tip"><b>Tipp:</b> Tippe auf das ⓘ neben jedem Typ in der Liste Posten hinzufügen, um genau zu sehen, wie dieser Typ bewertet wird.</p>
 <h4 id="de-holding-vadesiz">Sichtkonto</h4>
-<p>Ein Guthaben, das du selbst festlegst — ein Girokonto-artiges Konto oder ein beliebiger bargeldähnlicher Posten. Hierhin zahlen auch Festgelder aus.</p>
+<p>Ein Kontostand, den du selbst festlegst — ein Giro-/Kontokorrentkonto oder ein bargeldähnlicher Posten. Hierhin zahlen auch Festgelder aus.</p>
+<p class="how">So geht's</p>
+<ol><li>Tippe in Ersparnisse auf Posten hinzufügen und wähle Sichtkonto.</li><li>Gib ihm einen Namen und seine Währung.</li><li>Gib den aktuellen Kontostand ein.</li><li>Sichern — aktualisiere den Kontostand selbst, wann immer er sich ändert.</li></ol>
+<p class="tip"><b>Tipp:</b> Verwende hier eine Fremdwährung, um etwa ein USD-Konto zu halten — es wird zum Tageskurs in deine Standardwährung umgerechnet.</p>
 <h4 id="de-vadeli">Festgeld</h4>
-<p>Ein Festgeld. Gib Betrag, Zinssatz (brutto oder netto), Laufzeit und Quellensteuer ein, und der Fälligkeitswert wird berechnet. Es kann sich automatisch verlängern, die Zinsen jede Periode auszahlen oder vorzeitig geschlossen werden.</p>
+<p>Eine Festgeldanlage — GelirGider berechnet den Endwert aus deinem Zinssatz und deiner Laufzeit, einschließlich Quellensteuer.</p>
+<p class="how">So geht's</p>
+<ol><li>Tippe in Ersparnisse auf Posten hinzufügen und wähle Festgeld.</li><li>Gib das Kapital, den Zinssatz (brutto oder netto), die Laufzeit in Tagen und die Quellensteuer ein.</li><li>GelirGider zeigt dir während der Eingabe eine Vorschau der Zinsen und des Endwerts.</li><li>Wähle, ob es sich automatisch verlängert, jeden Zyklus Zinsen auszahlt oder du es selbst schließt — dann Sichern.</li></ol>
+<p class="tip"><b>Tipp:</b> Bei Fälligkeit kannst du den Erlös auf ein Sichtkonto übertragen oder es sich um eine weitere Laufzeit verlängern lassen.</p>
 <h4 id="de-holding-metal">Edelmetalle</h4>
-<p>Gold, Silber, Platin oder Palladium nach Gewicht, live pro Feinunze bepreist (gold-api.com) in deiner Standardwährung.</p>
+<p>Gold, Silber, Platin oder Palladium, nach Gewicht gehalten und live pro Feinunze bepreist.</p>
+<p class="how">So geht's</p>
+<ol><li>Tippe in Ersparnisse auf Posten hinzufügen und wähle Edelmetalle.</li><li>Wähle das Metall und die Einheit (Gramm oder Feinunze).</li><li>Gib ein, wie viel du hältst.</li><li>Sichern — der Wert aktualisiert sich mit Live-Kursen (gold-api.com) in deiner Standardwährung.</li></ol>
+<p class="tip"><b>Tipp:</b> Standardmäßig als Portfolio gruppiert — tippe auf die Zeile Edelmetalle, um jede einzelne Position zu sehen.</p>
 <h4 id="de-holding-crypto">Krypto</h4>
-<p>Ein Kryptowährungs-Posten, live bepreist (CoinGecko) und in deine Standardwährung umgerechnet.</p>
+<p>Ein Kryptowährungs-Posten, live bepreist und in deine Standardwährung umgerechnet.</p>
+<p class="how">So geht's</p>
+<ol><li>Tippe in Ersparnisse auf Posten hinzufügen und wähle Krypto.</li><li>Suche und wähle den Coin.</li><li>Gib die Menge ein (bis zu 8 Nachkommastellen).</li><li>Sichern — Wert = Menge × Live-Kurs (CoinGecko).</li></ol>
+<p class="tip"><b>Tipp:</b> Kurse aktualisieren sich beim manuellen Nach-unten-Ziehen, um innerhalb der kostenlosen Datenlimits zu bleiben — der letzte Kurs wird für den Offline-Betrieb zwischengespeichert.</p>
 <h4 id="de-holding-stock">Aktien</h4>
-<p>Eine Aktienposition, bepreist aus verzögerten Kursen (Yahoo Finance) in der Notierungswährung und in deine Standardwährung umgerechnet.</p>
-<h4 id="de-holding-manual">Manueller Posten</h4>
-<p>Diesen Wert gibst du selbst ein und aktualisierst ihn bei Änderungen — für diesen Typ gibt es keine Live-Bepreisung.</p>
-<h4 id="de-birikim-transfer">Geld zu/von den Ersparnissen</h4>
-<p>Verschiebt Geld zwischen deinem Bargeld-Buch und einem Posten über einen passenden Bargeld-Eintrag — es wird erst wirksam, wenn du es bestätigst (abhakst), und das Aufheben der Markierung macht es rückgängig.</p>
+<p>Eine Aktienposition, bepreist mit verzögerten Kursen in ihrer Heimatwährung und in deine Standardwährung umgerechnet.</p>
+<p class="how">So geht's</p>
+<ol><li>Tippe in Ersparnisse auf Posten hinzufügen und wähle Aktien.</li><li>Suche das Kürzel (globale Börsen werden unterstützt) und wähle es aus.</li><li>Gib die Anzahl der Aktien ein.</li><li>Sichern — der Wert stammt von Yahoo Finance (ca. 15 Min. verzögert) und wird in deine Standardwährung umgerechnet.</li></ol>
+<p class="tip"><b>Tipp:</b> Falls einmal kein Kurs verfügbar ist, wird dein manuell festgelegter Stückpreis verwendet, sodass die Position nie null anzeigt.</p>
+<h4 id="de-holding-manual">Manuelle Posten</h4>
+<p>Typen ohne Live-Kurs — Fonds, Anleihen, Immobilien, Forderungen, Wertgegenstände oder alles andere — bei denen du den Wert selbst festlegst.</p>
+<p class="how">So geht's</p>
+<ol><li>Tippe in Ersparnisse auf Posten hinzufügen und wähle den Typ (z. B. Fonds, Immobilien).</li><li>Benenne ihn und gib seinen aktuellen Wert ein.</li><li>Sichern.</li><li>Aktualisiere den Wert selbst, wann immer er sich ändert.</li></ol>
+<p class="tip"><b>Tipp:</b> Ideal für ein Auto, eine Immobilie oder Geld, das dir jemand schuldet — alles, was du im Vermögen mitzählen willst.</p>
+<h4 id="de-birikim-transfer">Geld zu und aus den Ersparnissen</h4>
+<p>Bewege Bargeld zwischen deinem Bargeld-Buch und einem Ersparnisse-Posten, mit einem passenden Bargeld-Eintrag, damit dein Cashflow korrekt bleibt.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne einen Posten in Ersparnisse und wähle Einzahlen (hinzufügen) oder Abheben (entnehmen).</li><li>Gib den Betrag und das Datum ein.</li><li>In deinem Bargeld-Buch wird ein passender Eintrag erstellt.</li><li>Er wird erst wirksam, sobald du ihn bestätigst (abhakst) — das Entfernen des Häkchens macht die gesamte Übertragung rückgängig.</li></ol>
+<p class="tip"><b>Tipp:</b> Auf der Bargeld-Seite kannst du bei Fremdwährungsposten den umgerechneten Betrag überschreiben, um genau das abzubilden, was deine Bank bewegt hat.</p>
 <h3 class="group">Mitteilungen &amp; Einstellungen</h3>
 <h4 id="de-daily-summary">Tägliche Übersicht</h4>
-<p>Eine Mitteilung pro Tag, zur von dir gewählten Zeit, die zusammenfasst, was Aufmerksamkeit braucht: überfällig, heute fällig und Einträge, deren Erinnerungsfenster offen ist. Leere Tage werden übersprungen, und sie erscheint in der Sprache der App.</p>
-<h4 id="de-data-transfer">Datenübertragung / Bereinigen</h4>
-<p>Exportiere ein vollständiges Backup oder importiere eines (Ersetzen oder Zusammenführen). Auf einem bei iCloud angemeldeten Gerät werden Änderungen mit deinen anderen Geräten synchronisiert; ein Simulator oder ein abgemeldetes Gerät bleibt lokal. Löschen entfernt alles.</p>
+<p>Eine Mitteilung pro Tag, zu einer von dir gewählten Zeit, die zusammenfasst, was Aufmerksamkeit braucht.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne Einstellungen → Mitteilungen → Tägliche Übersicht.</li><li>Schalte sie ein und wähle die Uhrzeit.</li><li>Jeden Tag listet sie auf, was überfällig ist, heute fällig ist und welche Einträge in ihrem Erinnerungsfenster liegen.</li><li>Tage, an denen es nichts zu melden gibt, werden übersprungen.</li></ol>
+<p class="tip"><b>Tipp:</b> Sie ist in der Sprache der App verfasst und benachrichtigt an einem leeren Tag nie, sodass sie nützlich bleibt.</p>
+<h4 id="de-data-transfer">Datenübertragung / Bereinigung</h4>
+<p>Exportiere ein vollständiges Backup von allem, importiere es auf einem anderen Gerät oder setze die App zurück.</p>
+<p class="how">So geht's</p>
+<ol><li>Öffne Einstellungen → Datenübertragung / Bereinigung.</li><li>Tippe auf Exportieren (vollständiges Backup), um ein komplettes JSON-Backup (Premium) überall zu sichern — auf dem Gerät, in einem Ordner oder in iCloud Drive.</li><li>Tippe auf einem anderen Gerät auf Importieren und wähle Vorhandene ersetzen oder Mit Vorhandenem zusammenführen.</li><li>Alle Daten löschen löscht alles und setzt die App auf ihren Ausgangszustand zurück.</li></ol>
+<p class="tip"><b>Tipp:</b> Auf einem bei iCloud angemeldeten Gerät werden Änderungen auch mit deinen anderen Geräten synchronisiert; ein abgemeldetes Gerät bleibt lokal.</p>
 </section>
 
 <section id="es" class="lang-section">
 <h2>GelirGider · Guía del usuario</h2>
-<p class="lead">Todo lo que GelirGider puede hacer, función por función. Toca el ⓘ junto a una función en la app para ir directamente a su sección aquí.</p>
-<div class="toc"><ul><li><a href="#es-cash-ledger">Libro Efectivo</a></li><li><a href="#es-credit-card">Libro de Tarjeta de Crédito</a></li><li><a href="#es-new-entry">Añadir una entrada</a></li><li><a href="#es-add-to-cash">Añadir a Efectivo</a></li><li><a href="#es-recurring">Entrada recurrente</a></li><li><a href="#es-varying-amounts">Importes variables</a></li><li><a href="#es-installments">Compra a plazos</a></li><li><a href="#es-deferred-payment">Pago diferido</a></li><li><a href="#es-foreign-currency">Conversión de moneda</a></li><li><a href="#es-summary">Resumen</a></li><li><a href="#es-budget">Presupuesto</a></li><li><a href="#es-net-worth">Ahorros</a></li><li><a href="#es-holding-vadesiz">Cuenta a la vista</a></li><li><a href="#es-vadeli">Depósito a plazo</a></li><li><a href="#es-holding-metal">Metales preciosos</a></li><li><a href="#es-holding-crypto">Cripto</a></li><li><a href="#es-holding-stock">Acciones</a></li><li><a href="#es-holding-manual">Activo manual</a></li><li><a href="#es-birikim-transfer">Dinero hacia/desde ahorros</a></li><li><a href="#es-daily-summary">Resumen diario</a></li><li><a href="#es-data-transfer">Transferencia de datos / Limpieza</a></li></ul></div>
-<h3 class="group">Akış (Flujo de caja)</h3>
-<h4 id="es-cash-ledger">Libro Efectivo</h4>
-<p>Tu cuenta de efectivo principal. Las pastillas de la tira filtran el intervalo de tiempo; Resumen reduce todo a una tarjeta por entrada. Añade más libros con + — 1 gratis, ilimitados con Premium.</p>
+<p class="lead">Cómo usar cada parte de GelirGider, paso a paso. En la app, toca el ⓘ junto a una función para ir directamente a su sección.</p>
+<div class="toc"><ul><li><a href="#es-cash-ledger">Libro de Efectivo</a></li><li><a href="#es-credit-card">Libro de Tarjeta de Crédito</a></li><li><a href="#es-new-entry">Añadir una entrada</a></li><li><a href="#es-add-to-cash">Añadir a Efectivo</a></li><li><a href="#es-recurring">Serie recurrente</a></li><li><a href="#es-varying-amounts">Importes variables</a></li><li><a href="#es-installments">Cuotas</a></li><li><a href="#es-deferred-payment">Pagos diferidos</a></li><li><a href="#es-foreign-currency">Moneda extranjera (Premium)</a></li><li><a href="#es-summary">Resumen</a></li><li><a href="#es-budget">Presupuesto (Premium)</a></li><li><a href="#es-net-worth">Ahorros y patrimonio neto (Premium)</a></li><li><a href="#es-holding-vadesiz">Cuenta a la vista</a></li><li><a href="#es-vadeli">Depósito a plazo</a></li><li><a href="#es-holding-metal">Metales preciosos</a></li><li><a href="#es-holding-crypto">Cripto</a></li><li><a href="#es-holding-stock">Acciones</a></li><li><a href="#es-holding-manual">Activos manuales</a></li><li><a href="#es-birikim-transfer">Dinero hacia y desde los ahorros</a></li><li><a href="#es-daily-summary">Resumen diario</a></li><li><a href="#es-data-transfer">Transferencia de datos / Limpieza</a></li></ul></div>
+<h3 class="group">Flujo de caja</h3>
+<h4 id="es-cash-ledger">Libro de Efectivo</h4>
+<p>Efectivo es tu cuenta de dinero principal: el total actualizado del dinero que realmente tienes. Es uno de los dos libros con los que GelirGider te inicia (el otro es Tarjeta de Crédito).</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre la pestaña Flujo de Caja y toca Efectivo en la parte superior de la lista de libros.</li><li>El número grande es tu saldo actual. Las opciones de debajo (Este mes, 30 días, 3 meses) cambian cuánto proyecta la lista hacia adelante; Resumen lo condensa todo en una tarjeta por entrada.</li><li>Toca + (arriba a la derecha) para añadir un ingreso o un gasto.</li><li>Para crear otro libro, toca + encima de la lista de libros. La versión gratuita incluye un libro extra; la Premium es ilimitada.</li></ol>
+<p class="tip"><b>Consejo:</b> Solo las entradas que has marcado cuentan para el saldo: las entradas futuras sin marcar aparecen como próximas, no como ya gastadas.</p>
 <h4 id="es-credit-card">Libro de Tarjeta de Crédito</h4>
-<p>Registra aquí las compras con tarjeta. Cuando se cierra un ciclo de facturación, su total aparece como un único «Pago de Tarjeta de Crédito» en tu libro Efectivo, con vencimiento en la fecha de pago — márcalo cuando pagues.</p>
+<p>Tarjeta de Crédito registra el gasto de tu tarjeta y luego convierte cada extracto en un único pago en tu libro de Efectivo, tal como funciona una tarjeta real.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre el libro de Tarjeta de Crédito desde la pestaña Flujo de Caja.</li><li>Toca + para registrar una compra (nombre, importe, fecha). Puedes dividir una compra grande en cuotas en Avanzado.</li><li>Cuando se cierra un periodo de extracto, GelirGider crea un único “Pago de Tarjeta de Crédito” en tu libro de Efectivo, con la fecha del día de pago.</li><li>Marca ese pago en Efectivo cuando pagues la tarjeta de verdad.</li></ol>
+<p class="tip"><b>Consejo:</b> Configura tus días de corte y de pago al crear el libro para que los ciclos coincidan con los de tu tarjeta real.</p>
 <h4 id="es-new-entry">Añadir una entrada</h4>
-<p>Introduce un nombre, un importe y una fecha; la casilla la marca como pagada o recibida. En Avanzado puedes añadir una categoría, hacerla recurrente, aplazar la fecha de liquidación, usar una moneda extranjera o poner un recordatorio.</p>
+<p>Cada ingreso y cada gasto es una entrada dentro de un libro.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre un libro y toca + (arriba a la derecha).</li><li>Elige Ingreso o Gasto.</li><li>Escribe un nombre y un importe, y luego fija la fecha.</li><li>Deja la casilla sin marcar si aún no ha ocurrido; márcala una vez que se haya pagado o recibido.</li><li>Abre Avanzado para añadir una categoría, convertirla en recurrente, aplazar la fecha del movimiento de efectivo, usar una moneda extranjera o poner un recordatorio.</li><li>Toca Guardar.</li></ol>
+<p class="tip"><b>Consejo:</b> La casilla es el corazón de la app: es lo que convierte un plan en un cambio real de saldo.</p>
 <h4 id="es-add-to-cash">Añadir a Efectivo</h4>
-<p>Cuando está activo, las entradas de este libro también cuentan en tu saldo de Efectivo y tu presupuesto — útil para las cuentas que quieras reflejar en tu efectivo global. Desactivado, el libro queda aparte.</p>
-<h4 id="es-recurring">Entrada recurrente</h4>
-<p>Crea una entrada al mes el día elegido, de inicio a fin. Cada una tiene su casilla. Una entrada sale de la serie al marcarla o cuando pasa su fecha; entonces es una entrada independiente que puedes editar o eliminar por separado. Editar la serie solo cambia las entradas futuras sin marcar.</p>
+<p>Un interruptor en un libro personalizado que suma sus entradas a tu saldo de Efectivo global y a tu presupuesto, útil para una cuenta que quieras ver reflejada en tu efectivo total.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Crea o edita un libro personalizado (+ encima de la lista de libros, o edita uno existente).</li><li>Activa “Añadir a Efectivo”.</li><li>Ahora los ingresos y gastos de este libro también aparecen en Efectivo y en tu Presupuesto mensual.</li><li>Desactívalo para mantener el libro por separado, solo con su propio saldo.</li></ol>
+<p class="tip"><b>Consejo:</b> Déjalo desactivado para cosas que sigues pero no quieres mezclar con tu efectivo disponible (p. ej. el bote de un piso compartido).</p>
+<h4 id="es-recurring">Serie recurrente</h4>
+<p>Convierte una entrada en una serie mensual —alquiler, sueldo, suscripciones— para introducirla una vez y que se repita.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Añade una entrada, luego abre Avanzado y activa Repetir.</li><li>Elige el día de repetición y las fechas de Inicio y Fin.</li><li>Guarda: GelirGider crea una entrada por mes, cada una con su propia casilla.</li><li>Al editarla después, se te pregunta si cambiar Solo esta entrada, Esta y las siguientes o Toda la serie.</li></ol>
+<p class="tip"><b>Consejo:</b> Una entrada sale de la serie en el momento en que la marcas o su fecha pasa; a partir de entonces es una entrada independiente que puedes editar por separado.</p>
 <h4 id="es-varying-amounts">Importes variables</h4>
-<p>Introduce un importe distinto para cada mes — útil con la inflación, facturas estacionales (p. ej. gas) o subidas. Adelanta la fecha de fin para añadir meses (copiando el último importe), retrásala para quitarlos. Se necesitan al menos 2 meses.</p>
-<h4 id="es-installments">Compra a plazos</h4>
-<p>Divide el total en cargos mensuales iguales (la última absorbe el redondeo). Cada una aparece como «n/m» y entra en el extracto de su mes. Una cuota facturada queda fija; editar solo cambia el importe de las próximas. Para cambiar número o fechas, elimina y vuelve a crear.</p>
-<h4 id="es-deferred-payment">Pago diferido</h4>
-<p>La entrada aparece en la fecha de arriba como recordatorio, pero el dinero se mueve — y el saldo cambia — en la fecha de liquidación que elijas.</p>
-<h4 id="es-foreign-currency">Conversión de moneda</h4>
-<p>Los importes en moneda extranjera sin marcar se convierten a tu moneda de la app al último tipo de cambio diario, por lo que cambian con el tiempo. Si editas el importe superior a mano, queda fijado y se elimina el vínculo con la moneda extranjera: pasa a ser un importe normal en tu moneda. Marcar la entrada bloquea su valor.</p>
+<p>Una serie recurrente en la que cada mes puede tener un importe distinto, por ejemplo una factura que cambia.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Añade una entrada recurrente (Avanzado → Repetir).</li><li>Activa Importes variables.</li><li>Aparece una tabla mes a mes: escribe el importe de cada mes.</li><li>Guarda; cada mes conserva su propio valor.</li></ol>
+<p class="tip"><b>Consejo:</b> Deja un mes en blanco para reutilizar el importe anterior, o rellénalos todos para tener control total.</p>
+<h4 id="es-installments">Cuotas</h4>
+<p>Divide una compra con tarjeta de crédito en cuotas mensuales iguales, mostradas como n/m.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En el libro de Tarjeta de Crédito, añade una compra e introduce el TOTAL como importe.</li><li>Abre Avanzado y activa Cuotas.</li><li>Fija el número de cuotas y el mes de inicio.</li><li>Guarda: cada cuota cae en el extracto de su propio mes, etiquetada como 1/3, 2/3, …</li></ol>
+<p class="tip"><b>Consejo:</b> Una cuota ya facturada queda bloqueada; editar solo cambia el importe de las cuotas aún no facturadas.</p>
+<h4 id="es-deferred-payment">Pagos diferidos</h4>
+<p>Para cuando la fecha de vencimiento y el día en que el dinero sale de verdad no coinciden: un impuesto del que te avisan ahora pero pagas después, o una domiciliación.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Añade la entrada y abre Avanzado.</li><li>Activa Pago diferido.</li><li>Fija la fecha de liquidación (cuándo se mueve realmente el dinero); la fecha de vencimiento sigue siendo la fecha propia de la entrada.</li><li>Guarda: la entrada afecta a tu saldo en la fecha de liquidación, mientras que un recordatorio gris de la fecha de vencimiento aparece en Hoy y en el presupuesto.</li></ol>
+<p class="tip"><b>Consejo:</b> Úsalo siempre que “lo debo ahora pero lo pago el mes que viene”: mantiene honesta tu proyección de flujo de caja.</p>
+<h4 id="es-foreign-currency">Moneda extranjera (Premium)</h4>
+<p>Introduce un importe en otra moneda y deja que GelirGider lo convierta a tu moneda predeterminada al cambio diario.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Añade una entrada y abre Avanzado.</li><li>Toca Moneda y elige la moneda extranjera.</li><li>Escribe el importe en esa moneda: el valor convertido rellena el importe automáticamente.</li><li>Guarda. Mientras la entrada está sin marcar, su valor se sigue actualizando con el cambio diario; marcarla fija el importe.</li></ol>
+<p class="tip"><b>Consejo:</b> Solo se pueden elegir monedas con cambio en directo. Editar el importe a mano lo fija y descarta la conversión.</p>
 <h4 id="es-summary">Resumen</h4>
-<p>Una tarjeta por cada entrada distinta en lugar de cada aparición con fecha — toda una serie recurrente se muestra como una sola fila. Alterna entre En curso/Pasado para ver las activas frente a las finalizadas.</p>
-<h3 class="group">Bütçe (Presupuesto)</h3>
-<h4 id="es-budget">Presupuesto</h4>
-<p>Una vista mensual del flujo de caja hacia delante — ingresos, gastos y el saldo final previsto, con un aviso de día en rojo si el efectivo se vuelve negativo. Ordena con ⇅, abre el gráfico diario con ▥, salta al mes actual, y + añade una entrada de Efectivo al mes mostrado.</p>
-<h3 class="group">Birikim (Ahorros)</h3>
-<h4 id="es-net-worth">Ahorros</h4>
-<p>Tu patrimonio neto total — efectivo, divisas, oro, cripto, acciones y depósitos a plazo, todo en tu moneda predeterminada. Divisas, metales, cripto y acciones se valoran en vivo; el resto lo defines tú. Añade activos con «Añadir activo».</p>
+<p>Una vista consolidada de un libro: una tarjeta por cada entrada distinta en lugar de cada repetición con fecha.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre un libro y toca la opción Resumen en la cabecera.</li><li>Una serie recurrente aparece como una sola fila, no una fila por mes.</li><li>Usa el conmutador En curso / Pasado para alternar entre entradas activas y finalizadas.</li><li>Toca cualquier tarjeta para abrirla y editarla.</li></ol>
+<p class="tip"><b>Consejo:</b> Resumen es la forma más rápida de revisar “qué tengo realmente en marcha” sin desplazarte por cada repetición.</p>
+<h3 class="group">Presupuesto</h3>
+<h4 id="es-budget">Presupuesto (Premium)</h4>
+<p>Una vista mensual de flujo de caja mirando hacia adelante: ingresos, gastos y dónde queda tu efectivo al final de cada mes.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre la pestaña Presupuesto. La lista de meses está a la izquierda (o las flechas ‹ › en iPhone).</li><li>Cada mes muestra Arrastre + ingresos − gastos = saldo final previsto.</li><li>Si se prevé que tu efectivo se ponga en negativo, aparece un aviso de fecha en rojo (también en Hoy).</li><li>Usa los iconos de la cabecera para ordenar (⇅), abrir el gráfico diario (▥), saltar a hoy o añadir una entrada de Efectivo (+).</li></ol>
+<p class="tip"><b>Consejo:</b> La fecha en rojo te dice el día exacto en que te quedarías corto: mueve un gasto o añade un ingreso antes de esa fecha para resolverlo.</p>
+<h3 class="group">Ahorros</h3>
+<h4 id="es-net-worth">Ahorros y patrimonio neto (Premium)</h4>
+<p>Ahorros hace un seguimiento de todo lo que posees —efectivo, moneda extranjera, oro, cripto, acciones y depósitos a plazo— como una única cifra de patrimonio neto.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre la pestaña Ahorros. El número de arriba es tu patrimonio neto total en tu moneda predeterminada.</li><li>Toca “Añadir activo” para añadir un activo y luego elige su tipo.</li><li>Los tipos con precio automático (moneda extranjera, oro, cripto, acciones) se actualizan con precios en directo; el resto los fijas tú.</li><li>Desliza hacia abajo para actualizar, o toca el botón de actualizar, para volver a fijar el precio de todo.</li></ol>
+<p class="tip"><b>Consejo:</b> Toca la ⓘ junto a cada tipo en la lista de Añadir activo para ver exactamente cómo se valora ese tipo.</p>
 <h4 id="es-holding-vadesiz">Cuenta a la vista</h4>
-<p>Un saldo que defines tú mismo — una cuenta corriente o a la vista o cualquier activo similar al efectivo. También es donde se pagan los depósitos a plazo.</p>
+<p>Un saldo que fijas tú mismo: una cuenta tipo corriente, o cualquier activo similar al efectivo. También es donde se abonan los depósitos a plazo.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En Ahorros, toca Añadir activo y elige Cuenta a la vista.</li><li>Ponle un nombre y su moneda.</li><li>Introduce el saldo actual.</li><li>Guarda: actualiza tú mismo el saldo cuando cambie.</li></ol>
+<p class="tip"><b>Consejo:</b> Usa aquí una moneda extranjera para mantener, por ejemplo, una cuenta en USD: se revaloriza a tu moneda predeterminada al cambio diario.</p>
 <h4 id="es-vadeli">Depósito a plazo</h4>
-<p>Un depósito a plazo fijo. Introduce el importe, el tipo (bruto o neto), el plazo y la retención, y se calcula el valor al vencimiento. Puede renovarse automáticamente, pagar los intereses cada ciclo o cerrarse anticipadamente.</p>
+<p>Un depósito a plazo fijo: GelirGider calcula el valor al vencimiento a partir de tu tipo y tu plazo, incluida la retención fiscal.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En Ahorros, toca Añadir activo y elige Depósito a plazo.</li><li>Introduce el capital, el tipo de interés (bruto o neto), el plazo en días y la retención.</li><li>GelirGider muestra una vista previa del interés y del valor al vencimiento a medida que escribes.</li><li>Elige si se renueva automáticamente, si paga el interés cada ciclo o si lo cerrarás tú, y luego Guarda.</li></ol>
+<p class="tip"><b>Consejo:</b> Al vencimiento puedes transferir el importe a una Cuenta a la vista, o dejar que se renueve por otro plazo.</p>
 <h4 id="es-holding-metal">Metales preciosos</h4>
-<p>Oro, plata, platino o paladio por peso, valorados en vivo por onza troy (gold-api.com) en tu moneda predeterminada.</p>
+<p>Oro, plata, platino o paladio mantenidos por peso, con precio en directo por onza troy.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En Ahorros, toca Añadir activo y elige Metales preciosos.</li><li>Elige el metal y la unidad (gramos u onza troy).</li><li>Introduce cuánto tienes.</li><li>Guarda: su valor se actualiza con precios en directo (gold-api.com) en tu moneda predeterminada.</li></ol>
+<p class="tip"><b>Consejo:</b> Se agrupan como una cartera de forma predeterminada: toca la fila de Metales preciosos para ver cada posición.</p>
 <h4 id="es-holding-crypto">Cripto</h4>
-<p>Un activo de criptomoneda, valorado en vivo (CoinGecko) y convertido a tu moneda predeterminada.</p>
+<p>Un activo de criptomoneda, con precio en directo y convertido a tu moneda predeterminada.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En Ahorros, toca Añadir activo y elige Cripto.</li><li>Busca y elige la moneda.</li><li>Introduce la cantidad (hasta 8 decimales).</li><li>Guarda: valor = cantidad × precio en directo (CoinGecko).</li></ol>
+<p class="tip"><b>Consejo:</b> Los precios se actualizan al deslizar manualmente hacia abajo para mantenerse dentro de los límites de datos gratuitos; el último precio se guarda en caché para uso sin conexión.</p>
 <h4 id="es-holding-stock">Acciones</h4>
-<p>Una posición en acciones, valorada con cotizaciones diferidas (Yahoo Finance) en la moneda de cotización y convertida a tu moneda predeterminada.</p>
-<h4 id="es-holding-manual">Activo manual</h4>
-<p>Este valor lo introduces tú y lo actualizas cuando cambia — no hay valoración en vivo para este tipo.</p>
-<h4 id="es-birikim-transfer">Dinero hacia/desde ahorros</h4>
-<p>Mueve dinero entre tu libro Efectivo y un activo mediante una entrada de Efectivo equivalente — solo surte efecto cuando lo confirmas (lo marcas), y desmarcarlo lo revierte.</p>
+<p>Una posición en acciones, con precio a partir de cotizaciones con retardo en su moneda de origen y convertido a tu moneda predeterminada.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En Ahorros, toca Añadir activo y elige Acciones.</li><li>Busca el símbolo (se admiten bolsas globales) y elígelo.</li><li>Introduce el número de acciones.</li><li>Guarda: el valor procede de Yahoo Finance (con ≈15 min de retardo), cruzado a tu moneda predeterminada.</li></ol>
+<p class="tip"><b>Consejo:</b> Si alguna vez no hay cotización disponible, se usa el precio unitario que fijaste a mano, así la posición nunca aparece en cero.</p>
+<h4 id="es-holding-manual">Activos manuales</h4>
+<p>Tipos sin precio en directo —fondos, bonos, inmuebles, cuentas por cobrar, objetos de valor o cualquier otra cosa— donde el valor lo fijas tú.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>En Ahorros, toca Añadir activo y elige el tipo (p. ej. Fondos, Inmuebles).</li><li>Ponle nombre e introduce su valor actual.</li><li>Guarda.</li><li>Actualiza tú mismo el valor cuando cambie.</li></ol>
+<p class="tip"><b>Consejo:</b> Ideal para un coche, un inmueble o dinero que alguien te debe: cualquier cosa que quieras contar en el patrimonio neto.</p>
+<h4 id="es-birikim-transfer">Dinero hacia y desde los ahorros</h4>
+<p>Mueve efectivo entre tu libro de Efectivo y un activo de Ahorros, con una entrada de Efectivo equivalente para que tu flujo de caja siga siendo correcto.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre un activo en Ahorros y elige añadirle (ingreso) o retirar de él.</li><li>Introduce el importe y la fecha.</li><li>Se crea una entrada equivalente en tu libro de Efectivo.</li><li>Solo surte efecto cuando la confirmas (la marcas): desmarcarla revierte toda la transferencia.</li></ol>
+<p class="tip"><b>Consejo:</b> En el lado de Efectivo puedes anular el importe convertido para activos en moneda extranjera, para que coincida exactamente con lo que movió tu banco.</p>
 <h3 class="group">Notificaciones y ajustes</h3>
 <h4 id="es-daily-summary">Resumen diario</h4>
-<p>Una notificación al día, a la hora que elijas, que resume lo que necesita atención: vencido, vence hoy y elementos cuya ventana de recordatorio está abierta. Los días vacíos se omiten, y está en el idioma de la app.</p>
+<p>Una notificación al día, a la hora que elijas, que resume lo que requiere atención.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre Ajustes → Notificaciones → Resumen diario.</li><li>Actívalo y elige la hora del día.</li><li>Cada día enumera lo que está vencido, lo que vence hoy y cualquier elemento cuya ventana de recordatorio esté abierta.</li><li>Los días sin nada que informar se omiten.</li></ol>
+<p class="tip"><b>Consejo:</b> Está escrito en el idioma de la app y nunca notifica en un día vacío, así que sigue siendo útil.</p>
 <h4 id="es-data-transfer">Transferencia de datos / Limpieza</h4>
-<p>Exporta una copia de seguridad completa o importa una (Reemplazar o Combinar). En un dispositivo con sesión iniciada en iCloud, los cambios se sincronizan con tus otros dispositivos; un simulador o un dispositivo sin sesión permanece local. Limpiar borra todo.</p>
+<p>Exporta una copia de seguridad completa de todo, impórtala en otro dispositivo o deja la app como recién instalada.</p>
+<p class="how">Cómo hacerlo</p>
+<ol><li>Abre Ajustes → Transferencia de datos / Limpieza.</li><li>Toca Exportar (copia completa) para guardar una copia JSON completa (Premium) donde quieras: en el dispositivo, en una carpeta o en iCloud Drive.</li><li>En otro dispositivo, toca Importar y elige Reemplazar lo existente o Combinar con lo existente.</li><li>Borrar todos los datos elimina todo y devuelve la app a su estado inicial.</li></ol>
+<p class="tip"><b>Consejo:</b> En un dispositivo con sesión iniciada en iCloud, los cambios también se sincronizan con tus otros dispositivos; un dispositivo con la sesión cerrada permanece local.</p>
 </section>
 
 <section id="it" class="lang-section">
 <h2>GelirGider · Guida utente</h2>
-<p class="lead">Tutto ciò che GelirGider può fare, funzione per funzione. Tocca la ⓘ accanto a una funzione nell'app per andare direttamente alla sua sezione qui.</p>
-<div class="toc"><ul><li><a href="#it-cash-ledger">Libretto Contanti</a></li><li><a href="#it-credit-card">Libretto Carta di Credito</a></li><li><a href="#it-new-entry">Aggiungere una voce</a></li><li><a href="#it-add-to-cash">Aggiungi a Contanti</a></li><li><a href="#it-recurring">Voce ricorrente</a></li><li><a href="#it-varying-amounts">Importi variabili</a></li><li><a href="#it-installments">Acquisto a rate</a></li><li><a href="#it-deferred-payment">Pagamento differito</a></li><li><a href="#it-foreign-currency">Conversione valuta</a></li><li><a href="#it-summary">Riepilogo</a></li><li><a href="#it-budget">Budget</a></li><li><a href="#it-net-worth">Risparmi</a></li><li><a href="#it-holding-vadesiz">Conto liquido</a></li><li><a href="#it-vadeli">Conto vincolato</a></li><li><a href="#it-holding-metal">Metalli preziosi</a></li><li><a href="#it-holding-crypto">Cripto</a></li><li><a href="#it-holding-stock">Azioni</a></li><li><a href="#it-holding-manual">Asset manuale</a></li><li><a href="#it-birikim-transfer">Denaro da/verso i risparmi</a></li><li><a href="#it-daily-summary">Riepilogo giornaliero</a></li><li><a href="#it-data-transfer">Trasferimento dati / Pulizia</a></li></ul></div>
-<h3 class="group">Akış (Flusso di cassa)</h3>
+<p class="lead">Come usare ogni parte di GelirGider, passo dopo passo. Nell'app, tocca la ⓘ accanto a una funzione per andare direttamente alla sua sezione.</p>
+<div class="toc"><ul><li><a href="#it-cash-ledger">Libretto Contanti</a></li><li><a href="#it-credit-card">Libretto Carta di Credito</a></li><li><a href="#it-new-entry">Aggiungere una voce</a></li><li><a href="#it-add-to-cash">Aggiungi a Contanti</a></li><li><a href="#it-recurring">Serie ricorrente</a></li><li><a href="#it-varying-amounts">Importi variabili</a></li><li><a href="#it-installments">Rate</a></li><li><a href="#it-deferred-payment">Pagamenti differiti</a></li><li><a href="#it-foreign-currency">Valuta straniera (Premium)</a></li><li><a href="#it-summary">Riepilogo</a></li><li><a href="#it-budget">Budget (Premium)</a></li><li><a href="#it-net-worth">Risparmi e patrimonio netto (Premium)</a></li><li><a href="#it-holding-vadesiz">Conto liquido</a></li><li><a href="#it-vadeli">Conto vincolato</a></li><li><a href="#it-holding-metal">Metalli preziosi</a></li><li><a href="#it-holding-crypto">Cripto</a></li><li><a href="#it-holding-stock">Azioni</a></li><li><a href="#it-holding-manual">Beni manuali</a></li><li><a href="#it-birikim-transfer">Denaro da e verso i risparmi</a></li><li><a href="#it-daily-summary">Riepilogo giornaliero</a></li><li><a href="#it-data-transfer">Trasferimento dati / pulizia</a></li></ul></div>
+<h3 class="group">Flusso di cassa</h3>
 <h4 id="it-cash-ledger">Libretto Contanti</h4>
-<p>Il tuo conto contanti principale. I pulsanti della striscia filtrano l’intervallo di tempo; Riepilogo riduce tutto a una card per voce. Aggiungi altri libretti con + — 1 gratis, illimitati con Premium.</p>
+<p>Contanti è il tuo conto principale — il totale aggiornato dei soldi che hai davvero. È uno dei due libretti con cui GelirGider ti fa partire (l’altro è Carta di Credito).</p>
+<p class="how">Come fare</p>
+<ol><li>Apri la scheda Flusso di Cassa e tocca Contanti in cima all’elenco dei libretti.</li><li>Il numero grande è il tuo saldo attuale. Le pillole sotto (Questo mese, 30 giorni, 3 mesi) cambiano quanto in avanti proietta l’elenco; Riepilogo riduce tutto a una scheda per voce.</li><li>Tocca + (in alto a destra) per aggiungere un’entrata o un’uscita.</li><li>Per creare un altro libretto, tocca + sopra l’elenco dei libretti. Il piano gratuito include un libretto in più; Premium è illimitato.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Solo le voci che hai spuntato contano nel saldo — le voci future non spuntate compaiono come imminenti, non ancora spese.</p>
 <h4 id="it-credit-card">Libretto Carta di Credito</h4>
-<p>Registra qui gli acquisti con carta. Quando un ciclo di estratto conto si chiude, il suo totale compare come un unico “Pagamento Carta di Credito” nel tuo libretto Contanti, con scadenza alla data di pagamento — spuntalo quando paghi.</p>
+<p>Carta di Credito tiene traccia delle spese con la carta, poi trasforma ogni estratto conto in un unico pagamento nel tuo libretto Contanti — proprio come funziona una carta vera.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri il libretto Carta di Credito dalla scheda Flusso di Cassa.</li><li>Tocca + per registrare un acquisto (nome, importo, data). Puoi dividere una spesa grande in rate sotto Avanzate.</li><li>Quando un periodo di estratto conto si chiude, GelirGider crea un unico “Pagamento carta di credito” nel tuo libretto Contanti, con la data del giorno di pagamento.</li><li>Spunta quel pagamento in Contanti quando paghi davvero la carta.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Imposta il giorno di chiusura e il giorno di pagamento quando crei il libretto, così i cicli combaciano con la tua carta reale.</p>
 <h4 id="it-new-entry">Aggiungere una voce</h4>
-<p>Inserisci un nome, un importo e una data; la casella la contrassegna come pagata o ricevuta. In Avanzate puoi aggiungere una categoria, renderla ricorrente, posticipare la data di regolamento, usare una valuta estera o impostare un promemoria.</p>
+<p>Ogni entrata e uscita è una voce all’interno di un libretto.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri un libretto e tocca + (in alto a destra).</li><li>Scegli Entrata o Uscita.</li><li>Scrivi un nome e un importo, poi imposta la data.</li><li>Lascia la casella non spuntata se non è ancora avvenuto; spuntala una volta pagato o ricevuto.</li><li>Apri Avanzate per aggiungere una categoria, renderla ricorrente, differire la data del movimento di cassa, usare una valuta straniera o impostare un promemoria.</li><li>Tocca Salva.</li></ol>
+<p class="tip"><b>Suggerimento:</b> La casella è il cuore dell’app — è ciò che trasforma un piano in una vera variazione di saldo.</p>
 <h4 id="it-add-to-cash">Aggiungi a Contanti</h4>
-<p>Quando è attivo, le voci di questo libretto contano anche nel saldo Contanti e nel budget — comodo per i conti che vuoi vedere riflessi nella liquidità complessiva. Disattivato, tiene il libretto separato.</p>
-<h4 id="it-recurring">Voce ricorrente</h4>
-<p>Crea una voce al mese nel giorno scelto, dall'inizio alla fine. Ognuna ha la sua casella. Una voce esce dalla serie quando la spunti o ne passa la data; diventa una voce autonoma. Modificare la serie cambia solo le voci future non spuntate.</p>
+<p>Un interruttore su un libretto personalizzato che integra le sue voci nel saldo Contanti complessivo e nel budget — utile per un conto che vuoi vedere riflesso nel totale della tua liquidità.</p>
+<p class="how">Come fare</p>
+<ol><li>Crea o modifica un libretto personalizzato (+ sopra l’elenco dei libretti, oppure modificane uno esistente).</li><li>Attiva “Aggiungi a Contanti”.</li><li>Ora le entrate e le uscite di questo libretto compaiono anche in Contanti e nel tuo Budget mensile.</li><li>Disattivalo per tenere il libretto separato, con il suo saldo a sé.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Lascialo disattivato per ciò che tieni sotto controllo ma non vuoi mescolare alla liquidità disponibile (es. la cassa comune di casa).</p>
+<h4 id="it-recurring">Serie ricorrente</h4>
+<p>Trasforma una voce in una serie mensile — affitto, stipendio, abbonamenti — così la inserisci una volta e si ripete.</p>
+<p class="how">Come fare</p>
+<ol><li>Aggiungi una voce, poi apri Avanzate e attiva Ripeti.</li><li>Scegli il giorno di ripetizione e le date di Inizio e Fine.</li><li>Salva — GelirGider crea una voce al mese, ognuna con la sua casella.</li><li>Modificando in seguito ti chiede se cambiare Solo questa voce, Questa e le voci future oppure l’Intera serie.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Una voce lascia la serie nel momento in cui la spunti o la sua data è passata — da quel momento è una voce indipendente che puoi modificare da sola.</p>
 <h4 id="it-varying-amounts">Importi variabili</h4>
-<p>Inserisci un importo separato per ogni mese — utile con inflazione, bollette stagionali (es. gas) o aumenti. Sposta avanti la data di fine per aggiungere mesi (copiando l'ultimo importo), indietro per rimuoverli. Servono almeno 2 mesi.</p>
-<h4 id="it-installments">Acquisto a rate</h4>
-<p>Divide il totale in addebiti mensili uguali (l'ultima assorbe l'arrotondamento). Ognuna appare come «n/m» ed entra nell'estratto del suo mese. Una rata addebitata è fissa; la modifica cambia solo l'importo di quelle future. Per cambiare numero o date, elimina e ricrea.</p>
-<h4 id="it-deferred-payment">Pagamento differito</h4>
-<p>La voce appare nella data qui sopra come promemoria, ma il denaro si muove — e il saldo cambia — nella data di liquidazione che scegli.</p>
-<h4 id="it-foreign-currency">Conversione valuta</h4>
-<p>Gli importi in valuta estera non spuntati vengono convertiti nella valuta dell'app al tasso giornaliero più recente, quindi cambiano nel tempo. Modificando a mano l'importo in alto lo si fissa e si rimuove il collegamento alla valuta estera: diventa un semplice importo nella valuta dell'app. Spuntare la voce ne blocca il valore.</p>
+<p>Una serie ricorrente in cui ogni mese può avere un importo diverso — per esempio una bolletta che cambia.</p>
+<p class="how">Come fare</p>
+<ol><li>Aggiungi una voce ricorrente (Avanzate → Ripeti).</li><li>Attiva Importi variabili.</li><li>Compare una tabella mese per mese — scrivi l’importo di ogni mese.</li><li>Salva; ogni mese conserva il suo valore.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Lascia un mese vuoto per riutilizzare l’importo precedente, oppure compilali tutti per il pieno controllo.</p>
+<h4 id="it-installments">Rate</h4>
+<p>Dividi un acquisto con carta di credito in rate mensili uguali, mostrate come n/m.</p>
+<p class="how">Come fare</p>
+<ol><li>Nel libretto Carta di Credito, aggiungi un acquisto e inserisci il TOTALE come importo.</li><li>Apri Avanzate e attiva Rate.</li><li>Imposta il numero di rate e il mese di inizio.</li><li>Salva — ogni rata cade sull’estratto conto del suo mese, etichettata 1/3, 2/3, …</li></ol>
+<p class="tip"><b>Suggerimento:</b> Una rata già fatturata è bloccata; la modifica cambia solo l’importo delle rate non ancora fatturate.</p>
+<h4 id="it-deferred-payment">Pagamenti differiti</h4>
+<p>Per quando la data di scadenza e il giorno in cui i soldi escono davvero non coincidono — una tassa di cui vieni avvisato ora ma paghi dopo, o un addebito automatico.</p>
+<p class="how">Come fare</p>
+<ol><li>Aggiungi la voce e apri Avanzate.</li><li>Attiva Pagamento differito.</li><li>Imposta la data di regolamento (quando i soldi si muovono davvero) — la data di scadenza resta la data propria della voce.</li><li>Salva — la voce incide sul saldo alla data di regolamento, mentre un promemoria grigio della data di scadenza compare in Oggi e nel budget.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Usalo ogni volta che “lo devo adesso ma pago il mese prossimo” — mantiene onesta la proiezione del tuo flusso di cassa.</p>
+<h4 id="it-foreign-currency">Valuta straniera (Premium)</h4>
+<p>Inserisci un importo in un’altra valuta e lascia che GelirGider lo converta nella tua valuta predefinita al cambio giornaliero.</p>
+<p class="how">Come fare</p>
+<ol><li>Aggiungi una voce e apri Avanzate.</li><li>Tocca Valuta e scegli la valuta straniera.</li><li>Scrivi l’importo in quella valuta — il valore convertito riempie l’importo automaticamente.</li><li>Salva. Finché la voce non è spuntata, il suo valore continua ad aggiornarsi con il cambio giornaliero; spuntandola l’importo si fissa.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Si possono scegliere solo le valute con un cambio in tempo reale. Modificare l’importo a mano lo fissa e annulla la conversione.</p>
 <h4 id="it-summary">Riepilogo</h4>
-<p>Una card per ogni voce distinta invece di ogni occorrenza datata — un’intera serie ricorrente appare come una sola riga. Passa tra In corso/Passato per attive o concluse.</p>
-<h3 class="group">Bütçe (Budget)</h3>
-<h4 id="it-budget">Budget</h4>
-<p>Una vista mensile del flusso di cassa futuro — entrate, uscite e il saldo finale previsto, con un avviso in rosso se la liquidità va in negativo. Ordina con ⇅, apri il grafico del giorno con ▥, salta al mese corrente e + aggiunge una voce Contanti al mese mostrato.</p>
-<h3 class="group">Birikim (Risparmi)</h3>
-<h4 id="it-net-worth">Risparmi</h4>
-<p>Il tuo patrimonio netto totale — contanti, valuta estera, oro, cripto, azioni e conti vincolati, tutto nella tua valuta predefinita. Valuta estera, metalli, cripto e azioni hanno il prezzo in tempo reale; il resto lo imposti tu. Aggiungi asset con “Aggiungi bene”.</p>
+<p>Una vista consolidata di un libretto — una scheda per voce distinta invece di ogni ripetizione datata.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri un libretto e tocca la pillola Riepilogo nell’intestazione.</li><li>Una serie ricorrente compare come una singola riga, non una riga per mese.</li><li>Usa l’interruttore In corso / Passato per passare tra le voci attive e quelle concluse.</li><li>Tocca una scheda qualsiasi per aprirla e modificarla.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Riepilogo è il modo più rapido per controllare “cosa ho davvero in corso” senza scorrere ogni occorrenza.</p>
+<h3 class="group">Budget</h3>
+<h4 id="it-budget">Budget (Premium)</h4>
+<p>Una vista mensile del flusso di cassa orientata al futuro: entrate, uscite e dove si posiziona la tua liquidità alla fine di ogni mese.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri la scheda Budget. L’elenco dei mesi è a sinistra (o le frecce ‹ › su iPhone).</li><li>Ogni mese mostra Riporto + entrate − uscite = saldo finale previsto.</li><li>Se la tua liquidità è prevista andare in negativo, compare un avviso con data in rosso (anche in Oggi).</li><li>Usa le icone dell’intestazione per ordinare (⇅), aprire il grafico giornaliero (▥), saltare a oggi o aggiungere una voce Contanti (+).</li></ol>
+<p class="tip"><b>Suggerimento:</b> La data in rosso ti dice il giorno esatto in cui resteresti a corto — sposta un’uscita o aggiungi un’entrata prima di allora per risolverla.</p>
+<h3 class="group">Risparmi</h3>
+<h4 id="it-net-worth">Risparmi e patrimonio netto (Premium)</h4>
+<p>Risparmi tiene traccia di tutto ciò che possiedi — contanti, valuta straniera, oro, cripto, azioni e conti vincolati — come un unico valore di patrimonio netto.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri la scheda Risparmi. Il numero in alto è il tuo patrimonio netto totale nella tua valuta predefinita.</li><li>Tocca “Aggiungi bene” per aggiungere un bene, poi scegline il tipo.</li><li>I tipi con prezzo automatico (valuta straniera, oro, cripto, azioni) si aggiornano dai prezzi in tempo reale; il resto lo imposti tu.</li><li>Trascina per aggiornare, o tocca il pulsante di aggiornamento, per riprezzare tutto.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Tocca la ⓘ accanto a ogni tipo nell’elenco Aggiungi bene per vedere esattamente come viene valutato quel tipo.</p>
 <h4 id="it-holding-vadesiz">Conto liquido</h4>
-<p>Un saldo che imposti tu — un conto corrente o simile, o qualsiasi asset assimilabile a liquidità. È anche dove i conti vincolati versano i loro pagamenti.</p>
+<p>Un saldo che imposti tu — un conto corrente o qualsiasi bene simile a liquidità. È anche dove vengono liquidati i conti vincolati.</p>
+<p class="how">Come fare</p>
+<ol><li>In Risparmi, tocca Aggiungi bene e scegli Conto liquido.</li><li>Dagli un nome e la sua valuta.</li><li>Inserisci il saldo attuale.</li><li>Salva — aggiorna tu stesso il saldo ogni volta che cambia.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Usa qui una valuta straniera per tenere, per esempio, un conto in USD — viene rivalutato nella tua valuta predefinita al cambio giornaliero.</p>
 <h4 id="it-vadeli">Conto vincolato</h4>
-<p>Un conto vincolato. Inserisci l’importo, il tasso (lordo o netto), la durata e la ritenuta, e il valore a scadenza viene calcolato. Può rinnovarsi automaticamente, pagare gli interessi a ogni ciclo o essere chiuso in anticipo.</p>
+<p>Un deposito a scadenza fissa — GelirGider calcola il valore a scadenza dal tuo tasso e dalla durata, inclusa la ritenuta fiscale.</p>
+<p class="how">Come fare</p>
+<ol><li>In Risparmi, tocca Aggiungi bene e scegli Conto vincolato.</li><li>Inserisci il capitale, il tasso di interesse (lordo o netto), la durata in giorni e la ritenuta.</li><li>GelirGider anteprima l’interesse e il valore a scadenza mentre digiti.</li><li>Scegli se si rinnova automaticamente, paga gli interessi a ogni ciclo o lo chiuderai tu — poi Salva.</li></ol>
+<p class="tip"><b>Suggerimento:</b> A scadenza puoi trasferire il ricavato su un Conto liquido, oppure lasciare che si rinnovi per un altro periodo.</p>
 <h4 id="it-holding-metal">Metalli preziosi</h4>
-<p>Oro, argento, platino o palladio a peso, con prezzo in tempo reale per oncia troy (gold-api.com) nella tua valuta predefinita.</p>
+<p>Oro, argento, platino o palladio tenuti a peso, con prezzo in tempo reale per oncia troy.</p>
+<p class="how">Come fare</p>
+<ol><li>In Risparmi, tocca Aggiungi bene e scegli Metalli preziosi.</li><li>Scegli il metallo e l’unità (grammi o oncia troy).</li><li>Inserisci quanto ne detieni.</li><li>Salva — il suo valore si aggiorna dai prezzi in tempo reale (gold-api.com) nella tua valuta predefinita.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Per impostazione predefinita sono raggruppati come un portafoglio — tocca la riga Metalli preziosi per vedere ogni posizione.</p>
 <h4 id="it-holding-crypto">Cripto</h4>
-<p>Un asset in criptovaluta, con prezzo in tempo reale (CoinGecko) e convertito nella tua valuta predefinita.</p>
+<p>Un bene in criptovaluta, con prezzo in tempo reale e convertito nella tua valuta predefinita.</p>
+<p class="how">Come fare</p>
+<ol><li>In Risparmi, tocca Aggiungi bene e scegli Cripto.</li><li>Cerca e scegli la moneta.</li><li>Inserisci la quantità (fino a 8 decimali).</li><li>Salva — valore = quantità × prezzo in tempo reale (CoinGecko).</li></ol>
+<p class="tip"><b>Suggerimento:</b> I prezzi si aggiornano solo con un trascinamento manuale per restare entro i limiti dei dati gratuiti — l’ultimo prezzo è memorizzato per l’uso offline.</p>
 <h4 id="it-holding-stock">Azioni</h4>
-<p>Una posizione azionaria, con prezzo da quotazioni ritardate (Yahoo Finance) nella valuta di quotazione e convertito nella tua valuta predefinita.</p>
-<h4 id="it-holding-manual">Asset manuale</h4>
-<p>Questo valore lo inserisci tu e lo aggiorni quando cambia — per questo tipo non c'è prezzo in tempo reale.</p>
-<h4 id="it-birikim-transfer">Denaro da/verso i risparmi</h4>
-<p>Sposta denaro tra il tuo libretto Contanti e un asset tramite una voce Contanti corrispondente — si applica solo quando lo confermi (spunti), e togliendo la spunta l’operazione si annulla.</p>
+<p>Una posizione azionaria, prezzata con quotazioni differite nella sua valuta nativa e convertita nella tua valuta predefinita.</p>
+<p class="how">Come fare</p>
+<ol><li>In Risparmi, tocca Aggiungi bene e scegli Azioni.</li><li>Cerca il simbolo (le borse globali sono supportate) e sceglilo.</li><li>Inserisci il numero di azioni.</li><li>Salva — il valore proviene da Yahoo Finance (≈15 min di ritardo), convertito nella tua valuta predefinita.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Se una quotazione non è mai disponibile, viene usato il prezzo unitario che hai impostato a mano, così la posizione non mostra mai zero.</p>
+<h4 id="it-holding-manual">Beni manuali</h4>
+<p>Tipi senza prezzo in tempo reale — fondi, obbligazioni, immobili, crediti, oggetti di valore o qualsiasi altra cosa — di cui imposti il valore tu.</p>
+<p class="how">Come fare</p>
+<ol><li>In Risparmi, tocca Aggiungi bene e scegli il tipo (es. Fondi, Immobili).</li><li>Dagli un nome e inserisci il suo valore attuale.</li><li>Salva.</li><li>Aggiorna tu stesso il valore ogni volta che cambia.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Perfetto per un’auto, un immobile o soldi che qualcuno ti deve — qualsiasi cosa tu voglia conteggiare nel patrimonio netto.</p>
+<h4 id="it-birikim-transfer">Denaro da e verso i risparmi</h4>
+<p>Sposta denaro tra il tuo libretto Contanti e un bene dei Risparmi, con una voce Contanti corrispondente così il tuo flusso di cassa resta corretto.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri un bene in Risparmi e scegli di aggiungervi (versare) o prelevare.</li><li>Inserisci l’importo e la data.</li><li>Viene creata una voce corrispondente nel tuo libretto Contanti.</li><li>Ha effetto solo quando la confermi (la spunti) — togliendo la spunta si annulla l’intero trasferimento.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Sul lato Contanti puoi correggere l’importo convertito per i beni in valuta straniera, così da corrispondere esattamente a quanto ha mosso la tua banca.</p>
 <h3 class="group">Notifiche e impostazioni</h3>
 <h4 id="it-daily-summary">Riepilogo giornaliero</h4>
-<p>Una notifica al giorno, all’ora che scegli, che riassume ciò che richiede attenzione: scaduto, in scadenza oggi e voci con la finestra di promemoria aperta. I giorni vuoti vengono saltati ed è nella lingua dell’app.</p>
-<h4 id="it-data-transfer">Trasferimento dati / Pulizia</h4>
-<p>Esporta un backup completo o importane uno (Sostituisci o Unisci). Su un dispositivo con accesso a iCloud, le modifiche si sincronizzano con gli altri dispositivi; un simulatore o un dispositivo disconnesso resta locale. Svuota cancella tutto.</p>
+<p>Una notifica al giorno, all’ora che scegli tu, che riassume ciò a cui prestare attenzione.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri Impostazioni → Notifiche → Riepilogo giornaliero.</li><li>Attivalo e scegli l’ora del giorno.</li><li>Ogni giorno elenca cosa è scaduto, cosa scade oggi e le voci il cui promemoria è aperto.</li><li>I giorni senza nulla da segnalare vengono saltati.</li></ol>
+<p class="tip"><b>Suggerimento:</b> È scritto nella lingua dell’app e non notifica mai in un giorno vuoto, così resta utile.</p>
+<h4 id="it-data-transfer">Trasferimento dati / pulizia</h4>
+<p>Esporta un backup completo di tutto, importalo su un altro dispositivo o azzera l’app.</p>
+<p class="how">Come fare</p>
+<ol><li>Apri Impostazioni → Trasferimento dati / pulizia.</li><li>Tocca Esporta (backup completo) per salvare un backup JSON completo (Premium) dove vuoi — dispositivo, una cartella o iCloud Drive.</li><li>Su un altro dispositivo, tocca Importa e scegli Sostituisci gli esistenti o Unisci agli esistenti.</li><li>Cancella tutti i dati azzera tutto e riporta l’app allo stato iniziale.</li></ol>
+<p class="tip"><b>Suggerimento:</b> Su un dispositivo collegato a iCloud, le modifiche si sincronizzano anche con gli altri tuoi dispositivi; un dispositivo scollegato resta locale.</p>
 </section>
 
 <section id="fr" class="lang-section">
 <h2>GelirGider · Guide d'utilisation</h2>
-<p class="lead">Tout ce que GelirGider peut faire, fonction par fonction. Touche le ⓘ à côté d'une fonction dans l'app pour aller directement à sa section ici.</p>
-<div class="toc"><ul><li><a href="#fr-cash-ledger">Carnet Espèces</a></li><li><a href="#fr-credit-card">Carnet Carte de Crédit</a></li><li><a href="#fr-new-entry">Ajouter une entrée</a></li><li><a href="#fr-add-to-cash">Ajouter aux Espèces</a></li><li><a href="#fr-recurring">Entrée récurrente</a></li><li><a href="#fr-varying-amounts">Montants variables</a></li><li><a href="#fr-installments">Achat échelonné</a></li><li><a href="#fr-deferred-payment">Paiement différé</a></li><li><a href="#fr-foreign-currency">Conversion de devise</a></li><li><a href="#fr-summary">Résumé</a></li><li><a href="#fr-budget">Budget</a></li><li><a href="#fr-net-worth">Épargne</a></li><li><a href="#fr-holding-vadesiz">Compte courant</a></li><li><a href="#fr-vadeli">Compte à terme</a></li><li><a href="#fr-holding-metal">Métaux précieux</a></li><li><a href="#fr-holding-crypto">Crypto</a></li><li><a href="#fr-holding-stock">Actions</a></li><li><a href="#fr-holding-manual">Actif manuel</a></li><li><a href="#fr-birikim-transfer">Argent vers/depuis l'épargne</a></li><li><a href="#fr-daily-summary">Résumé quotidien</a></li><li><a href="#fr-data-transfer">Transfert / nettoyage des données</a></li></ul></div>
-<h3 class="group">Akış (Trésorerie)</h3>
+<p class="lead">Comment utiliser chaque partie de GelirGider, étape par étape. Dans l'app, touche le ⓘ à côté d'une fonction pour aller directement à sa section.</p>
+<div class="toc"><ul><li><a href="#fr-cash-ledger">Carnet Espèces</a></li><li><a href="#fr-credit-card">Carnet Carte de Crédit</a></li><li><a href="#fr-new-entry">Ajouter une entrée</a></li><li><a href="#fr-add-to-cash">Ajouter aux Espèces</a></li><li><a href="#fr-recurring">Série récurrente</a></li><li><a href="#fr-varying-amounts">Montants variables</a></li><li><a href="#fr-installments">Versements</a></li><li><a href="#fr-deferred-payment">Paiements différés</a></li><li><a href="#fr-foreign-currency">Devise étrangère (Premium)</a></li><li><a href="#fr-summary">Résumé</a></li><li><a href="#fr-budget">Budget (Premium)</a></li><li><a href="#fr-net-worth">Épargne et patrimoine net (Premium)</a></li><li><a href="#fr-holding-vadesiz">Compte courant</a></li><li><a href="#fr-vadeli">Compte à terme</a></li><li><a href="#fr-holding-metal">Métaux précieux</a></li><li><a href="#fr-holding-crypto">Crypto</a></li><li><a href="#fr-holding-stock">Actions</a></li><li><a href="#fr-holding-manual">Actifs manuels</a></li><li><a href="#fr-birikim-transfer">Argent vers et depuis l'épargne</a></li><li><a href="#fr-daily-summary">Résumé quotidien</a></li><li><a href="#fr-data-transfer">Transfert de données / Nettoyage</a></li></ul></div>
+<h3 class="group">Trésorerie</h3>
 <h4 id="fr-cash-ledger">Carnet Espèces</h4>
-<p>Ton compte espèces principal. Les pastilles du bandeau filtrent la période ; Résumé réduit tout à une carte par entrée. Ajoute d'autres carnets avec + — 1 gratuit, illimité avec Premium.</p>
+<p>Espèces est ton compte principal de liquidités — le total courant de l'argent dont tu disposes réellement. C'est l'un des deux carnets avec lesquels GelirGider te démarre (l'autre étant Carte de Crédit).</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre l'onglet Trésorerie et touche Espèces en haut de la liste des carnets.</li><li>Le grand nombre est ton solde actuel. Les pastilles en dessous (Ce mois-ci, 30 jours, 3 mois) changent la distance que la liste projette vers l'avenir ; Résumé réduit tout à une seule carte par entrée.</li><li>Touche + (en haut à droite) pour ajouter un revenu ou une dépense.</li><li>Pour créer un autre carnet, touche + au-dessus de la liste des carnets. La version gratuite inclut un carnet supplémentaire ; Premium est illimité.</li></ol>
+<p class="tip"><b>Astuce:</b> Seules les entrées que tu as cochées comptent dans le solde — les entrées futures non cochées apparaissent comme à venir, pas encore dépensées.</p>
 <h4 id="fr-credit-card">Carnet Carte de Crédit</h4>
-<p>Enregistre ici tes achats par carte. À la clôture d'un cycle de relevé, son total apparaît comme un seul « Paiement de Carte de Crédit » dans ton carnet Espèces, dû à la date de paiement — coche-le quand tu paies.</p>
+<p>Carte de Crédit suit tes dépenses par carte, puis regroupe chaque relevé en un seul paiement dans ton carnet Espèces — comme fonctionne une vraie carte.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre le carnet Carte de Crédit depuis l'onglet Trésorerie.</li><li>Touche + pour enregistrer un achat (nom, montant, date). Tu peux découper un gros achat en versements sous Avancé.</li><li>Quand une période de relevé se clôt, GelirGider crée un seul « Paiement de carte de crédit » dans ton carnet Espèces, daté au jour du paiement.</li><li>Coche ce paiement dans Espèces quand tu règles réellement la carte.</li></ol>
+<p class="tip"><b>Astuce:</b> Règle tes jours de relevé et de paiement à la création du carnet pour que les cycles correspondent à ta vraie carte.</p>
 <h4 id="fr-new-entry">Ajouter une entrée</h4>
-<p>Saisis un nom, un montant et une date ; la case à cocher la marque comme payée ou reçue. Sous Avancé, tu peux ajouter une catégorie, la rendre récurrente, différer la date de règlement, utiliser une devise étrangère, ou définir un rappel.</p>
+<p>Chaque revenu et chaque dépense est une entrée à l'intérieur d'un carnet.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre un carnet et touche + (en haut à droite).</li><li>Choisis Revenu ou Dépense.</li><li>Saisis un nom et un montant, puis règle la date.</li><li>Laisse la case décochée si l'entrée n'a pas encore eu lieu ; coche-la une fois payée ou reçue.</li><li>Ouvre Avancé pour ajouter une catégorie, la rendre récurrente, différer la date de mouvement, utiliser une devise étrangère ou définir un rappel.</li><li>Touche Enregistrer.</li></ol>
+<p class="tip"><b>Astuce:</b> La case est le cœur de l'appli — c'est elle qui transforme un plan en un vrai changement de solde.</p>
 <h4 id="fr-add-to-cash">Ajouter aux Espèces</h4>
-<p>Quand c'est activé, les entrées de ce carnet comptent aussi dans ton solde Espèces et ton budget — pratique pour les comptes que tu veux voir reflétés dans ta trésorerie globale. Désactivé, le carnet reste séparé.</p>
-<h4 id="fr-recurring">Entrée récurrente</h4>
-<p>Crée une entrée par mois le jour choisi, du début à la fin. Chacune a sa case. Une occurrence quitte la série dès que tu la coches ou que sa date passe — c'est alors une entrée autonome. Modifier la série ne change que les occurrences à venir non cochées.</p>
+<p>Un interrupteur sur un carnet personnalisé qui intègre ses entrées à ton solde Espèces global et à ton budget — utile pour un compte que tu veux voir reflété dans ta trésorerie totale.</p>
+<p class="how">Comment faire</p>
+<ol><li>Crée ou modifie un carnet personnalisé (+ au-dessus de la liste des carnets, ou modifie un carnet existant).</li><li>Active « Ajouter aux Espèces ».</li><li>Désormais, les revenus et dépenses de ce carnet apparaissent aussi dans Espèces et dans ton Budget mensuel.</li><li>Désactive-le pour garder le carnet séparé, avec son seul solde propre.</li></ol>
+<p class="tip"><b>Astuce:</b> Laisse-le désactivé pour ce que tu suis mais ne veux pas mêler à ta trésorerie disponible (par ex. une cagnotte de colocation).</p>
+<h4 id="fr-recurring">Série récurrente</h4>
+<p>Transforme une entrée en série mensuelle — loyer, salaire, abonnements — pour la saisir une fois et qu'elle se répète.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ajoute une entrée, puis ouvre Avancé et active Répéter.</li><li>Choisis le jour de répétition ainsi que les dates de Début et de Fin.</li><li>Enregistre — GelirGider crée une entrée par mois, chacune avec sa propre case.</li><li>Une modification ultérieure te demande si tu veux changer Cette entrée seulement, Cette entrée et les suivantes, ou Toute la série.</li></ol>
+<p class="tip"><b>Astuce:</b> Une entrée quitte la série dès que tu la coches ou que sa date est passée — après quoi c'est une entrée indépendante que tu peux modifier seule.</p>
 <h4 id="fr-varying-amounts">Montants variables</h4>
-<p>Saisis un montant distinct pour chaque mois — utile en cas d'inflation, de factures saisonnières (ex. gaz) ou d'augmentations. Recule la date de fin pour ajouter des mois (en copiant le dernier montant), avance-la pour en retirer. Au moins 2 mois requis.</p>
-<h4 id="fr-installments">Achat échelonné</h4>
-<p>Répartit le total en prélèvements mensuels égaux (le dernier absorbe l'arrondi). Chacun apparaît en « n/m » et figure sur le relevé de son mois. Un versement facturé est figé ; modifier ne change que le montant des versements à venir. Pour changer le nombre ou les dates, supprime et recrée.</p>
-<h4 id="fr-deferred-payment">Paiement différé</h4>
-<p>L'entrée apparaît à la date ci-dessus comme rappel, mais l'argent bouge — et le solde change — à la date de règlement que tu choisis.</p>
-<h4 id="fr-foreign-currency">Conversion de devise</h4>
-<p>Les montants en devise étrangère non cochés sont convertis dans la devise de l'app au dernier taux quotidien, ils évoluent donc avec le temps. Modifier le montant du haut à la main le fige et supprime le lien avec la devise étrangère — il devient un simple montant dans la devise de l'app. Cocher l'entrée verrouille sa valeur.</p>
+<p>Une série récurrente où chaque mois peut avoir un montant différent — une facture de charges qui varie, par exemple.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ajoute une entrée récurrente (Avancé → Répéter).</li><li>Active Montants variables.</li><li>Un tableau mois par mois apparaît — saisis le montant de chaque mois.</li><li>Enregistre ; chaque mois conserve sa propre valeur.</li></ol>
+<p class="tip"><b>Astuce:</b> Laisse un mois vide pour réutiliser le montant précédent, ou remplis-les tous pour un contrôle total.</p>
+<h4 id="fr-installments">Versements</h4>
+<p>Découpe un achat par carte de crédit en versements mensuels égaux, affichés sous la forme n/m.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans le carnet Carte de Crédit, ajoute un achat et saisis le TOTAL comme montant.</li><li>Ouvre Avancé et active Versements.</li><li>Règle le nombre de versements et le mois de départ.</li><li>Enregistre — chaque versement tombe sur le relevé de son propre mois, étiqueté 1/3, 2/3, …</li></ol>
+<p class="tip"><b>Astuce:</b> Un versement déjà facturé est verrouillé ; la modification ne change que le montant des versements pas encore facturés.</p>
+<h4 id="fr-deferred-payment">Paiements différés</h4>
+<p>Pour quand la date d'échéance et le jour où l'argent sort réellement diffèrent — un impôt dont tu es prévenu maintenant mais que tu paies plus tard, ou un prélèvement automatique.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ajoute l'entrée et ouvre Avancé.</li><li>Active Paiement différé.</li><li>Règle la date de règlement (quand l'argent bouge réellement) — la date d'échéance reste la date propre de l'entrée.</li><li>Enregistre — l'entrée pèse sur ton solde à la date de règlement, tandis qu'un rappel gris de la date d'échéance s'affiche dans Aujourd’hui et dans le budget.</li></ol>
+<p class="tip"><b>Astuce:</b> Utilise-le chaque fois que « je le dois maintenant mais je paie le mois prochain » — ça garde ta projection de trésorerie honnête.</p>
+<h4 id="fr-foreign-currency">Devise étrangère (Premium)</h4>
+<p>Saisis un montant dans une autre devise et laisse GelirGider le convertir dans ta devise par défaut au taux du jour.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ajoute une entrée et ouvre Avancé.</li><li>Touche Devise et choisis la devise étrangère.</li><li>Saisis le montant dans cette devise — la valeur convertie remplit le montant automatiquement.</li><li>Enregistre. Tant que l'entrée est décochée, sa valeur continue de s'actualiser au taux du jour ; la cocher fige le montant.</li></ol>
+<p class="tip"><b>Astuce:</b> Seules les devises disposant d'un taux en direct sont sélectionnables. Modifier le montant à la main le fige et abandonne la conversion.</p>
 <h4 id="fr-summary">Résumé</h4>
-<p>Une carte par entrée distincte plutôt que chaque occurrence datée — toute une série récurrente apparaît sur une seule ligne. Bascule entre En cours/Passé pour les actives et les terminées.</p>
-<h3 class="group">Bütçe (Budget)</h3>
-<h4 id="fr-budget">Budget</h4>
-<p>Une vue prévisionnelle mensuelle de la trésorerie — revenus, dépenses et solde de fin projeté, avec une alerte en rouge si le solde passe sous zéro. Trie avec ⇅, ouvre le graphique du jour avec ▥, saute au mois en cours, et + ajoute une entrée Espèces au mois affiché.</p>
-<h3 class="group">Birikim (Épargne)</h3>
-<h4 id="fr-net-worth">Épargne</h4>
-<p>Ta valeur nette totale — liquidités, devises, or, crypto, actions et comptes à terme, le tout dans ta devise par défaut. Les devises, métaux, crypto et actions sont évalués en direct ; le reste, tu le définis toi-même. Ajoute des actifs avec « Ajouter un actif ».</p>
+<p>Une vue consolidée d'un carnet — une seule carte par entrée distincte au lieu de chaque répétition datée.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre un carnet et touche la pastille Résumé dans l'en-tête.</li><li>Une série récurrente s'affiche en une seule ligne, pas une ligne par mois.</li><li>Utilise le sélecteur En cours / Passé pour basculer entre les entrées actives et terminées.</li><li>Touche n'importe quelle carte pour l'ouvrir et la modifier.</li></ol>
+<p class="tip"><b>Astuce:</b> Résumé est le moyen le plus rapide de passer en revue « qu'est-ce que j'ai vraiment en cours » sans faire défiler chaque occurrence.</p>
+<h3 class="group">Budget</h3>
+<h4 id="fr-budget">Budget (Premium)</h4>
+<p>Une vue prospective de la trésorerie mensuelle : revenus, dépenses, et où atterrit ta trésorerie à la fin de chaque mois.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre l'onglet Budget. La liste des mois est à gauche (ou les flèches ‹ › sur iPhone).</li><li>Chaque mois affiche Report + revenus − dépenses = solde de fin projeté.</li><li>Si ta trésorerie est projetée dans le négatif, un avertissement de date en rouge apparaît (aussi dans Aujourd’hui).</li><li>Utilise les icônes de l'en-tête pour trier (⇅), ouvrir le graphique journalier (▥), aller à aujourd'hui, ou ajouter une entrée Espèces (+).</li></ol>
+<p class="tip"><b>Astuce:</b> La date rouge te dit le jour exact où tu serais à court — déplace une dépense ou ajoute un revenu avant cette date pour la lever.</p>
+<h3 class="group">Épargne</h3>
+<h4 id="fr-net-worth">Épargne et patrimoine net (Premium)</h4>
+<p>Épargne suit tout ce que tu possèdes — liquidités, devises étrangères, or, crypto, actions et comptes à terme — en un seul chiffre de patrimoine net.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre l'onglet Épargne. Le nombre en haut est ton patrimoine net total dans ta devise par défaut.</li><li>Touche « Ajouter un actif » pour ajouter un actif, puis choisis son type.</li><li>Les types à cotation automatique (devise étrangère, or, crypto, actions) se mettent à jour depuis les prix en direct ; le reste, tu le définis toi-même.</li><li>Tire pour actualiser, ou touche le bouton d'actualisation, pour tout revaloriser.</li></ol>
+<p class="tip"><b>Astuce:</b> Touche le ⓘ à côté de chaque type dans la liste Ajouter un actif pour voir exactement comment ce type est valorisé.</p>
 <h4 id="fr-holding-vadesiz">Compte courant</h4>
-<p>Un solde que tu définis toi-même — un compte courant ou tout actif assimilé à des liquidités. C'est aussi là que les comptes à terme versent leurs fonds.</p>
+<p>Un solde que tu définis toi-même — un compte de type courant/chèques, ou tout actif proche des liquidités. C'est aussi là que les comptes à terme versent leurs intérêts.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans Épargne, touche Ajouter un actif et choisis Compte courant.</li><li>Donne-lui un nom et sa devise.</li><li>Saisis le solde actuel.</li><li>Enregistre — mets à jour le solde toi-même chaque fois qu'il change.</li></ol>
+<p class="tip"><b>Astuce:</b> Utilise ici une devise étrangère pour détenir, par exemple, un compte en USD — il est revalorisé dans ta devise par défaut au taux du jour.</p>
 <h4 id="fr-vadeli">Compte à terme</h4>
-<p>Un compte à terme. Saisis le montant, le taux (brut ou net), la durée et la retenue, et la valeur à l'échéance est calculée. Il peut se renouveler automatiquement, verser les intérêts à chaque cycle, ou être clôturé par anticipation.</p>
+<p>Un dépôt à terme fixe — GelirGider calcule la valeur à l'échéance à partir de ton taux et de ta durée, retenue à la source comprise.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans Épargne, touche Ajouter un actif et choisis Compte à terme.</li><li>Saisis le capital, le taux d'intérêt (brut ou net), la durée en jours et la retenue à la source.</li><li>GelirGider prévisualise les intérêts et la valeur à l'échéance à mesure que tu saisis.</li><li>Choisis s'il se renouvelle automatiquement, verse les intérêts à chaque cycle, ou si tu le clôtureras toi-même — puis Enregistre.</li></ol>
+<p class="tip"><b>Astuce:</b> À l'échéance, tu peux transférer le produit vers un Compte courant, ou le laisser se renouveler pour une nouvelle période.</p>
 <h4 id="fr-holding-metal">Métaux précieux</h4>
-<p>Or, argent, platine ou palladium au poids, évalués en direct par once troy (gold-api.com) dans ta devise par défaut.</p>
+<p>Or, argent, platine ou palladium détenus au poids, cotés en direct par once troy.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans Épargne, touche Ajouter un actif et choisis Métaux précieux.</li><li>Choisis le métal et l'unité (grammes ou once troy).</li><li>Saisis la quantité que tu détiens.</li><li>Enregistre — sa valeur se met à jour depuis les prix en direct (gold-api.com) dans ta devise par défaut.</li></ol>
+<p class="tip"><b>Astuce:</b> Regroupés en portefeuille par défaut — touche la ligne Métaux précieux pour voir chaque position.</p>
 <h4 id="fr-holding-crypto">Crypto</h4>
-<p>Un actif en cryptomonnaie, évalué en direct (CoinGecko) et converti dans ta devise par défaut.</p>
+<p>Un avoir en cryptomonnaie, coté en direct et converti dans ta devise par défaut.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans Épargne, touche Ajouter un actif et choisis Crypto.</li><li>Recherche et choisis la pièce.</li><li>Saisis la quantité (jusqu'à 8 décimales).</li><li>Enregistre — valeur = quantité × prix en direct (CoinGecko).</li></ol>
+<p class="tip"><b>Astuce:</b> Les prix s'actualisent lors d'un tirer-pour-actualiser manuel afin de rester dans les limites des données gratuites — le dernier prix est mis en cache pour le hors ligne.</p>
 <h4 id="fr-holding-stock">Actions</h4>
-<p>Une position en actions, évaluée à partir de cours différés (Yahoo Finance) dans la devise de cotation et convertie dans ta devise par défaut.</p>
-<h4 id="fr-holding-manual">Actif manuel</h4>
-<p>Tu saisis cette valeur toi-même et la mets à jour quand elle change — il n'y a pas d'évaluation en direct pour ce type.</p>
-<h4 id="fr-birikim-transfer">Argent vers/depuis l'épargne</h4>
-<p>Déplace de l'argent entre ton carnet Espèces et un actif via une entrée Espèces correspondante — cela ne s'applique qu'une fois que tu l'as confirmé (coché), et le décocher annule l'opération.</p>
+<p>Une position en actions, cotée à partir de cours différés dans sa devise d'origine et convertie dans ta devise par défaut.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans Épargne, touche Ajouter un actif et choisis Actions.</li><li>Recherche le symbole (les bourses mondiales sont prises en charge) et choisis-le.</li><li>Saisis le nombre d'actions.</li><li>Enregistre — la valeur provient de Yahoo Finance (≈15 min de décalage), croisée avec ta devise par défaut.</li></ol>
+<p class="tip"><b>Astuce:</b> Si un cours est indisponible, ton prix unitaire défini à la main est utilisé, de sorte que la position n'affiche jamais zéro.</p>
+<h4 id="fr-holding-manual">Actifs manuels</h4>
+<p>Les types sans prix en direct — fonds, obligations, immobilier, créances, objets de valeur ou autre — dont tu définis la valeur toi-même.</p>
+<p class="how">Comment faire</p>
+<ol><li>Dans Épargne, touche Ajouter un actif et choisis le type (par ex. Fonds, Immobilier).</li><li>Nomme-le et saisis sa valeur actuelle.</li><li>Enregistre.</li><li>Mets à jour la valeur toi-même chaque fois qu'elle change.</li></ol>
+<p class="tip"><b>Astuce:</b> Parfait pour une voiture, un bien immobilier ou de l'argent qu'on te doit — tout ce que tu veux compter dans ton patrimoine net.</p>
+<h4 id="fr-birikim-transfer">Argent vers et depuis l'épargne</h4>
+<p>Déplace des liquidités entre ton carnet Espèces et un actif d'Épargne, avec une entrée Espèces correspondante pour que ta trésorerie reste juste.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre un actif dans Épargne et choisis d'y ajouter (dépôt) ou d'en retirer.</li><li>Saisis le montant et la date.</li><li>Une entrée correspondante est créée dans ton carnet Espèces.</li><li>Elle ne prend effet qu'une fois que tu la confirmes (la coches) — la décocher annule tout le transfert.</li></ol>
+<p class="tip"><b>Astuce:</b> Côté Espèces, tu peux remplacer le montant converti pour les actifs en devise étrangère, afin de correspondre exactement à ce que ta banque a déplacé.</p>
 <h3 class="group">Notifications et réglages</h3>
 <h4 id="fr-daily-summary">Résumé quotidien</h4>
-<p>Une notification par jour, à l'heure que tu choisis, récapitulant ce qui demande ton attention : en retard, dû aujourd'hui, et les éléments dont la fenêtre de rappel est ouverte. Les jours vides sont ignorés, et elle est dans la langue de l'app.</p>
-<h4 id="fr-data-transfer">Transfert / nettoyage des données</h4>
-<p>Exporte une sauvegarde complète ou importes-en une (Remplacer ou Fusionner). Sur un appareil connecté à iCloud, les changements se synchronisent avec tes autres appareils ; un simulateur ou un appareil déconnecté reste en local. Vider efface tout.</p>
+<p>Une notification par jour, à une heure que tu choisis, résumant ce qui demande ton attention.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre Réglages → Notifications → Résumé quotidien.</li><li>Active-le et choisis l'heure de la journée.</li><li>Chaque jour, il liste ce qui est en retard, ce qui est dû aujourd'hui, et tout élément dont la fenêtre de rappel est ouverte.</li><li>Les jours sans rien à signaler sont ignorés.</li></ol>
+<p class="tip"><b>Astuce:</b> Il est rédigé dans la langue de l'appli et ne notifie jamais un jour vide, pour rester utile.</p>
+<h4 id="fr-data-transfer">Transfert de données / Nettoyage</h4>
+<p>Exporte une sauvegarde complète de tout, importe-la sur un autre appareil, ou réinitialise l'appli.</p>
+<p class="how">Comment faire</p>
+<ol><li>Ouvre Réglages → Transfert de données / Nettoyage.</li><li>Touche Exporter (sauvegarde complète) pour enregistrer une sauvegarde JSON complète (Premium) n'importe où — appareil, dossier ou iCloud Drive.</li><li>Sur un autre appareil, touche Importer et choisis Remplacer l'existant ou Fusionner avec l'existant.</li><li>Effacer toutes les données efface tout et ramène l'appli à son état initial.</li></ol>
+<p class="tip"><b>Astuce:</b> Sur un appareil connecté à iCloud, les modifications se synchronisent aussi avec tes autres appareils ; un appareil déconnecté reste local.</p>
 </section>
 </div>
 <footer>© NAE Dev · <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> · <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a></footer>
