@@ -15,232 +15,355 @@
   nav.lang{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:12px 24px;z-index:10;overflow-x:auto;white-space:nowrap}
   nav.lang a{color:var(--ink);text-decoration:none;padding:6px 10px;margin-right:4px;border-radius:6px;font-size:14px}
   nav.lang a:hover{background:var(--bg)}
-  section.lang-section{padding:24px 0;border-bottom:1px solid var(--border);scroll-margin-top:60px}
+  section.lang-section{padding:24px 0;border-bottom:1px solid var(--border)}
   h2{font-size:24px;font-weight:600;margin-top:0}
-  h3{font-size:19px;font-weight:600;margin:28px 0 6px;scroll-margin-top:64px}
-  p{margin:6px 0 12px}
-  a{color:var(--brand)}
-  .toc{background:var(--accent-bg);border:1px solid #c7e0fa;border-radius:10px;padding:16px 20px;margin:12px 0 28px}
+  .lead{color:var(--muted);margin:4px 0 8px}
+  h3.group{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:28px 0 4px;border-top:1px solid var(--border);padding-top:20px}
+  h4{font-size:18px;font-weight:600;margin:22px 0 4px;scroll-margin-top:64px}
+  p{margin:4px 0 12px}a{color:var(--brand)}
+  .toc{background:var(--accent-bg);border:1px solid #c7e0fa;border-radius:10px;padding:16px 20px;margin:12px 0 24px}
   .toc ul{list-style:none;padding-left:0;columns:2;column-gap:24px;margin:0}
   .toc li{margin:4px 0;break-inside:avoid}.toc a{text-decoration:none}
   @media(max-width:600px){.toc ul{columns:1}}
-  .placeholder{background:#fff8e1;border:1px dashed #f0c674;border-radius:8px;padding:10px 12px;color:#7a6500;font-size:14px;margin:8px 0 20px}
   footer{text-align:center;padding:32px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
-<header class="page-head"><h1>GelirGider · User Guide</h1><div class="updated">Mock — updated 5 Jul 2026</div></header>
+<header class="page-head"><h1>GelirGider · User Guide</h1></header>
 <nav class="lang"><a href="#en">English</a><a href="#tr">Türkçe</a><a href="#de">Deutsch</a><a href="#es">Español</a><a href="#it">Italiano</a><a href="#fr">Français</a></nav>
 <div class="wrap">
 
-<!-- ===== EN ===== -->
 <section id="en" class="lang-section">
 <h2>GelirGider · User Guide</h2>
-<div class="placeholder">Placeholder content — final copy is written during the documentation phase.</div>
-<div class="toc"><ul><li><a href="#en-deferred-payment">Deferred payments</a></li><li><a href="#en-recurring">Recurring series</a></li><li><a href="#en-varying-amounts">Varying amounts</a></li><li><a href="#en-installments">Installments</a></li><li><a href="#en-foreign-currency">Foreign currency &amp; FX</a></li><li><a href="#en-credit-card">Credit-card cycles &amp; statements</a></li><li><a href="#en-red-date">The red-date alert</a></li><li><a href="#en-carry-over">Carry-over (Devreden)</a></li><li><a href="#en-net-worth">Net worth</a></li><li><a href="#en-vadeli">Term deposits (Vadeli)</a></li><li><a href="#en-birikim-transfer">Budget ↔ Savings transfers</a></li><li><a href="#en-summary">The Summary (Özet) view</a></li></ul></div>
-<h3 id="en-deferred-payment">Deferred payments</h3>
-<p>Record a payment whose due date differs from the actual cash date — it reminds you on the due date but only moves your balance on the settlement date.</p>
-<h3 id="en-recurring">Recurring series</h3>
-<p>Turn an entry into a monthly series; edits ask whether to change just this one, this and future, or the entire series.</p>
-<h3 id="en-varying-amounts">Varying amounts</h3>
-<p>A recurring series where each month can carry its own amount, entered in the per-month table.</p>
-<h3 id="en-installments">Installments</h3>
-<p>Split a credit-card purchase into equal monthly installments shown as n/m.</p>
-<h3 id="en-foreign-currency">Foreign currency &amp; FX</h3>
-<p>Enter an amount in another currency; it converts to your default currency at the daily rate and revalues while unchecked. (Premium)</p>
-<h3 id="en-credit-card">Credit-card cycles &amp; statements</h3>
-<p>Card purchases roll into a cycle; when it closes it becomes one “Credit Card Payment” in your Cash ledger, due at the payment date.</p>
-<h3 id="en-red-date">The red-date alert</h3>
-<p>Budget flags the first day your projected cash goes negative so you can act before it happens.</p>
-<h3 id="en-carry-over">Carry-over (Devreden)</h3>
-<p>Each month starts with the previous month's ending balance, so Carry-over + income − expense = end balance.</p>
-<h3 id="en-net-worth">Net worth</h3>
-<p>Savings totals your holdings — cash, FX, metals, crypto, stocks and deposits — in your default currency. (Premium)</p>
-<h3 id="en-vadeli">Term deposits (Vadeli)</h3>
-<p>Track a term deposit with gross/net rate, withholding tax, auto-renew and per-cycle payout. (Premium)</p>
-<h3 id="en-birikim-transfer">Budget ↔ Savings transfers</h3>
-<p>Move money between your Cash ledger and Savings; the transfer applies once you confirm it. (Premium)</p>
-<h3 id="en-summary">The Summary (Özet) view</h3>
-<p>The Summary view collapses your ledger to one card per distinct entry — a whole series shows as a single row. (Premium)</p>
+<p class="lead">Everything GelirGider can do, feature by feature. Tap the ⓘ next to a feature in the app to jump straight to its section here.</p>
+<div class="toc"><ul><li><a href="#en-cash-ledger">Cash ledger</a></li><li><a href="#en-credit-card">Credit Card ledger</a></li><li><a href="#en-new-entry">Adding an entry</a></li><li><a href="#en-add-to-cash">Add to Cash</a></li><li><a href="#en-recurring">Recurring Entry</a></li><li><a href="#en-varying-amounts">Varying Amounts</a></li><li><a href="#en-installments">Installment Purchase</a></li><li><a href="#en-deferred-payment">Deferred payment</a></li><li><a href="#en-foreign-currency">Currency Conversion</a></li><li><a href="#en-summary">Summary</a></li><li><a href="#en-budget">Budget</a></li><li><a href="#en-net-worth">Savings</a></li><li><a href="#en-holding-vadesiz">Demand account</a></li><li><a href="#en-vadeli">Term deposit</a></li><li><a href="#en-holding-metal">Precious metals</a></li><li><a href="#en-holding-crypto">Crypto</a></li><li><a href="#en-holding-stock">Stocks</a></li><li><a href="#en-holding-manual">Manual holding</a></li><li><a href="#en-birikim-transfer">Money to/from savings</a></li><li><a href="#en-daily-summary">Daily Summary</a></li><li><a href="#en-data-transfer">Data Transfer / Cleanup</a></li></ul></div>
+<h3 class="group">Akış (Cash Flow)</h3>
+<h4 id="en-cash-ledger">Cash ledger</h4>
+<p>Your main cash account. The strip pills filter the time window; Summary collapses everything to one card per entry. Add more ledgers with + — 1 free, unlimited with Premium.</p>
+<h4 id="en-credit-card">Credit Card ledger</h4>
+<p>Log card purchases here. When a statement cycle closes, its total appears as one “Card Payment” in your Cash ledger, due on the payment date — check it off when you pay.</p>
+<h4 id="en-new-entry">Adding an entry</h4>
+<p>Enter a name, amount, and date; the checkbox marks it paid or received. Under Advanced you can add a category, make it recurring, defer the settlement date, use a foreign currency, or set a reminder.</p>
+<h4 id="en-add-to-cash">Add to Cash</h4>
+<p>When on, this ledger's entries also count toward your Cash balance and budget — handy for accounts you want reflected in your overall cash. Off keeps the ledger separate.</p>
+<h4 id="en-recurring">Recurring Entry</h4>
+<p>Creates one entry per month on the chosen day, from start to end. Each has its own checkbox. An occurrence leaves the series once you check it or its date passes — then it's a normal standalone entry you can edit or delete on its own. Editing the series only changes upcoming, unchecked occurrences.</p>
+<h4 id="en-varying-amounts">Varying Amounts</h4>
+<p>Enter a separate amount for each month — handy for inflation, seasonal bills (e.g. natural gas), or raises/renewals. Move the end date later to add months (copying the last amount), or earlier to remove them. At least 2 months are required.</p>
+<h4 id="en-installments">Installment Purchase</h4>
+<p>Splits the total into equal monthly card charges (the last absorbs any rounding). Each appears as “n/m” and lands in its month's statement. Once an installment is billed it's fixed; editing changes only the amount of upcoming installments. To change the count or schedule, delete and recreate.</p>
+<h4 id="en-deferred-payment">Deferred payment</h4>
+<p>The entry appears on the date above as a reminder, but the cash moves — and the balance changes — on the settlement date you pick.</p>
+<h4 id="en-foreign-currency">Currency Conversion</h4>
+<p>Unchecked foreign-currency amounts are converted to your app currency at the latest daily rate, so they update over time. Editing the top amount by hand fixes it and removes the foreign-currency link — it becomes a plain amount in your app currency. Checking the entry locks its value.</p>
+<h4 id="en-summary">Summary</h4>
+<p>One card per distinct entry instead of every dated occurrence — a whole recurring series shows as a single row. Toggle Ongoing/Past for active vs. finished.</p>
+<h3 class="group">Bütçe (Budget)</h3>
+<h4 id="en-budget">Budget</h4>
+<p>A monthly forward cash-flow view — income, expenses and the projected end balance, with a red-date warning if cash goes negative. Sort with ⇅, open the day chart with ▥, jump to the current month, and + adds a Cash entry to the shown month.</p>
+<h3 class="group">Birikim (Savings)</h3>
+<h4 id="en-net-worth">Savings</h4>
+<p>Your total net worth — cash, foreign currency, gold, crypto, stocks and term deposits, all in your default currency. FX, metals, crypto and stocks are priced live; the rest you set yourself. Add holdings with “Add Holding”.</p>
+<h4 id="en-holding-vadesiz">Demand account</h4>
+<p>A balance you set yourself — a current/checking-style account or any cash-like holding. It's also where term deposits pay out.</p>
+<h4 id="en-vadeli">Term deposit</h4>
+<p>A fixed-term deposit. Enter the amount, rate (gross or net), term and withholding, and the maturity value is computed. It can auto-renew, pay interest out each cycle, or be closed early.</p>
+<h4 id="en-holding-metal">Precious metals</h4>
+<p>Gold, silver, platinum or palladium by weight, priced live per troy ounce (gold-api.com) in your default currency.</p>
+<h4 id="en-holding-crypto">Crypto</h4>
+<p>A cryptocurrency holding, priced live (CoinGecko) and converted to your default currency.</p>
+<h4 id="en-holding-stock">Stocks</h4>
+<p>A stock position, priced from delayed quotes (Yahoo Finance) in the listing currency and converted to your default currency.</p>
+<h4 id="en-holding-manual">Manual holding</h4>
+<p>You enter this value yourself and update it when it changes — there's no live pricing for this type.</p>
+<h4 id="en-birikim-transfer">Money to/from savings</h4>
+<p>Moves cash between your Cash ledger and a holding through a matching Cash entry — it only applies once you confirm (check) it, and unchecking reverses it.</p>
+<h3 class="group">Notifications &amp; Settings</h3>
+<h4 id="en-daily-summary">Daily Summary</h4>
+<p>One notification a day, at the time you pick, summarizing what needs attention: overdue, due today, and items whose reminder window is open. Empty days are skipped, and it's in the app's language.</p>
+<h4 id="en-data-transfer">Data Transfer / Cleanup</h4>
+<p>Export a full backup or import one (Replace or Merge). On a device signed into iCloud, changes sync to your other devices; a simulator or signed-out device stays local. Clear wipes everything.</p>
 </section>
 
-<!-- ===== TR ===== -->
 <section id="tr" class="lang-section">
 <h2>GelirGider · Kullanım Kılavuzu</h2>
-<div class="placeholder">Örnek içerik — nihai metin dokümantasyon aşamasında yazılacak.</div>
-<div class="toc"><ul><li><a href="#tr-deferred-payment">Ertelenmiş ödemeler</a></li><li><a href="#tr-recurring">Tekrarlayan seriler</a></li><li><a href="#tr-varying-amounts">Değişken tutarlar</a></li><li><a href="#tr-installments">Taksitler</a></li><li><a href="#tr-foreign-currency">Yabancı para ve kur</a></li><li><a href="#tr-credit-card">Kredi kartı dönemleri ve ekstreler</a></li><li><a href="#tr-red-date">Kırmızı gün uyarısı</a></li><li><a href="#tr-carry-over">Devreden</a></li><li><a href="#tr-net-worth">Net değer</a></li><li><a href="#tr-vadeli">Vadeli mevduat</a></li><li><a href="#tr-birikim-transfer">Bütçe ↔ Birikim aktarımları</a></li><li><a href="#tr-summary">Özet görünümü</a></li></ul></div>
-<h3 id="tr-deferred-payment">Ertelenmiş ödemeler</h3>
-<p>Vade tarihi ile nakit çıkış tarihi farklı olan ödemeler; vade tarihinde hatırlatır ama bakiyeyi yalnızca nakit çıkış tarihinde etkiler.</p>
-<h3 id="tr-recurring">Tekrarlayan seriler</h3>
-<p>Bir işlemi aylık seriye dönüştür; düzenlemede sadece bunu, bunu ve sonrakileri ya da tüm seriyi seçersin.</p>
-<h3 id="tr-varying-amounts">Değişken tutarlar</h3>
-<p>Her ayın kendi tutarını taşıyabildiği tekrarlayan seri; tutarları aylık tabloda girersin.</p>
-<h3 id="tr-installments">Taksitler</h3>
-<p>Kredi kartı harcamasını n/m olarak gösterilen eşit aylık taksitlere böl.</p>
-<h3 id="tr-foreign-currency">Yabancı para ve kur</h3>
-<p>Tutarı başka bir para biriminde gir; günlük kurla varsayılan para birimine çevrilir ve işaretlenmediği sürece güncellenir. (Premium)</p>
-<h3 id="tr-credit-card">Kredi kartı dönemleri ve ekstreler</h3>
-<p>Kart harcamaları bir döneme girer; dönem kapanınca Nakit defterinde tek bir “Kredi Kartı Ödemesi” olur ve son ödeme tarihinde ödenir.</p>
-<h3 id="tr-red-date">Kırmızı gün uyarısı</h3>
-<p>Bütçe, tahmini nakdinin ilk kez eksiye düştüğü günü işaretler; böylece önceden önlem alırsın.</p>
-<h3 id="tr-carry-over">Devreden</h3>
-<p>Her ay bir önceki ayın kalanıyla başlar; Devreden + gelir − gider = ay sonu bakiyesi.</p>
-<h3 id="tr-net-worth">Net değer</h3>
-<p>Birikim; nakit, döviz, kıymetli maden, kripto, hisse ve vadeli varlıklarının toplamını varsayılan para biriminde gösterir. (Premium)</p>
-<h3 id="tr-vadeli">Vadeli mevduat</h3>
-<p>Brüt/net oran, stopaj, otomatik yenileme ve dönem başı getiri ile vadeli mevduatı takip et. (Premium)</p>
-<h3 id="tr-birikim-transfer">Bütçe ↔ Birikim aktarımları</h3>
-<p>Nakit defteri ile Birikim arasında para aktar; aktarım onayladığında geçerli olur. (Premium)</p>
-<h3 id="tr-summary">Özet görünümü</h3>
-<p>Özet görünümü defteri her ayrı kayıt için tek karta indirger; tüm bir seri tek satır olarak görünür. (Premium)</p>
+<p class="lead">GelirGider'ın yapabildiği her şey, özellik özellik. Uygulamada bir özelliğin yanındaki ⓘ simgesine dokunarak doğrudan buradaki bölümüne gel.</p>
+<div class="toc"><ul><li><a href="#tr-cash-ledger">Nakit defteri</a></li><li><a href="#tr-credit-card">Kredi Kartı defteri</a></li><li><a href="#tr-new-entry">Kayıt ekleme</a></li><li><a href="#tr-add-to-cash">Nakit'e Ekle</a></li><li><a href="#tr-recurring">Tekrarlanan Kayıt</a></li><li><a href="#tr-varying-amounts">Değişken Tutarlar</a></li><li><a href="#tr-installments">Taksitli Harcama</a></li><li><a href="#tr-deferred-payment">Ertelenmiş ödeme</a></li><li><a href="#tr-foreign-currency">Döviz Çevrimi</a></li><li><a href="#tr-summary">Özet</a></li><li><a href="#tr-budget">Bütçe</a></li><li><a href="#tr-net-worth">Birikim</a></li><li><a href="#tr-holding-vadesiz">Vadesiz</a></li><li><a href="#tr-vadeli">Vadeli</a></li><li><a href="#tr-holding-metal">Kıymetli maden</a></li><li><a href="#tr-holding-crypto">Kripto</a></li><li><a href="#tr-holding-stock">Hisse senedi</a></li><li><a href="#tr-holding-manual">Elle girilen varlık</a></li><li><a href="#tr-birikim-transfer">Birikime para aktarma</a></li><li><a href="#tr-daily-summary">Günlük Özet</a></li><li><a href="#tr-data-transfer">Veri Aktarımı / Temizleme</a></li></ul></div>
+<h3 class="group">Akış</h3>
+<h4 id="tr-cash-ledger">Nakit defteri</h4>
+<p>Ana nakit hesabın. Üstteki şerit zaman aralığını değiştirir; Özet her kaydı tek karta indirir. + ile yeni defter ekle — biri ücretsiz, Premium ile sınırsız.</p>
+<h4 id="tr-credit-card">Kredi Kartı defteri</h4>
+<p>Kart harcamalarını buraya gir. Ekstre dönemi kapanınca toplamı, Nakit defterinde son ödeme tarihli tek bir “Kredi Kartı Ödemesi” olarak görünür — ödediğinde işaretle.</p>
+<h4 id="tr-new-entry">Kayıt ekleme</h4>
+<p>İsim, tutar ve tarih gir; kutucuk ödendi/alındı olarak işaretler. Gelişmiş altında kategori ekleyebilir, tekrarlayabilir, nakit çıkış tarihini erteleyebilir, yabancı para kullanabilir ya da hatırlatma koyabilirsin.</p>
+<h4 id="tr-add-to-cash">Nakit'e Ekle</h4>
+<p>Açıkken bu defterin kayıtları Nakit bakiyene ve bütçene de dahil olur — genel nakdine yansımasını istediğin hesaplar için kullanışlı. Kapalıyken defter ayrı kalır.</p>
+<h4 id="tr-recurring">Tekrarlanan Kayıt</h4>
+<p>Seçtiğin günde, başlangıçtan bitişe kadar her ay bir kayıt oluşturur. Her birinin kendi onay kutusu vardır. Bir kayıt, işaretlediğinde veya tarihi geçtiğinde seriden ayrılır; artık tek başına düzenleyip silebileceğin bağımsız bir kayıttır. Seriyi düzenlemek yalnızca gelecekteki, işaretlenmemiş kayıtları değiştirir.</p>
+<h4 id="tr-varying-amounts">Değişken Tutarlar</h4>
+<p>Her ay için ayrı tutar gir — enflasyon, mevsimsel değişim (ör. doğalgaz) ya da zam/yenileme durumlarında ileriki ayların beklenen tutarlarını tek tek düzenleyebilirsin. Bitiş tarihini ileri alırsan yeni aylar son tutarla eklenir; geri alırsan fazla aylar silinir. En az 2 ay gerekir.</p>
+<h4 id="tr-installments">Taksitli Harcama</h4>
+<p>Toplamı eşit aylık kart harcamalarına böler (son taksit yuvarlama farkını üstlenir). Her biri “n/m” olarak görünür ve ait olduğu ayın ekstresine girer. Bir taksit ekstreye yansıdıktan sonra sabitlenir; düzenleme yalnızca gelecek taksitlerin tutarını değiştirir. Taksit sayısını veya tarihleri değiştirmek için silip yeniden oluşturun.</p>
+<h4 id="tr-deferred-payment">Ertelenmiş ödeme</h4>
+<p>İşlem yukarıdaki tarihte hatırlatma olarak görünür, ama nakit seçtiğin ödeme tarihinde çıkar ve bakiyeyi o gün etkiler.</p>
+<h4 id="tr-foreign-currency">Döviz Çevrimi</h4>
+<p>İşaretlenmemiş döviz tutarları, uygulama para biriminize her gün güncel kura göre çevrilir, yani zamanla değişir. Üstteki tutarı elle değiştirirseniz sabitlenir ve döviz bağlantısı kaldırılır; artık döviz cinsi bir kayıt olmaz, uygulama para biriminde düz bir tutara dönüşür. Kaydı işaretlediğinizde değeri kilitlenir.</p>
+<h4 id="tr-summary">Özet</h4>
+<p>Her tarihli tekrar yerine her ayrı kayıt için tek kart — tüm bir tekrarlayan seri tek satır olarak görünür. Etkin ve biten için Sürüyor/Geçmiş arasında geçiş yap.</p>
+<h3 class="group">Bütçe</h3>
+<h4 id="tr-budget">Bütçe</h4>
+<p>Aylık ileriye dönük nakit akışı — gelir, gider ve tahmini ay sonu bakiyesi; nakit eksiye düşerse kırmızı gün uyarısı. ⇅ ile sırala, ▥ ile gün grafiğini aç, bu aya atla; + görüntülenen aya Nakit kaydı ekler.</p>
+<h3 class="group">Birikim</h3>
+<h4 id="tr-net-worth">Birikim</h4>
+<p>Toplam net değerin — nakit, döviz, altın, kripto, hisse ve vadeli mevduat, hepsi varsayılan para biriminde. Döviz, maden, kripto ve hisse anlık fiyatlanır; gerisini sen belirlersin. “Varlık Ekle” ile ekle.</p>
+<h4 id="tr-holding-vadesiz">Vadesiz</h4>
+<p>Kendi belirlediğin bir bakiye — vadesiz/cari hesap ya da nakit benzeri bir varlık. Vadeli mevduatların da buraya ödenir.</p>
+<h4 id="tr-vadeli">Vadeli</h4>
+<p>Vadeli mevduat. Tutar, oran (brüt ya da net), vade ve stopajı gir; vade sonu değeri hesaplanır. Otomatik yenilenebilir, her dönem faizi ödeyebilir ya da erken kapatılabilir.</p>
+<h4 id="tr-holding-metal">Kıymetli maden</h4>
+<p>Ağırlığa göre altın, gümüş, platin veya paladyum; ons başına anlık fiyatlanır (gold-api.com) ve varsayılan para biriminde gösterilir.</p>
+<h4 id="tr-holding-crypto">Kripto</h4>
+<p>Kripto para varlığı; anlık fiyatlanır (CoinGecko) ve varsayılan para birimine çevrilir.</p>
+<h4 id="tr-holding-stock">Hisse senedi</h4>
+<p>Hisse pozisyonu; gecikmeli kotasyonlarla (Yahoo Finance) işlem para biriminde fiyatlanır ve varsayılan para birimine çevrilir.</p>
+<h4 id="tr-holding-manual">Elle girilen varlık</h4>
+<p>Bu değeri kendin girer ve değiştikçe güncellersin — bu tür için anlık fiyatlama yoktur.</p>
+<h4 id="tr-birikim-transfer">Birikime para aktarma</h4>
+<p>Nakit defterin ile bir varlık arasında, eşleşen bir Nakit kaydı üzerinden para aktarır — yalnızca onayladığında (işaretlediğinde) geçerli olur; işareti kaldırmak geri alır.</p>
+<h3 class="group">Bildirimler ve Ayarlar</h3>
+<h4 id="tr-daily-summary">Günlük Özet</h4>
+<p>Günde bir bildirim, seçtiğin saatte, dikkat gerektirenleri özetler: geciken, bugün ödenecek ve hatırlatma penceresi açık olanlar. Boş günler atlanır ve uygulama dilindedir.</p>
+<h4 id="tr-data-transfer">Veri Aktarımı / Temizleme</h4>
+<p>Tam yedek dışa aktar ya da içe aktar (Yerine koy veya Birleştir). iCloud'a giriş yapılmış cihazda değişiklikler diğer cihazlarına eşitlenir; simülatör ya da çıkış yapılmış cihaz yerel kalır. Temizle her şeyi siler.</p>
 </section>
 
-<!-- ===== DE ===== -->
 <section id="de" class="lang-section">
 <h2>GelirGider · Benutzerhandbuch</h2>
-<div class="placeholder">Platzhalter-Inhalt — der finale Text entsteht in der Dokumentationsphase.</div>
-<div class="toc"><ul><li><a href="#de-deferred-payment">Aufgeschobene Zahlungen</a></li><li><a href="#de-recurring">Wiederkehrende Serien</a></li><li><a href="#de-varying-amounts">Variable Beträge</a></li><li><a href="#de-installments">Raten</a></li><li><a href="#de-foreign-currency">Fremdwährung &amp; Kurse</a></li><li><a href="#de-credit-card">Kreditkarten-Zyklen &amp; Abrechnungen</a></li><li><a href="#de-red-date">Der Rote-Tag-Hinweis</a></li><li><a href="#de-carry-over">Übertrag (Devreden)</a></li><li><a href="#de-net-worth">Vermögen</a></li><li><a href="#de-vadeli">Festgeld (Vadeli)</a></li><li><a href="#de-birikim-transfer">Budget ↔ Ersparnisse-Übertragungen</a></li><li><a href="#de-summary">Die Übersicht (Özet)</a></li></ul></div>
-<h3 id="de-deferred-payment">Aufgeschobene Zahlungen</h3>
-<p>Record a payment whose due date differs from the actual cash date — it reminds you on the due date but only moves your balance on the settlement date.</p>
-<h3 id="de-recurring">Wiederkehrende Serien</h3>
-<p>Turn an entry into a monthly series; edits ask whether to change just this one, this and future, or the entire series.</p>
-<h3 id="de-varying-amounts">Variable Beträge</h3>
-<p>A recurring series where each month can carry its own amount, entered in the per-month table.</p>
-<h3 id="de-installments">Raten</h3>
-<p>Split a credit-card purchase into equal monthly installments shown as n/m.</p>
-<h3 id="de-foreign-currency">Fremdwährung &amp; Kurse</h3>
-<p>Enter an amount in another currency; it converts to your default currency at the daily rate and revalues while unchecked. (Premium)</p>
-<h3 id="de-credit-card">Kreditkarten-Zyklen &amp; Abrechnungen</h3>
-<p>Card purchases roll into a cycle; when it closes it becomes one “Credit Card Payment” in your Cash ledger, due at the payment date.</p>
-<h3 id="de-red-date">Der Rote-Tag-Hinweis</h3>
-<p>Budget flags the first day your projected cash goes negative so you can act before it happens.</p>
-<h3 id="de-carry-over">Übertrag (Devreden)</h3>
-<p>Each month starts with the previous month's ending balance, so Carry-over + income − expense = end balance.</p>
-<h3 id="de-net-worth">Vermögen</h3>
-<p>Savings totals your holdings — cash, FX, metals, crypto, stocks and deposits — in your default currency. (Premium)</p>
-<h3 id="de-vadeli">Festgeld (Vadeli)</h3>
-<p>Track a term deposit with gross/net rate, withholding tax, auto-renew and per-cycle payout. (Premium)</p>
-<h3 id="de-birikim-transfer">Budget ↔ Ersparnisse-Übertragungen</h3>
-<p>Move money between your Cash ledger and Savings; the transfer applies once you confirm it. (Premium)</p>
-<h3 id="de-summary">Die Übersicht (Özet)</h3>
-<p>The Summary view collapses your ledger to one card per distinct entry — a whole series shows as a single row. (Premium)</p>
+<p class="lead">Alles, was GelirGider kann — Funktion für Funktion. Tippe in der App auf das ⓘ neben einer Funktion, um direkt zu ihrem Abschnitt hier zu springen.</p>
+<div class="toc"><ul><li><a href="#de-cash-ledger">Bargeld-Buch</a></li><li><a href="#de-credit-card">Kreditkarten-Buch</a></li><li><a href="#de-new-entry">Einen Eintrag hinzufügen</a></li><li><a href="#de-add-to-cash">Zu Bargeld hinzufügen</a></li><li><a href="#de-recurring">Wiederkehrender Eintrag</a></li><li><a href="#de-varying-amounts">Variable Beträge</a></li><li><a href="#de-installments">Ratenkauf</a></li><li><a href="#de-deferred-payment">Aufgeschobene Zahlung</a></li><li><a href="#de-foreign-currency">Währungsumrechnung</a></li><li><a href="#de-summary">Übersicht</a></li><li><a href="#de-budget">Budget</a></li><li><a href="#de-net-worth">Ersparnisse</a></li><li><a href="#de-holding-vadesiz">Sichtkonto</a></li><li><a href="#de-vadeli">Festgeld</a></li><li><a href="#de-holding-metal">Edelmetalle</a></li><li><a href="#de-holding-crypto">Krypto</a></li><li><a href="#de-holding-stock">Aktien</a></li><li><a href="#de-holding-manual">Manueller Posten</a></li><li><a href="#de-birikim-transfer">Geld zu/von den Ersparnissen</a></li><li><a href="#de-daily-summary">Tägliche Übersicht</a></li><li><a href="#de-data-transfer">Datenübertragung / Bereinigen</a></li></ul></div>
+<h3 class="group">Akış (Cashflow)</h3>
+<h4 id="de-cash-ledger">Bargeld-Buch</h4>
+<p>Dein Haupt-Bargeldkonto. Die Filter-Pillen der Leiste grenzen den Zeitraum ein; die Übersicht fasst alles zu einer Karte pro Eintrag zusammen. Füge mit + weitere Bücher hinzu — 1 kostenlos, unbegrenzt mit Premium.</p>
+<h4 id="de-credit-card">Kreditkarten-Buch</h4>
+<p>Erfasse hier Kartenkäufe. Wenn ein Abrechnungszeitraum endet, erscheint sein Gesamtbetrag als eine einzelne „Kreditkartenzahlung“ in deinem Bargeld-Buch, fällig am Zahlungsdatum — hake sie ab, wenn du zahlst.</p>
+<h4 id="de-new-entry">Einen Eintrag hinzufügen</h4>
+<p>Gib einen Namen, Betrag und ein Datum ein; das Kästchen markiert ihn als bezahlt oder erhalten. Unter Erweitert kannst du eine Kategorie hinzufügen, ihn wiederkehrend machen, das Abrechnungsdatum verschieben, eine Fremdwährung nutzen oder eine Erinnerung setzen.</p>
+<h4 id="de-add-to-cash">Zu Bargeld hinzufügen</h4>
+<p>Wenn aktiviert, zählen die Einträge dieses Buchs auch zu deinem Bargeld-Saldo und Budget — praktisch für Konten, die du in deinem gesamten Bargeld abgebildet sehen willst. Aus hält das Buch getrennt.</p>
+<h4 id="de-recurring">Wiederkehrender Eintrag</h4>
+<p>Erstellt pro Monat einen Eintrag am gewählten Tag, von Beginn bis Ende. Jeder hat sein eigenes Häkchen. Ein Eintrag verlässt die Serie, sobald du ihn abhakst oder sein Datum vorbei ist — dann ist er ein normaler, eigenständiger Eintrag. Die Serie zu bearbeiten ändert nur kommende, nicht abgehakte Einträge.</p>
+<h4 id="de-varying-amounts">Variable Beträge</h4>
+<p>Gib für jeden Monat einen eigenen Betrag ein – praktisch bei Inflation, saisonalen Rechnungen (z. B. Gas) oder Erhöhungen. Ein späteres Enddatum fügt Monate hinzu (kopiert den letzten Betrag), ein früheres entfernt sie. Mindestens 2 Monate.</p>
+<h4 id="de-installments">Ratenkauf</h4>
+<p>Teilt den Gesamtbetrag in gleiche monatliche Kartenbuchungen (die letzte trägt die Rundung). Jede erscheint als „n/m“ und landet in der Abrechnung ihres Monats. Eine abgerechnete Rate ist fix; Bearbeiten ändert nur den Betrag kommender Raten. Für Anzahl/Termine löschen und neu anlegen.</p>
+<h4 id="de-deferred-payment">Aufgeschobene Zahlung</h4>
+<p>Der Eintrag erscheint am Datum oben als Erinnerung, aber das Geld fließt — und der Saldo ändert sich — am gewählten Abrechnungsdatum.</p>
+<h4 id="de-foreign-currency">Währungsumrechnung</h4>
+<p>Nicht abgehakte Fremdwährungsbeträge werden täglich zum aktuellen Kurs in deine App-Währung umgerechnet und ändern sich daher mit der Zeit. Bearbeitest du den oberen Betrag von Hand, wird er fixiert und die Fremdwährungs-Verknüpfung entfernt — es wird ein einfacher Betrag in deiner App-Währung. Abhaken sperrt den Wert.</p>
+<h4 id="de-summary">Übersicht</h4>
+<p>Eine Karte pro eindeutigem Eintrag statt jedes datierten Vorkommens — eine ganze wiederkehrende Serie erscheint als einzelne Zeile. Wechsle zwischen Laufend/Früher für aktive und abgeschlossene.</p>
+<h3 class="group">Bütçe (Budget)</h3>
+<h4 id="de-budget">Budget</h4>
+<p>Eine monatliche vorausschauende Cashflow-Ansicht — Einnahmen, Ausgaben und der prognostizierte Endsaldo, mit einer Warnung als rotes Datum, falls das Bargeld negativ wird. Sortiere mit ⇅, öffne das Tagesdiagramm mit ▥, springe zum aktuellen Monat, und + fügt dem angezeigten Monat einen Bargeld-Eintrag hinzu.</p>
+<h3 class="group">Birikim (Ersparnisse)</h3>
+<h4 id="de-net-worth">Ersparnisse</h4>
+<p>Dein gesamtes Nettovermögen — Bargeld, Fremdwährung, Gold, Krypto, Aktien und Festgeld, alles in deiner Standardwährung. Devisen, Metalle, Krypto und Aktien werden live bepreist; den Rest legst du selbst fest. Füge Posten mit „Posten hinzufügen“ hinzu.</p>
+<h4 id="de-holding-vadesiz">Sichtkonto</h4>
+<p>Ein Guthaben, das du selbst festlegst — ein Girokonto-artiges Konto oder ein beliebiger bargeldähnlicher Posten. Hierhin zahlen auch Festgelder aus.</p>
+<h4 id="de-vadeli">Festgeld</h4>
+<p>Ein Festgeld. Gib Betrag, Zinssatz (brutto oder netto), Laufzeit und Quellensteuer ein, und der Fälligkeitswert wird berechnet. Es kann sich automatisch verlängern, die Zinsen jede Periode auszahlen oder vorzeitig geschlossen werden.</p>
+<h4 id="de-holding-metal">Edelmetalle</h4>
+<p>Gold, Silber, Platin oder Palladium nach Gewicht, live pro Feinunze bepreist (gold-api.com) in deiner Standardwährung.</p>
+<h4 id="de-holding-crypto">Krypto</h4>
+<p>Ein Kryptowährungs-Posten, live bepreist (CoinGecko) und in deine Standardwährung umgerechnet.</p>
+<h4 id="de-holding-stock">Aktien</h4>
+<p>Eine Aktienposition, bepreist aus verzögerten Kursen (Yahoo Finance) in der Notierungswährung und in deine Standardwährung umgerechnet.</p>
+<h4 id="de-holding-manual">Manueller Posten</h4>
+<p>Diesen Wert gibst du selbst ein und aktualisierst ihn bei Änderungen — für diesen Typ gibt es keine Live-Bepreisung.</p>
+<h4 id="de-birikim-transfer">Geld zu/von den Ersparnissen</h4>
+<p>Verschiebt Geld zwischen deinem Bargeld-Buch und einem Posten über einen passenden Bargeld-Eintrag — es wird erst wirksam, wenn du es bestätigst (abhakst), und das Aufheben der Markierung macht es rückgängig.</p>
+<h3 class="group">Mitteilungen &amp; Einstellungen</h3>
+<h4 id="de-daily-summary">Tägliche Übersicht</h4>
+<p>Eine Mitteilung pro Tag, zur von dir gewählten Zeit, die zusammenfasst, was Aufmerksamkeit braucht: überfällig, heute fällig und Einträge, deren Erinnerungsfenster offen ist. Leere Tage werden übersprungen, und sie erscheint in der Sprache der App.</p>
+<h4 id="de-data-transfer">Datenübertragung / Bereinigen</h4>
+<p>Exportiere ein vollständiges Backup oder importiere eines (Ersetzen oder Zusammenführen). Auf einem bei iCloud angemeldeten Gerät werden Änderungen mit deinen anderen Geräten synchronisiert; ein Simulator oder ein abgemeldetes Gerät bleibt lokal. Löschen entfernt alles.</p>
 </section>
 
-<!-- ===== ES ===== -->
 <section id="es" class="lang-section">
 <h2>GelirGider · Guía del usuario</h2>
-<div class="placeholder">Contenido de ejemplo — el texto final se redacta en la fase de documentación.</div>
-<div class="toc"><ul><li><a href="#es-deferred-payment">Pagos diferidos</a></li><li><a href="#es-recurring">Series recurrentes</a></li><li><a href="#es-varying-amounts">Importes variables</a></li><li><a href="#es-installments">Plazos</a></li><li><a href="#es-foreign-currency">Divisa extranjera y cambio</a></li><li><a href="#es-credit-card">Ciclos y extractos de tarjeta</a></li><li><a href="#es-red-date">La alerta de día rojo</a></li><li><a href="#es-carry-over">Arrastre (Devreden)</a></li><li><a href="#es-net-worth">Patrimonio neto</a></li><li><a href="#es-vadeli">Depósitos a plazo (Vadeli)</a></li><li><a href="#es-birikim-transfer">Transferencias Presupuesto ↔ Ahorros</a></li><li><a href="#es-summary">La vista Resumen (Özet)</a></li></ul></div>
-<h3 id="es-deferred-payment">Pagos diferidos</h3>
-<p>Record a payment whose due date differs from the actual cash date — it reminds you on the due date but only moves your balance on the settlement date.</p>
-<h3 id="es-recurring">Series recurrentes</h3>
-<p>Turn an entry into a monthly series; edits ask whether to change just this one, this and future, or the entire series.</p>
-<h3 id="es-varying-amounts">Importes variables</h3>
-<p>A recurring series where each month can carry its own amount, entered in the per-month table.</p>
-<h3 id="es-installments">Plazos</h3>
-<p>Split a credit-card purchase into equal monthly installments shown as n/m.</p>
-<h3 id="es-foreign-currency">Divisa extranjera y cambio</h3>
-<p>Enter an amount in another currency; it converts to your default currency at the daily rate and revalues while unchecked. (Premium)</p>
-<h3 id="es-credit-card">Ciclos y extractos de tarjeta</h3>
-<p>Card purchases roll into a cycle; when it closes it becomes one “Credit Card Payment” in your Cash ledger, due at the payment date.</p>
-<h3 id="es-red-date">La alerta de día rojo</h3>
-<p>Budget flags the first day your projected cash goes negative so you can act before it happens.</p>
-<h3 id="es-carry-over">Arrastre (Devreden)</h3>
-<p>Each month starts with the previous month's ending balance, so Carry-over + income − expense = end balance.</p>
-<h3 id="es-net-worth">Patrimonio neto</h3>
-<p>Savings totals your holdings — cash, FX, metals, crypto, stocks and deposits — in your default currency. (Premium)</p>
-<h3 id="es-vadeli">Depósitos a plazo (Vadeli)</h3>
-<p>Track a term deposit with gross/net rate, withholding tax, auto-renew and per-cycle payout. (Premium)</p>
-<h3 id="es-birikim-transfer">Transferencias Presupuesto ↔ Ahorros</h3>
-<p>Move money between your Cash ledger and Savings; the transfer applies once you confirm it. (Premium)</p>
-<h3 id="es-summary">La vista Resumen (Özet)</h3>
-<p>The Summary view collapses your ledger to one card per distinct entry — a whole series shows as a single row. (Premium)</p>
+<p class="lead">Todo lo que GelirGider puede hacer, función por función. Toca el ⓘ junto a una función en la app para ir directamente a su sección aquí.</p>
+<div class="toc"><ul><li><a href="#es-cash-ledger">Libro Efectivo</a></li><li><a href="#es-credit-card">Libro de Tarjeta de Crédito</a></li><li><a href="#es-new-entry">Añadir una entrada</a></li><li><a href="#es-add-to-cash">Añadir a Efectivo</a></li><li><a href="#es-recurring">Entrada recurrente</a></li><li><a href="#es-varying-amounts">Importes variables</a></li><li><a href="#es-installments">Compra a plazos</a></li><li><a href="#es-deferred-payment">Pago diferido</a></li><li><a href="#es-foreign-currency">Conversión de moneda</a></li><li><a href="#es-summary">Resumen</a></li><li><a href="#es-budget">Presupuesto</a></li><li><a href="#es-net-worth">Ahorros</a></li><li><a href="#es-holding-vadesiz">Cuenta a la vista</a></li><li><a href="#es-vadeli">Depósito a plazo</a></li><li><a href="#es-holding-metal">Metales preciosos</a></li><li><a href="#es-holding-crypto">Cripto</a></li><li><a href="#es-holding-stock">Acciones</a></li><li><a href="#es-holding-manual">Activo manual</a></li><li><a href="#es-birikim-transfer">Dinero hacia/desde ahorros</a></li><li><a href="#es-daily-summary">Resumen diario</a></li><li><a href="#es-data-transfer">Transferencia de datos / Limpieza</a></li></ul></div>
+<h3 class="group">Akış (Flujo de caja)</h3>
+<h4 id="es-cash-ledger">Libro Efectivo</h4>
+<p>Tu cuenta de efectivo principal. Las pastillas de la tira filtran el intervalo de tiempo; Resumen reduce todo a una tarjeta por entrada. Añade más libros con + — 1 gratis, ilimitados con Premium.</p>
+<h4 id="es-credit-card">Libro de Tarjeta de Crédito</h4>
+<p>Registra aquí las compras con tarjeta. Cuando se cierra un ciclo de facturación, su total aparece como un único «Pago de Tarjeta de Crédito» en tu libro Efectivo, con vencimiento en la fecha de pago — márcalo cuando pagues.</p>
+<h4 id="es-new-entry">Añadir una entrada</h4>
+<p>Introduce un nombre, un importe y una fecha; la casilla la marca como pagada o recibida. En Avanzado puedes añadir una categoría, hacerla recurrente, aplazar la fecha de liquidación, usar una moneda extranjera o poner un recordatorio.</p>
+<h4 id="es-add-to-cash">Añadir a Efectivo</h4>
+<p>Cuando está activo, las entradas de este libro también cuentan en tu saldo de Efectivo y tu presupuesto — útil para las cuentas que quieras reflejar en tu efectivo global. Desactivado, el libro queda aparte.</p>
+<h4 id="es-recurring">Entrada recurrente</h4>
+<p>Crea una entrada al mes el día elegido, de inicio a fin. Cada una tiene su casilla. Una entrada sale de la serie al marcarla o cuando pasa su fecha; entonces es una entrada independiente que puedes editar o eliminar por separado. Editar la serie solo cambia las entradas futuras sin marcar.</p>
+<h4 id="es-varying-amounts">Importes variables</h4>
+<p>Introduce un importe distinto para cada mes — útil con la inflación, facturas estacionales (p. ej. gas) o subidas. Adelanta la fecha de fin para añadir meses (copiando el último importe), retrásala para quitarlos. Se necesitan al menos 2 meses.</p>
+<h4 id="es-installments">Compra a plazos</h4>
+<p>Divide el total en cargos mensuales iguales (la última absorbe el redondeo). Cada una aparece como «n/m» y entra en el extracto de su mes. Una cuota facturada queda fija; editar solo cambia el importe de las próximas. Para cambiar número o fechas, elimina y vuelve a crear.</p>
+<h4 id="es-deferred-payment">Pago diferido</h4>
+<p>La entrada aparece en la fecha de arriba como recordatorio, pero el dinero se mueve — y el saldo cambia — en la fecha de liquidación que elijas.</p>
+<h4 id="es-foreign-currency">Conversión de moneda</h4>
+<p>Los importes en moneda extranjera sin marcar se convierten a tu moneda de la app al último tipo de cambio diario, por lo que cambian con el tiempo. Si editas el importe superior a mano, queda fijado y se elimina el vínculo con la moneda extranjera: pasa a ser un importe normal en tu moneda. Marcar la entrada bloquea su valor.</p>
+<h4 id="es-summary">Resumen</h4>
+<p>Una tarjeta por cada entrada distinta en lugar de cada aparición con fecha — toda una serie recurrente se muestra como una sola fila. Alterna entre En curso/Pasado para ver las activas frente a las finalizadas.</p>
+<h3 class="group">Bütçe (Presupuesto)</h3>
+<h4 id="es-budget">Presupuesto</h4>
+<p>Una vista mensual del flujo de caja hacia delante — ingresos, gastos y el saldo final previsto, con un aviso de día en rojo si el efectivo se vuelve negativo. Ordena con ⇅, abre el gráfico diario con ▥, salta al mes actual, y + añade una entrada de Efectivo al mes mostrado.</p>
+<h3 class="group">Birikim (Ahorros)</h3>
+<h4 id="es-net-worth">Ahorros</h4>
+<p>Tu patrimonio neto total — efectivo, divisas, oro, cripto, acciones y depósitos a plazo, todo en tu moneda predeterminada. Divisas, metales, cripto y acciones se valoran en vivo; el resto lo defines tú. Añade activos con «Añadir activo».</p>
+<h4 id="es-holding-vadesiz">Cuenta a la vista</h4>
+<p>Un saldo que defines tú mismo — una cuenta corriente o a la vista o cualquier activo similar al efectivo. También es donde se pagan los depósitos a plazo.</p>
+<h4 id="es-vadeli">Depósito a plazo</h4>
+<p>Un depósito a plazo fijo. Introduce el importe, el tipo (bruto o neto), el plazo y la retención, y se calcula el valor al vencimiento. Puede renovarse automáticamente, pagar los intereses cada ciclo o cerrarse anticipadamente.</p>
+<h4 id="es-holding-metal">Metales preciosos</h4>
+<p>Oro, plata, platino o paladio por peso, valorados en vivo por onza troy (gold-api.com) en tu moneda predeterminada.</p>
+<h4 id="es-holding-crypto">Cripto</h4>
+<p>Un activo de criptomoneda, valorado en vivo (CoinGecko) y convertido a tu moneda predeterminada.</p>
+<h4 id="es-holding-stock">Acciones</h4>
+<p>Una posición en acciones, valorada con cotizaciones diferidas (Yahoo Finance) en la moneda de cotización y convertida a tu moneda predeterminada.</p>
+<h4 id="es-holding-manual">Activo manual</h4>
+<p>Este valor lo introduces tú y lo actualizas cuando cambia — no hay valoración en vivo para este tipo.</p>
+<h4 id="es-birikim-transfer">Dinero hacia/desde ahorros</h4>
+<p>Mueve dinero entre tu libro Efectivo y un activo mediante una entrada de Efectivo equivalente — solo surte efecto cuando lo confirmas (lo marcas), y desmarcarlo lo revierte.</p>
+<h3 class="group">Notificaciones y ajustes</h3>
+<h4 id="es-daily-summary">Resumen diario</h4>
+<p>Una notificación al día, a la hora que elijas, que resume lo que necesita atención: vencido, vence hoy y elementos cuya ventana de recordatorio está abierta. Los días vacíos se omiten, y está en el idioma de la app.</p>
+<h4 id="es-data-transfer">Transferencia de datos / Limpieza</h4>
+<p>Exporta una copia de seguridad completa o importa una (Reemplazar o Combinar). En un dispositivo con sesión iniciada en iCloud, los cambios se sincronizan con tus otros dispositivos; un simulador o un dispositivo sin sesión permanece local. Limpiar borra todo.</p>
 </section>
 
-<!-- ===== IT ===== -->
 <section id="it" class="lang-section">
 <h2>GelirGider · Guida utente</h2>
-<div class="placeholder">Contenuto segnaposto — il testo finale sarà scritto nella fase di documentazione.</div>
-<div class="toc"><ul><li><a href="#it-deferred-payment">Pagamenti differiti</a></li><li><a href="#it-recurring">Serie ricorrenti</a></li><li><a href="#it-varying-amounts">Importi variabili</a></li><li><a href="#it-installments">Rate</a></li><li><a href="#it-foreign-currency">Valuta estera e cambio</a></li><li><a href="#it-credit-card">Cicli ed estratti della carta</a></li><li><a href="#it-red-date">L'avviso giorno rosso</a></li><li><a href="#it-carry-over">Riporto (Devreden)</a></li><li><a href="#it-net-worth">Patrimonio netto</a></li><li><a href="#it-vadeli">Depositi vincolati (Vadeli)</a></li><li><a href="#it-birikim-transfer">Trasferimenti Budget ↔ Risparmi</a></li><li><a href="#it-summary">La vista Riepilogo (Özet)</a></li></ul></div>
-<h3 id="it-deferred-payment">Pagamenti differiti</h3>
-<p>Record a payment whose due date differs from the actual cash date — it reminds you on the due date but only moves your balance on the settlement date.</p>
-<h3 id="it-recurring">Serie ricorrenti</h3>
-<p>Turn an entry into a monthly series; edits ask whether to change just this one, this and future, or the entire series.</p>
-<h3 id="it-varying-amounts">Importi variabili</h3>
-<p>A recurring series where each month can carry its own amount, entered in the per-month table.</p>
-<h3 id="it-installments">Rate</h3>
-<p>Split a credit-card purchase into equal monthly installments shown as n/m.</p>
-<h3 id="it-foreign-currency">Valuta estera e cambio</h3>
-<p>Enter an amount in another currency; it converts to your default currency at the daily rate and revalues while unchecked. (Premium)</p>
-<h3 id="it-credit-card">Cicli ed estratti della carta</h3>
-<p>Card purchases roll into a cycle; when it closes it becomes one “Credit Card Payment” in your Cash ledger, due at the payment date.</p>
-<h3 id="it-red-date">L'avviso giorno rosso</h3>
-<p>Budget flags the first day your projected cash goes negative so you can act before it happens.</p>
-<h3 id="it-carry-over">Riporto (Devreden)</h3>
-<p>Each month starts with the previous month's ending balance, so Carry-over + income − expense = end balance.</p>
-<h3 id="it-net-worth">Patrimonio netto</h3>
-<p>Savings totals your holdings — cash, FX, metals, crypto, stocks and deposits — in your default currency. (Premium)</p>
-<h3 id="it-vadeli">Depositi vincolati (Vadeli)</h3>
-<p>Track a term deposit with gross/net rate, withholding tax, auto-renew and per-cycle payout. (Premium)</p>
-<h3 id="it-birikim-transfer">Trasferimenti Budget ↔ Risparmi</h3>
-<p>Move money between your Cash ledger and Savings; the transfer applies once you confirm it. (Premium)</p>
-<h3 id="it-summary">La vista Riepilogo (Özet)</h3>
-<p>The Summary view collapses your ledger to one card per distinct entry — a whole series shows as a single row. (Premium)</p>
+<p class="lead">Tutto ciò che GelirGider può fare, funzione per funzione. Tocca la ⓘ accanto a una funzione nell'app per andare direttamente alla sua sezione qui.</p>
+<div class="toc"><ul><li><a href="#it-cash-ledger">Libretto Contanti</a></li><li><a href="#it-credit-card">Libretto Carta di Credito</a></li><li><a href="#it-new-entry">Aggiungere una voce</a></li><li><a href="#it-add-to-cash">Aggiungi a Contanti</a></li><li><a href="#it-recurring">Voce ricorrente</a></li><li><a href="#it-varying-amounts">Importi variabili</a></li><li><a href="#it-installments">Acquisto a rate</a></li><li><a href="#it-deferred-payment">Pagamento differito</a></li><li><a href="#it-foreign-currency">Conversione valuta</a></li><li><a href="#it-summary">Riepilogo</a></li><li><a href="#it-budget">Budget</a></li><li><a href="#it-net-worth">Risparmi</a></li><li><a href="#it-holding-vadesiz">Conto liquido</a></li><li><a href="#it-vadeli">Conto vincolato</a></li><li><a href="#it-holding-metal">Metalli preziosi</a></li><li><a href="#it-holding-crypto">Cripto</a></li><li><a href="#it-holding-stock">Azioni</a></li><li><a href="#it-holding-manual">Asset manuale</a></li><li><a href="#it-birikim-transfer">Denaro da/verso i risparmi</a></li><li><a href="#it-daily-summary">Riepilogo giornaliero</a></li><li><a href="#it-data-transfer">Trasferimento dati / Pulizia</a></li></ul></div>
+<h3 class="group">Akış (Flusso di cassa)</h3>
+<h4 id="it-cash-ledger">Libretto Contanti</h4>
+<p>Il tuo conto contanti principale. I pulsanti della striscia filtrano l’intervallo di tempo; Riepilogo riduce tutto a una card per voce. Aggiungi altri libretti con + — 1 gratis, illimitati con Premium.</p>
+<h4 id="it-credit-card">Libretto Carta di Credito</h4>
+<p>Registra qui gli acquisti con carta. Quando un ciclo di estratto conto si chiude, il suo totale compare come un unico “Pagamento Carta di Credito” nel tuo libretto Contanti, con scadenza alla data di pagamento — spuntalo quando paghi.</p>
+<h4 id="it-new-entry">Aggiungere una voce</h4>
+<p>Inserisci un nome, un importo e una data; la casella la contrassegna come pagata o ricevuta. In Avanzate puoi aggiungere una categoria, renderla ricorrente, posticipare la data di regolamento, usare una valuta estera o impostare un promemoria.</p>
+<h4 id="it-add-to-cash">Aggiungi a Contanti</h4>
+<p>Quando è attivo, le voci di questo libretto contano anche nel saldo Contanti e nel budget — comodo per i conti che vuoi vedere riflessi nella liquidità complessiva. Disattivato, tiene il libretto separato.</p>
+<h4 id="it-recurring">Voce ricorrente</h4>
+<p>Crea una voce al mese nel giorno scelto, dall'inizio alla fine. Ognuna ha la sua casella. Una voce esce dalla serie quando la spunti o ne passa la data; diventa una voce autonoma. Modificare la serie cambia solo le voci future non spuntate.</p>
+<h4 id="it-varying-amounts">Importi variabili</h4>
+<p>Inserisci un importo separato per ogni mese — utile con inflazione, bollette stagionali (es. gas) o aumenti. Sposta avanti la data di fine per aggiungere mesi (copiando l'ultimo importo), indietro per rimuoverli. Servono almeno 2 mesi.</p>
+<h4 id="it-installments">Acquisto a rate</h4>
+<p>Divide il totale in addebiti mensili uguali (l'ultima assorbe l'arrotondamento). Ognuna appare come «n/m» ed entra nell'estratto del suo mese. Una rata addebitata è fissa; la modifica cambia solo l'importo di quelle future. Per cambiare numero o date, elimina e ricrea.</p>
+<h4 id="it-deferred-payment">Pagamento differito</h4>
+<p>La voce appare nella data qui sopra come promemoria, ma il denaro si muove — e il saldo cambia — nella data di liquidazione che scegli.</p>
+<h4 id="it-foreign-currency">Conversione valuta</h4>
+<p>Gli importi in valuta estera non spuntati vengono convertiti nella valuta dell'app al tasso giornaliero più recente, quindi cambiano nel tempo. Modificando a mano l'importo in alto lo si fissa e si rimuove il collegamento alla valuta estera: diventa un semplice importo nella valuta dell'app. Spuntare la voce ne blocca il valore.</p>
+<h4 id="it-summary">Riepilogo</h4>
+<p>Una card per ogni voce distinta invece di ogni occorrenza datata — un’intera serie ricorrente appare come una sola riga. Passa tra In corso/Passato per attive o concluse.</p>
+<h3 class="group">Bütçe (Budget)</h3>
+<h4 id="it-budget">Budget</h4>
+<p>Una vista mensile del flusso di cassa futuro — entrate, uscite e il saldo finale previsto, con un avviso in rosso se la liquidità va in negativo. Ordina con ⇅, apri il grafico del giorno con ▥, salta al mese corrente e + aggiunge una voce Contanti al mese mostrato.</p>
+<h3 class="group">Birikim (Risparmi)</h3>
+<h4 id="it-net-worth">Risparmi</h4>
+<p>Il tuo patrimonio netto totale — contanti, valuta estera, oro, cripto, azioni e conti vincolati, tutto nella tua valuta predefinita. Valuta estera, metalli, cripto e azioni hanno il prezzo in tempo reale; il resto lo imposti tu. Aggiungi asset con “Aggiungi bene”.</p>
+<h4 id="it-holding-vadesiz">Conto liquido</h4>
+<p>Un saldo che imposti tu — un conto corrente o simile, o qualsiasi asset assimilabile a liquidità. È anche dove i conti vincolati versano i loro pagamenti.</p>
+<h4 id="it-vadeli">Conto vincolato</h4>
+<p>Un conto vincolato. Inserisci l’importo, il tasso (lordo o netto), la durata e la ritenuta, e il valore a scadenza viene calcolato. Può rinnovarsi automaticamente, pagare gli interessi a ogni ciclo o essere chiuso in anticipo.</p>
+<h4 id="it-holding-metal">Metalli preziosi</h4>
+<p>Oro, argento, platino o palladio a peso, con prezzo in tempo reale per oncia troy (gold-api.com) nella tua valuta predefinita.</p>
+<h4 id="it-holding-crypto">Cripto</h4>
+<p>Un asset in criptovaluta, con prezzo in tempo reale (CoinGecko) e convertito nella tua valuta predefinita.</p>
+<h4 id="it-holding-stock">Azioni</h4>
+<p>Una posizione azionaria, con prezzo da quotazioni ritardate (Yahoo Finance) nella valuta di quotazione e convertito nella tua valuta predefinita.</p>
+<h4 id="it-holding-manual">Asset manuale</h4>
+<p>Questo valore lo inserisci tu e lo aggiorni quando cambia — per questo tipo non c'è prezzo in tempo reale.</p>
+<h4 id="it-birikim-transfer">Denaro da/verso i risparmi</h4>
+<p>Sposta denaro tra il tuo libretto Contanti e un asset tramite una voce Contanti corrispondente — si applica solo quando lo confermi (spunti), e togliendo la spunta l’operazione si annulla.</p>
+<h3 class="group">Notifiche e impostazioni</h3>
+<h4 id="it-daily-summary">Riepilogo giornaliero</h4>
+<p>Una notifica al giorno, all’ora che scegli, che riassume ciò che richiede attenzione: scaduto, in scadenza oggi e voci con la finestra di promemoria aperta. I giorni vuoti vengono saltati ed è nella lingua dell’app.</p>
+<h4 id="it-data-transfer">Trasferimento dati / Pulizia</h4>
+<p>Esporta un backup completo o importane uno (Sostituisci o Unisci). Su un dispositivo con accesso a iCloud, le modifiche si sincronizzano con gli altri dispositivi; un simulatore o un dispositivo disconnesso resta locale. Svuota cancella tutto.</p>
 </section>
 
-<!-- ===== FR ===== -->
 <section id="fr" class="lang-section">
 <h2>GelirGider · Guide d'utilisation</h2>
-<div class="placeholder">Contenu provisoire — le texte final sera rédigé lors de la phase de documentation.</div>
-<div class="toc"><ul><li><a href="#fr-deferred-payment">Paiements différés</a></li><li><a href="#fr-recurring">Séries récurrentes</a></li><li><a href="#fr-varying-amounts">Montants variables</a></li><li><a href="#fr-installments">Échéances</a></li><li><a href="#fr-foreign-currency">Devise étrangère et change</a></li><li><a href="#fr-credit-card">Cycles et relevés de carte</a></li><li><a href="#fr-red-date">L'alerte jour rouge</a></li><li><a href="#fr-carry-over">Report (Devreden)</a></li><li><a href="#fr-net-worth">Valeur nette</a></li><li><a href="#fr-vadeli">Dépôts à terme (Vadeli)</a></li><li><a href="#fr-birikim-transfer">Transferts Budget ↔ Épargne</a></li><li><a href="#fr-summary">La vue Résumé (Özet)</a></li></ul></div>
-<h3 id="fr-deferred-payment">Paiements différés</h3>
-<p>Record a payment whose due date differs from the actual cash date — it reminds you on the due date but only moves your balance on the settlement date.</p>
-<h3 id="fr-recurring">Séries récurrentes</h3>
-<p>Turn an entry into a monthly series; edits ask whether to change just this one, this and future, or the entire series.</p>
-<h3 id="fr-varying-amounts">Montants variables</h3>
-<p>A recurring series where each month can carry its own amount, entered in the per-month table.</p>
-<h3 id="fr-installments">Échéances</h3>
-<p>Split a credit-card purchase into equal monthly installments shown as n/m.</p>
-<h3 id="fr-foreign-currency">Devise étrangère et change</h3>
-<p>Enter an amount in another currency; it converts to your default currency at the daily rate and revalues while unchecked. (Premium)</p>
-<h3 id="fr-credit-card">Cycles et relevés de carte</h3>
-<p>Card purchases roll into a cycle; when it closes it becomes one “Credit Card Payment” in your Cash ledger, due at the payment date.</p>
-<h3 id="fr-red-date">L'alerte jour rouge</h3>
-<p>Budget flags the first day your projected cash goes negative so you can act before it happens.</p>
-<h3 id="fr-carry-over">Report (Devreden)</h3>
-<p>Each month starts with the previous month's ending balance, so Carry-over + income − expense = end balance.</p>
-<h3 id="fr-net-worth">Valeur nette</h3>
-<p>Savings totals your holdings — cash, FX, metals, crypto, stocks and deposits — in your default currency. (Premium)</p>
-<h3 id="fr-vadeli">Dépôts à terme (Vadeli)</h3>
-<p>Track a term deposit with gross/net rate, withholding tax, auto-renew and per-cycle payout. (Premium)</p>
-<h3 id="fr-birikim-transfer">Transferts Budget ↔ Épargne</h3>
-<p>Move money between your Cash ledger and Savings; the transfer applies once you confirm it. (Premium)</p>
-<h3 id="fr-summary">La vue Résumé (Özet)</h3>
-<p>The Summary view collapses your ledger to one card per distinct entry — a whole series shows as a single row. (Premium)</p>
+<p class="lead">Tout ce que GelirGider peut faire, fonction par fonction. Touche le ⓘ à côté d'une fonction dans l'app pour aller directement à sa section ici.</p>
+<div class="toc"><ul><li><a href="#fr-cash-ledger">Carnet Espèces</a></li><li><a href="#fr-credit-card">Carnet Carte de Crédit</a></li><li><a href="#fr-new-entry">Ajouter une entrée</a></li><li><a href="#fr-add-to-cash">Ajouter aux Espèces</a></li><li><a href="#fr-recurring">Entrée récurrente</a></li><li><a href="#fr-varying-amounts">Montants variables</a></li><li><a href="#fr-installments">Achat échelonné</a></li><li><a href="#fr-deferred-payment">Paiement différé</a></li><li><a href="#fr-foreign-currency">Conversion de devise</a></li><li><a href="#fr-summary">Résumé</a></li><li><a href="#fr-budget">Budget</a></li><li><a href="#fr-net-worth">Épargne</a></li><li><a href="#fr-holding-vadesiz">Compte courant</a></li><li><a href="#fr-vadeli">Compte à terme</a></li><li><a href="#fr-holding-metal">Métaux précieux</a></li><li><a href="#fr-holding-crypto">Crypto</a></li><li><a href="#fr-holding-stock">Actions</a></li><li><a href="#fr-holding-manual">Actif manuel</a></li><li><a href="#fr-birikim-transfer">Argent vers/depuis l'épargne</a></li><li><a href="#fr-daily-summary">Résumé quotidien</a></li><li><a href="#fr-data-transfer">Transfert / nettoyage des données</a></li></ul></div>
+<h3 class="group">Akış (Trésorerie)</h3>
+<h4 id="fr-cash-ledger">Carnet Espèces</h4>
+<p>Ton compte espèces principal. Les pastilles du bandeau filtrent la période ; Résumé réduit tout à une carte par entrée. Ajoute d'autres carnets avec + — 1 gratuit, illimité avec Premium.</p>
+<h4 id="fr-credit-card">Carnet Carte de Crédit</h4>
+<p>Enregistre ici tes achats par carte. À la clôture d'un cycle de relevé, son total apparaît comme un seul « Paiement de Carte de Crédit » dans ton carnet Espèces, dû à la date de paiement — coche-le quand tu paies.</p>
+<h4 id="fr-new-entry">Ajouter une entrée</h4>
+<p>Saisis un nom, un montant et une date ; la case à cocher la marque comme payée ou reçue. Sous Avancé, tu peux ajouter une catégorie, la rendre récurrente, différer la date de règlement, utiliser une devise étrangère, ou définir un rappel.</p>
+<h4 id="fr-add-to-cash">Ajouter aux Espèces</h4>
+<p>Quand c'est activé, les entrées de ce carnet comptent aussi dans ton solde Espèces et ton budget — pratique pour les comptes que tu veux voir reflétés dans ta trésorerie globale. Désactivé, le carnet reste séparé.</p>
+<h4 id="fr-recurring">Entrée récurrente</h4>
+<p>Crée une entrée par mois le jour choisi, du début à la fin. Chacune a sa case. Une occurrence quitte la série dès que tu la coches ou que sa date passe — c'est alors une entrée autonome. Modifier la série ne change que les occurrences à venir non cochées.</p>
+<h4 id="fr-varying-amounts">Montants variables</h4>
+<p>Saisis un montant distinct pour chaque mois — utile en cas d'inflation, de factures saisonnières (ex. gaz) ou d'augmentations. Recule la date de fin pour ajouter des mois (en copiant le dernier montant), avance-la pour en retirer. Au moins 2 mois requis.</p>
+<h4 id="fr-installments">Achat échelonné</h4>
+<p>Répartit le total en prélèvements mensuels égaux (le dernier absorbe l'arrondi). Chacun apparaît en « n/m » et figure sur le relevé de son mois. Un versement facturé est figé ; modifier ne change que le montant des versements à venir. Pour changer le nombre ou les dates, supprime et recrée.</p>
+<h4 id="fr-deferred-payment">Paiement différé</h4>
+<p>L'entrée apparaît à la date ci-dessus comme rappel, mais l'argent bouge — et le solde change — à la date de règlement que tu choisis.</p>
+<h4 id="fr-foreign-currency">Conversion de devise</h4>
+<p>Les montants en devise étrangère non cochés sont convertis dans la devise de l'app au dernier taux quotidien, ils évoluent donc avec le temps. Modifier le montant du haut à la main le fige et supprime le lien avec la devise étrangère — il devient un simple montant dans la devise de l'app. Cocher l'entrée verrouille sa valeur.</p>
+<h4 id="fr-summary">Résumé</h4>
+<p>Une carte par entrée distincte plutôt que chaque occurrence datée — toute une série récurrente apparaît sur une seule ligne. Bascule entre En cours/Passé pour les actives et les terminées.</p>
+<h3 class="group">Bütçe (Budget)</h3>
+<h4 id="fr-budget">Budget</h4>
+<p>Une vue prévisionnelle mensuelle de la trésorerie — revenus, dépenses et solde de fin projeté, avec une alerte en rouge si le solde passe sous zéro. Trie avec ⇅, ouvre le graphique du jour avec ▥, saute au mois en cours, et + ajoute une entrée Espèces au mois affiché.</p>
+<h3 class="group">Birikim (Épargne)</h3>
+<h4 id="fr-net-worth">Épargne</h4>
+<p>Ta valeur nette totale — liquidités, devises, or, crypto, actions et comptes à terme, le tout dans ta devise par défaut. Les devises, métaux, crypto et actions sont évalués en direct ; le reste, tu le définis toi-même. Ajoute des actifs avec « Ajouter un actif ».</p>
+<h4 id="fr-holding-vadesiz">Compte courant</h4>
+<p>Un solde que tu définis toi-même — un compte courant ou tout actif assimilé à des liquidités. C'est aussi là que les comptes à terme versent leurs fonds.</p>
+<h4 id="fr-vadeli">Compte à terme</h4>
+<p>Un compte à terme. Saisis le montant, le taux (brut ou net), la durée et la retenue, et la valeur à l'échéance est calculée. Il peut se renouveler automatiquement, verser les intérêts à chaque cycle, ou être clôturé par anticipation.</p>
+<h4 id="fr-holding-metal">Métaux précieux</h4>
+<p>Or, argent, platine ou palladium au poids, évalués en direct par once troy (gold-api.com) dans ta devise par défaut.</p>
+<h4 id="fr-holding-crypto">Crypto</h4>
+<p>Un actif en cryptomonnaie, évalué en direct (CoinGecko) et converti dans ta devise par défaut.</p>
+<h4 id="fr-holding-stock">Actions</h4>
+<p>Une position en actions, évaluée à partir de cours différés (Yahoo Finance) dans la devise de cotation et convertie dans ta devise par défaut.</p>
+<h4 id="fr-holding-manual">Actif manuel</h4>
+<p>Tu saisis cette valeur toi-même et la mets à jour quand elle change — il n'y a pas d'évaluation en direct pour ce type.</p>
+<h4 id="fr-birikim-transfer">Argent vers/depuis l'épargne</h4>
+<p>Déplace de l'argent entre ton carnet Espèces et un actif via une entrée Espèces correspondante — cela ne s'applique qu'une fois que tu l'as confirmé (coché), et le décocher annule l'opération.</p>
+<h3 class="group">Notifications et réglages</h3>
+<h4 id="fr-daily-summary">Résumé quotidien</h4>
+<p>Une notification par jour, à l'heure que tu choisis, récapitulant ce qui demande ton attention : en retard, dû aujourd'hui, et les éléments dont la fenêtre de rappel est ouverte. Les jours vides sont ignorés, et elle est dans la langue de l'app.</p>
+<h4 id="fr-data-transfer">Transfert / nettoyage des données</h4>
+<p>Exporte une sauvegarde complète ou importes-en une (Remplacer ou Fusionner). Sur un appareil connecté à iCloud, les changements se synchronisent avec tes autres appareils ; un simulateur ou un appareil déconnecté reste en local. Vider efface tout.</p>
 </section>
 </div>
-<footer><a href="#">GelirGider</a> · <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a></footer>
+<footer>© NAE Dev · <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> · <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a></footer>
 <script>
 (function(){
   const SUPPORTED=['en','tr','de','es','it','fr'];const KEY='nae-lang';
-  function detectLang(){
-    const h=location.hash.slice(1);
+  function detectLang(){const h=location.hash.slice(1);
     if(SUPPORTED.includes(h)){try{localStorage.setItem(KEY,h)}catch(e){}return h;}
     if(h&&h.includes('-')){const p=h.split('-')[0];if(SUPPORTED.includes(p)){try{localStorage.setItem(KEY,p)}catch(e){}return p;}}
-    try{const s=localStorage.getItem(KEY);if(s&&SUPPORTED.includes(s))return s;}catch(e){}
-    return 'en';
-  }
+    try{const s=localStorage.getItem(KEY);if(s&&SUPPORTED.includes(s))return s;}catch(e){}return 'en';}
   function showOnly(lang){SUPPORTED.forEach(l=>{const s=document.getElementById(l);if(s)s.style.display=(l===lang)?'':'none';});}
-  function scrollToFeature(){
-    const h=location.hash.slice(1);if(!h)return;
-    if(h.includes('-')&&SUPPORTED.includes(h.split('-')[0])){requestAnimationFrame(()=>{const el=document.getElementById(h);if(el)el.scrollIntoView();});return;}
-    const lang=detectLang();
-    requestAnimationFrame(()=>{const el=document.getElementById(lang+'-'+h)||document.getElementById('en-'+h);if(el)el.scrollIntoView();});
-  }
-  function init(){const lang=detectLang();showOnly(lang);scrollToFeature();}
+  function init(){showOnly(detectLang());}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
-  window.addEventListener('hashchange',function(){const lang=detectLang();showOnly(lang);scrollToFeature();});
+  window.addEventListener('hashchange',()=>showOnly(detectLang()));
 })();
 </script>
+</body>
+</html>
+
+</body>
+</html>
+
 </body>
 </html>
