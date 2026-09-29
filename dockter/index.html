@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dockter — a dock and menu bar for your Mac</title>
+<meta name="description" content="Your apps, folders, bookmarks, weather, calendar and more in one menu, from the Dock icon or the menu bar.">
+<meta name="theme-color" content="#1a1a1a">
+<style>
+  :root{--brand:#0a84ff;--ink:#1a1a1a;--ink-2:#4b5563;--muted:#6b7280;--bg:#f8f9fa;--card:#fff;--border:#e5e7eb;--radius:16px}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:24px}
+  header.hero{text-align:center;padding:64px 24px 40px;background:radial-gradient(ellipse at top,rgba(10,132,255,0.07),transparent 60%)}
+  header.hero img{width:104px;height:104px;border-radius:22px;margin-bottom:18px}
+  header.hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:10px}
+  header.hero p.tagline{font-size:18px;color:var(--ink-2);max-width:520px;margin:0 auto}
+  .links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:500}
+  .btn-primary{background:var(--brand);color:#fff}
+  .btn-secondary{background:var(--card);color:var(--ink);border:1px solid var(--border)}
+  h2{font-size:22px;font-weight:600;margin:32px 0 10px}
+  .feature{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin:10px 0}
+  .feature h3{font-size:17px;font-weight:600;margin-bottom:2px}
+  .feature p{color:var(--ink-2);font-size:15px}
+  p.note{color:var(--muted);font-size:14px;margin-top:10px}
+  footer{text-align:center;padding:32px;color:var(--muted);font-size:13px}
+  a{color:var(--brand)}
+  @media(max-width:600px){header.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="dockter-icon.png" alt="Dockter app icon">
+  <h1>Dockter</h1>
+  <p class="tagline">Your apps, folders and bookmarks — plus the weather, your day and a few useful numbers — in one menu, from the Dock icon or the menu bar.</p>
+  <div class="links">
+    <a class="btn btn-primary" href="https://apps.apple.com/app/id6817247049">Open in App Store</a>
+    <a class="btn btn-secondary" href="user-guide.html">User Guide</a>
+    <a class="btn btn-secondary" href="support.html">Support</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h2>What Dockter does</h2>
+
+<div class="feature">
+  <h3>One menu, from two places</h3>
+  <p>Click Dockter's Dock icon or its menu bar icon — the same menu opens either way. Keep both, or just the one you prefer.</p>
+</div>
+<div class="feature">
+  <h3>Your apps, your folders</h3>
+  <p>Group your favourite apps into folders you name and colour yourself. A green dot shows what's already running.</p>
+</div>
+<div class="feature">
+  <h3>Bookmarks that behave</h3>
+  <p>Web links, files and folders together. Bookmarked folders can be browsed right in the menu, and links show the site's own icon.</p>
+</div>
+<div class="feature">
+  <h3>The things you check anyway</h3>
+  <p>Weather for a city you choose, world clocks, today's events and reminders, exchange rates, free disk space and battery — each one optional, in the order you like.</p>
+</div>
+<div class="feature">
+  <h3>Everything running, everything installed</h3>
+  <p>Running Apps lists what's open, with each app's windows and tabs. Launch Apps lists everything installed, arranged as in your Applications folder.</p>
+</div>
+<div class="feature">
+  <h3>Add things in a second</h3>
+  <p>Drag an app, file or folder onto Dockter's icon. Send a page from Safari or Firefox with Share › Dockter. Chrome and friends get a one-click bookmarklet.</p>
+</div>
+
+<h2>Private by design</h2>
+<p>Everything you put in Dockter stays on your Mac. There are no accounts, no ads and no tracking, and we run no servers. Dockter uses the internet only for the weather in the city you pick, exchange rates, and the icons of sites you bookmark. Read the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+<h2>Free for 30 days</h2>
+<p>Everything works for 30 days from the first time you run it. After that, one payment unlocks Dockter for good on every Mac using your Apple Account — no subscription. Nothing is deleted if you wait: your folders and bookmarks are exactly where you left them.</p>
+<p class="note">Requires macOS 26.5 or later.</p>
+
+</div>
+
+<footer>© NAE Dev · <a href="mailto:nae_dev@icloud.com">nae_dev@icloud.com</a> · <a href="user-guide.html">User Guide</a> · <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a></footer>
+</body>
+</html>
